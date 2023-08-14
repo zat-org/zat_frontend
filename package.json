@@ -9,8 +9,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.7.2",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/strapi": "^1.9.3",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "^18.17.1",
-    "nuxt": "^3.6.5"
+    "daisyui": "^3.5.0",
+    "nuxt": "^3.6.5",
+    "nuxt-icon": "^0.4.2",
+    "tailwindcss-flip": "^1.0.0"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.15",
+    "@heroicons/vue": "^2.0.18",
+    "chart.js": "^4.3.3",
+    "superjson": "^1.13.1",
+    "vue-chartjs": "^5.2.0"
   }
 }

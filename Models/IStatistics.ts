@@ -1,0 +1,41 @@
+interface IStatistics {
+    "الاسم": string,
+    "عدد الصكات الملعوبة": number,
+    "عدد الصكات المربوحة": number,
+    "عدد الصكات الخاسرة": number,
+    "الابناط": number,
+    "الاكك": number,
+    "الأكلات": number,
+    "مشترى صن": number,
+    "مشترى حكم": number,
+    "مشتريات ناجحة": number,
+    "مشتريات خسرانة": number,
+    "سرا": number,
+    "بلوت": number,
+    "خمسين": number,
+    "مية": number,
+    "أربعمية": number,
+    "عدد الكبابيت صن": number,
+    "عدد الكبابيت حكم": number
+}
+enum StatisticOption {
+    playedSka = "عدد الصكات الملعوبة",
+    winnedSka = "عدد الصكات المربوحة",
+    LoosedSka = "عدد الصكات الخاسرة",
+    abnat = "الابناط",
+    okok = "الاكك",
+    aklat = "الأكلات",
+    moshtara_sun = "مشترى صن",
+    moshtara_hukm = "مشترى حكم",
+    nagha = "مشتريات ناجحة",
+    khasrana = "مشتريات خسرانة",
+    sra = "سرا",
+    baloot = "بلوت",
+    khamsen = "خمسين",
+    mea = "مية",
+    arben = "أربعمية",
+    kbabet_sun = "عدد الكبابيت صن",
+    kbabet_hukm = "عدد الكبابيت حكم",
+}
+export { StatisticOption };
+export default IStatistics;
