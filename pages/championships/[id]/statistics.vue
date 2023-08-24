@@ -1,19 +1,28 @@
 <template>
-    <div class="w-full flex flex-col items-center space-y-5 justify-center" v-if="!pending && !error">
-        <select class="select w-full select-bordered max-w-xs bg-select" v-model="selectedStatistic">
-            <option v-for="o, i  in StatisticOption" :value="o" selected>{{ o }}</option>
-        </select>
-        <div class=" w-full flex justify-center mx-auto">
-            <Bar id="statistics" class="w-full" :options="chartOptions" :data="chartData" />
+    <div class="w-full">
+        <template v-if="!pending && !error">
+            <div v-if="statistics && statistics.length > 0"
+                class="w-full flex flex-col items-center space-y-5 justify-center">
+                <select class="select w-full select-bordered max-w-xs bg-select" v-model="selectedStatistic">
+                    <option v-for="o, i  in StatisticOption" :value="o" selected>{{ o }}</option>
+                </select>
+                <div class=" w-full flex justify-center mx-auto">
+                    <Bar id="statistics" class="w-full" :options="chartOptions" :data="chartData" />
+                </div>
+            </div>
+            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
+                <Icon name="line-md:alert-circle" class="block text-9xl" />
+                <h3>لا توجد احصائيات حاليا</h3>
+            </div>
+        </template>
+        <div v-else-if="pending" class="text-zinc-700 flex flex-col space-y-4 justify-center items-center p-10">
+            <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
+            <h2 class="font-semibold">تحميل</h2>
         </div>
-    </div>
-    <div v-else-if="pending" class="text-zinc-700 flex flex-col space-y-4 justify-center items-center p-10">
-        <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
-        <h2 class="font-semibold">تحميل</h2>
-    </div>
-    <div v-else-if="error" class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center p-4">
-        <Icon name="line-md:close-circle" class="block text-9xl text-red-500" />
-        <h3>{{ error }}</h3>
+        <div v-else-if="error" class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center p-4">
+            <Icon name="line-md:close-circle" class="block text-9xl text-red-500" />
+            <h3>{{ error }}</h3>
+        </div>
     </div>
 </template>
     
@@ -24,7 +33,6 @@ import { StatisticOption } from "~/Models/IStatistics"
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Colors, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 ChartJS.register(Title, Tooltip, Colors, Legend, BarElement, CategoryScale, LinearScale)
-
 
 const chartData = computed(() => {
     if (!error.value && statistics.value) {
@@ -60,30 +68,36 @@ const chartData = computed(() => {
         datasets: [{ data: [] }]
     };
 })
+
 const chartOptions = {
     responsive: true
 }
 const selectedStatistic = ref<StatisticOption>(StatisticOption.playedSka)
+const props = defineProps(["leagueData"]);
 
 const client = useStrapiClient()
 const statistics = ref<null | IStatistics[]>(null)
 const error = ref<string | null>(null)
 const pending = ref(false)
 const route = useRoute()
-onBeforeMount(() => {
+
+const fetchData = () => {
     pending.value = true
-    client(`/leagues/${route.params.id}/statistics`, { method: 'GET' })
+    return client(`/leagues/${route.params.id}/statistics`, { method: 'GET' })
         .then((data: any) => {
             statistics.value = data.data
             pending.value = false
-            console.log(statistics.value);
+            // console.log(statistics.value);
+            useHead({
+                title: ` اجماليات الاحصائيات - ${props.leagueData.name} `,
+            })
         }).catch((err) => {
             console.error(err)
             error.value = "تعذر تحميل البيانات."
             pending.value = false
-
         })
-})
+}
+onBeforeMount(fetchData)
 </script>
     
 <style scoped>

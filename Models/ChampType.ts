@@ -1,6 +1,6 @@
 enum LeagueType {
-    league = "دوري",
-    cup = "كأس",
-    super = "كأس السوبر"
+    league,
+    cup,
+    super
 }
 export default LeagueType; 

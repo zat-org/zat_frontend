@@ -1,15 +1,17 @@
 <template>
-    <div class="bg-zinc-200 w-full  rounded-lg">
-        <div v-if="!error && !pending" ref="matchCards"
-            class="scroll-smooth overflow-x-hidden overflow-y-scroll max-h-[60vh] px-2 md:px-10  ">
-            <template v-if="orderedEvents.length > 0" v-for="event in orderedEvents" :key="event.id">
-                <MatchStudioCard :studio="event" class="my-4" />
-            </template>
-            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center">
+    <div class="w-full">
+        <template v-if="!error && !pending">
+            <div v-if="orderedEvents.length > 0" ref="matchCards"
+                class=" bg-zinc-200  rounded-lg scroll-smooth overflow-x-hidden overflow-y-scroll max-h-[60vh] px-2 md:px-10  ">
+                <template v-for="event in orderedEvents" :key="event.id">
+                    <MatchStudioCard :studio="event" class="my-4" />
+                </template>
+            </div>
+            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />
                 <h3>لا يوجد استديو تحليلي حاليا</h3>
             </div>
-        </div>
+        </template>
         <div v-else-if="pending" class=" text-zinc-700 flex flex-col space-y-4 justify-center items-center  p-10">
             <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
             <h2>تحميل</h2>
@@ -23,12 +25,14 @@
 
 <script setup lang="ts">
 import { IStudio } from "Models/IStudio";
+
 const route = useRoute();
 const client = useStrapiClient()
 const studios = ref<IStudio[]>([]);
 const error = ref<string | null>(null);
 const matchCards = ref<HTMLElement | null>(null);
 const pending = ref(false);
+const props = defineProps(["leagueData"]);
 
 definePageMeta({
     name: "leagueStudios"
@@ -42,21 +46,26 @@ const orderedEvents = computed((): (IStudio)[] => {
     })
 })
 
-onBeforeMount(() => {
+const fetchData = () => {
     pending.value = true;
-    client(`/leagues/${route.params.id}/studios`, { method: 'GET' })
+    return client(`/leagues/${route.params.id}/studios`, { method: 'GET' })
         .then((data: any) => {
             studios.value = (data.studios as IStudio[])
             // console.log(data.studios);
             pending.value = false;
-
+            useHead({
+                title: ` الاستديو التحليلي - ${props.leagueData.name} `,
+            })
         }).catch((err) => {
             console.error(err)
             error.value = "تعذر تحميل الاستديو التحليلي";
             pending.value = false;
 
         })
-})
+}
+
+onServerPrefetch(fetchData)
+onBeforeMount(fetchData)
 
 const offsetOfComingMatch = computed(() => {
     if (studios.value) {
@@ -71,7 +80,7 @@ const offsetOfComingMatch = computed(() => {
     return null
 })
 watchEffect(() => {
-    if (studios.value) {
+    if (studios.value && studios.value.length > 0) {
         if (matchCards.value && offsetOfComingMatch.value) {
             matchCards.value.scrollTop = (matchCards.value.children[offsetOfComingMatch.value - 1] as HTMLElement).offsetTop;
         }

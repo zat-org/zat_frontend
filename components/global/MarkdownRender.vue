@@ -7,8 +7,12 @@ import { parseMarkdown } from '~/utils/parseMarkdown';
 const parsed = ref<Record<string, any>>({ data: "" });
 const props = defineProps(["markdownString"])
 
-parseMarkdown(props.markdownString)
-  .then((str: string) => parsed.value.data = str)
+const parse = () => {
+  return parseMarkdown(props.markdownString)
+    .then((str: string) => parsed.value.data = str)
+}
+onServerPrefetch(parse)
+onBeforeMount(parse)
 </script>
 
 <style scoped></style>

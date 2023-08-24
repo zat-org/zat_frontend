@@ -1,9 +1,9 @@
 <template>
     <div>
-        <div v-if="!pending && !error && champs">
-            <div v-if="champs.length > 0" v-for="champ in champs"
+        <template v-if="!pending && !error">
+            <div v-if="champs && champs.length > 0" v-for="champ in champs"
                 class="card border-[1px] border-blue-300 md:card-side bg-base-100 shadow-xl">
-                <figure class="bg-blue-200  md:px-2"><img :src="url + champ.league_logo" class="py-2"
+                <figure class="bg-blue-200  md:px-2"><nuxt-img loading="lazy" :src="url + champ.league_logo" class="py-2"
                         alt="championship logo" />
                 </figure>
                 <div class="card-body">
@@ -22,7 +22,7 @@
                 <Icon name="line-md:alert-circle" class="block text-9xl" />
                 <h3>لا توجد بطولات حاليا</h3>
             </div>
-        </div>
+        </template>
         <div v-else-if="pending" class="text-zinc-700 flex flex-col space-y-4 justify-center items-center p-10">
             <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
             <h2 class="font-semibold">تحميل</h2>
@@ -45,7 +45,7 @@ const error = ref<string | null>(null)
 const pending = ref(false)
 const loadChamps = () => {
     pending.value = true
-    client(`/leagues?type=${route.query.type}`, { method: 'GET' })
+    return client(`/leagues?type=${route.query.type}`, { method: 'GET' })
         .then((data: any) => {
             champs.value = data.champs
             pending.value = false
@@ -56,12 +56,10 @@ const loadChamps = () => {
 
         })
 }
-watch(() => route.query.type, () => {
-    loadChamps();
-})
-onBeforeMount(() => {
-    loadChamps()
-})
+onServerPrefetch(loadChamps)
+watch(() => route.query.type, loadChamps)
+onBeforeMount(loadChamps)
+
 </script>
 
 <style scoped></style>

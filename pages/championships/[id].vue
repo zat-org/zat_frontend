@@ -1,9 +1,11 @@
 <template>
     <div class="flex flex-col justify-center items-center  text-zinc-700">
         <template v-if="!pending && !error">
-            <Menubar />
-            <div class="w-full md:w-3/4 lg:w-3/5 xl:1/2 mx-auto flex justify-center ">
-                <NuxtPage :leagueData="champ" class="mb-3" />
+            <Menubar :champ="champ" />
+            <div class="w-full md:w-3/4 lg:w-3/5 xl:1/2 mx-auto flex justify-center mb-3">
+                <KeepAlive max="4">
+                    <NuxtPage :leagueData="champ" />
+                </KeepAlive>
             </div>
         </template>
         <template v-else-if="pending">
@@ -29,30 +31,22 @@ const champ = ref<null | IChamp>(null)
 const error = ref<string | null>(null)
 const pending = ref(false)
 
-onBeforeMount(() => {
+const fetchData = () => {
     pending.value = true
-    client(`/leagues/${route.params.id}`, { method: 'GET' })
+    return client(`/leagues/${route.params.id}`, { method: 'GET' })
         .then((data: any) => {
             champ.value = data
             pending.value = false
-
+            useHead({
+                title: champ.value?.name,
+            })
         }).catch((err) => {
             console.error(err)
-            error.value = "تعذر تحميل البيانات."
             pending.value = false
         })
-})
-
-
-const navigation = [
-    { name: 'المباريات', href: `/championships/${route.params.id}/matches` },
-    { name: 'الاستديو التحليلي', href: `/championships/${route.params.id}/studios` },
-    { name: 'الاحصائيات', href: `/championships/${route.params.id}/statistics` },
-    { name: 'القوانين', href: `/championships/${route.params.id}/laws` },
-    { name: 'الجدول', href: `/championships/${route.params.id}/table` },
-    { name: 'الفرق', href: `/championships/${route.params.id}/teams` },
-    { name: 'الرئيسة', href: `/championships/${route.params.id}/` },
-]
+}
+onServerPrefetch(fetchData)
+onBeforeMount(fetchData)
 
 </script>
 

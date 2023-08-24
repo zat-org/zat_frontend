@@ -28,20 +28,26 @@ const match = ref<IMatchFullDetails | null>(null)
 const error = ref<string | null>(null)
 const pending = ref(false)
 
-onBeforeMount(() => {
+const fetchData = () => {
     pending.value = true
-    client(`/matches/${route.params.mid}`, { method: 'GET' })
+    return client(`/matches/${route.params.mid}`, { method: 'GET' })
         .then((data: any) => {
             match.value = data
             pending.value = false
             // console.log(data);
-
+            useHead({
+                title: `(${match.value?.team1.name} ضد ${match.value?.team2.name}) - ${match.value?.leagueName}`,
+            })
         }).catch((err) => {
             console.error(err)
             error.value = "هذه المباراة غير موجودة"
             pending.value = false
         })
-})
+}
+
+onServerPrefetch(fetchData)
+onBeforeMount(fetchData)
+
 </script>
 
 <style scoped></style>

@@ -45,8 +45,8 @@
         <div class="navbar-center">
             <NuxtLink to="/">
                 <div class="font-family-aref h-8 w-16 -mt-4  font-bold text-4xl flex   justify-center items-center">
-                    <span class=" text-black relative">سام
-                        <span class=" text-[#f7b032] absolute top-[0rem] left-[0.07rem]">سام</span>
+                    <span class=" text-black relative">زات
+                        <span class=" text-[#f7b032] absolute top-[0rem] left-[0.07rem]">زات</span>
                     </span>
                 </div>
 
@@ -72,7 +72,8 @@
 <script setup>
 const router = useRouter()
 const navigation = [
-    { name: 'الرئيسة', href: '/', links: [] },
+    { name: 'الرئيسية', href: '/', links: [] },
+
     {
         name: 'البطولات', href: '/championships', links: [
             { name: "دوري", href: "/championships?type=league" },
@@ -80,6 +81,14 @@ const navigation = [
             { name: "سوبر", href: "/championships?type=super" }
         ]
     },
+
+    { name: 'الفرق', href: '/teams', links: [] },
+    { name: 'الحكام', href: '/referees', links: [] },
+
+
+
+    { name: 'من نحن', href: '/about-us', links: [] },
+    { name: 'اتصل بنا', href: '/contact-us', links: [] },
 ]
 const IsOpened = ref(false)
 const IsDark = ref(false)

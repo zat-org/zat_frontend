@@ -9,6 +9,11 @@
     html {
         font-family: 'Noto Kufi Arabic', sans-serif;
     }
+
+
+    .font-family-aref {
+        font-family: 'Aref Ruqaa', serif;
+    }
 }
 
 @layer components {}

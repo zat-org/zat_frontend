@@ -58,22 +58,25 @@ const route = useRoute();
 const table = ref<any>(null)
 const error = ref<string | null>(null)
 const pending = ref(false);
+const props = defineProps(["leagueData"]);
 
-onBeforeMount(() => {
+const fetchData = () => {
     pending.value = true;
-    client(`/leagues/${route.params.id}/summary`, { method: 'GET' })
+    return client(`/leagues/${route.params.id}/summary`, { method: 'GET' })
         .then((data: any) => {
             table.value = data.table
             pending.value = false;
-
+            useHead({
+                title: `جدول ترتيب الدوري - ${props.leagueData.name} `,
+            })
         }).catch((err) => {
             console.error(err)
             error.value = "تعذر تحميل جدول الترتيب "
             pending.value = false;
-
         })
-})
-
+}
+onServerPrefetch(fetchData)
+onBeforeMount(fetchData)
 
 useHead({
     title: "جدول الترتيب"

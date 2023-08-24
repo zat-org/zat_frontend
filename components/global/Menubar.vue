@@ -1,7 +1,7 @@
 <template>
-    <ul class="bg-zinc-100 grid grid-cols-7 my-5 px-5 gap-2 place-items-center rounded-xl">
-        <template v-for="link in navigation" :key="link.href">
-            <li class="flex flex-col items-center relative">
+    <ul v-if="avialaleNavigation" :class="`bg-zinc-100 flex my-5 px-5  justify-center items-center rounded-xl `">
+        <template v-for="link in avialaleNavigation" :key="link.href">
+            <li class="flex flex-col items-center relative mx-0.5">
                 <NuxtLink :to="link.href" exact-active-class="text-amber-400 -translate-y-5 active"
                     class="h-10 w-10 flex justify-center items-center transition-all relative top-0 rounded-full bg-zinc-100 duration-200">
                     <Icon :name="link.icon" class="text-2xl" />
@@ -24,14 +24,20 @@ a.active~span {
 </style>
 
 <script setup lang="ts">
+import LeagueType from '~/Models/champType';
+
+const props = defineProps(["champ"])
 const route = useRoute();
 const navigation = [
-    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws` },
-    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics` },
-    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches` },
-    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/` },
-    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios` },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table` },
-    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams` },
+    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super] },
+    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
+    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
+    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
+    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
+    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [LeagueType.league], },
+    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
 ]
+const avialaleNavigation = computed(() => {
+    return navigation.filter(link => props.champ && props.champ.type ? link.availableAt.includes(LeagueType[props.champ.type] as unknown as LeagueType) : true)
+})
 </script>
