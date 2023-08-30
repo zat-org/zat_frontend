@@ -10,16 +10,19 @@
         font-family: 'Noto Kufi Arabic', sans-serif;
     }
 
-
     .font-family-aref {
         font-family: 'Aref Ruqaa', serif;
+    }
+
+    .bg-select {
+        background-position: calc(0% + 20px) calc(1px + 50%), calc(0% + 16px) calc(1px + 50%) !important;
+    }
+
+    #toasts {
+        @apply justify-end items-center !important
     }
 }
 
 @layer components {}
 
-@layer utilities {
-    /* .spaced-table{
-        space
-    } */
-}
+@layer utilities {}

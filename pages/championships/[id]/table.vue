@@ -1,9 +1,9 @@
 <template>
     <div class="w-full ">
         <table v-if="!pending && !error"
-            class="table table-zebra table-pin-rows  shadow-lg text-center w-full table-auto border-separate border-spacing-0	">
+            class="table table-zebra table-pin-rows shadow-lg text-center w-full table-auto border-separate border-spacing-0">
             <thead>
-                <tr class="bg-amber-300 text-zinc-700 ">
+                <tr class="bg-blue-300 text-zinc-700 ">
                     <th class="hd-cell w-3/12 md:w-6/12 text-start ">
                         الفريق
                     </th>
@@ -28,16 +28,16 @@
                 <tr v-for="team, index in table" :key="team.id">
                     <td class="data text-start relative">
                         <div
-                            class="h-[100%] w-5 bg-zinc-200 absolute top-0 right-0 flex justify-center items-center text-zinc-600">
+                            class="h-[100%] w-5 bg-transparent absolute top-0 right-0 flex justify-center items-center text-amber-500">
                             <span class="">{{ index + 1 }}</span>
                         </div>
-                        <span class="font-semibold text-amber-900 pl-6 pr-0">{{ team.name }}</span>
+                        <span class="font-semibold text-blue-900 pl-6 pr-0">{{ team.name }}</span>
                     </td>
-                    <td class="data text-gray-500">{{ team.play }}</td>
-                    <td class="data text-gray-500">{{ team.win }}</td>
-                    <td class="data text-gray-500">{{ team.lost }}</td>
-                    <td class="data text-gray-500">{{ team.abnat }}</td>
-                    <td class="data font-bold text-amber-900">{{ team.totalScore }}</td>
+                    <td class="data text-gray-700">{{ team.play }}</td>
+                    <td class="data text-gray-700">{{ team.win }}</td>
+                    <td class="data text-gray-700">{{ team.lost }}</td>
+                    <td class="data text-gray-700">{{ team.abnat }}</td>
+                    <td class="data font-bold text-blue-900">{{ team.totalScore }}</td>
                 </tr>
             </tbody>
         </table>
@@ -109,15 +109,11 @@ tr:last-child td:first-child * {
 }
 
 tr:nth-child(even) {
-    @apply bg-amber-100 !important
+    @apply bg-blue-100 !important
 }
 
 .hd-cell {
     @apply px-1
-}
-
-.index {
-    @apply text-black bg-orange-500 py-1 px-1 rounded-lg relative -right-1
 }
 
 .data {

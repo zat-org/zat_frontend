@@ -3,7 +3,7 @@
     <div class="grid grid-cols-5  grid-flow-row gap-1 md:gap-4 place-items-center text-center">
         <div class="col-start-1 col-end-3">
             <p class="text-sm text-gray-400"> {{ match.leagueName }}</p>
-            <p class="text-sm text-amber-500 ">الجولة {{ match.tournament }}</p>
+            <p class="text-sm text-amber-500 ">{{ match.tournament }}</p>
         </div>
         <div>
             <a v-if="match.url" :href="`${match.url}`" target="_blank">

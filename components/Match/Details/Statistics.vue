@@ -3,7 +3,7 @@
         <div class="divider">احصائيات المباراة</div>
         <div class="container mx-auto rounded-lg shadow-lg mb-2 ">
 
-            <table class="table table-zebra rounded-t-lg text-center table-fixed	table-pin-rows	">
+            <table class="table table-zebra rounded-t-lg text-center table-fixed table-pin-rows">
                 <thead>
                     <tr class="">
                         <th class="text-lg text-gray-900">

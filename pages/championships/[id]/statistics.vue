@@ -100,8 +100,4 @@ const fetchData = () => {
 onBeforeMount(fetchData)
 </script>
     
-<style scoped>
-.bg-select {
-    background-position: calc(0% + 20px) calc(1px + 50%), calc(0% + 16px) calc(1px + 50%);
-}
-</style>
+<style scoped></style>

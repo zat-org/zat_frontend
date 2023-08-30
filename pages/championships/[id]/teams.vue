@@ -3,7 +3,12 @@
         <template v-if="!pending && !error">
             <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mb-3" v-if="teams && teams.length > 0">
                 <div v-for="team in teams" :key="team.id"
-                    class=" bg-zinc-100 rounded-xl shadow-lg p-4 flex flex-col justify-center items-center space-y-2 ">
+                    class=" bg-zinc-100 rounded-xl shadow-lg p-4 flex flex-col justify-center items-center space-y-2 relative overflow-hidden">
+                    <NuxtLink :to="`/teams/${team.id}`"
+                        class="absolute  h-12 w-12 rounded-full bg-blue-400 -top-3 -left-3 btn">
+                        <Icon name="fluent:arrow-circle-up-left-24-filled"
+                            class="text-white text-xl absolute bottom-2 right-2" />
+                    </NuxtLink>
                     <h4 class="font-bold text-lg">
                         فريق {{ team.name }}
                     </h4>
@@ -15,16 +20,21 @@
 
 
                     <div class="grid grid-cols-3 w-full mt-2">
-                        <div v-for="player in team.players" :key="player.id"
-                            class=" flex flex-col justify-start items-center">
+                        <div v-for="(player, index) in team.players" :key="player.id"
+                            class=" flex flex-col justify-start items-center"
+                            :class="player.is_captain || index === 0 ? '' : index % 2 === 0 ? 'order-first' : 'order-last'">
                             <div class="avatar ">
-                                <div class=" w-12 sm:w-16 md:w-20 rounded-xl shadow-lg  ">
+                                <div class=" w-12 sm:w-16 md:w-20 rounded-xl shadow-lg  "
+                                    :class="player.is_captain ? 'w-14 sm:w-18 md:w-24' : `w-12 sm:w-16 md:w-20`">
                                     <nuxt-img loading="lazy" class="object-top" :src="url + player.image"
                                         :alt="player.name" />
                                 </div>
                             </div>
                             <p class="text-sm text-center font-semibold mt-2 text-amber-900">
                                 {{ player.name }}
+                                <NuxtLink :to="`/players/${player.id}`">
+                                    <Icon name="solar:square-arrow-right-up-broken" class="text-blue-400" size="15" />
+                                </NuxtLink>
                             </p>
                             <p class="text-xs text-amber-500">
                                 {{ player.is_captain ? `كابتن الفريق` : `لاعب بالفريق` }}
@@ -32,6 +42,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
             <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />

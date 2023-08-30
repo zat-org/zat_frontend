@@ -12,7 +12,10 @@ interface IMatchLessDetails {
     state: MatchState,
     url: string,
     start_at: string,
-    tournament_name: string
+    tournament_name: string,
+    name: string,
+    type: "official" | "friendly"
+    league_id: number
 }
 
 export default IMatchLessDetails;

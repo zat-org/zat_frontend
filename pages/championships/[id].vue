@@ -33,7 +33,7 @@ const pending = ref(false)
 
 const fetchData = () => {
     pending.value = true
-    return client(`/leagues/${route.params.id}`, { method: 'GET' })
+    return client(`/leagues/getById/${route.params.id}`, { method: 'GET' })
         .then((data: any) => {
             champ.value = data
             pending.value = false

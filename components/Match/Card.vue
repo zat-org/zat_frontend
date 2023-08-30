@@ -3,7 +3,7 @@
     <div dir="rtl" class="rounded-lg shadow-md relative bg-white pb-2" @click.prevent="handleMatchCardClick">
         <div class="bg-gradient-to-r from-[#ffcc33] to-[#ffb347] px-2 py-1 flex justify-between rounded-t-lg items-center">
             <div class="w-1/3  flex justify-center items-center">
-                <p>الجولة {{ parseInt(match.tournament_name).toLocaleString('ar-Eg') }}</p>
+                <p class="text-xs md:text-sm ">{{ match.name }} - {{ match.tournament_name }} </p>
             </div>
             <div class="w-1/3 flex justify-center items-center">
                 <div v-if="match.url" @click.prevent="handleYoutubeClick" style="cursor: pointer;"
@@ -11,7 +11,7 @@
                     <Icon name="ion:logo-youtube" class="text-red-600" size="23"></Icon>
                 </div>
             </div>
-            <div class="w-1/3 flex justify-center items-center">
+            <div class="w-1/3 flex justify-center items-center text-xs md:text-sm">
                 {{ new Date(match.start_at).toLocaleDateString("ar-EG") }}
                 <Icon name="fontisto:date" size="18" class="mx-1 text-zinc-600" />
             </div>
@@ -30,7 +30,7 @@
                         {{ match.team_1_score }} <span class="text-gray-600">-</span> {{ match.team_2_score }}
                     </p>
                     <p
-                        class="w-fit py-1 px-4 bg-gray-600 text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
+                        class="w-fit py-1 px-4 bg-gray-600 text-xs md:text-sm text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
                         {{ MatchState.Done }}
                     </p>
 
@@ -38,7 +38,7 @@
                 <div v-else-if="match.state === MatchState.Upcoming">
                     <Icon name="fxemoji:squaredvs" width="50" height="50" />
                     <p
-                        class="w-fit py-1 px-4 bg-yellow-400 text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
+                        class="w-fit py-1 px-4 bg-yellow-400 text-xs md:text-sm text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
                         {{ MatchState.Upcoming }}
                     </p>
 
@@ -47,7 +47,7 @@
                 <div v-else-if="match.state === MatchState.Live">
                     <Icon name="svg-spinners:pulse-rings-3" color="red" width="50" height="50" />
                     <p
-                        class="w-fit py-1 px-4 bg-red-500 text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
+                        class="w-fit py-1 px-4 bg-red-500 text-xs md:text-sm text-white rounded-t-lg absolute bottom-0 left-1/2 -translate-x-1/2">
                         {{ MatchState.Live }}
                     </p>
                 </div>

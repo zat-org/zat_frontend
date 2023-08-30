@@ -48,6 +48,7 @@
 </template>
 
 <script setup lang="ts">
+import getElapsedTime from "~/utils/getElapsedTime"
 import IReferee from '~/Models/IReferee';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
@@ -73,35 +74,6 @@ const fetchData = () => {
 onServerPrefetch(fetchData)
 onBeforeMount(fetchData)
 
-function getElapsedTime(inputDate: string): string {
-    const inputTime = new Date(inputDate).getTime();
-    const currentTime = new Date().getTime();
-    const timeDifference = currentTime - inputTime;
-
-    const seconds = Math.floor(timeDifference / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-    const weeks = Math.floor(days / 7);
-    const months = Math.floor(days / 30);
-    const years = Math.floor(months / 12);
-
-    if (years > 0) {
-        return `${years} ${years > 1 ? 'أعوام' : 'عام'} `;
-    } else if (months > 0) {
-        return `${months} ${months > 1 ? 'أشهر' : 'شهر'} `;
-    } else if (weeks > 0) {
-        return `${weeks} ${weeks > 1 ? 'أسابيع' : 'أسبوع'} `;
-    } else if (days > 0) {
-        return `${days} ${days > 1 ? 'أيام' : 'يوم'} `;
-    } else if (hours > 0) {
-        return `${hours} ${hours > 1 ? 'ساعات' : 'ساعة'} `;
-    } else if (minutes > 0) {
-        return `${minutes} ${minutes > 1 ? 'دقائق' : 'دقيقة'} `;
-    } else {
-        return `${seconds} ${seconds !== 1 ? 'ثوان' : 'ثانية'} `;
-    }
-}
 
 </script>
 

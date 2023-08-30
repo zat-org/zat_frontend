@@ -7,9 +7,7 @@ const LogoURL = "https://firebasestorage.googleapis.com/v0/b/players-photos.apps
 const WebsiteUrl = "https://osasyona.com/"
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image',
-
-  ],
+  modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt'],
   content: {
     markdown: {
       anchorLinks: false,

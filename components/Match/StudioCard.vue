@@ -2,8 +2,8 @@
     <div dir="rtl" class="bg-white rounded-lg shadow-lg relative text-white">
         <div class="flex items-center justify-between background-color px-2 py-1 rounded-t-lg">
             <p class="w-1/3 flex justify-center items-center">
-                الجولة
-                {{ parseInt(props.studio.tournament_name).toLocaleString('ar-Eg') }}
+
+                {{ props.studio.tournament_name }}
             </p>
             <div class="w-1/3 flex justify-center items-center">
                 <div v-if="props.studio.url" @click.prevent="handleYoutubeClick" style="cursor: pointer;"

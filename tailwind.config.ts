@@ -10,5 +10,8 @@ export default {
     ],
     daisyui: {
         rtl: true,
-    }
+    },
+    content: [
+          "node_modules/tailvue/dist/tailvue.es.js",
+      ],
 }

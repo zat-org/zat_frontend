@@ -3,7 +3,7 @@
         <template v-if="!pending && !error">
             <div v-if="champs && champs.length > 0" v-for="champ in champs"
                 class="card border-[1px] border-blue-300 md:card-side bg-base-100 shadow-xl">
-                <figure class="bg-blue-200  md:px-2"><nuxt-img loading="lazy" :src="url + champ.league_logo" class="py-2"
+                <figure class="bg-blue-200  md:px-2"><nuxt-img loading="lazy" :src="url + champ.url" class="py-2 w-36"
                         alt="championship logo" />
                 </figure>
                 <div class="card-body">
@@ -45,7 +45,7 @@ const error = ref<string | null>(null)
 const pending = ref(false)
 const loadChamps = () => {
     pending.value = true
-    return client(`/leagues?type=${route.query.type}`, { method: 'GET' })
+    return client(`/leagues/get?type=${route.query.type}`, { method: 'GET' })
         .then((data: any) => {
             champs.value = data.champs
             pending.value = false
