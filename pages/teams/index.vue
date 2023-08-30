@@ -73,8 +73,8 @@
 </template>
 
 <script setup lang="ts">
-import getElapsedTime from "~/utils/getElapsedTime"
-import { ITeamLessDetails } from '~/Models/ITeam';
+import getElapsedTime from "@/utils/getElapsedTime"
+import { ITeamLessDetails } from '@/Models/ITeam';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const teams = ref<ITeamLessDetails[] | null>(null)

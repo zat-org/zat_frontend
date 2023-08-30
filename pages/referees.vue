@@ -48,8 +48,8 @@
 </template>
 
 <script setup lang="ts">
-import getElapsedTime from "~/utils/getElapsedTime"
-import IReferee from '~/Models/IReferee';
+import getElapsedTime from "@/utils/getElapsedTime"
+import IReferee from '@/Models/IReferee';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const referees = ref<IReferee[] | null>(null)

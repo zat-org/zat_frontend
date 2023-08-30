@@ -24,7 +24,7 @@ a.active~span {
 </style>
 
 <script setup lang="ts">
-import LeagueType from '~/Models/champType';
+import LeagueType from "@/Models/ChampType";
 
 const props = defineProps(["champ"])
 const route = useRoute();

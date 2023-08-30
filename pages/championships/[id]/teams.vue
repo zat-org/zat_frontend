@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts" >
-import ITeam from "~/Models/ITeam"
+import ITeam from "@/Models/ITeam"
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const teams = ref<ITeam[] | null>(null)

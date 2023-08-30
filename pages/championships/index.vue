@@ -35,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import IChamp from 'Models/IChamp';
+import IChamp from '@/Models/IChamp';
 const client = useStrapiClient()
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

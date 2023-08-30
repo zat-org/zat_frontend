@@ -100,8 +100,8 @@
 
 <script setup lang="ts">
 const route = useRoute()
-import getElapsedTime from "~/utils/getElapsedTime"
-import { IPlayerFullDetails } from '~/Models/ITeam';
+import getElapsedTime from "@/utils/getElapsedTime"
+import { IPlayerFullDetails } from '@/Models/ITeam';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const player = ref<IPlayerFullDetails | null>(null)

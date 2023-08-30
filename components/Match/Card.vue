@@ -63,7 +63,7 @@
 
 <script setup lang="ts">
 
-import MatchState from "~/Models/MatchState";
+import MatchState from "@/Models/MatchState";
 const props = defineProps(["match", "champId"])
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

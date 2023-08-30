@@ -67,8 +67,8 @@
 </template>
 
 <script setup lang="ts">
-import IMatchFullDetails from '~/Models/IMatchFullDetails';
-import MatchState from '~/Models/MatchState';
+import IMatchFullDetails from '@/Models/IMatchFullDetails';
+import MatchState from '@/Models/MatchState';
 
 const props = defineProps(["match"])
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 

@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import IMatchLessDetails from '~/Models/IMatchLessDetails';
+import IMatchLessDetails from '@/Models/IMatchLessDetails';
 const client = useStrapiClient()
 const matches = ref<IMatchLessDetails[] | null>(null)
 const error = ref<string | null>(null)

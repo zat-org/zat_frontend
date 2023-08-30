@@ -25,8 +25,8 @@
 
 <script setup lang="ts">
 const route = useRoute()
-import getElapsedTime from "~/utils/getElapsedTime"
-import { IBlogFullDetails } from '~/Models/IBlog';
+import getElapsedTime from "@/utils/getElapsedTime"
+import { IBlogFullDetails } from '@/Models/IBlog';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const blog = ref<IBlogFullDetails | null>(null)

@@ -197,8 +197,8 @@
 
 <script setup lang="ts">
 const route = useRoute()
-import getElapsedTime from "~/utils/getElapsedTime"
-import { ITeamFullDetails } from '~/Models/ITeam';
+import getElapsedTime from "@/utils/getElapsedTime"
+import { ITeamFullDetails } from '@/Models/ITeam';
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const team = ref<ITeamFullDetails | null>(null)
