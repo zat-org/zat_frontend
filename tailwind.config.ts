@@ -1,6 +1,8 @@
+
 export default {
+    darkMode: 'class',
     theme: {
-        // ...
+
     },
     plugins: [
         require('@tailwindcss/typography'),
@@ -12,6 +14,6 @@ export default {
         rtl: true,
     },
     content: [
-          "node_modules/tailvue/dist/tailvue.es.js",
-      ],
+        "node_modules/tailvue/dist/tailvue.es.js",
+    ],
 }

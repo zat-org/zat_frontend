@@ -1,5 +1,5 @@
 import champState from "./ChampState"
-import champType from "./champType"
+import champType from "./ChampType"
 
 interface IUpcomingChamp {
     id: number,
@@ -19,6 +19,7 @@ export default interface IChamp {
     state: champState,
     winner_name: string | null,
     winner_logo: string | null,
+    league_logo: string | null,
     url: string | null,
     leagueid: number
 }

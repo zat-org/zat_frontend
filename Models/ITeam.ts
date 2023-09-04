@@ -37,31 +37,31 @@ interface ITeamFullDetails {
     team_logo: string,
     winning_count: string,
     players: IPlayerLessDetails[],
-    champs: IChamp[],
-    statistics: {
-        "عدد المباريات": number,
-        "عدد الصكات الملعوبة": number,
-        "عدد الصكات المربوحة": number,
-        "عدد الصكات الخاسرة": number,
-        "الابناط": number,
-        "الاكك": number,
-        "الأكلات": number,
-        "مشترى صن": number,
-        "مشترى حكم": number,
-        "مشتريات ناجحة": number,
-        "مشتريات خسرانة": number,
-        "سرا": number,
-        "بلوت": number,
-        "خمسين": number,
-        "مية": number,
-        "أربعمية": number,
-        "عدد الكبابيت صن": number,
-        "عدد الكبابيت حكم": number
-    },
+    champs: IChampLessDetails[],
+    statistics: ITeamStatistics,
     transfers: ITransfer[]
-
 }
-interface IChamp {
+interface ITeamStatistics {
+    "عدد المباريات": number,
+    "عدد الصكات الملعوبة": number,
+    "عدد الصكات المربوحة": number,
+    "عدد الصكات الخاسرة": number,
+    "الابناط": number,
+    "الاكك": number,
+    "الأكلات": number,
+    "مشترى صن": number,
+    "مشترى حكم": number,
+    "مشتريات ناجحة": number,
+    "مشتريات خسرانة": number,
+    "سرا": number,
+    "بلوت": number,
+    "خمسين": number,
+    "مية": number,
+    "أربعمية": number,
+    "عدد الكبابيت صن": number,
+    "عدد الكبابيت حكم": number
+}
+interface IChampLessDetails {
     name: string,
     end_at: string,
     logo: string,
@@ -78,6 +78,6 @@ interface ITransfer {
     player_id: number
 }
 export {
-    ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails
+    ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails, IPlayerLessDetails, IChampLessDetails, ITransfer, ITeamStatistics
 }
 export default ITeam; 

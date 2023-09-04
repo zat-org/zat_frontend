@@ -1,7 +1,7 @@
 <template>
     <div v-if="match.referees && match.referees.length > 0">
         <div class="divider">حكام المباراة</div>
-        <div class="text-gray-500  text-sm text-center">
+        <div class="text-gray-500 dark:text-slate-300  text-sm text-center">
             <div class="flex ">
                 <div class="w-1/3"></div>
                 <div class="w-1/3 flex flex-col justify-center items-center  space-y-2">
@@ -12,7 +12,7 @@
                     </div>
 
                     <div class="">
-                        <p class="text-gray-950 ">
+                        <p class="text-gray-950 dark:text-slate-50 ">
                             {{ match.referees[0].name }}
                         </p>
                         <p class="text-xs ">
@@ -30,10 +30,10 @@
                         </div>
                     </div>
                     <div class="">
-                        <p class="text-gray-950 ">
+                        <p class="text-gray-950 dark:text-slate-50 ">
                             {{ match.referees[1].name }}
                         </p>
-                        <p class="text-xs ">
+                        <p class="text-xs  ">
                             حكم مساعد
                         </p>
                     </div>
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="">
-                        <p class="text-gray-950 ">
+                        <p class="text-gray-950 dark:text-slate-50 ">
                             {{ match.referees[2].name }}
                         </p>
                         <p class="text-xs ">

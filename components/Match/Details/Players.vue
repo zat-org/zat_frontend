@@ -7,14 +7,14 @@
                     class="flex justify-start  items-center  mb-3">
                     <div class="avatar me-4">
                         <div class=" w-10 sm:w-16 md:w-20 rounded-xl shadow-lg ">
-                            <img class="object-top" :src="url + player.image" :alt="player.name" />
+                            <nuxt-img class="object-top" :src="url + player.image" :alt="player.name" />
                         </div>
                     </div>
                     <div class="">
-                        <p class="text-gray-950 text-right">
+                        <p class="text-gray-950 dark:text-slate-50 text-right">
                             {{ player.name }}
                         </p>
-                        <p class="text-xs text-right">
+                        <p class="text-xs text-right dark:text-slate-400">
                             {{ index === 0 ? `كابتن الفريق` : `لاعب بالفريق` }}
                         </p>
                     </div>
@@ -24,16 +24,16 @@
                 <div v-for="player, index in match.team2.players" :key="player.id"
                     class="flex justify-end  items-center mb-3">
                     <div class="">
-                        <p class="text-gray-950 text-left">
+                        <p class="text-gray-950 dark:text-slate-50 text-left">
                             {{ player.name }}
                         </p>
-                        <p class="text-xs text-left">
+                        <p class="text-xs text-left dark:text-slate-400">
                             {{ index === 0 ? `كابتن الفريق` : `لاعب بالفريق` }}
                         </p>
                     </div>
                     <div class="avatar ms-4  ">
                         <div class=" w-10 sm:w-16 md:w-20 rounded-xl shadow-lg ">
-                            <img class=" object-top" :src="url + player.image" :alt="player.name" />
+                            <nuxt-img class=" object-top" :src="url + player.image" :alt="player.name" />
                         </div>
                     </div>
                 </div>

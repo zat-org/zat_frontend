@@ -2,7 +2,7 @@
     <div class="divider"> بيانات المباراة </div>
     <div class="grid grid-cols-5  grid-flow-row gap-1 md:gap-4 place-items-center text-center">
         <div class="col-start-1 col-end-3">
-            <p class="text-sm text-gray-400"> {{ match.leagueName }}</p>
+            <p class="text-sm text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
             <p class="text-sm text-amber-500 ">{{ match.tournament }}</p>
         </div>
         <div>
@@ -13,7 +13,7 @@
             </a>
         </div>
         <div class="col-start-4 col-end-6 ">
-            <p class="text-sm text-gray-400">
+            <p class="text-sm text-gray-400 dark:text-slate-300">
                 تاريخ المباراة
             </p>
             <p class="text-sm text-amber-500 ">

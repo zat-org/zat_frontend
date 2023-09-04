@@ -1,27 +1,18 @@
 <template>
-    <div class=" w-full ">
-        <template v-if="!error && !pending">
+    <FetchDataWraper :error="error" :pending="pending" class="w-full text-zinc-700 dark:text-slate-50">
+        <template #main>
             <div v-if="orderedEvents.length > 0" ref="matchCards"
-                class="scroll-smooth overflow-x-hidden overflow-y-scroll max-h-[60vh] px-2 md:px-10 bg-zinc-200  rounded-lg ">
+                class="scroll-smooth overflow-x-hidden overflow-y-scroll max-h-[60vh] px-2 md:px-10 bg-zinc-200 dark:bg-slate-700  rounded-lg ">
                 <template v-for="event in orderedEvents" :key="event.id">
                     <MatchCard :match="event" :id="event.id" :champId="route.params.id" class="my-4" />
                 </template>
             </div>
-            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
+            <div v-else class=" text-lg h-50 flex flex-col justify-center items-center py-10">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />
                 <h3>لا توجد مباريات حاليا</h3>
             </div>
         </template>
-
-        <div v-else-if="pending" class=" text-zinc-700 flex flex-col space-y-4 justify-center items-center  p-10">
-            <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
-            <h2>تحميل</h2>
-        </div>
-        <div v-else-if="error" class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center p-4">
-            <Icon name="line-md:close-circle" class="block text-9xl text-red-500" />
-            <h3>{{ error }}</h3>
-        </div>
-    </div>
+    </FetchDataWraper>
 </template>
 
 <script setup lang="ts">

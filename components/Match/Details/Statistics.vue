@@ -19,9 +19,9 @@
                 </thead>
                 <tbody>
                     <tr v-for="_, index in match.team1.statistics" :key="index">
-                        <td class="font-semibold text-md text-blue-950">{{ match.team1.statistics[index].value }}</td>
+                        <td class="font-semibold text-md text-blue-950 dark:text-slate-50">{{ match.team1.statistics[index].value }}</td>
                         <td class="px-0">{{ match.team1.statistics[index].name }}</td>
-                        <td class="font-semibold text-md text-blue-950">{{ match.team2.statistics[index].value }}</td>
+                        <td class="font-semibold text-md text-blue-950 dark:text-slate-50">{{ match.team2.statistics[index].value }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -34,7 +34,12 @@ const props = defineProps(["match"])
 </script>
 
 <style scoped>
-/* tr:nth-child(even) {
-    @apply bg-blue-50 !important
-} */
+tbody tr:nth-child(even) {
+    @apply dark:bg-slate-500  !important;
+}
+
+
+tbody tr:nth-child(odd) {
+    @apply dark:bg-slate-600 !important;
+}
 </style>

@@ -19,8 +19,19 @@
     }
 
     #toasts {
-        @apply justify-end items-center !important
+        @apply justify-end items-center dark:text-slate-50 !important
     }
+
+    .avatar-contain img {
+        object-fit: contain !important;
+    }
+
+
+    .divider::after , .divider::before {
+        @apply dark:bg-slate-300 !important;
+    }
+
+    
 }
 
 @layer components {}

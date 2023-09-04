@@ -1,18 +1,18 @@
 <template>
-    <div>
-        <template v-if="!pending && !error">
+    <FetchDataWraper :error="error" :pending="pending">
+        <template #main>
             <div v-if="champs && champs.length > 0" v-for="champ in champs"
-                class="card border-[1px] border-blue-300 md:card-side bg-base-100 shadow-xl">
-                <figure class="bg-blue-200  md:px-2"><nuxt-img loading="lazy" :src="url + champ.url" class="py-2 w-36"
+                class="card border-[1px] border-blue-300 dark:bg-slate-600 md:card-side bg-base-100 shadow-xl">
+                <figure class="bg-blue-100  md:px-2"><nuxt-img loading="lazy" :src="url + champ.url" class="py-2 w-36"
                         alt="championship logo" />
                 </figure>
-                <div class="card-body">
-                    <h2 class="card-title">{{ champ.name }}</h2>
+                <div class="card-body space-y-3 text-right md:text-center">
+                    <h2 class="font-semibold text-xl text-right md:text-center">{{ champ.name }}</h2>
                     <p>{{ champ.description }}</p>
-                    <div class="card-actions justify-start ">
-                        <NuxtLink :to="`/championships/${champ.leagueid}`" class="btn btn-info btn-md ">
+                    <div class="card-actions justify-end md:justify-center ">
+                        <NuxtLink :to="`/championships/${champ.leagueid}`" class="btn btn-info btn-md  dark:text-slate-50 ">
                             تفاصيل البطولة
-                            <Icon name="mingcute:arrow-left-fill" />
+                            <!-- <Icon name="mingcute:arrow-left-fill" /> -->
                         </NuxtLink>
                     </div>
                 </div>
@@ -23,15 +23,7 @@
                 <h3>لا توجد بطولات حاليا</h3>
             </div>
         </template>
-        <div v-else-if="pending" class="text-zinc-700 flex flex-col space-y-4 justify-center items-center p-10">
-            <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
-            <h2 class="font-semibold">تحميل</h2>
-        </div>
-        <div v-else-if="error" class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center p-4">
-            <Icon name="line-md:close-circle" class="block text-9xl text-red-500" />
-            <h3>{{ error }}</h3>
-        </div>
-    </div>
+    </FetchDataWraper>
 </template>
 
 <script setup lang="ts">
