@@ -46,7 +46,7 @@
         </div>
         <div class="navbar-center">
             <NuxtLink to="/">
-                <nuxt-img class="h-20"
+                <img class="h-20"
                     :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'" />
             </NuxtLink>
         </div>
