@@ -3,12 +3,12 @@
         :class="`bg-zinc-100 dark:bg-slate-700 flex my-5 px-5  justify-center items-center rounded-xl `">
         <template v-for="link in avialaleNavigation" :key="link.href">
             <li class="flex flex-col items-center relative mx-0.5">
-                <NuxtLink :to="link.href" exact-active-class="text-amber-400 -translate-y-5 active"
+                <NuxtLink :to="link.href" exact-active-class="text-[#ed1c24] -translate-y-5 active"
                     class="h-10 w-10 flex justify-center items-center transition-all relative top-0 rounded-full bg-zinc-100 dark:bg-slate-700 duration-200">
                     <Icon :name="link.icon" class="text-2xl" />
                 </NuxtLink>
                 <span
-                    class="text-[0.7rem] bg-amber-400 text-white px-1 rounded-full  absolute z-[2] py-[0.05rem] -bottom-2 transition-all opacity-0 duration-100">
+                    class="text-[0.7rem] bg-[#ed1c24] text-white px-1 rounded-full  absolute z-[2] py-[0.05rem] -bottom-2 transition-all opacity-0 duration-100">
                     {{
                         link.name
                     }}

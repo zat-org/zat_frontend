@@ -26,7 +26,9 @@
 </template>
 
 <script setup lang="ts">
-
+useHead({
+    title: `زات - من نحن`,
+})
 </script>
 
 <style scoped></style>

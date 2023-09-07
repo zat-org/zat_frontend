@@ -21,7 +21,9 @@
 </template>
 
 <script setup lang="ts">
-
+useHead({
+    title: `زات - تواصل معنا`,
+})
 </script>
 
 <style scoped></style>

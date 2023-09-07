@@ -55,7 +55,9 @@ const fetchData = () => {
             blogs.value = data.blogs
             pending.value = false
             totalBlogsCount.value = data.totalCount
-            // console.log(data);
+            useHead({
+                title: `اخبار زات`,
+            })
         }).catch((err) => {
             console.error(err)
             error.value = "تعذر تحميل البيانات."

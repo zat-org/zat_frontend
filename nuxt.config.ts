@@ -1,10 +1,14 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const Title = "سام لبطولات البلوت الاحترافية"
-const Description = "أوساسيونا مكان صنَّاع المحتوى، والمكان الذي يُمكِّنك من الانطلاقة للعالم الذي تريده."
-const Keywords = "سام , زات , بلوت , ورقة , لعب"
-const LogoURL = "https://firebasestorage.googleapis.com/v0/b/players-photos.appspot.com/o/channelsLogos%2Fsam.webp?alt=media&token=87b2bf1f-9115-463e-86d7-ec4206488d69"
-const WebsiteUrl = "https://osasyona.com/"
+const Title = "زات لبطولات البلوت الاحترافية"
+const Description = `قناة متخصصة ببث وتنظيم بطولات البلوت في المملكة العربية السعودية 
+تهدف إلى نشر محتوى لعبة البلوت بشكل واسع في جميع أنحاء الوطن العربي ورفع التنافسية الى مستوى جديد في
+                    عالم اللعبة الشهيرة، تضم القناة عدد من اللاعبين المحترفين الذين يتنافسون لحصد الجوائز والألقاب الموسمية
+                    على مدار السنة وقد بلغ عدد الجوائز حتى الآن ما يتجاوز 200,000 ريال سعودي.
+`
+const Keywords = "زات , سام , بلوت , ورقة , لعب , اوساسيونا , الادهم , طويق , دوري , الحزام , كاس , سوبر , اوراق "
+const LogoURL = "https://sam-baloot-admin.online/uploads/Screenshot_2023_09_06_182305_1a642302ba.jpg"
+const WebsiteUrl = "https://zatbaloot.com/"
 
 export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode"],

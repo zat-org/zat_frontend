@@ -7,7 +7,9 @@
 </template>
 
 <script setup lang="ts">
-
+useHead({
+    title: `زات لبطولات البلوت الاحترافية`,
+})
 </script>
 
 <style scoped></style>

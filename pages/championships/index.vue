@@ -51,7 +51,9 @@ const loadChamps = () => {
 onServerPrefetch(loadChamps)
 watch(() => route.query.type, loadChamps)
 onBeforeMount(loadChamps)
-
+useHead({
+    title: `بطولات زات`,
+})
 </script>
 
 <style scoped></style>
