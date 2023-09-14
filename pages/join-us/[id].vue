@@ -1,5 +1,5 @@
 <template>
-    <h2 class="text-center  text-2xl my-5 dark:text-slate-50"></h2>
+    <h2 class="text-center  text-2xl my-5 dark:text-slate-50"> استمارة الالتحاق بالبطولة</h2>
     <form @submit.prevent="onHandleSubmit">
         <div class="divider my-5">بيانات الفريق</div>
         <div class="row">
@@ -59,7 +59,18 @@
 import * as yup from 'yup';
 import { SelectOption } from "@/Models/FormTypes"
 
+
 const saudiArabianPhoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+
+const client = useStrapiClient()
+
+const { $toast } = useNuxtApp();
+
+const IsToastShown = ref(false)
+const pending = ref(false)
+const ToastShowDelay = 6;
+
+
 
 const AgeOptions: SelectOption[] = [
     { value: "18 ~ 23", displayValue: "18 ~ 23" },
@@ -83,13 +94,40 @@ const schema = {
     approve: yup.boolean().isTrue()
 };
 
-const { handleSubmit, values } = useForm();
-
+const { handleSubmit, values, resetForm } = useForm();
+const route = useRoute()
+const router = useRouter()
 const onHandleSubmit = handleSubmit(() => {
-    console.log(values);
 
-    alert(values)
+    pending.value = true
+    IsToastShown.value = false
+    client("/champion-join-requests", { method: "post", body: { data: { ...values, date: new Date(), champ: route.params.id } } })
+        .then(() => {
+
+            $toast.show({
+                type: 'success',
+                message: 'تم الارسال بنجاح ',
+                timeout: ToastShowDelay,
+            })
+            router.push("/");
+        })
+        .catch((err) => {
+            $toast.show({
+                type: 'danger',
+                message: 'تعذر الارسال برجاء المحاولة مرة اخري',
+                timeout: ToastShowDelay,
+
+            })
+            console.error(err);
+        })
+        .finally(() => {
+            pending.value = false;
+        })
 })
+
+
+
+
 </script>
 
 <style scoped></style>

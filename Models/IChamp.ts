@@ -7,8 +7,13 @@ interface IUpcomingChamp {
     logo_background: string,
     champ_logo: string
 }
+interface IJoinChamp {
+    id: number,
+    name: string,
+    champ_logo: string
+}
 
-export { IUpcomingChamp }
+export { IUpcomingChamp, IJoinChamp }
 export default interface IChamp {
     name: string,
     laws: string,

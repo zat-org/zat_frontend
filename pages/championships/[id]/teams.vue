@@ -16,12 +16,8 @@
                             <nuxt-img loading="lazy" :src="url + team.team_logo" :alt="team.name" />
                         </div>
                     </div>
-
-
                     <TeamPlayers v-bind:players="team.players" />
-
                 </div>
-
             </div>
             <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />

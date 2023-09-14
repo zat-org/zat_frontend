@@ -3,6 +3,7 @@
         <HomeSlider />
         <HomeMatches />
         <HomeBlogs />
+        <HomeJoinChampions />
     </div>
 </template>
 

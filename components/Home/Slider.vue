@@ -4,7 +4,7 @@
             <section class="mb-20" v-if="champs && champs.length > 0">
                 <div class="flex flex-wrap w-full mb-2">
                     <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">البطولات الحالية</h1>
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">احدث البطولات</h1>
                         <div class="h-1 w-20 bg-yellow-500 rounded"></div>
                     </div>
                 </div>
