@@ -25,7 +25,7 @@ const pending = ref(false)
 
 const fetchData = () => {
     pending.value = true
-    return client(`/teams`, { method: 'GET' })
+    return client(`/teams/getall`, { method: 'GET' })
         .then((data: any) => {
             teams.value = data.teams
             pending.value = false
@@ -44,5 +44,4 @@ onBeforeMount(fetchData)
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

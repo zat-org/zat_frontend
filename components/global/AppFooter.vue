@@ -1,11 +1,9 @@
 <template>
     <footer
-        class="footer px-7 py-4 border-t dark:bg-slate-800 dark:border-slate-400 bg-base-200 text-base-content border-base-300 flex flex-col md:flex-row justify-center items-center md:justify-between ">
-        <div class="items-center grid-flow-col">
-            <img class="h-20"
-                :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'" />
-            <p class="dark:text-slate-50">زات لبطولات البلوت الاحترافية<br />نوفر مواد ترفيهية وتنافسية منذ عام 2020</p>
-        </div>
+        class=" flex flex-row justify-center items-center dark:text-slate-50 border-t border-slate-600 dark:border-slate-100 py-2">
+        <img class="mx-5" width="75" height="75"
+            :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'" alt="zat logo"/>
+        <p class="mx-5 text-sm">زات لبطولات البلوت الاحترافية<br />نوفر مواد ترفيهية وتنافسية منذ عام 2020</p>
 
     </footer>
 </template>

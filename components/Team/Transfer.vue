@@ -5,7 +5,7 @@
             <div v-if="trans.to_team_logo !== null" class=" w-20 md:w-32  h-full  bg-white p-1 ">
                 <nuxt-img loading="lazy" class="object-center" :src="url + trans.to_team_logo" :alt="trans.to_team_name" />
             </div>
-            <p v-else class="font-semibold text-center">لاعب <br /> حر </p>
+            <p v-else class="font-semibold text-center dark:text-slate-700">لاعب <br /> حر </p>
         </div>
         <div class="text-center w-2/4 flex flex-nowrap justify-around ">
             <div class="flex justify-center items-center">
@@ -32,7 +32,7 @@
                 <nuxt-img loading="lazy" class="object-center" :src="url + trans.from_team_logo"
                     :alt="trans.from_team_name" />
             </div>
-            <p v-else class="font-semibold text-center">لاعب <br /> حر </p>
+            <p v-else class="font-semibold text-center dark:text-slate-700">لاعب <br /> حر </p>
         </div>
     </div>
 </template>

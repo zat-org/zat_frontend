@@ -5,7 +5,7 @@
                 هذه الصفحة غير متاحة حاليا
             </h2>
             <img class="img-404" src="/images/404.svg">
-            <button @click="handleError" class="btn btn-secondary w-50 m-auto">
+            <button @click="handleError" class="btn btn-info w-50 m-auto">
                 العودة للصفحة الرئيسية
             </button>
         </div>

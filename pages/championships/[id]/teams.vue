@@ -13,7 +13,7 @@
                     </h4>
                     <div class="avatar avatar-contain ">
                         <div class=" w-16 sm:w-20 md:w-24 rounded-xl bg-white p-1  shadow-lg ">
-                            <nuxt-img loading="lazy" :src="url + team.logo" :alt="team.name" />
+                            <nuxt-img loading="lazy" :src="url + team.team_logo" :alt="team.name" />
                         </div>
                     </div>
 

@@ -11,7 +11,7 @@ const LogoURL = "https://sam-baloot-admin.online/uploads/Screenshot_2023_09_06_1
 const WebsiteUrl = "https://zatbaloot.com/"
 
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode"],
+  modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode", "@vee-validate/nuxt"],
   content: {
     markdown: {
       anchorLinks: false,
@@ -20,7 +20,17 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
-
+  veeValidate: {
+    // disable or enable auto imports
+    autoImports: true,
+    // Use different names for components
+    componentNames: {
+      Form: 'VeeForm',
+      Field: 'VeeField',
+      FieldArray: 'VeeFieldArray',
+      ErrorMessage: 'VeeErrorMessage',
+    }
+  },
   app: {
     head: {
       htmlAttrs: {

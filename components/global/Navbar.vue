@@ -1,27 +1,28 @@
 <template>
-    <div class="navbar bg-base-100 shadow rounded-md dark:shadow-slate-100/20 dark:bg-slate-800 dark:text-slate-50">
+    <div
+        class="navbar bg-base-100 border-b border-b-slate-800 dark:border-b-slate-100   dark:bg-slate-800 dark:text-slate-50">
         <div class="navbar-start">
-            <details class="dropdown z-50 " :open="IsOpened">
-                <summary class="btn btn-ghost btn-circle" @click.prevent="toggleNav">
+            <details class="dropdown dropdown-hover	 z-50 " :open="IsOpened">
+                <summary class="btn btn-ghost btn-circle hover:dark:bg-slate-300 hover:dark:text-slate-800"
+                    @click.prevent="toggleNav">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" transform="scale(-1,1)" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
                 </summary>
-                <ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 pb-1 shadow bg-base-100 rounded-box w-52
-                     dark:bg-slate-800 dark:text-slate-50 dark:shadow-slate-900/70 ">
+                <ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 pb-1 shadow rounded-box w-52
+                      dark:text-slate-50 dark:bg-slate-700 bg-slate-400 shadow-slate-500">
                     <template v-for="item in navigation" :key="item.name">
                         <NuxtLink v-if="item.links.length === 0" :to="item.href" @click.prevent="handleRoute(item.href)"
-                            class=" text-gray-700 hover:bg-gray-700 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium "
+                            class=" text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium "
                             exactActiveClass="bg-gray-200 text-gray-700 dark:text-slate-700 dark:hover:text-slate-50"
                             ariaCurrentValue="page">{{
                                 item.name }}
                         </NuxtLink>
                         <div v-else>
                             <details tabindex="0" class="collapse rounded-md">
-                                <summary class="">
-                                    <NuxtLink
-                                        class="text-gray-700 dark:text-slate-50 hover:bg-gray-700 mb-1 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center justify-between "
+                                <summary>
+                                    <p class="text-gray-700 dark:text-slate-50 hover:bg-gray-600 mb-1 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center justify-between "
                                         ariaCurrentValue="page" style="user-select: none;">
                                         <span>
                                             {{ item.name }}
@@ -29,12 +30,12 @@
                                         <span>
                                             <Icon name="ep:arrow-down" />
                                         </span>
-                                    </NuxtLink>
+                                    </p>
                                 </summary>
                                 <ul class="collapse-content ">
                                     <NuxtLink v-for="item2 in item.links" :to="item2.href"
                                         @click.prevent="handleRoute(item2.href)"
-                                        class="block text-gray-700 hover:bg-gray-700 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                        class="block text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                         ariaCurrentValue="page">{{ item2.name }}
                                     </NuxtLink>
                                 </ul>
@@ -46,16 +47,18 @@
         </div>
         <div class="navbar-center">
             <NuxtLink to="/">
-                <img class="h-20"
-                    :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'" />
+                <img width="75" height="75"
+                    :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
+                    alt="zat logo" />
             </NuxtLink>
         </div>
         <div class="navbar-end">
-            <label class="swap swap-rotate">
+            <label for="toggleColorMode"
+                class="swap swap-rotate hover:dark:bg-slate-300 hover:dark:text-slate-800 hover:bg-slate-700 hover:text-slate-100 rounded-full w-10 h-10">
 
                 <!-- this hidden checkbox controls the state -->
-                <input type="checkbox" :value="useColorMode().preference === 'dark'"
-                    @change.prevent="handleToggleColorMode" />
+                <input type="checkbox" :value="useColorMode().preference === 'dark'" @change.prevent="handleToggleColorMode"
+                    id="toggleColorMode" />
 
                 <!-- sun icon -->
                 <svg class="swap-on fill-current w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -94,7 +97,10 @@ const navigation = [
 
 
     { name: 'من نحن', href: '/about-us', links: [] },
+
     { name: 'اتصل بنا', href: '/contact-us', links: [] },
+    { name: 'البطولات المتاحة', href: '/join-us', links: [] },
+
 ]
 const IsOpened = ref(false)
 

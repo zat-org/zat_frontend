@@ -2,12 +2,13 @@ interface IPlayerLessDetails {
     id: number,
     name: string,
     image: string,
-    is_captain: boolean
+    isCaptain: boolean
 }
 interface IPlayerFullDetails {
     player_id: number,
     player_name: string,
     twitter_link: string | null,
+    tiktok_link: string | null,
     snap_link: string | null,
     player_image: string,
     team_name: string,
@@ -19,7 +20,7 @@ interface IPlayerFullDetails {
 interface ITeam {
     name: string,
     id: number,
-    logo: string,
+    team_logo: string,
     players: IPlayerLessDetails[]
 }
 

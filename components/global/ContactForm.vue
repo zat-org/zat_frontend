@@ -11,7 +11,7 @@
             <div class="relative">
                 <label for="name" class="leading-7 text-sm text-gray-600 dark:text-slate-200">نوع
                     الرسالة</label>
-                <select class="select select-bordered bg-select dark:bg-slate-700  w-full " v-model="message.type">
+                <select class="select select-bordered rtl:bg-select dark:bg-slate-700  w-full " v-model="message.type">
                     <option v-for="t in messageTypes" :value="t">{{ t }}</option>
                 </select>
             </div>

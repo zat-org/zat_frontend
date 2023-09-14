@@ -25,6 +25,8 @@
     "tailwindcss-flip": "^1.0.0"
   },
   "dependencies": {
+    "@vee-validate/nuxt": "^4.11.6",
+    "@vee-validate/yup": "^4.11.6",
     "chart.js": "^4.3.3",
     "tailvue": "^1.0.0",
     "vue-chartjs": "^5.2.0",

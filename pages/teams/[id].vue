@@ -57,7 +57,7 @@ const pending = ref(false)
 
 const fetchData = () => {
     pending.value = true
-    return client(`/teams/${route.params.id}`, { method: 'GET' })
+    return client(`/teams/getbyid/${route.params.id}`, { method: 'GET' })
         .then((res: any) => {
             team.value = res.data
             pending.value = false

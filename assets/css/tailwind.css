@@ -34,6 +34,19 @@
     
 }
 
-@layer components {}
+@layer components {
+    .row{
+        @apply flex   justify-start  items-start flex-col md:flex-row md:justify-around py-2 flex-wrap 
+    }
+    .input{
+        @apply bg-slate-200 dark:bg-slate-400 dark:placeholder:text-slate-500 w-full ;
+    }
+    .select { 
+        @apply bg-slate-200 dark:bg-slate-400 dark:placeholder:text-slate-500 ;
+    }
+    .form-control{
+        @apply  w-full md:w-fit;
+    } 
+}
 
 @layer utilities {}
