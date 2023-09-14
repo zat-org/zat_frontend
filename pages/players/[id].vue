@@ -29,7 +29,7 @@
                                 </a>
                             </div>
                             <div class=" flex flex-col justify-center items-center space-y-3">
-                                <template v-if="player.transfers.length > 0">
+                                <template v-if="player.transfers && player.transfers.length > 0">
                                     <div class="avatar team-avatar">
                                         <div class=" w-16 sm:w-20 md:w-24 rounded-xl bg-white p-1  shadow-lg ">
                                             <nuxt-img loading="lazy" :src="url + player.transfers[0].to_team_logo" />

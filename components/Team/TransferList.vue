@@ -1,5 +1,5 @@
 <template>
-    <div v-if="transfers.length > 0" class="max-h-96 overflow-auto py-5 px-3">
+    <div v-if="transfers && transfers.length > 0" class="max-h-96 overflow-auto py-5 px-3">
         <div class="grid grid-cols-1 gap-3 w-full align-start  ">
             <TeamTransfer v-for="trans, index in transfers" v-bind:trans="trans" :key="index"
                 :currentTeamName="currentTeamName" />
