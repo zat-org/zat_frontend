@@ -86,7 +86,8 @@ const navigation = [
         name: 'البطولات', href: '/championships', links: [
             { name: "دوري", href: "/championships?type=league" },
             { name: "كأس", href: "/championships?type=cup" },
-            { name: "سوبر", href: "/championships?type=super" }
+            { name: "سوبر", href: "/championships?type=super" },
+            { name: "حزام", href: "/championships?type=hezam" }
         ]
     },
     { name: 'الاخبار', href: '/blogs', links: [] },

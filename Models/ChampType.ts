@@ -1,6 +1,7 @@
 enum LeagueType {
     league,
     cup,
-    super
+    super,
+    hezam
 }
 export default LeagueType; 

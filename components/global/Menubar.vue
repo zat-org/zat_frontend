@@ -30,13 +30,13 @@ import LeagueType from "@/Models/ChampType";
 const props = defineProps(["champ"])
 const route = useRoute();
 const navigation = [
-    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super] },
-    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
-    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
-    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
-    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [LeagueType.league], },
-    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super], },
+    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam] },
+    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
+    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
+    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
+    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
+    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [LeagueType.league, LeagueType.hezam], },
+    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
 ]
 const avialaleNavigation = computed(() => {
     return navigation.filter(link => props.champ && props.champ.type ? link.availableAt.includes(LeagueType[props.champ.type] as unknown as LeagueType) : true)
