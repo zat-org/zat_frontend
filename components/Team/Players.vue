@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-3 w-full mt-2">
         <div v-for="(player, index) in players" :key="player.id" class=" flex flex-col justify-start items-center "
-            :class="player.isCaptain ? '' : index % 2 === 0 ? 'order-first' : 'order-last'">
+            :class="player.isCaptain ? 'order-first' : ''">
             <div class="avatar">
                 <div class="rounded-xl shadow-lg  mask mask-squircle bg-white"
                     :class="player.isCaptain ? 'w-14 sm:w-18 md:w-24 ' : `w-12 sm:w-16 md:w-20 `">
