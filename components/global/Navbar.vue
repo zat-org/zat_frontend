@@ -1,6 +1,6 @@
 <template>
     <div
-        class="navbar bg-base-100 border-b border-b-slate-800 dark:border-b-slate-100   dark:bg-slate-800 dark:text-slate-50">
+        class="navbar bg-base-100 border-b border-b-slate-800 dark:border-b-slate-100   dark:bg-slate-800 dark:text-slate-50  ">
         <div class="navbar-start">
             <details class="dropdown dropdown-hover	 z-50 " :open="IsOpened">
                 <summary class="btn btn-ghost btn-circle hover:dark:bg-slate-300 hover:dark:text-slate-800"
@@ -10,39 +10,40 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
                 </summary>
-                <ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 pb-1 shadow rounded-box w-52
-                      dark:text-slate-50 dark:bg-slate-700 bg-slate-400 shadow-slate-500">
-                    <template v-for="item in navigation" :key="item.name">
-                        <NuxtLink v-if="item.links.length === 0" :to="item.href" @click.prevent="handleRoute(item.href)"
-                            class=" text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium "
-                            exactActiveClass="bg-gray-200 text-gray-700 dark:text-slate-700 dark:hover:text-slate-50"
-                            ariaCurrentValue="page">{{
-                                item.name }}
-                        </NuxtLink>
-                        <div v-else>
-                            <details tabindex="0" class="collapse rounded-md">
-                                <summary>
-                                    <p class="text-gray-700 dark:text-slate-50 hover:bg-gray-600 mb-1 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center justify-between "
-                                        ariaCurrentValue="page" style="user-select: none;">
-                                        <span>
-                                            {{ item.name }}
-                                        </span>
-                                        <span>
-                                            <Icon name="ep:arrow-down" />
-                                        </span>
-                                    </p>
-                                </summary>
-                                <ul class="collapse-content ">
-                                    <NuxtLink v-for="item2 in item.links" :to="item2.href"
-                                        @click.prevent="handleRoute(item2.href)"
-                                        class="block text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                        ariaCurrentValue="page">{{ item2.name }}
-                                    </NuxtLink>
-                                </ul>
-                            </details>
-                        </div>
-                    </template>
-                </ul>
+                    <ul class="menu menu-md dropdown-content mt-3 z-[1] p-2 pb-1 shadow rounded-box w-52
+                      dark:text-slate-50 dark:bg-slate-700 bg-slate-200 shadow-slate-500">
+                        <template v-for="item in navigation" :key="item.name">
+                            <NuxtLink v-if="item.links.length === 0" :to="item.href" @click.prevent="handleRoute(item.href)"
+                                class=" text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium "
+                                exactActiveClass="bg-gray-200 text-gray-700 dark:text-slate-700 dark:hover:text-slate-50"
+                                ariaCurrentValue="page">{{
+                                    item.name }}
+                            </NuxtLink>
+                            <div v-else>
+                                <details tabindex="0" class="collapse rounded-md">
+                                    <summary>
+                                        <p class="text-gray-700 dark:text-slate-50 hover:bg-gray-600 mb-1 hover:text-white rounded-md px-3 py-2 text-sm font-medium flex items-center justify-between "
+                                            ariaCurrentValue="page" style="user-select: none;">
+                                            <span>
+                                                {{ item.name }}
+                                            </span>
+                                            <span>
+                                                <Icon name="ep:arrow-down" />
+                                            </span>
+                                        </p>
+                                    </summary>
+                                    <ul class="collapse-content ">
+                                        <NuxtLink v-for="item2 in item.links" :to="item2.href"
+                                            @click.prevent="handleRoute(item2.href)"
+                                            class="block text-gray-700 hover:bg-gray-600 mb-1 dark:text-slate-50 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                            ariaCurrentValue="page">{{ item2.name }}
+                                        </NuxtLink>
+                                    </ul>
+                                </details>
+                            </div>
+                        </template>
+                    </ul>
+
             </details>
         </div>
         <div class="navbar-center">

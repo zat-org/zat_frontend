@@ -8,7 +8,7 @@
                         <div class="h-1 w-20 bg-yellow-500 rounded"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mb-20">
                     <template v-for="(blog, index) in blogs" :key="index">
                         <Blog :blog="blog" />
                     </template>
