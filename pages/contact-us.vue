@@ -10,10 +10,8 @@
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
                 <ContactForm />
                 <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
-                    <a href="mailto:hr@osasyona.com" class="text-amber-500">hr@osasyona.com</a>
-                    <p class="leading-normal my-5">شارع رقم 298 ، حي الياسمين
-                        <br>الرياض ، المملكة العربية السعودية
-                    </p>
+                    <a href="mailto:zat@osasyona.com" class="text-amber-500">zat@osasyona.com</a>
+
                 </div>
             </div>
         </div>
