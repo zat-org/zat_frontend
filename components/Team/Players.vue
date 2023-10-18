@@ -1,10 +1,9 @@
 <template>
-    <div class="grid grid-cols-3 w-full mt-2">
-        <div v-for="(player, index) in players" :key="player.id" class=" flex flex-col justify-start items-center "
-            :class="player.isCaptain ? 'order-first' : ''">
+    <div class="flex flex-wrap  w-full mt-2 justify-around items-start">
+        <div v-for="(player, index) in  players " :key="player.id"
+            class="w-1/3 my-2 flex flex-col justify-center items-center " :class="player.isCaptain ? 'order-first' : ''">
             <div class="avatar">
-                <div class="rounded-xl shadow-lg  mask mask-squircle bg-white"
-                    :class="player.isCaptain ? 'w-14 sm:w-18 md:w-24 ' : `w-12 sm:w-16 md:w-20 `">
+                <div class="rounded-xl shadow-lg  mask mask-squircle bg-white w-12 sm:w-16 md:w-20">
                     <nuxt-img loading="lazy" class="object-top" :src="url + player.image" :alt="player.name" />
                 </div>
             </div>

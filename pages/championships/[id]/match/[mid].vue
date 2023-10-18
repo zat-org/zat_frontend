@@ -1,9 +1,11 @@
 <template>
-    <FetchDataWraper :error="error" :pending="pending">
-        <template #main>
-            <MatchDetails :match="match" />
-        </template>
-    </FetchDataWraper>
+    <div class="w-full">
+        <FetchDataWraper :error="error" :pending="pending">
+            <template #main>
+                <MatchDetails :match="match" />
+            </template>
+        </FetchDataWraper>
+    </div>
 </template>
 
 <script setup lang="ts">

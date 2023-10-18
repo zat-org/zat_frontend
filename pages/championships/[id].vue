@@ -3,7 +3,7 @@
         :pending="pending">
         <template #main>
             <Menubar :champ="champ" />
-            <div class="w-full md:w-3/4 lg:w-3/5 xl:1/2 mx-auto flex justify-center mb-3">
+            <div class="w-full md:w-5/6  mx-auto flex justify-center mb-3">
                 <KeepAlive max="4">
                     <NuxtPage :leagueData="champ" />
                 </KeepAlive>

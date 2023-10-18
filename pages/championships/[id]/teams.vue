@@ -1,9 +1,9 @@
 <template>
     <FetchDataWraper :error="error" :pending="pending" class="w-full ">
         <template #main>
-            <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mb-3" v-if="teams && teams.length > 0">
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mb-3" v-if="teams && teams.length > 0">
                 <div v-for="team in teams" :key="team.id"
-                    class=" bg-zinc-100 dark:bg-slate-600 rounded-xl shadow-lg p-4 flex flex-col justify-center items-center space-y-2 relative overflow-hidden">
+                    class=" bg-zinc-100 dark:bg-slate-600 rounded-xl shadow-lg p-4 flex flex-col justify-start items-center space-y-2 relative overflow-hidden">
                     <NuxtLink :to="`/teams/${team.id}`"
                         class="absolute  h-12 w-12 rounded-full bg-blue-400 border-0 hover:text-slate-700 text-white -top-3 -left-3 btn">
                         <Icon name="fluent:arrow-circle-up-left-24-filled" class=" text-xl absolute bottom-2 right-2" />

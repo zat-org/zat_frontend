@@ -6,13 +6,13 @@
             <table class="table table-zebra rounded-t-lg text-center table-fixed table-pin-rows">
                 <thead>
                     <tr class="">
-                        <th class="text-lg text-gray-900">
+                        <th class="text-lg text-gray-900 dark:text-white">
                             {{ match.team1.name }}
                         </th>
                         <th>
                             <Icon name="fxemoji:squaredvs" width="30" height="30" />
                         </th>
-                        <th class="text-lg text-gray-900">
+                        <th class="text-lg text-gray-900 dark:text-white">
                             {{ match.team2.name }}
                         </th>
                     </tr>

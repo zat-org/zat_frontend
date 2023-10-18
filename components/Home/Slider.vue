@@ -8,7 +8,7 @@
                         <div class="h-1 w-20 bg-yellow-500 rounded"></div>
                     </div>
                 </div>
-                <Carousel :autoplay="5000" :wrap-around="true">
+                <Carousel :autoplay="champs.length > 1 ? 5000 : 0" :wrap-around="true">
                     <Slide v-for="champ in champs" :key="champ.id">
                         <div class="carousel__item h-[200px] bg-center bg-cover flex justify-evenly items-center relative"
                             :style="`background-image:url(${url + champ.logo_background})`">
