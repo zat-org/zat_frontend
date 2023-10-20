@@ -26,9 +26,9 @@
         </div>
         <div class="p-2 w-full">
             <div class="relative">
-                <label for="message" class="leading-7 text-sm text-gray-600 dark:text-slate-200">الرسالة</label>
+                <label for="message" class="leading-7 text-sm  text-gray-600 dark:text-slate-200">الرسالة</label>
                 <textarea id="message" name="message" v-model="message.message" required
-                    class="textarea textarea-bordered textarea-lg  w-full dark:bg-slate-700"></textarea>
+                    class="textarea textarea-bordered textarea-lg bg-slate-200  w-full dark:bg-slate-700"></textarea>
             </div>
         </div>
         <div class="p-2 w-full">

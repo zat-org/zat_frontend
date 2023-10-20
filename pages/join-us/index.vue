@@ -11,7 +11,7 @@
                     </div>
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
                         <template v-for="(champ, index) in champs" :key="champ.id">
-                            <div class="card card-compact w-84 bg-base-100 shadow-xl">
+                            <div class="card card-compact w-84 bg-slate-100 dark:bg-slate-600 shadow-xl">
                                 <figure class="bg-amber-50">
                                     <nuxt-img :src="`${url}${champ.champ_logo}`" :alt="champ.name" class="h-52" />
                                 </figure>
@@ -67,4 +67,5 @@ onBeforeMount(fetchData)
 
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

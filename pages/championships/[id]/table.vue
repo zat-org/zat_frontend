@@ -101,13 +101,14 @@ tr:last-child td:last-child {
 tr:last-child td:first-child * {
     border-bottom-right-radius: 10px;
 }
+
 tbody tr:nth-child(even) {
-    @apply dark:bg-slate-500  !important;
+    @apply bg-slate-100 dark:bg-slate-500 !important;
 }
 
 
 tbody tr:nth-child(odd) {
-    @apply dark:bg-slate-600 !important;
+    @apply bg-slate-200 dark:bg-slate-600 !important;
 }
 
 .hd-cell {

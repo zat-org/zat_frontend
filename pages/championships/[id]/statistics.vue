@@ -11,7 +11,7 @@
                     <Bar id="statistics" class="w-full" :options="chartOptions" :data="chartData" />
                 </div>
             </div>
-            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
+            <div v-else class="text-zinc-700 dark:text-white text-lg h-50 flex flex-col justify-center items-center py-10">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />
                 <h3>لا توجد احصائيات حاليا</h3>
             </div>

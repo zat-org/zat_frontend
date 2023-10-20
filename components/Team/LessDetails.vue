@@ -2,7 +2,7 @@
     <div
         class="bg-zinc-100 rounded-xl shadow-lg p-4 text-amber-900 dark:text-slate-50 dark:bg-slate-700 flex justify-evenly relative overflow-hidden">
         <NuxtLink :to="`/teams/${team.id}`"
-            class="absolute  h-12 w-12 rounded-full bg-blue-400 -top-3 -left-3 btn dark:border-slate-700 text-white  hover:text-slate-700 ">
+            class="absolute  h-12 w-12 rounded-full bg-blue-400 -top-3 -left-3 btn dark:border-slate-700 text-white   ">
             <Icon name="fluent:arrow-circle-up-left-24-filled" class=" text-xl absolute bottom-2 right-2" />
         </NuxtLink>
         <div class="avatar avatar-contain">

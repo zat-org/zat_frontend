@@ -3,7 +3,7 @@
         <template #main>
             <section v-if="blog">
                 <div class="flex flex-col justify-center items-center my-5 space-y-5">
-                    <nuxt-img class="h-96 rounded w-full md:w-3/4 lg:w-2/3 object-cover object-center mb-2"
+                    <nuxt-img class="w-full h-52 rounded  md:w-3/4 lg:w-2/3 object-cover object-center mb-2"
                         :src="url + blog.image" :alt="blog.title" />
                     <MarkdownRender :markdownString="blog.details" class="" />
                 </div>

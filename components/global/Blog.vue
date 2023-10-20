@@ -1,8 +1,8 @@
 <template>
     <div class="p-4">
         <div
-            class="bg-gray-200 dark:bg-slate-700 text-gray-900 dark:text-slate-50 p-6 rounded-lg shadow-lg relative overflow-hidden pb-10 text-center">
-            <img class="h-40 rounded w-full object-cover object-center mb-2" :src="url + blog.image" alt="content">
+            class="bg-gray-200 dark:bg-slate-700 text-gray-900 dark:text-slate-50 p-6 rounded-lg shadow-lg relative overflow-hidden pb-10 flex justify-center flex-col text-center">
+            <img class="w-full h-52 rounded  object-cover object-center mb-2" :src="url + blog.image" alt="content">
             <h2 class="text-lg   font-semibold title-font mb-2">{{ blog.title }}</h2>
             <p class="leading-relaxed text-sm mb-2 text-gray-700 dark:text-slate-100">{{ blog.description }}</p>
 

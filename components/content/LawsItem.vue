@@ -1,5 +1,5 @@
 <template>
-    <div class="collapse collapse-arrow bg-base-300 my-5 dark:bg-slate-600 ">
+    <div class="collapse collapse-arrow  my-5 dark:bg-slate-600 bg-slate-200">
         <input type="checkbox" />
         <div
             class="collapse-title text-zinc-700 dark:text-slate-50 bg-zinc-100 dark:bg-slate-700 text-lg font-semibold flex items-center justify-center">

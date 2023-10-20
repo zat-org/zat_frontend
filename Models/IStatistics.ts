@@ -1,7 +1,7 @@
 interface IStatistics {
     "الاسم": string,
     "عدد الصكات الملعوبة": number,
-    "عدد الصكات المربوحة": number,
+    "عدد الصكات الرابحة": number,
     "عدد الصكات الخاسرة": number,
     "الابناط": number,
     "الاكك": number,
@@ -20,7 +20,7 @@ interface IStatistics {
 }
 enum StatisticOption {
     playedSka = "عدد الصكات الملعوبة",
-    winnedSka = "عدد الصكات المربوحة",
+    winnedSka = "عدد الصكات الرابحة",
     LoosedSka = "عدد الصكات الخاسرة",
     abnat = "الابناط",
     okok = "الاكك",

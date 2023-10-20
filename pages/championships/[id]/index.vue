@@ -1,6 +1,6 @@
 <template>
     <div v-if="leagueData"
-        class="card border-[1px]  border-blue-300 bg-base-100 dark:bg-slate-600 dark:text-slate-50 shadow-xl w-full">
+        class="card border-[1px]  border-blue-300 bg-white dark:bg-slate-600 dark:text-slate-50 shadow-xl w-full">
         <figure class="bg-blue-200  md:px-2">
             <nuxt-img loading="lazy" :src="url + leagueData.league_logo" class="w-24 md:w-32 py-2"
                 alt="championship logo" />
@@ -32,12 +32,13 @@
                 </template>
             </div>
 
-            <div class="stats  w-full overflow-hidden bg-slate-200 dark:bg-slate-700 dark:text-slate-50 py-2">
+            <div
+                class="stats  w-full overflow-hidden bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-50 py-2">
                 <div class="stat flex flex-col p-0">
                     <div class="stat-figure text-secondary">
                         <Icon name="fluent-emoji:calendar" size="30" />
                     </div>
-                    <div class="stat-title  dark:text-slate-200 text-md"> بداية البطولة</div>
+                    <div class="stat-title text-slate-800 dark:text-slate-200 text-md"> بداية البطولة</div>
                     <div class="stat-value  text-lg">{{ new Date(leagueData.start_at).toLocaleDateString("ar-eg") }}</div>
                 </div>
 
@@ -45,7 +46,7 @@
                     <div class="stat-figure text-secondary">
                         <Icon name="fluent-emoji:calendar" size="30" />
                     </div>
-                    <div class="stat-title  dark:text-slate-200 text-md"> نهاية البطولة</div>
+                    <div class="stat-title text-slate-800 dark:text-slate-200 text-md"> نهاية البطولة</div>
                     <div class="stat-value text-lg">{{ new Date(leagueData.end_at).toLocaleDateString("ar-eg") }}</div>
                 </div>
             </div>

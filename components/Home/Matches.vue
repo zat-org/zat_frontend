@@ -8,7 +8,7 @@
                         <div class="h-1 w-20 bg-yellow-500 rounded"></div>
                     </div>
                 </div>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                     <template v-for="(match, index) in matches" :key="match.id">
                         <MatchCard :match="match" :champId="match.league_id" />
                     </template>
