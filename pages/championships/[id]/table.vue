@@ -14,13 +14,16 @@
                         <th class="hd-cell w-1/12 md:w-1/12">
                             فاز
                         </th>
+                        <th class="hd-cell w-1/12 md:w-1/12" v-if="champType === 'hezam'">
+                            فوز متوالى
+                        </th>
                         <th class="hd-cell w-1/12 md:w-1/12">
                             خسر
                         </th>
                         <th class="hd-cell w-1/12 md:w-1/12">
                             أبناط
                         </th>
-                        <th class="hd-cell w-1/12 md:w-1/12">
+                        <th class="hd-cell w-1/12 md:w-1/12" v-if="champType === 'league'">
                             نقاط
                         </th>
                     </tr>
@@ -36,9 +39,13 @@
                         </td>
                         <td class="data text-gray-700 dark:text-slate-300">{{ team.play }}</td>
                         <td class="data text-gray-700 dark:text-slate-300">{{ team.win }}</td>
+                        <td class="data text-gray-700 dark:text-slate-300" v-if="champType === 'hezam'">{{
+                            team.consecutiveWins }}</td>
+
                         <td class="data text-gray-700 dark:text-slate-300">{{ team.lost }}</td>
                         <td class="data text-gray-700 dark:text-slate-300">{{ team.abnat }}</td>
-                        <td class="data font-bold text-blue-900 dark:text-slate-50">{{ team.totalScore }}</td>
+                        <td class="data font-bold text-blue-900 dark:text-slate-50" v-if="champType === 'league'">{{
+                            team.totalScore }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -53,12 +60,13 @@ const table = ref<any>(null)
 const error = ref<string | null>(null)
 const pending = ref(false);
 const props = defineProps(["leagueData"]);
-
+const champType = ref<string | null>(null);
 const fetchData = () => {
     pending.value = true;
     return client(`/leagues/${route.params.id}/summary`, { method: 'GET' })
         .then((data: any) => {
             table.value = data.table
+            champType.value = data.type
             pending.value = false;
             useHead({
                 title: `جدول ترتيب الدوري - ${props.leagueData.name} `,
