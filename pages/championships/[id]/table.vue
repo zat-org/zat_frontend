@@ -15,7 +15,7 @@
                             فاز
                         </th>
                         <th class="hd-cell w-1/12 md:w-1/12" v-if="champType === 'hezam'">
-                            فوز متوالى
+                            فوز متتالى
                         </th>
                         <th class="hd-cell w-1/12 md:w-1/12">
                             خسر
