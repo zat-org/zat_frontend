@@ -34,7 +34,6 @@
 
 <script setup lang="ts">
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
 import { IUpcomingChamp } from "@/Models/IChamp"
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()

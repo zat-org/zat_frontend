@@ -10,5 +10,9 @@
 </template>
 
 <script setup lang="ts">
+const client = useStrapiClient()
 
+onMounted(() => {
+  client(`/website-visits-counter/add-one`, { method: 'POST' })
+})
 </script>

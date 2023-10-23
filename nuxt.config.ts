@@ -11,6 +11,12 @@ const LogoURL = "https://sam-baloot-admin.online/uploads/Screenshot_2023_09_06_1
 const WebsiteUrl = "https://zatbaloot.com/"
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      youtubeApi: process.env.YOUTUBE_API_KEY,
+      zatYoutubeId: process.env.ZAT_YOUTUBE_ID
+    }
+  },
   modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode", "@vee-validate/nuxt"],
   content: {
     markdown: {
@@ -55,9 +61,5 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: ''
   },
-  runtimeConfig: {
-    public: {
-      apiLink: process.env.API_LINK
-    }
-  }
+
 })

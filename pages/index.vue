@@ -4,10 +4,22 @@
         <HomeMatches />
         <HomeBlogs />
         <HomeJoinChampions />
+        <div dir="ltr" class=" pb-8 text-slate-800 dark:text-white text-center -mb-5 dark:bg-slate-800  overflow-hidden">
+
+            <div :class="[useColorMode().preference === 'dark' ? 'stars' : 'stars-light']"></div>
+            <div :class="[useColorMode().preference === 'dark' ? 'stars2' : 'stars-light2']"></div>
+            <div :class="[useColorMode().preference === 'dark' ? 'stars3' : 'stars-light3']"></div>
+
+            <HomeOurStatistics />
+            <hr class="my-20">
+            <HomeClientsSection />
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
+import 'vue3-carousel/dist/carousel.css'
+
 useHead({
     title: `زات لبطولات البلوت الاحترافية`,
 })
