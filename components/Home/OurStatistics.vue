@@ -42,9 +42,10 @@ interface IStatistics {
 const statistics = ref<IStatistics>({
 
     viewCount: {
-        title: "عدد المشاهدات ", value: 0, icon: "ant-design:fund-view-outlined",
+        title: "عدد المشاهدات ", value: 4020000, icon: "ant-design:fund-view-outlined",
         statisticDetails: [
-            { icon: "bi:youtube", value: 0, color: "text-red-500" }
+            { icon: "bi:youtube", value: 0, color: "text-red-500" },
+            { icon: "logos:twitch", value: 4020000, color: "" }
         ]
     },
     websiteVisitsCount: {
@@ -54,9 +55,13 @@ const statistics = ref<IStatistics>({
         ]
     },
     subscriberCount: {
-        title: "عدد المشتركين ", value: 0, icon: "formkit:people",
+        title: "عدد المشتركين ", value: 164100, icon: "formkit:people",
         statisticDetails: [
-            { icon: "bi:youtube", value: 0, color: "text-red-500" }
+            { icon: "bi:youtube", value: 0, color: "text-red-500" },
+            { icon: "logos:twitch", value: 89400, color: "" },
+            { icon: "logos:tiktok-icon", value: 74700, color: "" }
+
+
         ]
     },
 

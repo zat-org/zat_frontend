@@ -5,7 +5,7 @@
             <img class="mx-5" width="75" height="75"
                 :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
                 alt="zat logo" />
-            <p class="mx-5 text-sm"> لبطولات البلوت الاحترافية<br />المنصة الاحترافية الاولى للعبة البلوت</p>
+            <p class="mx-5 text-sm"> لبطولات البلوت الاحترافية<br />المنصة الاحترافية الاولى لرياضة البلوت</p>
         </div>
         <div class=" flex justify-around my-5 ">
 
