@@ -47,7 +47,7 @@ const offsetOfComingMatch = computed(() => {
 watchEffect(() => {
     if (props.matches && props.matches.length > 0) {
         if (matchCards.value && offsetOfComingMatch.value) {
-            matchCards.value.scrollTop = (matchCards.value.children[offsetOfComingMatch.value - 1] as HTMLElement).scrollHeight;
+            matchCards.value.scrollTop = 16 + (((matchCards.value.children[offsetOfComingMatch.value - 1] as HTMLElement).scrollHeight) * (offsetOfComingMatch.value)) + (16 * (offsetOfComingMatch.value));
         }
     }
 })
