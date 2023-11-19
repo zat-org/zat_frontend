@@ -59,7 +59,7 @@ const statistics = ref<IStatistics>({
         statisticDetails: [
             { icon: "bi:youtube", value: 0, color: "text-red-500" },
             { icon: "logos:twitch", value: 89400, color: "" },
-            { icon: "logos:tiktok-icon", value: 74700, color: "" }
+            // { icon: "logos:tiktok-icon", value: 74700, color: "" }
 
 
         ]

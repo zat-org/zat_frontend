@@ -29,18 +29,18 @@
         </div>
 
         <div class="divider my-5">استفسارات عامة</div>
-        <RadioField name="IsPlayedBefore" label="هل سبق لكم المشاركة ببطولات سام سابقاً ؟" :rules="schema.IsPlayedBefore"
+        <RadioField name="IsPlayedBefore" label="هل سبق لكم المشاركة ببطولات زات سابقاً ؟" :rules="schema.IsPlayedBefore"
             :options="IsPlayedBeforeOptions" />
 
         <div class="divider my-5">تعهد</div>
 
 
-        <CheckboxField name="approveFees"
-            label="أتعهد بدفع رسوم المشاركة للفريق الواحد ٢٠٠ ريال (اثبات جدية) مستردة بعد نهاية البطولة."
+        <CheckboxField name="approveFees" label="أتعهد بدفع رسوم المشاركة للفريق الواحد 100 ريال (اثبات جدية) غير مستردة ."
             :rules="schema.approve" />
 
         <CheckboxField name="approveNoCheating"
-            label="أتعهد بعدم الغش في البطولة.. و في حال مخالفتي ذلك اتنازل عن الجائزة المقدمة." :rules="schema.approve" />
+            label="أتعهد بعدم الغش في البطولة.. و في حال مخالفتي ذلك يحق لادارة القناة استبعادي من اي بطولات قادمة."
+            :rules="schema.approve" />
 
         <CheckboxField name="approveMedia"
             label="أسمح بتصويري واستخدام المحتوى في اي شبكة من وسائل التواصل الاجتماعي ولا يحق لي المطالبة بازالة المحتوى.."
