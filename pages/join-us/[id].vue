@@ -46,7 +46,9 @@
             label="أسمح بتصويري واستخدام المحتوى في اي شبكة من وسائل التواصل الاجتماعي ولا يحق لي المطالبة بازالة المحتوى.."
             :rules="schema.approve" />
 
-        <CheckboxField name="approveInfoCorrect" label="اتعهد بصحة المعلومات المقدمة أعلاه." :rules="schema.approve" />
+        <CheckboxField name="approveInfoCorrect"
+            label="اتعهد بصحة المعلومات المقدمة أعلاه وفي حال مخالفتي ذلك اعتبر منسحباً من البطولة."
+            :rules="schema.approve" />
 
         <div class="row">
             <button class="btn btn-warning shadow-lg hover:shadow-yellow-500 w-1/2 md:w-1/4  disabled:text-slate-600"
