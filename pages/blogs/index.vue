@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import IBlog from '@/Models/IBlog'
-const pgSize = 2;
+const pgSize = 10;
 const route = useRoute()
 const router = useRouter()
 
