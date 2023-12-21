@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       zatYoutubeId: process.env.ZAT_YOUTUBE_ID
     }
   },
-  modules: ['@nuxtjs/tailwindcss', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode", "@vee-validate/nuxt"],
+  modules: ['@nuxtjs/tailwindcss', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode", "@vee-validate/nuxt"],
   content: {
     markdown: {
       anchorLinks: false,
@@ -56,10 +56,10 @@ export default defineNuxtConfig({
         children: `
           <p style='text-align: center;color:white ; background-color:rgb(218, 55, 55); margin:5px 10px; padding: 10px 5px ;  border-radius:10px '>Warning: Please Enable Js</p>
         ` }],
+
     }
   },
   colorMode: {
     classSuffix: ''
   },
-
 })

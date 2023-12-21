@@ -1,7 +1,10 @@
 <template>
     <div class="text-gray-900 dark:text-slate-50 body-font container mx-auto my-5 ">
         <HomeSlider />
-        <HomeMatches />
+        <div class="flex justify-around flex-col md:flex-row">
+            <HomeCalender class="w-full md:w-2/6 mb-16 md:mb-0" />
+            <HomeMatches class="w-full md:w-3/6" />
+        </div>
         <HomeBlogs />
         <HomeJoinChampions />
         <div dir="ltr" class=" pb-8 text-slate-800 dark:text-white text-center -mb-5 dark:bg-slate-800  overflow-hidden">

@@ -3,7 +3,7 @@
         <template #main>
             <section class="mb-20" v-if="matches && matches.length > 0">
                 <div class="flex flex-wrap w-full mb-3 md:mb-6">
-                    <div class="lg:w-1/2 w-full ">
+                    <div class=" w-full ">
                         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">
                             {{ champName === null ? " احدث المباريات " : `مباريات ${champName}` }}
                         </h1>
