@@ -1,7 +1,7 @@
 <template>
     <FetchDataWraper :error="error" :pending="pending">
         <template #main>
-            <section class="mb-20" v-if="matches && matches.length > 0">
+            <section class="mb-20 " v-if="matches && matches.length > 0">
                 <div class="flex flex-wrap w-full mb-3 md:mb-6">
                     <div class=" w-full ">
                         <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">

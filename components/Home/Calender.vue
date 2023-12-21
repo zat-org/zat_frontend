@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full">
+    <div class="h-full px-2 xl:px-10">
         <div class="flex flex-wrap w-full mb-3 md:mb-6">
             <div class=" w-full ">
                 <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">
@@ -8,18 +8,87 @@
                 <div class="h-1 w-20 bg-yellow-500 rounded"></div>
             </div>
         </div>
-        <VCalendar expanded locale="ar-EG" :first-day-of-week="6" :is-dark="{ selector: ':root', darkClass: 'dark' }"
-            title-position="left" :rows="2" :attributes='attrs' />
+        <!-- :is-dark="{ selector: ':root', darkClass: 'dark' }" -->
+
+        <VCalendar expanded locale="ar-EG" :masks="masks" :first-day-of-week="6" title-position="left" :rows="2"
+            :attributes='attrs'>
+            <template #header-prev-button>
+                <Icon name="iconamoon:arrow-right-2-bold" />
+
+            </template>
+            <template #header-next-button>
+                <Icon name="iconamoon:arrow-left-2-bold" />
+            </template>
+            <template #nav-prev-button>
+                <Icon name="iconamoon:arrow-right-2-bold" />
+
+            </template>
+            <template #nav-next-button>
+                <Icon name="iconamoon:arrow-left-2-bold" />
+            </template>
+
+        </VCalendar>
+
+        <div class="grid grid-cols-3 md:grid-cols-2 xl:grid-cols-3 mt-3 ml-3">
+            <div v-for="attr in data" class="flex justify-start items-center ">
+                <span class="h-5 w-5 inline-block rounded-full mr-3 " :class="attr.color"></span>
+                {{ attr.label }}
+            </div>
+
+        </div>
+
     </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
+const masks = {
+    title: 'M / YYYY',
+    weekdays: 'W',
+    navMonths: 'M',
+    hours: 'h A',
+    input: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
+    inputDateTime: ['L h:mm A', 'YYYY-MM-DD h:mm A', 'YYYY/MM/DD h:mm A'],
+    inputDateTime24hr: ['L HH:mm', 'YYYY-MM-DD HH:mm', 'YYYY/MM/DD HH:mm'],
+    inputTime: ['h:mm A'],
+    inputTime24hr: ['HH:mm'],
+    dayPopover: 'WWW, MMM D, YYYY',
+    data: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
+    model: 'iso',
+    iso: 'YYYY-MM-DDTHH:mm:ss.SSSZ',
+}
+const data = ref([
+    {
+        key: "break",
+        label: "فترة توقف",
+        color: "bg-[#475569]"
+    },
+    {
+        key: "kas",
+        label: "بطولة الكأس",
+        color: "bg-[#0d9488]"
+    },
+    {
+        key: "dawry",
+        label: "بطولة الدورى",
+        color: "bg-[#16a34a]"
+    },
+    {
+        key: "super",
+        label: "بطولة السوبر",
+        color: "bg-[#9333ea]"
 
+    },
+    {
+        key: "hezam",
+        label: "بطولة الحزام",
+        color: "bg-[#ea580c]"
+    },
+])
 const attrs = ref([
     {
         key: 'today',
-        highlight: true,
+        bar: true,
         dates: new Date(),
         popover: {
             label: "اليوم",
@@ -86,7 +155,8 @@ const attrs = ref([
         dates: [
             [new Date(2023, 9, 18), new Date(2024, 0, 19)],
             [new Date(2024, 9, 2), new Date(2024, 11, 31)],
-        ], popover: {
+        ],
+        popover: {
             label: "بطولة الحزام",
             visibility: 'hover',
             hideIndicator: true,
@@ -96,7 +166,7 @@ const attrs = ref([
 </script>
 
 <style >
-.vc-header {
+/* .vc-header {
     grid-template-columns: [title] auto 1fr [next] auto [prev] auto !important;
-}
+} */
 </style>

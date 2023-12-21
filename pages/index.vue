@@ -1,9 +1,9 @@
 <template>
     <div class="text-gray-900 dark:text-slate-50 body-font container mx-auto my-5 ">
         <HomeSlider />
-        <div class="flex justify-around flex-col lg:flex-row">
-            <HomeCalender class="w-full lg:w-2/6 mb-16 lg:mb-0" />
-            <HomeMatches class="w-full lg:w-3/6" />
+        <div class="flex justify-around flex-col md:flex-row mb-10 ">
+            <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
+            <HomeMatches class="w-full md:w-7/12" />
         </div>
         <HomeBlogs />
         <HomeJoinChampions />
