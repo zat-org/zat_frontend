@@ -9,22 +9,23 @@
                 :rules="schema.email" />
             <InputField name="phone" type="tel" label="رقم الجوال" placeholder="512345678" dir="ltr"
                 :rules="schema.phone" />
-
         </div>
         <div class="divider my-5">بيانات اللاعب الاول</div>
         <div class="row">
             <InputField name="fpName" type="text" label="الاسم" :rules="schema.playerName" />
             <InputField name="fpCity" type="text" label="مدينة الاقامة" :rules="schema.playCity" />
-            <SelectField name="fpAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
-                :options="AgeOptions" />
+            <InputField name="fpAgeNumber" type="number" label="العمر" placeholder="25" :rules="schema.playerAgeNumber" />
+            <!-- <SelectField name="fpAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
+                :options="AgeOptions" /> -->
             <InputField name="fpExperience" type="number" label="سنوات الخبرة" :rules="schema.playerExperience" />
         </div>
         <div class="divider my-5">بيانات اللاعب الثاني</div>
         <div class="row">
             <InputField name="spName" type="text" label="الاسم" :rules="schema.playerName" />
             <InputField name="spCity" type="text" label="مدينة الاقامة" :rules="schema.playCity" />
-            <SelectField name="spAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
-                :options="AgeOptions" />
+            <InputField name="spAgeNumber" type="number" label="العمر" placeholder="25" :rules="schema.playerAgeNumber" />
+            <!-- <SelectField name="spAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
+                :options="AgeOptions" /> -->
             <InputField name="spExperience" type="number" label="سنوات الخبرة" :rules="schema.playerExperience" />
         </div>
 
@@ -74,14 +75,14 @@ const ToastShowDelay = 6;
 
 
 
-const AgeOptions: SelectOption[] = [
-    { value: "18 ~ 23", displayValue: "18 ~ 23" },
-    { value: "24 ~ 29", displayValue: "24 ~ 29" },
-    { value: "30 ~ 36", displayValue: "30 ~ 36" },
-    { value: " > 37 ", displayValue: "أكبر من 37 سنة" },
-]
-const agePlaceholder: SelectOption =
-    { value: "", displayValue: "اختر الفئة العمرية" }
+// const AgeOptions: SelectOption[] = [
+//     { value: "18 ~ 23", displayValue: "18 ~ 23" },
+//     { value: "24 ~ 29", displayValue: "24 ~ 29" },
+//     { value: "30 ~ 36", displayValue: "30 ~ 36" },
+//     { value: " > 37 ", displayValue: "أكبر من 37 سنة" },
+// ]
+// const agePlaceholder: SelectOption =
+//     { value: "", displayValue: "اختر الفئة العمرية" }
 
 const IsPlayedBeforeOptions: SelectOption[] = [{ displayValue: 'نعم', value: 'yes' }, { displayValue: 'لا', value: 'no' }]
 
@@ -90,20 +91,37 @@ const schema = {
     phone: yup.string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
     playerName: yup.string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),
     playCity: yup.string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم المدينة بشكل صحيح").max(50, "يجب ان لا يتعدي اسم المدينة الخمسين حرفا"),
-    playerAge: yup.string().required("هذا الحقل مطلوب").oneOf(AgeOptions.map(elm => elm.value)),
+    // playerAge: yup.string().required("هذا الحقل مطلوب").oneOf(AgeOptions.map(elm => elm.value)),
     playerExperience: yup.number().required("هذا الحقل مطلوب").min(0, "يرجي ادخال عدد سنوات صحيح").max(30, "يرجي ادخال عدد سنوات صحيح"),
     IsPlayedBefore: yup.string().required("هذا الحقل مطلوب").oneOf(IsPlayedBeforeOptions.map(elm => elm.value)),
-    approve: yup.boolean().isTrue()
+    approve: yup.boolean().isTrue(),
+    playerAgeNumber: yup.number().required("هذا الحقل مطلوب").min(5, "يرجي ادخال عمر صحيح").max(100, "يرجي ادخال عمر صحيح"),
+
 };
 
 const { handleSubmit, values, resetForm } = useForm();
 const route = useRoute()
 const router = useRouter()
+
+const getAgeRange = (age: number) => {
+    if (age < 18)
+        return " < 18"
+    else if (age >= 18 && age < 24)
+        return "18 ~ 23"
+    else if (age >= 24 && age < 30)
+        return "24 ~ 29"
+    else if (age >= 30 && age < 37)
+        return "30 ~ 36"
+    else if (age > 36)
+        return " > 37"
+}
 const onHandleSubmit = handleSubmit(() => {
+    const fpAge = getAgeRange(values.fpAgeNumber);
+    const spAge = getAgeRange(values.spAgeNumber);
 
     pending.value = true
     IsToastShown.value = false
-    client("/champion-join-requests", { method: "post", body: { data: { ...values, date: new Date(), champ: route.params.id } } })
+    client("/champion-join-requests", { method: "post", body: { data: { ...values, date: new Date(), champ: route.params.id, fpAge, spAge } } })
         .then(() => {
 
             $toast.show({
@@ -118,7 +136,6 @@ const onHandleSubmit = handleSubmit(() => {
                 type: 'danger',
                 message: 'تعذر الارسال برجاء المحاولة مرة اخري',
                 timeout: ToastShowDelay,
-
             })
             console.error(err);
         })

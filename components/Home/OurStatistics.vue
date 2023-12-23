@@ -67,19 +67,23 @@ const statistics = ref<IStatistics>({
 
 
 })
-
+const channelsIds = ["UCWZxxMNzoPwxfwuWfjqmjSA", "UCMH_VRnwuXWL9pnMTDIKN0A"];
 const fetchData = async () => {
-    $fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${runtimeConfig.public.zatYoutubeId}&key=${runtimeConfig.public.youtubeApi}`)
-        .then((data: any) => {
-            let states = data.items[0].statistics;
-            statistics.value.subscriberCount.value += parseInt(states.subscriberCount);
-            statistics.value.viewCount.value += parseInt(states.viewCount);
-            statistics.value.subscriberCount.statisticDetails[0].value += parseInt(states.subscriberCount);
-            statistics.value.viewCount.statisticDetails[0].value += parseInt(states.viewCount);
-        }
-        ).catch((err) => {
-            console.error(err);
-        })
+    channelsIds.forEach((channelId) => {
+        $fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelId}&key=${runtimeConfig.public.youtubeApi}`)
+            .then((data: any) => {
+                let states = data.items[0].statistics;
+                statistics.value.subscriberCount.value += parseInt(states.subscriberCount);
+                statistics.value.viewCount.value += parseInt(states.viewCount);
+                statistics.value.subscriberCount.statisticDetails[0].value += parseInt(states.subscriberCount);
+                statistics.value.viewCount.statisticDetails[0].value += parseInt(states.viewCount);
+            }
+            ).catch((err) => {
+                console.error(err);
+            })
+
+    });
+
     client(`/website-visits-counter`, { method: 'GET' })
         .then((data: any) => {
             statistics.value.websiteVisitsCount.value = parseInt(data.data.attributes.counter)

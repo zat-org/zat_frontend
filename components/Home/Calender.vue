@@ -29,12 +29,11 @@
 
         </VCalendar>
 
-        <div class="grid grid-cols-3 md:grid-cols-2 xl:grid-cols-3 mt-3 ml-3">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3 mt-3 ml-3">
             <div v-for="attr in data" class="flex justify-start items-center ">
                 <span class="h-5 w-5 inline-block rounded-full mr-3 " :class="attr.color"></span>
                 {{ attr.label }}
             </div>
-
         </div>
 
     </div>
@@ -66,12 +65,12 @@ const data = ref([
     {
         key: "kas",
         label: "بطولة الكأس",
-        color: "bg-[#0d9488]"
+        color: "bg-[#ef4444]"
     },
     {
         key: "dawry",
         label: "بطولة الدورى",
-        color: "bg-[#16a34a]"
+        color: "bg-[#0d9488]"
     },
     {
         key: "super",
@@ -105,6 +104,11 @@ const attrs = ref([
             [new Date(2024, 5, 20), new Date(2024, 5, 29)],
             [new Date(2024, 7, 19), new Date(2024, 7, 31)],
             [new Date(2024, 8, 4), new Date(2024, 9, 1)],
+            [new Date(2025, 0, 6), new Date(2025, 1, 28)],
+            [new Date(2025, 2, 30), new Date(2025, 4, 3)],
+            [new Date(2025, 5, 23), new Date(2025, 6, 1)],
+            [new Date(2025, 7, 21), new Date(2025, 8, 2)],
+            [new Date(2025, 8, 6), new Date(2025, 8, 30)],
         ],
         popover: {
             label: "فترة توقف",
@@ -114,9 +118,10 @@ const attrs = ref([
     },
     {
         key: "kas",
-        highlight: 'teal',
+        highlight: 'red',
         dates: [
             [new Date(2024, 2, 11), new Date(2024, 3, 8)],
+            [new Date(2025, 2, 1), new Date(2025, 2, 29)],
         ],
         popover: {
             label: "بطولة الكأس",
@@ -126,10 +131,12 @@ const attrs = ref([
     },
     {
         key: "dawry",
-        highlight: 'green',
+        highlight: 'teal',
         dates: [
             [new Date(2024, 4, 1), new Date(2024, 5, 19)],
             [new Date(2024, 5, 30), new Date(2024, 7, 18)],
+            [new Date(2025, 4, 4), new Date(2025, 5, 22)],
+            [new Date(2025, 6, 2), new Date(2025, 7, 20)],
         ],
         popover: {
             label: "بطولة الدورى",
@@ -142,6 +149,7 @@ const attrs = ref([
         highlight: 'purple',
         dates: [
             [new Date(2024, 8, 1), new Date(2024, 8, 3)],
+            [new Date(2025, 8, 3), new Date(2025, 8, 5)],
         ],
         popover: {
             label: "بطولة السوبر",
@@ -154,7 +162,8 @@ const attrs = ref([
         highlight: 'orange',
         dates: [
             [new Date(2023, 9, 18), new Date(2024, 0, 19)],
-            [new Date(2024, 9, 2), new Date(2024, 11, 31)],
+            [new Date(2024, 9, 2), new Date(2025, 0, 5)],
+            [new Date(2025, 9, 1), new Date(2025, 11, 31)],
         ],
         popover: {
             label: "بطولة الحزام",

@@ -180,7 +180,7 @@
         @apply bg-slate-200 dark:bg-slate-400 dark:placeholder:text-slate-500 ;
     }
     .form-control{
-        @apply  w-full md:w-fit;
+        @apply  w-full md:w-fit px-2;
     } 
 }
 

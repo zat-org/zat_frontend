@@ -1,7 +1,7 @@
 <template>
     <div>
         <div v-if="orderedEvents.length > 0" ref="matchCards"
-            class="scroll-smooth overflow-x-hidden overflow-y-scroll h-[650px] px-2 lg:px-10 bg-zinc-200 dark:bg-slate-700  rounded-lg ">
+            class="scroll-smooth overflow-x-hidden overflow-y-scroll h-[430px] md:h-[650px] px-2 lg:px-10 bg-zinc-200 dark:bg-slate-700  rounded-lg ">
             <template v-for="event in orderedEvents" :key="event.id">
                 <MatchCard :match="event" :id="event.id" :champId="event.league_id" class="my-4" />
             </template>
