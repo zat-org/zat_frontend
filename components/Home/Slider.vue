@@ -61,6 +61,7 @@ onBeforeMount(fetchData)
 </script>
 
 <style scoped>
+
 .carousel__item {
     width: 100%;
     background-color: #5f5e5e;

@@ -186,7 +186,12 @@
     .input-success {
         @apply text-slate-800;
     }
-  
+    .carousel{
+        display: block; 
+        overflow-x: auto; 
+        scroll-snap-type: default; 
+        scroll-behavior: none;
+    }
       
 }
 
