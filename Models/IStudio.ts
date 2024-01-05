@@ -11,4 +11,4 @@ interface IStudio {
     tournament_name: string,
     analysts: IAnalyst[]
 }
-export { IStudio, IAnalyst }; 
+export type { IStudio, IAnalyst }; 

@@ -2,4 +2,4 @@ interface SelectOption {
     displayValue: string
     value: string
 }
-export { SelectOption }
+export type { SelectOption }

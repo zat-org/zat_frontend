@@ -44,10 +44,8 @@
 <script setup lang="ts">
 const client = useStrapiClient()
 
-const { $toast } = useNuxtApp();
 
 const messageTypes = ["اقتراح", "نقد", "تحدى"]
-const IsToastShown = ref(false)
 const pending = ref(false)
 const message = ref({
     name: "",
@@ -55,11 +53,10 @@ const message = ref({
     message: "",
     type: messageTypes[0]
 })
+const toast = useToast();
 
-const ToastShowDelay = 6;
 const handleSubmit = () => {
     pending.value = true
-    IsToastShown.value = false
     client("/contact-us-messages/", { method: "post", body: { data: { ...message.value, date: new Date() } } })
         .then(() => {
             message.value = {
@@ -68,20 +65,13 @@ const handleSubmit = () => {
                 message: "",
                 type: "اقتراح"
             }
-            $toast.show({
-                type: 'success',
-                message: 'تم الارسال بنجاح ',
-                timeout: ToastShowDelay,
+            toast.add({ title: 'تم الارسال بنجاح ' })
 
-            })
+
         })
         .catch((err) => {
-            $toast.show({
-                type: 'danger',
-                message: 'تعذر الارسال برجاء المحاولة مرة اخري',
-                timeout: ToastShowDelay,
+            toast.add({ title: 'تعذر الارسال برجاء المحاولة مرة اخري' })
 
-            })
             console.error(err);
         })
         .finally(() => {

@@ -25,8 +25,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { IChampLessDetails } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { IChampLessDetails } from '@/Models/ITeam';
 
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

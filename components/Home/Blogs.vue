@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import IBlog from '@/Models/IBlog';
+import type {IBlog} from '@/Models/IBlog';
 const client = useStrapiClient()
 const blogs = ref<IBlog[] | null>(null)
 const error = ref<string | null>(null)

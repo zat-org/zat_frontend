@@ -18,7 +18,7 @@
 </template>
 
 <script setup lang="ts">
-import IReferee from '@/Models/IReferee';
+import type { IReferee } from '@/Models/IReferee';
 const client = useStrapiClient()
 const referees = ref<IReferee[] | null>(null)
 const error = ref<string | null>(null)

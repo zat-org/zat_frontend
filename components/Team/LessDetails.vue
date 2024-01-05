@@ -39,9 +39,9 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
 import getElapsedTime from "@/utils/getElapsedTime"
-import { ITeamLessDetails } from '@/Models/ITeam';
+import type { ITeamLessDetails } from '@/Models/ITeam';
 
 const props = defineProps({
     team: { type: Object as PropType<ITeamLessDetails>, required: true }

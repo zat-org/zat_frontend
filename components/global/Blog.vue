@@ -20,8 +20,8 @@
 
 <script setup lang="ts">
 import getElapsedTime from "@/utils/getElapsedTime"
-import IBlog from "@/Models/IBlog";
-import { PropType } from 'nuxt/dist/app/compat/capi';
+import type { IBlog } from "@/Models/IBlog";
+import type { PropType } from 'nuxt/dist/app/compat/capi';
 
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

@@ -33,8 +33,9 @@
 </template>
 
 <script setup lang="ts">
+import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Navigation, Pagination, Slide } from 'vue3-carousel'
-import { IUpcomingChamp } from "@/Models/IChamp"
+import type { IUpcomingChamp } from "@/Models/IChamp"
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 const client = useStrapiClient()
 const champs = ref<IUpcomingChamp[] | null>(null)
@@ -66,7 +67,6 @@ onBeforeMount(fetchData)
     color: #000;
     font-size: 20px;
     border-radius: 8px;
-
 }
 
 .carousel__slide {

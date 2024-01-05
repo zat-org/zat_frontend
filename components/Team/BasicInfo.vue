@@ -20,8 +20,8 @@
 
 <script setup lang="ts">
 import getElapsedTime from "@/utils/getElapsedTime"
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { ITeamFullDetails } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { ITeamFullDetails } from '@/Models/ITeam';
 
 const props = defineProps({
     team: { type: Object as PropType<ITeamFullDetails>, required: true }

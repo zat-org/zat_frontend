@@ -5,7 +5,7 @@
                 class="w-full flex flex-col items-center space-y-5 justify-center">
                 <select class="select w-full dark:bg-slate-700 select-bordered max-w-xs bg-select"
                     v-model="selectedStatistic">
-                    <option v-for="o, i  in StatisticOption" :value="o" selected>{{ o }}</option>
+                    <option v-for="o, i in StatisticOption" :value="o" selected>{{ o }}</option>
                 </select>
                 <div class=" w-full flex justify-center mx-auto bg-white p-5 dark:bg-slate-200  rounded-lg shadow-lg">
                     <Bar id="statistics" class="w-full" :options="chartOptions" :data="chartData" />
@@ -20,8 +20,8 @@
 </template>
     
 <script setup lang="ts">
-import IStatistics from "@/Models/IStatistics"
-import { StatisticOption } from "@/Models/IStatistics"
+import type { IStatistics } from "@/Models/IStatistics"
+import StatisticOption from "@/Models/StatisticOption"
 
 import { Bar } from 'vue-chartjs'
 import { Chart as ChartJS, Title, Colors, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'

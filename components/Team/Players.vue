@@ -21,8 +21,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { IPlayerLessDetails } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { IPlayerLessDetails } from '@/Models/ITeam';
 
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

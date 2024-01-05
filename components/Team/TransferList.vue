@@ -16,8 +16,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { ITransfer } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { ITransfer } from '@/Models/ITeam';
 
 
 const props = defineProps({

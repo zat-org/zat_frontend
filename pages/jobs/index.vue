@@ -1,16 +1,22 @@
 <template>
     <FetchDataWraper class="md:w-5/6 lg:w2/3 mx-auto text-gray-900 dark:text-slate-50" :error="error" :pending="pending">
         <template #main>
-            <section class="py-10 h-full" v-if="blogs && blogs.length > 0">
-                <div class="flex flex-wrap w-full mb-3 md:mb-6">
-                    <div class="lg:w-1/2 w-full ">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">اخبار زات</h1>
-                        <div class="h-1 w-20 bg-yellow-500 rounded"></div>
+            <section class="py-10 h-full" v-if="jobs && jobs.length > 0">
+                <div class="flex flex-wrap justify-between w-full mb-3 md:mb-6">
+                    <div class="">
+                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 flex justify-start items-center">
+                            <UIcon name="i-heroicons-briefcase" class="me-2 text-amber-500" />
+                            وظائف زات
+                        </h1>
+                        <div class="h-1 w-32 bg-amber-500 rounded"></div>
                     </div>
+                    <UButton color="amber" :to="`/jobs/_`" icon="i-heroicons-inbox">
+                        <span class="hidden md:block">ارسل بياناتك الان</span>
+                    </UButton>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mb-20">
-                    <template v-for="(blog, index) in blogs" :key="index">
-                        <Blog :blog="blog" />
+                    <template v-for="(job, index) in jobs" :key="index">
+                        <JobCard :job="job" />
                     </template>
                 </div>
                 <div class="flex justify-center mt-8 absolute bottom-3 left-1/2 -translate-x-1/2">
@@ -27,21 +33,25 @@
             </section>
             <div v-else
                 class="text-zinc-700 dark:text-slate-50 text-lg h-50 flex flex-col justify-center items-center py-10">
-                <Icon name="line-md:alert-circle" class="block text-9xl" />
-                <h3>لا يوجد اخبار حاليا</h3>
+                <Icon name="pepicons-print:cv-circle" size="100" />
+                <h4 class="text-center mt-5"> لا توجد وظائف شاغرة الان ولكن ارفق لنا بياناتك لنتواصل معك عند توفر وظيفة
+                    تناسبك </h4>
+                <UButton color="amber" :to="`/jobs/_`" icon="i-heroicons-inbox" class="mt-5">
+                    <span class="">ارسل بياناتك الان</span>
+                </UButton>
             </div>
         </template>
     </FetchDataWraper>
 </template>
 
 <script setup lang="ts">
-import type {IBlog} from '@/Models/IBlog'
+import type { IJob } from '@/Models/IJob'
 const pgSize = 10;
 const route = useRoute()
 const router = useRouter()
 
 const client = useStrapiClient()
-const blogs = ref<IBlog[] | null>(null)
+const jobs = ref<IJob[] | null>(null)
 const error = ref<string | null>(null)
 const pending = ref(false)
 const pgNumStr = route.query.pageNum as string;
@@ -50,13 +60,13 @@ if (pgNumStr && !isNaN(parseInt(pgNumStr))) pgNum = parseInt(pgNumStr)
 const totalBlogsCount = ref(0)
 const fetchData = () => {
     pending.value = true
-    return client(`/blogs?pgSize=${pgSize}&pgNum=${pgNum}`, { method: 'GET' })
+    return client(`/jobs?filters[isApplyingOpen][$eq]=true&pagination[page]=${pgNum}&pagination[pageSize]=${pgSize}`, { method: 'GET' })
         .then((data: any) => {
-            blogs.value = data.blogs
+            jobs.value = data.data
             pending.value = false
-            totalBlogsCount.value = data.totalCount
+            totalBlogsCount.value = data.meta.pagination.total
             useHead({
-                title: `اخبار زات`,
+                title: `وظائف زات`,
             })
         }).catch((err) => {
             console.error(err)
@@ -66,9 +76,10 @@ const fetchData = () => {
 }
 onServerPrefetch(fetchData)
 onBeforeMount(fetchData)
+
 const handleNewPage = (direction: -1 | 1) => {
     pgNum += direction
-    router.push(`/blogs?pageNum=${pgNum}`)
+    router.push(`/jobs?pageNum=${pgNum}`)
 }
 
 watch(
@@ -81,8 +92,4 @@ watch(
 );
 </script>
 
-<style scoped>
-.team-avatar img {
-    object-fit: contain;
-}
-</style>
+<style scoped></style>

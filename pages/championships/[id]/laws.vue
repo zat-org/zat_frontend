@@ -10,7 +10,7 @@
 </template>
 
 <script setup lang="ts">
-import IChamp from "@/Models/IChamp"
+import type  {IChamp} from "@/Models/IChamp"
 
 const props = defineProps({
     leagueData: {

@@ -42,7 +42,7 @@
 useHead({
     title: `انضم لبطولات زات للبلوت`,
 })
-import { IJoinChamp } from '@/Models/IChamp';
+import type { IJoinChamp } from '@/Models/IChamp';
 const client = useStrapiClient()
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 
@@ -67,5 +67,4 @@ onBeforeMount(fetchData)
 
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

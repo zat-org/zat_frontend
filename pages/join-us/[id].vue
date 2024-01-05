@@ -1,109 +1,161 @@
 <template>
-    <h2 class="text-center  text-2xl my-5 dark:text-slate-50"> استمارة الالتحاق بالبطولة</h2>
-    <form @submit.prevent="onHandleSubmit">
-        <div class="divider my-5">بيانات الفريق</div>
+    <h2 class="text-center text-2xl my-5 dark:text-slate-50"> استمارة الالتحاق بالبطولة</h2>
+
+    <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
+        <UDivider label="بيانات الفريق" />
         <div class="row">
-            <InputField name="teamName" type="text" label="اسم الفريق" :rules="schema.playerName" />
+            <FormInputField v-model="state.email" dir="ltr" type="email" name="email" label="البريد الالكترونى" hint="مطلوب"
+                icon="i-heroicons-envelope" placeholder="example@gmail.com" />
 
-            <InputField name="email" type="email" label="البريد الاكتروني" placeholder="example@zatbaloot.com" dir="ltr"
-                :rules="schema.email" />
-            <InputField name="phone" type="tel" label="رقم الجوال" placeholder="512345678" dir="ltr"
-                :rules="schema.phone" />
+            <FormInputField v-model="state.teamName" type="text" name="teamName" label="اسم الفريق" hint="مطلوب"
+                icon="i-heroicons-users" placeholder="اسم الفريق" />
+
+            <FormInputField v-model="state.phone" dir="ltr" type="text" name="phone" label="رقم الجوال" hint="مطلوب"
+                icon="i-heroicons-phone" placeholder="512345678" />
         </div>
-        <div class="divider my-5">بيانات اللاعب الاول</div>
+        <UDivider label="بيانات اللاعب الاول" />
         <div class="row">
-            <InputField name="fpName" type="text" label="الاسم" :rules="schema.playerName" />
-            <InputField name="fpCity" type="text" label="مدينة الاقامة" :rules="schema.playCity" />
-            <InputField name="fpAgeNumber" type="number" label="العمر" placeholder="25" :rules="schema.playerAgeNumber" />
-            <!-- <SelectField name="fpAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
-                :options="AgeOptions" /> -->
-            <InputField name="fpExperience" type="number" label="سنوات الخبرة" :rules="schema.playerExperience" />
+            <FormInputField v-model="state.fpName" type="text" name="fpName" label="الاسم" hint="مطلوب"
+                icon="i-heroicons-user" placeholder="اللاعب الاول" />
+            <FormInputField v-model="state.fpCity" type="text" name="fpCity" label="مدينة الاقامة" hint="مطلوب"
+                icon="i-heroicons-map-pin" placeholder="الرياض" />
+            <FormInputField v-model="state.fpBirthDate" type="date" name="fpBirthDate" label="تاريخ الميلاد" hint="مطلوب" />
+            <FormInputField v-model="state.fpExperience" type="number" name="fpExperience" label="سنوات الخبرة" hint="مطلوب"
+                icon="i-heroicons-academic-cap" />
         </div>
-        <div class="divider my-5">بيانات اللاعب الثاني</div>
+        <UDivider label="بيانات اللاعب الثاني" />
         <div class="row">
-            <InputField name="spName" type="text" label="الاسم" :rules="schema.playerName" />
-            <InputField name="spCity" type="text" label="مدينة الاقامة" :rules="schema.playCity" />
-            <InputField name="spAgeNumber" type="number" label="العمر" placeholder="25" :rules="schema.playerAgeNumber" />
-            <!-- <SelectField name="spAge" label="العمر" :placeholder="agePlaceholder" dir="rtl" :rules="schema.playerAge"
-                :options="AgeOptions" /> -->
-            <InputField name="spExperience" type="number" label="سنوات الخبرة" :rules="schema.playerExperience" />
+            <FormInputField v-model="state.spName" type="text" name="spName" label="الاسم" hint="مطلوب"
+                icon="i-heroicons-user" placeholder="اللاعب الاول" />
+            <FormInputField v-model="state.spCity" type="text" name="spCity" label="مدينة الاقامة" hint="مطلوب"
+                icon="i-heroicons-map-pin" placeholder="الرياض" />
+            <FormInputField v-model="state.spBirthDate" type="date" name="spBirthDate" label="تاريخ الميلاد" hint="مطلوب" />
+            <FormInputField v-model="state.spExperience" type="number" name="spExperience" label="سنوات الخبرة" hint="مطلوب"
+                icon="i-heroicons-academic-cap" />
         </div>
+        <UDivider label="استفسارات عامة" />
+        <UFormGroup class="form-control" name="IsPlayedBefore" size="xl">
+            <URadioGroup v-model="state.IsPlayedBefore" legend="هل سبق لكم المشاركة ببطولات زات سابقاً ؟"
+                :options="IsPlayedBeforeOptions" />
+        </UFormGroup>
 
-        <div class="divider my-5">استفسارات عامة</div>
-        <RadioField name="IsPlayedBefore" label="هل سبق لكم المشاركة ببطولات زات سابقاً ؟" :rules="schema.IsPlayedBefore"
-            :options="IsPlayedBeforeOptions" />
+        <UDivider label="تعهد" />
+        <FormCheckbox v-model="state.approveCommitments" name="approveCommitments"
+            label="اوافق علي جميع  الشروط المرفقة ادناه." />
 
-        <div class="divider my-5">تعهد</div>
+        <MarkdownRender v-if="champ" :markdownString="champ?.commitments" class="mt-2 ms-2  w-full" />
 
 
-        <CheckboxField name="approveFees" label="أتعهد بدفع رسوم المشاركة للفريق الواحد 100 ريال (اثبات جدية) غير مستردة ."
-            :rules="schema.approve" />
-
-        <CheckboxField name="approveNoCheating"
-            label="أتعهد بعدم الغش في البطولة.. و في حال مخالفتي ذلك يحق لادارة القناة استبعادي من اي بطولات قادمة."
-            :rules="schema.approve" />
-
-        <CheckboxField name="approveMedia"
-            label="أسمح بتصويري واستخدام المحتوى في اي شبكة من وسائل التواصل الاجتماعي ولا يحق لي المطالبة بازالة المحتوى.."
-            :rules="schema.approve" />
-
-        <CheckboxField name="approveInfoCorrect"
-            label="اتعهد بصحة المعلومات المقدمة أعلاه وفي حال مخالفتي ذلك اعتبر منسحباً من البطولة."
-            :rules="schema.approve" />
-
-        <div class="row">
-            <button class="btn btn-warning shadow-lg hover:shadow-yellow-500 w-1/2 md:w-1/4  disabled:text-slate-600"
-                type="submit" :disabled="!useIsFormValid().value">ارسال</button>
+        <div class="row justify-center">
+            <UButton type="submit" :loading="pending"
+                class="h-12 flex justify-center text-md shadow-md border-0  w-1/2 md:w-1/4">
+                ارسال
+            </UButton>
         </div>
-    </form>
-</template> 
+    </UForm>
+</template>
 
 <script setup lang="ts">
-import * as yup from 'yup';
-import { SelectOption } from "@/Models/FormTypes"
-
-
-const saudiArabianPhoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
-
-const client = useStrapiClient()
-
-const { $toast } = useNuxtApp();
-
-const IsToastShown = ref(false)
+import { object, string, number, boolean, date, type InferType } from 'yup'
+import type { IChamp } from "@/Models/IChamp"
+const error = ref<string | null>(null)
 const pending = ref(false)
-const ToastShowDelay = 6;
 
+import type { FormSubmitEvent } from '#ui/types'
 
+type StateObj = {
+    teamName: string,
+    email: string,
+    phone: string,
+    fpName: string,
+    fpCity: string,
+    fpBirthDate: string,
+    fpExperience: number,
+    spName: string,
+    spCity: string,
+    spBirthDate: string,
+    spExperience: number,
+    IsPlayedBefore: string,
+    approveCommitments: boolean,
 
-// const AgeOptions: SelectOption[] = [
-//     { value: "18 ~ 23", displayValue: "18 ~ 23" },
-//     { value: "24 ~ 29", displayValue: "24 ~ 29" },
-//     { value: "30 ~ 36", displayValue: "30 ~ 36" },
-//     { value: " > 37 ", displayValue: "أكبر من 37 سنة" },
-// ]
-// const agePlaceholder: SelectOption =
-//     { value: "", displayValue: "اختر الفئة العمرية" }
-
-const IsPlayedBeforeOptions: SelectOption[] = [{ displayValue: 'نعم', value: 'yes' }, { displayValue: 'لا', value: 'no' }]
-
-const schema = {
-    email: yup.string().trim().required("هذا الحقل مطلوب").email("يرجي ادخال بريد الكتروني صحيح"),
-    phone: yup.string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
-    playerName: yup.string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),
-    playCity: yup.string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم المدينة بشكل صحيح").max(50, "يجب ان لا يتعدي اسم المدينة الخمسين حرفا"),
-    // playerAge: yup.string().required("هذا الحقل مطلوب").oneOf(AgeOptions.map(elm => elm.value)),
-    playerExperience: yup.number().required("هذا الحقل مطلوب").min(0, "يرجي ادخال عدد سنوات صحيح").max(30, "يرجي ادخال عدد سنوات صحيح"),
-    IsPlayedBefore: yup.string().required("هذا الحقل مطلوب").oneOf(IsPlayedBeforeOptions.map(elm => elm.value)),
-    approve: yup.boolean().isTrue(),
-    playerAgeNumber: yup.number().required("هذا الحقل مطلوب").min(5, "يرجي ادخال عمر صحيح").max(100, "يرجي ادخال عمر صحيح"),
-
-};
-
-const { handleSubmit, values, resetForm } = useForm();
+}
+const client = useStrapiClient()
+const toast = useToast();
 const route = useRoute()
 const router = useRouter()
+const champ = ref<null | IChamp>(null)
 
-const getAgeRange = (age: number) => {
+
+const state = reactive<StateObj>({
+    teamName: "",
+    email: "",
+    phone: "",
+    fpName: "",
+    fpCity: "",
+    fpBirthDate: "",
+    fpExperience: 0,
+    spName: "",
+    spCity: "",
+    spBirthDate: "",
+    spExperience: 0,
+    IsPlayedBefore: "no",
+    approveCommitments: false,
+})
+const IsPlayedBeforeOptions = [{ label: 'نعم', value: 'yes' }, { label: 'لا', value: 'no' }]
+const currentDate = new Date();
+const maxBirthDate: Date = new Date(currentDate.getFullYear() - 5, currentDate.getMonth(), currentDate.getDay());
+const minBirthDate: Date = new Date(currentDate.getFullYear() - 105, currentDate.getMonth(), currentDate.getDay());
+const saudiArabianPhoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+
+const schema = object({
+    email: string().trim().required("هذا الحقل مطلوب").email("يرجي ادخال بريد الكتروني صحيح"),
+    phone: string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
+    teamName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(30, "يجب ان لا يتعدي الاسم ثلاثين حرفا"),
+
+    fpName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),
+    spName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),
+
+    fpCity: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم المدينة بشكل صحيح").max(50, "يجب ان لا يتعدي اسم المدينة الخمسين حرفا"),
+    spCity: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم المدينة بشكل صحيح").max(50, "يجب ان لا يتعدي اسم المدينة الخمسين حرفا"),
+
+    fpExperience: number().required("هذا الحقل مطلوب").min(0, "يرجي ادخال عدد سنوات صحيح").max(30, "يرجي ادخال عدد سنوات صحيح"),
+    spExperience: number().required("هذا الحقل مطلوب").min(0, "يرجي ادخال عدد سنوات صحيح").max(30, "يرجي ادخال عدد سنوات صحيح"),
+
+
+    fpBirthDate: date()
+        .required("هذا الحقل مطلوب")
+        .typeError("برجاء ادخال تاريخ ميلاد صحيح")
+        .max(maxBirthDate, "يجب ان يكون عمرك اكبر من 5 سنوات")
+        .min(minBirthDate, "يجب ان يكون عمرك اصغر من 100 سنة"),
+    spBirthDate: date()
+        .required("هذا الحقل مطلوب")
+        .typeError("برجاء ادخال تاريخ ميلاد صحيح")
+        .max(maxBirthDate, "يجب ان يكون عمرك اكبر من 5 سنوات")
+        .min(minBirthDate, "يجب ان يكون عمرك اصغر من 100 سنة"),
+
+    IsPlayedBefore: string().required("هذا الحقل مطلوب").oneOf(IsPlayedBeforeOptions.map(elm => elm.value)),
+    approveCommitments: boolean().isTrue("يجب الموافقة علي التعهد لاكمال الاستمارة."),
+
+
+})
+type Schema = InferType<typeof schema>
+
+const calculateAge = (birthDateStr: Date): number => {
+    const birthDate: Date = new Date(birthDateStr);
+
+    const currentDate: Date = new Date();
+    const timeDiff: number = currentDate.getTime() - birthDate.getTime();
+    const ageInMilliseconds: number = Math.floor(timeDiff);
+
+    // Calculate the age in years, accounting for leap years
+    const msPerYear: number = 365.25 * 24 * 60 * 60 * 1000;
+    const age: number = Math.floor(ageInMilliseconds / msPerYear);
+
+    return age;
+}
+
+const getAgeRange = (birthDateStr: Date): string => {
+    const age: number = calculateAge(birthDateStr);
     if (age < 18)
         return " < 18"
     else if (age >= 18 && age < 24)
@@ -112,40 +164,46 @@ const getAgeRange = (age: number) => {
         return "24 ~ 29"
     else if (age >= 30 && age < 37)
         return "30 ~ 36"
-    else if (age > 36)
+    else
         return " > 37"
 }
-const onHandleSubmit = handleSubmit(() => {
-    const fpAge = getAgeRange(values.fpAgeNumber);
-    const spAge = getAgeRange(values.spAgeNumber);
+
+async function onSubmit(event: FormSubmitEvent<Schema>) {
+    const fpAge = getAgeRange(event.data.fpBirthDate);
+    const spAge = getAgeRange(event.data.spBirthDate);
 
     pending.value = true
-    IsToastShown.value = false
-    client("/champion-join-requests", { method: "post", body: { data: { ...values, date: new Date(), champ: route.params.id, fpAge, spAge } } })
+    client("/champion-join-requests", { method: "post", body: { data: { ...event.data, date: new Date(), champ: route.params.id, fpAge, spAge } } })
         .then(() => {
-
-            $toast.show({
-                type: 'success',
-                message: 'تم الارسال بنجاح ',
-                timeout: ToastShowDelay,
-            })
+            toast.add({ title: 'تم الارسال بنجاح ' })
             router.push("/");
         })
         .catch((err) => {
-            $toast.show({
-                type: 'danger',
-                message: 'تعذر الارسال برجاء المحاولة مرة اخري',
-                timeout: ToastShowDelay,
-            })
+            toast.add({ title: 'تعذر الارسال برجاء المحاولة مرة اخري' })
             console.error(err);
         })
         .finally(() => {
             pending.value = false;
         })
-})
+}
 
 
-
+const fetchData = () => {
+    pending.value = true
+    return client(`/leagues/getById/${route.params.id}`, { method: 'GET' })
+        .then((data: any) => {
+            champ.value = data
+            pending.value = false
+            useHead({
+                title: champ.value?.name,
+            })
+        }).catch((err) => {
+            console.error(err)
+            pending.value = false
+        })
+}
+onServerPrefetch(fetchData)
+onBeforeMount(fetchData)
 
 </script>
 

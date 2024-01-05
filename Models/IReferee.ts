@@ -5,4 +5,4 @@ interface IReferee {
     image: string,
     refereed_matches_count: string
 }
-export default IReferee;
+export type { IReferee };

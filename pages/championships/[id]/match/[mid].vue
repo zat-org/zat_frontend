@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import IMatchFullDetails from "@/Models/IMatchFullDetails"
+import type {IMatchFullDetails} from "@/Models/IMatchFullDetails"
 
 defineProps(["leagueData"])
 const route = useRoute()

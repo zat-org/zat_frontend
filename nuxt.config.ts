@@ -16,7 +16,7 @@ export default defineNuxtConfig({
       youtubeApi: process.env.YOUTUBE_API_KEY
     }
   },
-  modules: ['@nuxtjs/tailwindcss', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image', '@tailvue/nuxt', "@nuxtjs/color-mode", "@vee-validate/nuxt"],
+  modules: ['@nuxt/ui', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image'],
   content: {
     markdown: {
       anchorLinks: false,
@@ -25,17 +25,7 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
-  veeValidate: {
-    // disable or enable auto imports
-    autoImports: true,
-    // Use different names for components
-    componentNames: {
-      Form: 'VeeForm',
-      Field: 'VeeField',
-      FieldArray: 'VeeFieldArray',
-      ErrorMessage: 'VeeErrorMessage',
-    }
-  },
+
   app: {
     head: {
       htmlAttrs: {

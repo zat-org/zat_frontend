@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import { ITeamLessDetails } from '@/Models/ITeam';
+import type { ITeamLessDetails } from '@/Models/ITeam';
 const client = useStrapiClient()
 const teams = ref<ITeamLessDetails[] | null>(null)
 const error = ref<string | null>(null)

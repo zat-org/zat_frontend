@@ -3,7 +3,7 @@
         <template #main>
             <div class="flex justify-around items-center flex-wrap">
                 <div v-if="champs && champs.length > 0" v-for="champ in champs"
-                    class="card border-[1px] border-blue-300 bg-white dark:bg-slate-600 bg-base-100 shadow-xl my-3 w-96 ">
+                    class="card border-[1px] border-blue-300  dark:bg-slate-600 bg-base-100 shadow-xl my-3 w-96 ">
                     <figure class="bg-blue-100  md:px-2"><nuxt-img loading="lazy" :src="url + champ.url" class="py-2 w-36"
                             alt="championship logo" />
                     </figure>
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import IChamp from '@/Models/IChamp';
+import type {IChamp} from '@/Models/IChamp';
 const client = useStrapiClient()
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
 

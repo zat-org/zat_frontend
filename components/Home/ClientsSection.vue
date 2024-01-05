@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-
+import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
 
 const client = useStrapiClient()

@@ -7,26 +7,26 @@
 
 @layer base {
 
-    /* width */
-::-webkit-scrollbar {
-    width: 10px;
-}
- 
-/* Track */
-::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0);
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
- 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
+        /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0);
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
     html {
         font-family: 'Noto Kufi Arabic', sans-serif;
     }
@@ -36,18 +36,10 @@
         background-position: calc(0% + 20px) calc(1px + 50%), calc(0% + 16px) calc(1px + 50%) !important;
     }
 
-    #toasts {
-        @apply justify-end items-center dark:text-slate-50 !important
-    }
-
     .avatar-contain img {
         object-fit: contain !important;
     }
 
-
-    .divider::after , .divider::before {
-        @apply dark:bg-slate-300 !important;
-    }
 
     .stars {
         width: 1px;
@@ -166,22 +158,38 @@
             transform: translateY(-2000px);
         }
     }
+   
     
 }
 
 @layer components {
     .row{
-        @apply flex   justify-start  items-start flex-col md:flex-row md:justify-around py-2 flex-wrap 
+        @apply flex  flex-wrap  justify-start items-start flex-col md:flex-row md:justify-evenly py-2  
     }
+    .form-control{
+        @apply  w-full px-2 md:w-[335px] mb-3;
+    } 
+    .form-control-error{
+        @apply  text-red-500 dark:text-red-400 text-sm;
+    } 
+
     .input{
-        @apply bg-slate-200 dark:bg-slate-400 dark:placeholder:text-slate-500 w-full ;
+        @apply bg-slate-200  dark:placeholder:text-slate-500 w-full  text-slate-900 dark:text-slate-50 dark:bg-slate-600;
     }
     .select { 
         @apply bg-slate-200 dark:bg-slate-400 dark:placeholder:text-slate-500 ;
     }
-    .form-control{
-        @apply  w-full md:w-fit px-2;
-    } 
+    .input-error {
+        @apply text-slate-800;
+    }
+    
+    .input-success {
+        @apply text-slate-800;
+    }
+  
+      
 }
 
-@layer utilities {}
+@layer utilities {
+
+}

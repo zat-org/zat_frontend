@@ -23,8 +23,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { ITeamStatistics } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { ITeamStatistics } from '@/Models/ITeam';
 
 
 const props = defineProps({

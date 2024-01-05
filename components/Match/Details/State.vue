@@ -67,7 +67,7 @@
 </template>
 
 <script setup lang="ts">
-import IMatchFullDetails from '@/Models/IMatchFullDetails';
+import type { IMatchFullDetails } from '@/Models/IMatchFullDetails';
 import MatchState from '@/Models/MatchState';
 
 const props = defineProps(["match"])

@@ -1,0 +1,20 @@
+enum StatisticOption {
+    playedSka = "عدد الصكات الملعوبة",
+    winnedSka = "عدد الصكات الرابحة",
+    LoosedSka = "عدد الصكات الخاسرة",
+    abnat = "الابناط",
+    okok = "الاكك",
+    aklat = "الأكلات",
+    moshtara_sun = "مشترى صن",
+    moshtara_hukm = "مشترى حكم",
+    nagha = "مشتريات ناجحة",
+    khasrana = "مشتريات خسرانة",
+    sra = "سرا",
+    baloot = "بلوت",
+    khamsen = "خمسين",
+    mea = "مية",
+    arben = "أربعمية",
+    kbabet_sun = "عدد الكبابيت صن",
+    kbabet_hukm = "عدد الكبابيت حكم",
+}
+export default StatisticOption;

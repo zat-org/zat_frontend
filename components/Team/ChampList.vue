@@ -9,8 +9,8 @@
 </template>
 
 <script setup lang="ts">
-import { PropType } from 'nuxt/dist/app/compat/capi';
-import { IChampLessDetails } from '@/Models/ITeam';
+import type { PropType } from 'nuxt/dist/app/compat/capi';
+import type { IChampLessDetails } from '@/Models/ITeam';
 
 const props = defineProps({
     champs: { type: Object as PropType<IChampLessDetails[]>, required: true }

@@ -40,23 +40,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
 const masks = {
     title: 'M / YYYY',
-    weekdays: 'W',
-    navMonths: 'M',
-    hours: 'h A',
-    input: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
-    inputDateTime: ['L h:mm A', 'YYYY-MM-DD h:mm A', 'YYYY/MM/DD h:mm A'],
-    inputDateTime24hr: ['L HH:mm', 'YYYY-MM-DD HH:mm', 'YYYY/MM/DD HH:mm'],
-    inputTime: ['h:mm A'],
-    inputTime24hr: ['HH:mm'],
-    dayPopover: 'WWW, MMM D, YYYY',
-    data: ['L', 'YYYY-MM-DD', 'YYYY/MM/DD'],
-    model: 'iso',
-    iso: 'YYYY-MM-DDTHH:mm:ss.SSSZ',
+    navMonths: 'M'
 }
-const data = ref([
+const data = [
     {
         key: "break",
         label: "فترة توقف",
@@ -82,9 +70,9 @@ const data = ref([
         key: "hezam",
         label: "بطولة الحزام",
         color: "bg-[#ea580c]"
-    },
-])
-const attrs = ref([
+    }
+]
+const attrs = [
     {
         key: 'today',
         bar: true,
@@ -171,11 +159,9 @@ const attrs = ref([
             hideIndicator: true,
         }
     },
-]);
+]
 </script>
 
 <style >
-/* .vc-header {
-    grid-template-columns: [title] auto 1fr [next] auto [prev] auto !important;
-} */
+
 </style>

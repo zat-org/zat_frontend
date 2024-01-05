@@ -49,6 +49,11 @@
                 </svg>
             </a>
 
+            <a class="mx-2 w-10 h-10 bg-gray-300 rounded-full flex justify-center items-center hover:-translate-y-1 duration-300 transition-all"
+                href=" https://www.instagram.com/zat_baloot?igsh=OGQ5ZDc2ODk2ZA==" target="_blank">
+                <Icon name="skill-icons:instagram" size="27px" />
+            </a>
+
         </div>
     </footer>
 </template>

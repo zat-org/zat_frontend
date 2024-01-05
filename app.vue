@@ -4,6 +4,8 @@
     <Navbar />
     <main class="p-2 grow items-start w-full relative">
       <NuxtPage />
+      <UNotifications />
+
     </main>
     <AppFooter />
   </div>

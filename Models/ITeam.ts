@@ -78,7 +78,6 @@ interface ITransfer {
     to_team_logo: string,
     player_id: number
 }
-export {
-    ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails, IPlayerLessDetails, IChampLessDetails, ITransfer, ITeamStatistics
+export type {
+    ITeam, ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails, IPlayerLessDetails, IChampLessDetails, ITransfer, ITeamStatistics
 }
-export default ITeam; 

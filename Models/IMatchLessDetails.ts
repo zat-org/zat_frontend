@@ -18,4 +18,4 @@ interface IMatchLessDetails {
     league_id: number
 }
 
-export default IMatchLessDetails;
+export type { IMatchLessDetails };

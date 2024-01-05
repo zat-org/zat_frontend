@@ -12,9 +12,7 @@ interface IJoinChamp {
     name: string,
     champ_logo: string
 }
-
-export { IUpcomingChamp, IJoinChamp }
-export default interface IChamp {
+interface IChamp {
     name: string,
     laws: string,
     start_at: string,
@@ -26,5 +24,8 @@ export default interface IChamp {
     winner_logo: string | null,
     league_logo: string | null,
     url: string | null,
+    commitments: string,
     leagueid: number
 }
+
+export type { IChamp, IUpcomingChamp, IJoinChamp }

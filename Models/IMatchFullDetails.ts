@@ -10,7 +10,7 @@ interface KeyNamePair {
     value: number,
     name: string
 }
-interface IMatchLessDetails {
+interface IMatchFullDetails {
     leagueName: string,
     state: MatchState,
     start_at: string,
@@ -36,4 +36,4 @@ interface IMatchLessDetails {
     },
 }
 
-export default IMatchLessDetails;
+export type { IMatchFullDetails };

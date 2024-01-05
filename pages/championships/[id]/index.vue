@@ -55,7 +55,7 @@
 </template>
 
 <script setup lang="ts">
-import IChamp from "@/Models/IChamp"
+import type {IChamp} from "@/Models/IChamp"
 import LeagueState from "@/Models/ChampState";
 
 const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 

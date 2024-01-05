@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import IMatchLessDetails from '@/Models/IMatchLessDetails';
+import type {IMatchLessDetails} from '@/Models/IMatchLessDetails';
 const props = defineProps({
     matches: {
         type: Object as PropType<IMatchLessDetails[]>,

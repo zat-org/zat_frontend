@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { IStudio } from "@/Models/IStudio";
+import type { IStudio } from "@/Models/IStudio";
 
 const route = useRoute();
 const client = useStrapiClient()
