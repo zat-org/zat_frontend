@@ -7,9 +7,6 @@
 
             <FormInputField v-model="state.teamName" type="text" name="teamName" label="اسم الفريق" hint="مطلوب"
                 icon="i-heroicons-users" placeholder="اسم الفريق" />
-
-            <FormInputField v-model="state.phone" dir="ltr" type="text" name="phone" label="رقم الجوال" hint="مطلوب"
-                icon="i-heroicons-phone" placeholder="512345678" />
         </div>
         <UDivider label="بيانات اللاعب الاول" />
         <div class="row">
@@ -17,6 +14,8 @@
                 icon="i-heroicons-user" placeholder="اللاعب الاول" />
             <FormInputField v-model="state.fpCity" type="text" name="fpCity" label="مدينة الاقامة" hint="مطلوب"
                 icon="i-heroicons-map-pin" placeholder="الرياض" />
+            <FormInputField v-model="state.fpPhone" dir="ltr" type="text" name="fpPhone" label="رقم الجوال" hint="مطلوب"
+                icon="i-heroicons-phone" placeholder="512345678" />
             <FormInputField v-model="state.fpBirthDate" type="date" name="fpBirthDate" label="تاريخ الميلاد" hint="مطلوب" />
             <FormInputField v-model="state.fpExperience" type="number" name="fpExperience" label="سنوات الخبرة" hint="مطلوب"
                 icon="i-heroicons-academic-cap" />
@@ -27,6 +26,8 @@
                 icon="i-heroicons-user" placeholder="اللاعب الاول" />
             <FormInputField v-model="state.spCity" type="text" name="spCity" label="مدينة الاقامة" hint="مطلوب"
                 icon="i-heroicons-map-pin" placeholder="الرياض" />
+            <FormInputField v-model="state.spPhone" dir="ltr" type="text" name="spPhone" label="رقم الجوال" hint="مطلوب"
+                icon="i-heroicons-phone" placeholder="512345678" />
             <FormInputField v-model="state.spBirthDate" type="date" name="spBirthDate" label="تاريخ الميلاد" hint="مطلوب" />
             <FormInputField v-model="state.spExperience" type="number" name="spExperience" label="سنوات الخبرة" hint="مطلوب"
                 icon="i-heroicons-academic-cap" />
@@ -76,7 +77,8 @@ const { error, pending, send: sendJoinRequest } = $api.followersChampions.useSen
 const state = reactive<IFollowerChampionApplyRequest>({
     teamName: "",
     email: "",
-    phone: "",
+    fpPhone: "",
+    spPhone: "",
     fpName: "",
     fpCity: "",
     fpBirthDate: "",
@@ -97,9 +99,11 @@ const minBirthDate: Date = new Date(currentDate.getFullYear() - 105, currentDate
 const saudiArabianPhoneNumberRegex = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
 
 const schema = object({
-    email: string().trim().required("هذا الحقل مطلوب").email("يرجي ادخال بريد الكتروني صحيح"),
-    phone: string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
     teamName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(30, "يجب ان لا يتعدي الاسم ثلاثين حرفا"),
+    email: string().trim().required("هذا الحقل مطلوب").email("يرجي ادخال بريد الكتروني صحيح"),
+
+    fpPhone: string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
+    spPhone: string().trim().required("هذا الحقل مطلوب").matches(saudiArabianPhoneNumberRegex, { message: 'يرجي ادخال رقم جوال صحيح', excludeEmptyString: true }),
 
     fpName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),
     spName: string().trim().required("هذا الحقل مطلوب").min(2, "يرجى ادخال اسم صحيح").max(50, "يجب ان لا يتعدي الاسم الخمسين حرفا"),

@@ -1,18 +1,8 @@
 <template>
-    <FetchDataWrapper class="md:w-5/6 lg:w2/3 mx-auto text-gray-900 dark:text-slate-50"
-        :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : ''" :pending="pending">
-        <section class="py-10" v-if="blogs && blogs.length > 0">
-            <div class="flex flex-wrap w-full mb-3 md:mb-6">
-                <div>
-                    <h1 class=" font-medium title-font mb-2 flex items-center ">
-                        <UIcon name="i-heroicons-newspaper" class="me-1 text-3xl text-amber-500" />
-                        <span class="sm:text-3xl text-2xl">
-                            اخبار زات
-                        </span>
-                    </h1>
-                    <div class="h-1 w-32 bg-yellow-500 rounded"></div>
-                </div>
-            </div>
+    <FetchDataWrapper class="w-full lg:w-5/6  mx-auto py-10" :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : ''"
+        :pending="pending">
+        <section class="" v-if="blogs && blogs.length > 0">
+            <SectionHeader title=" اخبار زات" icon="i-heroicons-newspaper" />
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-20 justify-items-center">
                 <template v-for="blog in blogs">
                     <BlogCard :blog="blog" />

@@ -1,5 +1,5 @@
 <template>
-    <UCard :ui="ui" class="shadow-xl w-full clickable relative bg-gray-200"
+    <UCard :ui="ui" class="shadow-xl w-full clickable relative bg-gray-200 z-0"
         @click="$router.push(`/championships/${champion.leagueid}`)">
         <template #default>
             <div class="flex ">
@@ -11,15 +11,17 @@
                         </object>
                     </div>
                     <template #content>
-                        <template v-if="champion.state === LeagueState.done">
-                            <UIcon name="i-heroicons-check-badge" class="text-white-500 text-[35px]" />
-                        </template>
-                        <template v-else-if="champion.state === LeagueState.upcoming">
-                            <UIcon name="i-heroicons-clock" class="text-white-500 text-[35px]" />
-                        </template>
-                        <template v-else-if="champion.state === LeagueState.live">
-                            <UIcon name="i-heroicons-fire-16-solid" class="text-white-500 text-[35px]" />
-                        </template>
+                        <div class="text-white-500 text-[35px] flex justify-center items-center">
+                            <template v-if="champion.state === LeagueState.done">
+                                <UIcon name="i-heroicons-check-badge" />
+                            </template>
+                            <template v-else-if="champion.state === LeagueState.upcoming">
+                                <UIcon name="i-heroicons-clock" />
+                            </template>
+                            <template v-else-if="champion.state === LeagueState.live">
+                                <UIcon name="i-heroicons-fire-16-solid" />
+                            </template>
+                        </div>
                     </template>
                 </UChip>
                 <div class=" ms-5 space-y-2 grow ">
@@ -27,6 +29,8 @@
                     <p class="text-sm line-clamp-4 ">{{ champion.description }}</p>
                 </div>
             </div>
+            <UIcon name="i-heroicons-trophy"
+                class="absolute text-[220px]  text-gray-400 dark:text-gray-600 -top-4 -left-16 z-[-1]" />
         </template>
     </UCard>
 </template>

@@ -13,7 +13,8 @@ interface IFollowerChampion {
 interface IFollowerChampionApplyRequest {
     teamName: string,
     email: string,
-    phone: string,
+    fpPhone: string,
+    spPhone: string,
     fpName: string,
     fpCity: string,
     fpBirthDate: string,

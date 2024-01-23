@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import type { IJob } from "@/Models/IJob";
-const props = defineProps({
+defineProps({
     job: {
         type: Object as PropType<IJob>,
         required: true

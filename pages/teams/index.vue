@@ -1,12 +1,8 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null" :pending="pending">
-        <div class="w-full my-3 md:mb-6">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 flex justify-start items-center">
-                <UIcon name="i-heroicons-user-group-solid" class="me-2 text-amber-500 text-4xl" />
-                فرق زات
-            </h1>
-            <div class="h-1 w-32 bg-amber-500 rounded"></div>
-        </div>
+    <FetchDataWrapper class="mx-auto w-full lg:w-5/6 py-10"
+        :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null" :pending="pending">
+
+        <SectionHeader title="فرق زات" icon="i-heroicons-user-group-solid" />
         <div class="list-grid mx-2" v-if="teams && teams.length > 0">
             <TeamLessDetails v-for="team in teams" :key="team.id" :team="team" />
         </div>

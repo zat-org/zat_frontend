@@ -1,10 +1,11 @@
 <template>
     <div class="mx-auto mt-5" dir="rtl">
-        <div class="w-full flex justify-center">
+        <div class="flex  justify-center">
+
             <SectionHeader title="زات فى أرقام" icon="i-heroicons-chart-bar" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 align-content-center">
-            <UCard class="bg-gray-200 h-44 clickable" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">
@@ -25,12 +26,11 @@
 
                     <UIcon name="i-heroicons-arrow-trending-up-20-solid"
                         class="absolute text-[220px]  text-gray-400 dark:text-gray-600 top-8 -right-9 z-[-1]" />
-                    <Icon name="mdi:youtube"
-                        class="absolute text-[220px]  text-gray-400 dark:text-gray-600 bottom-8 -left-20 z-[-1]" />
+                    <Icon name="mdi:youtube" class="absolute text-[220px]  text-[#CD201F] bottom-8 -left-20 z-[-1]" />
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44 clickable" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0 h-full">
                     <div class="flex flex-col justify-evenly h-full">
                         <h2 class="text-2xl font-semibold ">زيارات موقع زات</h2>
@@ -41,7 +41,7 @@
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44 clickable" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">
@@ -64,12 +64,11 @@
 
                     <UIcon name="i-heroicons-arrow-trending-up-20-solid"
                         class="absolute text-[220px]  text-gray-400 dark:text-gray-600 top-8 -right-9 z-[-1]" />
-                    <Icon name="mdi:youtube"
-                        class="absolute text-[220px]  text-gray-400 dark:text-gray-600 bottom-8 -left-20 z-[-1]" />
+                    <Icon name="mdi:youtube" class="absolute text-[220px]  text-[#CD201F] bottom-8 -left-20 z-[-1]" />
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44 clickable" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center h-full">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">
@@ -87,8 +86,7 @@
 
                     <UIcon name="i-heroicons-arrow-trending-up-20-solid"
                         class="absolute text-[220px]  text-gray-400 dark:text-gray-600 top-8 -right-9 z-[-1]" />
-                    <Icon name="mdi:twitch"
-                        class="absolute text-[220px]  text-gray-400 dark:text-gray-600 -bottom-3 -left-20 z-[-1]" />
+                    <Icon name="mdi:twitch" class="absolute text-[220px]  text-[#6441a5] -bottom-8 -left-20 z-[-1]" />
                 </div>
             </UCard>
         </div>

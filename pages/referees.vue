@@ -2,17 +2,11 @@
     <UModal v-model="isOpen">
         <RefereeJoinRequestForm @cancel="isOpen = false" />
     </UModal>
-    <FetchDataWrapper :error="error ? 'تعذر تحميل الحكام' : null" :pending="pending">
-        <div class="flex justify-between items-center mb-5">
-            <div>
-                <h1 class="sm:text-3xl text-2xl mb-2 ">
-                    <Icon name="fluent-emoji:balance-scale" size="50px" />
-                    حكام زات
-                </h1>
-                <div class="h-1 w-32 bg-yellow-500 rounded"></div>
-            </div>
+    <FetchDataWrapper class="mx-auto w-full lg:w-5/6 py-10" :error="error ? 'تعذر تحميل الحكام' : null" :pending="pending">
+        <SectionHeader title="حكام زات" icon="i-heroicons-scale">
             <UButton label="انضم لحكامنا" @click="isOpen = true" size="lg" trailing-icon="i-heroicons-user-group" />
-        </div>
+        </SectionHeader>
+
         <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 "
             v-if="data && data.referees && data.referees.length > 0">
             <RefereeCard v-for="referee in data.referees" :key="referee.id" v-bind:referee="referee" />

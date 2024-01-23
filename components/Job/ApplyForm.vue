@@ -3,7 +3,7 @@
         <template #header>
             <div class="relative">
                 <h2 class="text-center">استمارة التقدم للوظيفة</h2>
-                <UButton class="absolute -top-1 left-0" icon="i-heroicons-x-mark" square variant="ghost"
+                <UButton class="absolute -top-1 left-0 lg:hidden " icon="i-heroicons-x-mark" square variant="ghost"
                     @click="emit('cancel')" />
             </div>
         </template>
@@ -34,7 +34,7 @@
                     ارسال
                 </UButton>
                 <UButton type="button" color="white" variant="outline" trailing-icon="i-heroicons-x-mark"
-                    class="flex justify-center text-md w-1/3" @click="emit('cancel')">
+                    class="flex justify-center text-md w-1/3 lg:hidden" @click="emit('cancel')">
                     الغاء
                 </UButton>
             </div>

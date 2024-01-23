@@ -1,16 +1,8 @@
 <template>
-    <div class="text-gray-900 dark:text-slate-50 body-font container mx-auto my-5 ">
+    <div class="mx-auto w-full lg:w-5/6 py-10">
         <FetchDataWrapper :error="error ? 'تعذر تحميل البيانات برجاء المحاولة مرة اخري لاحقا.' : null" :pending="pending">
             <section class="mb-20" v-if="champions && champions.length > 0">
-                <div class="flex flex-wrap w-full mb-3 md:mb-6">
-                    <div class="lg:w-1/2 w-full ">
-                        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">
-                            <UIcon name="i-heroicons-trophy" class="text-amber-500 text-[30px]" />
-                            بطولات المتابعين
-                        </h1>
-                        <div class="h-1 w-32 bg-yellow-500 rounded"></div>
-                    </div>
-                </div>
+                <SectionHeader title="بطولات المتابعين" icon="i-heroicons-trophy" />
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                     <template v-for="champ in champions" :key="champ.id">
                         <FollowerChampionCard :champion="champ" />

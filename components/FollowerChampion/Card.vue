@@ -8,8 +8,8 @@
                     انضم الان
                 </UButton>
             </div>
-            <UIcon name="i-heroicons-trophy"
-                class="absolute text-[220px]  text-gray-400 dark:text-gray-600 -top-10  -right-24 z-[-1]" />
+            <UIcon name="i-heroicons-user-group"
+                class="absolute text-[220px]  text-gray-400 dark:text-gray-600 -top-12  -right-24 z-[-1]" />
         </div>
     </UCard>
 </template>
