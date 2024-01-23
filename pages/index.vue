@@ -5,7 +5,7 @@
             <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
             <HomeMatches class="w-full md:w-7/12" />
         </div>
-        <img src="/images/botolat.jpg" class="mb-5 rounded-xl" />
+        <img src="https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/btolatZat.jpg" class="mb-5 rounded-xl" />
         <HomeBlogs />
         <HomeJoinChampions />
         <div dir="ltr" class=" pb-8 text-slate-800 dark:text-white text-center -mb-5 dark:bg-slate-800  overflow-hidden">

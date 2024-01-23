@@ -1,13 +1,10 @@
 <template>
     <div class=" bg-zinc-100 dark:bg-slate-600  dark:text-slate-50 rounded-xl shadow-lg p-4 flex justify-start  ">
-        <div class="avatar w-1/3 flex justify-center pr-4">
-            <div class="w-16 sm:w-16 md:w-20 rounded-xl shadow-lg  ">
-                <nuxt-img loading="lazy" class="object-top" :src="url + referee.image" :alt="referee.name" />
-            </div>
-        </div>
-        <div class="flex flex-col  justify-start items-start space-y-1 w-2/3 text-amber-900 dark:text-slate-50">
+        <UAvatar size="3xl" :src="baseUrl + referee.image" class="w-24 h-24 me-4 " icon="i-heroicons-user"
+            :ui="{ rounded: 'object-top object-cover' }" />
 
-            <p class="text-sm text-center font-semibold ">
+        <div class="flex flex-col justify-center items-start space-y-1  text-amber-900 dark:text-slate-50">
+            <p class=" text-center font-semibold ">
                 {{ referee.name }}
             </p>
             <p class="text-xs  te">
@@ -27,10 +24,9 @@
 
 <script setup lang="ts">
 import type { PropType } from 'nuxt/dist/app/compat/capi';
-import getElapsedTime from "@/utils/getElapsedTime"
-import type {IReferee} from '@/Models/IReferee';
+import type { IReferee } from '@/Models/IReferee';
 
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
+const baseUrl = useRuntimeConfig().public.apiBaseUrl;
 
 const props = defineProps({
     referee: {

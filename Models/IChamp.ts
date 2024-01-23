@@ -1,5 +1,9 @@
-import champState from "./ChampState"
-import champType from "./ChampType"
+import ChampState from "./ChampState"
+import ChampType from "./ChampType"
+import type { ITeam } from "@/Models/ITeam"
+import type { IStudio } from "@/Models/IStudio"
+import type { IMatchLessDetails } from "@/Models/IMatchLessDetails"
+
 
 interface IUpcomingChamp {
     id: number,
@@ -13,19 +17,57 @@ interface IJoinChamp {
     champ_logo: string
 }
 interface IChamp {
+    leagueid: number,
     name: string,
-    laws: string,
     start_at: string,
     end_at: string,
     description: string,
-    type: champType,
-    state: champState,
+    type: ChampType,
+    state: ChampState,
     winner_name: string | null,
-    winner_logo: string | null,
     league_logo: string | null,
     url: string | null,
-    commitments: string,
-    leagueid: number
+    winner_logo: string | null,
+    laws: string
+}
+interface IGetAllChampionsResponse {
+    champs: IChamp[]
 }
 
-export type { IChamp, IUpcomingChamp, IJoinChamp }
+interface IGetChampDetailsResponse {
+    id: string,
+    name: string,
+    url: string,
+    end_at: string,
+    type: ChampType,
+}
+interface IGetChampTeamsResponse extends IGetChampDetailsResponse {
+    teams: ITeam[]
+}
+interface TeamSummary {
+    id: number,
+    win: number,
+    lost: number,
+    name: string,
+    play: number,
+    abnat: string,
+}
+interface LeagueTeamSummary extends TeamSummary {
+    totalScore: number,
+    totalScoreForAbnat: number,
+    totalNumberOfRounds: number
+}
+interface HezamTeamSummary extends TeamSummary {
+    consecutiveWins: number,
+}
+interface IGetChampSummaryResponse extends IGetChampDetailsResponse {
+    table: HezamTeamSummary[] | LeagueTeamSummary[]
+}
+interface IGetChampStudiosResponse extends IGetChampDetailsResponse {
+    studios: IStudio[]
+}
+
+interface IGetChampMatchesResponse extends IGetChampDetailsResponse {
+    matches: IMatchLessDetails[]
+}
+export type { IChamp, IUpcomingChamp, IJoinChamp, IGetAllChampionsResponse, IGetChampTeamsResponse, IGetChampSummaryResponse, HezamTeamSummary, LeagueTeamSummary, IGetChampStudiosResponse, IGetChampMatchesResponse }

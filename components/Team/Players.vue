@@ -1,21 +1,23 @@
 <template>
-    <div class="flex flex-wrap  w-full mt-2 justify-around items-start">
-        <div v-for="(player, index) in  players " :key="player.id"
-            class="w-1/3 my-2 flex flex-col justify-center items-center " :class="player.isCaptain ? 'order-first' : ''">
-            <div class="avatar">
-                <div class="rounded-xl shadow-lg  mask mask-squircle bg-white w-12 sm:w-16 md:w-20">
-                    <nuxt-img loading="lazy" class="object-top" :src="url + player.image" :alt="player.name" />
+    <div class="grid grid-cols-2 md:grid-cols-3 w-full mt-2">
+        <div v-for="(player, index) in  players " :key="player.id" @click="$router.push(`/players/${player.id}`)"
+            class=" my-2 flex flex-col justify-center items-center clickable"
+            :class="player.isCaptain ? 'order-first' : ''">
+            <div>
+                <Image :src="url + player.image" class="object-top object-cover" :alt="player.name"
+                    icon="i-heroicons-user" />
+                <div class="flex justify-start items-end">
+                    <div class="grow">
+                        <p class="text-sm text-right font-semibold mt-2 text-amber-900 dark:text-slate-50">
+                            {{ player.name }}
+                        </p>
+                        <p class="text-xs text-amber-500">
+                            {{ player.isCaptain ? `كابتن الفريق` : `لاعب بالفريق` }}
+                        </p>
+                    </div>
                 </div>
             </div>
-            <p class="text-sm text-center font-semibold mt-2 text-amber-900 dark:text-slate-50">
-                {{ player.name }}
-                <NuxtLink :to="`/players/${player.id}`">
-                    <Icon name="solar:square-arrow-right-up-broken" class="text-blue-400" size="18" />
-                </NuxtLink>
-            </p>
-            <p class="text-xs text-amber-500">
-                {{ player.isCaptain ? `كابتن الفريق` : `لاعب بالفريق` }}
-            </p>
+
         </div>
     </div>
 </template>
@@ -23,8 +25,9 @@
 <script setup lang="ts">
 import type { PropType } from 'nuxt/dist/app/compat/capi';
 import type { IPlayerLessDetails } from '@/Models/ITeam';
+import type { UAvatar } from '#build/components';
 
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
+const url = useRuntimeConfig().public.apiBaseUrl
 
 const props = defineProps({
     players: { type: Object as PropType<IPlayerLessDetails[]>, required: true }

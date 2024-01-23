@@ -9,18 +9,15 @@ interface IJob {
         updatedAt: Date
     }
 }
-interface IPagination {
-    page: number,
-    pageSize: number,
-    pageCount: number,
-    total: number
-}
-interface IMeta {
-    pagination: IPagination
+interface IApplyToJobRequest {
+    name: string,
+    email: string,
+    phone: string,
+    address: string,
+    aboutMe: string,
+    cv: File | null,
 }
 
-interface IJobsResponse {
-    data: IJob[],
-    meta: IMeta
-}
-export type { IJobsResponse, IJob };
+
+
+export type { IJob, IApplyToJobRequest };

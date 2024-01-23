@@ -1,7 +1,7 @@
-enum LeagueType {
-    league,
-    cup,
-    super,
-    hezam
+enum ChampType {
+    LEAGUE = "league",
+    CUP = "cup",
+    SUPER = "super",
+    HEZAM = "hezam"
 }
-export default LeagueType; 
+export default ChampType; 

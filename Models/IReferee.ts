@@ -5,4 +5,13 @@ interface IReferee {
     image: string,
     refereed_matches_count: string
 }
-export type { IReferee };
+interface IJoinAsRefereeRequest {
+    name: string,
+    email: string,
+    phone: string,
+    address: string,
+    birthDate: string,
+    experience: number,
+    IsJudgedBefore: string,
+}
+export type { IReferee, IJoinAsRefereeRequest };

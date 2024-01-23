@@ -1,14 +1,6 @@
 <template>
     <div class="h-full px-2 xl:px-10">
-        <div class="flex flex-wrap w-full mb-3 md:mb-6">
-            <div class=" w-full ">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 ">
-                    تقويم زات
-                </h1>
-                <div class="h-1 w-20 bg-yellow-500 rounded"></div>
-            </div>
-        </div>
-        <!-- :is-dark="{ selector: ':root', darkClass: 'dark' }" -->
+        <SectionHeader title="تقويم زات" icon="i-heroicons-calendar-days" />
 
         <VCalendar expanded locale="ar-EG" :masks="masks" :first-day-of-week="6" title-position="left" :rows="2"
             :attributes='attrs'>
@@ -162,6 +154,4 @@ const attrs = [
 ]
 </script>
 
-<style >
-
-</style>
+<style ></style>

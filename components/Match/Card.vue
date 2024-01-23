@@ -19,11 +19,11 @@
         </div>
 
         <div class="flex justify-center items-center my-2 ">
-            <div class="w-1/3 flex justify-center items-center flex-col">
-                <nuxt-img :src="`${url}${match.team_1_logo}`"
-                    class="rounded-lg h-16 sm:h-20 lg:h-24 object-cover bg-white p-1" alt="team logo" />
-                <p class="text-xl font-semibold "> {{ match.team_1_name }} </p>
 
+            <div class="w-1/3 flex justify-center items-center flex-col">
+                <Image :src="url + match.team_1_logo" class="bg-white p-1 object-contain mb-1" :alt="match.team_1_name"
+                    icon="i-heroicons-user-group" />
+                <p class="text-xl font-semibold truncate"> {{ match.team_1_name }} </p>
             </div>
             <div class="w-1/3 flex justify-center items-center ">
                 <div v-if="match.state === MatchState.Done && match.team_1_score !== null && match.team_2_score !== null">
@@ -54,19 +54,29 @@
                 </div>
             </div>
             <div class="w-1/3 flex justify-center items-center flex-col">
-                <nuxt-img :src="`${url}${match.team_2_logo}`"
-                    class="rounded-lg h-16 sm:h-20 lg:h-24 object-cover bg-white p-1" alt="team logo" />
-                <p class="text-xl font-semibold"> {{ match.team_2_name }} </p>
+                <Image :src="url + match.team_2_logo" class="bg-white p-1 object-contain mb-1" :alt="match.team_2_name"
+                    icon="i-heroicons-user-group" />
+                <p class="text-xl font-semibold truncate"> {{ match.team_2_name }} </p>
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-
 import MatchState from "@/Models/MatchState";
-const props = defineProps(["match", "champId"])
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
+import type { IMatchLessDetails } from "@/Models/IMatchLessDetails"
+
+const props = defineProps({
+    match: {
+        required: true,
+        type: Object as PropType<IMatchLessDetails>
+    },
+    champId: {
+        required: true,
+        type: Number
+    }
+})
+const url = useRuntimeConfig().public.apiBaseUrl
 
 function handleMatchCardClick() {
     if (props.match.state === MatchState.Live && props.match.url) {

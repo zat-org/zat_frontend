@@ -6,7 +6,7 @@
                 <MatchCard :match="event" :id="event.id" :champId="event.league_id" class="my-4" />
             </template>
         </div>
-        <div v-else class=" text-lg h-50 flex flex-col justify-center items-center py-10">
+        <div v-else class="text-lg h-50 flex flex-col justify-center items-center py-10">
             <Icon name="line-md:alert-circle" class="block text-9xl" />
             <h3>لا توجد مباريات حاليا</h3>
         </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import type {IMatchLessDetails} from '@/Models/IMatchLessDetails';
+import type { IMatchLessDetails } from '@/Models/IMatchLessDetails';
 const props = defineProps({
     matches: {
         type: Object as PropType<IMatchLessDetails[]>,

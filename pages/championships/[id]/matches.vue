@@ -1,48 +1,30 @@
 <template>
-    <FetchDataWraper :error="error" :pending="pending" class="w-full text-zinc-700 dark:text-slate-50">
-        <template #main>
-            <MatchList :matches="matches" />
-        </template>
-    </FetchDataWraper>
+    <FetchDataWrapper :error="error ? 'تعذر تحميل المباريات برجاء المحاولة لاحقا.' : null" :pending="pending">
+            <MatchList v-if="matches" :matches="matches" />
+    </FetchDataWrapper>
 </template>
 
 <script setup lang="ts">
-import type {IMatchLessDetails} from "@/Models/IMatchLessDetails"
-const props = defineProps(["leagueData"])
+import type { IChamp } from "@/Models/IChamp"
+const props = defineProps({
+    champ: {
+        required: true,
+        type: Object as PropType<IChamp>
+    }
+});
 
-const route = useRoute();
-const client = useStrapiClient()
-const matches = ref<IMatchLessDetails[]>([]);
-const error = ref<string | null>(null);
-const pending = ref(false);
+const { $api } = useNuxtApp();
+const { data, error, pending } = await $api.champions.getChampMatchesByChampId(props.champ.leagueid.toString());
+const matches = computed(() => data.value?.matches);
+
 
 definePageMeta({
     name: "leagueMatches"
 })
 
-
-const fetchData = () => {
-    pending.value = true;
-    return client(`/leagues/${route.params.id}/matches`, { method: 'GET' })
-        .then((data: any) => {
-            matches.value = (data.matches as IMatchLessDetails[])
-            // console.log(data.matches);
-            pending.value = false;
-            useHead({
-                title: ` المباريات - ${props.leagueData.name} `,
-            })
-
-        }).catch((err) => {
-            console.error(err)
-            error.value = "تعذر تحميل المباريات";
-            pending.value = false;
-
-        })
-
-}
-onServerPrefetch(fetchData)
-onBeforeMount(fetchData)
-
+useHead({
+    title: ` المباريات - ${props.champ.name} `,
+})
 
 </script>
 

@@ -1,15 +1,10 @@
 <template>
-    <div
-        class="navbar  border-b border-b-slate-800 dark:border-b-slate-100 bg-white  dark:bg-slate-800 dark:text-slate-50  ">
-        <div class="navbar-start">
+    <div class="h-20 flex justify-between items-center border-b ">
+        <div class="ms-3 w-1/3 ">
             <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-                <UButton color="gray" variant="ghost"
-                    class="rounded-full  w-12 h-12 flex justify-center items-center hover:dark:bg-slate-300 hover:dark:text-slate-800 hover:bg-slate-700 hover:text-slate-100">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" transform="scale(-1,1)" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
-                    </svg>
-                </UButton>
+                <UButton class="rounded-full transition-transform duration-500 ease-out hover:scale-105 active:scale-95"
+                    icon="i-heroicons-ellipsis-horizontal-16-solid" size="lg" square variant="outline" />
+
                 <template #item="{ item }">
                     <span class="truncate">{{ item.label }}</span>
                     <UIcon :name="item.icon" class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto" />
@@ -17,25 +12,18 @@
             </UDropdown>
         </div>
 
-        <div class="navbar-center">
+        <div>
             <NuxtLink to="/">
                 <img width="75" height="75"
                     :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
                     alt="zat logo" />
             </NuxtLink>
         </div>
-
-
-        <div class="navbar-end">
+        <div class="me-3 w-1/3 text-left">
             <ClientOnly>
-                <UButton
-                    class="swap swap-rotate hover:dark:bg-slate-300 hover:dark:text-slate-800 hover:bg-slate-700 hover:text-slate-100 rounded-full w-12 h-12 "
-                    :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" color="gray" variant="ghost"
-                    aria-label="Theme" @click="isDark = !isDark" />
-
-                <template #fallback>
-                    <div class="w-8 h-8" />
-                </template>
+                <UButton class="rounded-full transition-transform duration-1000 ease-out active:rotate-180"
+                    :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" size="lg" square
+                    variant="outline" @click="isDark = !isDark" aria-label="Theme" />
             </ClientOnly>
         </div>
     </div>
@@ -76,7 +64,7 @@ const items = [
     [{
         label: 'الاخبار',
         icon: 'i-heroicons-megaphone-solid',
-        to: '/blogs'
+        to: '/blogs?pageNum=1'
     },
     {
         label: 'الفرق',
@@ -101,7 +89,7 @@ const items = [
     {
         label: 'وظائف زات',
         icon: 'i-heroicons-briefcase',
-        to: '/jobs'
+        to: '/jobs?pageNum=1'
     },]
 ]
 

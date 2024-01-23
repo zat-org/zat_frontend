@@ -1,7 +1,7 @@
 <template>
     <div>
         <template v-if="!pending && !error">
-            <slot name="main"></slot>
+            <slot name="default"></slot>
         </template>
         <template v-else-if="pending">
             <slot name="pending" :pending="pending">

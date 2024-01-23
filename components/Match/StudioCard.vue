@@ -37,10 +37,17 @@
     </div>
 </template> 
 
-<script setup>
-const props = defineProps(["studio"])
+<script setup lang="ts">
+import type { IStudio } from "@/Models/IStudio"
 
-function handleYoutubeClick(event) {
+const props = defineProps({
+    studio: {
+        required: true,
+        type: Object as PropType<IStudio>
+    }
+})
+
+function handleYoutubeClick(event: Event) {
     window.open(props.studio.url, "_blank")
     event.stopImmediatePropagation()
 }

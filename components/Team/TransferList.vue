@@ -1,6 +1,7 @@
 <template>
-    <div v-if="transfers && transfers.length > 0" class="max-h-96 overflow-auto py-5 px-3">
-        <div class="grid grid-cols-1 gap-3 w-full align-start  ">
+    <div v-if="transfers && transfers.length > 0"
+        class="max-h-96 overflow-auto py-5 px-3 bg-slate-50 dark:bg-slate-900 rounded-lg">
+        <div class="grid grid-cols-1 gap-3 w-full align-start">
             <TeamTransfer v-for="trans, index in transfers" v-bind:trans="trans" :key="index"
                 :currentTeamName="currentTeamName" />
         </div>

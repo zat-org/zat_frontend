@@ -1,43 +1,28 @@
 <template>
     <div class="w-full">
-        <FetchDataWraper :error="error" :pending="pending">
-            <template #main>
-                <MatchDetails :match="match" />
-            </template>
-        </FetchDataWraper>
+        <FetchDataWrapper class="mx-auto md:w-5/6" :error="error ? 'تعذر تحميل المباراة برجاء المحاولة لاحقا.' : null"
+            :pending="pending">
+            <MatchDetails v-if="match" :match="match" />
+        </FetchDataWrapper>
     </div>
 </template>
 
 <script setup lang="ts">
-import type {IMatchFullDetails} from "@/Models/IMatchFullDetails"
+import type { IChamp } from "@/Models/IChamp"
+defineProps({
+    champ: {
+        required: true,
+        type: Object as PropType<IChamp>
+    }
+});
 
-defineProps(["leagueData"])
 const route = useRoute()
-const client = useStrapiClient()
+const { $api } = useNuxtApp()
+const { data: match, error, pending } = await $api.matches.getById(route.params.mid as string);
 
-const match = ref<IMatchFullDetails | null>(null)
-const error = ref<string | null>(null)
-const pending = ref(false)
-
-const fetchData = () => {
-    pending.value = true
-    return client(`/match/getById/${route.params.mid}`, { method: 'GET' })
-        .then((data: any) => {
-            match.value = data
-            pending.value = false
-            useHead({
-                title: `(${match.value?.team1.name} ضد ${match.value?.team2.name}) - ${match.value?.leagueName}`,
-            })
-        }).catch((err) => {
-            console.error(err)
-            error.value = "هذه المباراة غير موجودة"
-            pending.value = false
-        })
-}
-
-onServerPrefetch(fetchData)
-onBeforeMount(fetchData)
-
+useHead({
+    title: match.value ? `(${match.value.team1.name} ضد ${match.value.team2.name}) - ${match.value.leagueName}` : 'مباريات زات',
+})
 </script>
 
 <style scoped></style>

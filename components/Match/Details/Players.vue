@@ -1,20 +1,17 @@
 <template>
     <div v-if="match.team1.players?.length > 0 && match.team1.players?.length > 0">
-        <div class="divider">لاعبي الفريقين</div>
+        <UDivider>لاعبي الفريقين</UDivider>
         <div class="flex text-gray-500 justify-around  text-sm">
             <div>
                 <div v-for="player, index in match.team1.players" :key="player.id"
                     class="flex justify-start  items-center  mb-3">
-                    <div class="avatar me-4">
-                        <div class=" w-10 sm:w-16 md:w-20 rounded-xl shadow-lg ">
-                            <nuxt-img class="object-top" :src="url + player.image" :alt="player.name" />
-                        </div>
-                    </div>
-                    <div class="">
-                        <p class="text-gray-950 dark:text-slate-50 text-right">
+                    <Image :src="url + player.image" class="object-top me-4 object-cover" :alt="player.name"
+                        icon="i-heroicons-user" />
+                    <div>
+                        <p class="text-gray-950 text-md lg:text-lg dark:text-slate-50 text-right">
                             {{ player.name }}
                         </p>
-                        <p class="text-xs text-right dark:text-slate-400">
+                        <p class="text-xs lg:text-sm text-right dark:text-slate-400">
                             {{ index === 0 ? `كابتن الفريق` : `لاعب بالفريق` }}
                         </p>
                     </div>
@@ -22,20 +19,17 @@
             </div>
             <div>
                 <div v-for="player, index in match.team2.players" :key="player.id"
-                    class="flex justify-end  items-center mb-3">
-                    <div class="">
-                        <p class="text-gray-950 dark:text-slate-50 text-left">
+                    class="flex justify-end items-center mb-3">
+                    <div>
+                        <p class="text-gray-950 text-md lg:text-lg dark:text-slate-50 text-left">
                             {{ player.name }}
                         </p>
-                        <p class="text-xs text-left dark:text-slate-400">
+                        <p class="text-xs lg:text-sm text-left dark:text-slate-400">
                             {{ index === 0 ? `كابتن الفريق` : `لاعب بالفريق` }}
                         </p>
                     </div>
-                    <div class="avatar ms-4  ">
-                        <div class=" w-10 sm:w-16 md:w-20 rounded-xl shadow-lg ">
-                            <nuxt-img class=" object-top" :src="url + player.image" :alt="player.name" />
-                        </div>
-                    </div>
+                    <Image :src="url + player.image" class="object-top ms-4 object-cover" :alt="player.name"
+                        icon="i-heroicons-user" />
                 </div>
             </div>
         </div>
@@ -43,9 +37,14 @@
 </template>
 
 <script setup lang="ts">
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
-
-const props = defineProps(["match"])
+import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
+const url = useRuntimeConfig().public.apiBaseUrl;
+defineProps({
+    match: {
+        required: true,
+        type: Object as PropType<IMatchFullDetails>
+    }
+});
 </script>
 
 <style scoped></style>

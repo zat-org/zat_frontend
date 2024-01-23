@@ -1,49 +1,46 @@
 <template>
-    <div class="flex justify-evenly items-center bg-gray-200 rounded-xl shadow-lg h-24">
-        <div
-            class="avatar avatar-contain w-1/4 flex flex-col justify-center rounded-r-xl shadow-lg items-center overflow-hidden h-full bg-white ">
-            <div v-if="trans.to_team_logo !== null" class=" w-20 md:w-32  h-full  bg-white p-1 ">
-                <nuxt-img loading="lazy" class="object-center" :src="url + trans.to_team_logo" :alt="trans.to_team_name" />
+    <div class="flex justify-evenly items-center bg-white rounded-xl shadow-lg h-24 ">
+        <div class="w-1/4 flex flex-col justify-center items-center rounded-r-xl  overflow-hidden  ">
+            <div v-if="trans.to_team_logo !== null">
+                <object type="image/png" :data="url + trans.to_team_logo" :aria-label="trans.to_team_name"
+                    class="object-center object-cover flex justify-center items-center rounded-lg  w-16">
+                    <UIcon name="i-heroicons-user-group" class="text-[75px] text-amber-500" />
+                </object>
+                <p class=" font-semibold text-center dark:text-slate-700 text-sm">{{ trans.to_team_name }}</p>
             </div>
             <p v-else class="font-semibold text-center dark:text-slate-700">لاعب <br /> حر </p>
-            <p class=" font-semibold text-center dark:text-slate-700 text-sm">{{ trans.to_team_name }}</p>
         </div>
         <div class="text-center w-2/4 flex flex-nowrap justify-around ">
-            <div class="flex justify-center items-center">
-                <Icon name="gg:arrow-long-right" :rotate="0" size="50"
-                    :class="trans.to_team_name === currentTeamName ? 'text-green-400' : 'text-red-400'" />
+            <div class="flex justify-center items-center ms-2">
+                <UIcon name="i-heroicons-arrow-long-right" :rotate="0"
+                    :class="[trans.to_team_name === currentTeamName ? 'text-green-400' : 'text-red-400', 'text-[50px]']" />
             </div>
-            <div class="flex flex-col justify-center items-center py-2 space-y-0.5">
-                <div class="avatar ">
-                    <div class=" w-16  mask mask-squircle bg-white">
-                        <nuxt-img loading="lazy" :src="url + trans.image" class="object-top" />
-                    </div>
-                </div>
-                <p class="text-sm text-center font-semibold  text-amber-900">
+            <div class="flex flex-col justify-center grow items-center py-2 space-y-1 hover:cursor-pointer hover:scale-105 active:scale-100 transition-transform duration-500 ease-out "
+                @click="$router.push(`/players/${trans.player_id}`)">
+                <UAvatar size="xl" :ui="{ rounded: 'rounded-lg object-cover object-center shadow-lg' }"
+                    :src="url + trans.image" icon="i-heroicons-user" :alt="trans.name" />
+                <p class="text-xs md:text-sm text-center font-semibold truncate text-amber-900">
                     {{ trans.name }}
-                    <NuxtLink :to="`/players/${trans.player_id}`">
-                        <Icon name="solar:square-arrow-right-up-broken" class="text-blue-400" size="18" />
-                    </NuxtLink>
                 </p>
             </div>
         </div>
-        <div
-            class="avatar avatar-contain w-1/4 flex flex-col  justify-center items-center h-full  shadow-lg overflow-hidden rounded-l-xl  bg-white">
-            <div v-if="trans.from_team_logo !== null" class=" w-20 md:w-32  h-full bg-white p-1 ">
-                <nuxt-img loading="lazy" class="object-center" :src="url + trans.from_team_logo"
-                    :alt="trans.from_team_name" />
+        <div class="w-1/4 flex flex-col justify-center  items-center rounded-l-xl h-full overflow-hidden bg-white">
+            <div v-if="trans.from_team_logo !== null">
+                <object type="image/png" :data="url + trans.from_team_logo" :aria-label="trans.from_team_name"
+                    class="object-center  flex justify-center items-center rounded-lg  w-16">
+                    <UIcon name="i-heroicons-user-group" class="text-[75px] text-amber-500" />
+                </object>
+                <p class=" font-semibold text-center dark:text-slate-700 text-sm">{{ trans.from_team_name }}</p>
             </div>
             <p v-else class="font-semibold text-center dark:text-slate-700">لاعب <br /> حر </p>
-            <p class="font-semibold text-center dark:text-slate-700 text-sm">{{ trans.from_team_name }}</p>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
 import type { ITransfer } from '@/Models/ITeam';
 
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
+const url = useRuntimeConfig().public.apiBaseUrl;
 
 const props = defineProps({
     trans: { type: Object as PropType<ITransfer>, required: true }

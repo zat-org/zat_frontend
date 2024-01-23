@@ -1,8 +1,7 @@
 <template>
-    <button @click="() => $router.go(-1)"
-        class="btn btn-glass bg-blue-400  text-white  absolute -top-2 left-0 rounded-full border-0">
-        <Icon name="fluent:arrow-circle-left-24-filled" size="20" />
-    </button>
+    <UButton @click="() => $router.go(-1)" class="absolute -top-2 left-0 rounded-full">
+        <UIcon name="i-heroicons-arrow-left-circle-solid" class="text-[25px]"></UIcon>
+    </UButton>
 </template>
 
 <script setup lang="ts">

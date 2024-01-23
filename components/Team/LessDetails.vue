@@ -1,17 +1,13 @@
 <template>
-    <div
-        class="bg-zinc-100 rounded-xl shadow-lg p-4 text-amber-900 dark:text-slate-50 dark:bg-slate-700 flex justify-evenly relative overflow-hidden">
-        <NuxtLink :to="`/teams/${team.id}`"
-            class="absolute  h-12 w-12 rounded-full bg-blue-400 -top-3 -left-3 btn dark:border-slate-700 text-white   ">
-            <Icon name="fluent:arrow-circle-up-left-24-filled" class=" text-xl absolute bottom-2 right-2" />
-        </NuxtLink>
-        <div class="avatar avatar-contain">
-            <div class=" w-20 sm:w-24 md:w-32 rounded-xl bg-white p-1  shadow-lg ">
-                <nuxt-img :src="url + team.team_logo" />
-            </div>
+    <div class="flex rounded-xl shadow-lg w-full border dark:border-0 bg-gray-50  dark:bg-slate-900 clickable"
+        @click="$router.push(`/teams/${team.id}`)">
+        <div class="w-32 h-32 rounded-r-xl overflow-hidden bg-white flex justify-center items-center">
+            <object type="image/png" :data="url + team.team_logo" :aria-label="team.name"
+                class="object-center w-28 flex justify-center items-center">
+                <UIcon name="i-heroicons-users" class="text-[75px] text-amber-500" />
+            </object>
         </div>
-
-        <div class="w-full">
+        <div class="flex flex-col justify-center grow">
             <p class="text-lg text-center font-semibold  mb-3">
                 فريق {{ team.name }}
             </p>
@@ -31,27 +27,23 @@
                         {{ ChampWinText }}
                     </p>
                 </div>
-
             </div>
-
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
-import getElapsedTime from "@/utils/getElapsedTime"
 import type { ITeamLessDetails } from '@/Models/ITeam';
 
 const props = defineProps({
     team: { type: Object as PropType<ITeamLessDetails>, required: true }
 })
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
+const url = useRuntimeConfig().public.apiBaseUrl; // remove /api from strapi url 
 
 const ChampWinText = computed(() => {
     switch (props.team.winning_count) {
         case '0':
-            return "لم يفز بأي بطولات حتى الاّن"
+            return "لم يفز بأي بطولات "
         case '1':
             return "فاز ببطولة واحدة"
         case '2':

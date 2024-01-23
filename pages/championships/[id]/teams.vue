@@ -1,59 +1,47 @@
 <template>
-    <FetchDataWraper :error="error" :pending="pending" class="w-full ">
-        <template #main>
-            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2 mb-3" v-if="teams && teams.length > 0">
-                <div v-for="team in teams" :key="team.id"
-                    class=" bg-zinc-100 dark:bg-slate-600 rounded-xl shadow-lg p-4 flex flex-col justify-start items-center space-y-2 relative overflow-hidden">
-                    <NuxtLink :to="`/teams/${team.id}`"
-                        class="absolute  h-12 w-12 rounded-full bg-blue-400 border-0 hover:text-slate-700 text-white -top-3 -left-3 btn">
-                        <Icon name="fluent:arrow-circle-up-left-24-filled" class=" text-xl absolute bottom-2 right-2" />
-                    </NuxtLink>
-                    <h4 class="font-bold text-lg">
-                        فريق {{ team.name }}
-                    </h4>
-                    <div class="avatar avatar-contain ">
-                        <div class=" w-16 sm:w-20 md:w-24 rounded-xl bg-white p-1  shadow-lg ">
-                            <nuxt-img loading="lazy" :src="url + team.team_logo" :alt="team.name" />
-                        </div>
-                    </div>
-                    <TeamPlayers v-bind:players="team.players" />
+    <FetchDataWrapper :error="error ? ' تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null" :pending="pending">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2 mb-3" v-if="teams && teams.length > 0">
+            <div v-for="team in teams" :key="team.id"
+                class="w-full bg-zinc-100 dark:bg-slate-600 rounded-xl shadow-lg p-4 flex flex-col justify-start items-center space-y-2 relative overflow-hidden">
+                <UButton :to="`/teams/${team.id}`" class="absolute h-12 w-12 rounded-full -top-3 -left-3 ">
+                    <UIcon name="i-heroicons-arrow-up-left-16-solid" class="text-xl absolute bottom-2.5 right-2.5" />
+                </UButton>
+                <h4 class="font-bold text-lg">
+                    فريق {{ team.name }}
+                </h4>
+                <div class="w-32 h-32 rounded-xl overflow-hidden bg-white flex justify-center items-center">
+                    <object type="image/png" :data="url + team.team_logo" :aria-label="team.name"
+                        class="object-center w-28 flex justify-center items-center">
+                        <UIcon name="i-heroicons-users" class="text-[75px] text-amber-500" />
+                    </object>
                 </div>
+                <TeamPlayers v-bind:players="team.players" />
             </div>
-            <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
-                <Icon name="line-md:alert-circle" class="block text-9xl" />
-                <h3>لا توجد فرق حاليا</h3>
-            </div>
-
-        </template>
-    </FetchDataWraper>
+        </div>
+        <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
+            <Icon name="line-md:alert-circle" class="block text-9xl" />
+            <h3>لا توجد فرق حاليا</h3>
+        </div>
+    </FetchDataWrapper>
 </template>
 
 <script setup lang="ts" >
-import type {ITeam} from "@/Models/ITeam"
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
-const client = useStrapiClient()
-const teams = ref<ITeam[] | null>(null)
-const error = ref<string | null>(null)
-const pending = ref(false)
-const props = defineProps(["leagueData"]);
-const route = useRoute()
-const fetchData = () => {
-    pending.value = true
-    return client(`/leagues/${route.params.id}/teams`, { method: 'GET' })
-        .then((data: any) => {
-            teams.value = data.teams
-            pending.value = false
-            useHead({
-                title: `الفرق المشاركة - ${props.leagueData.name} `,
-            })
-        }).catch((err) => {
-            console.error(err)
-            error.value = "تعذر تحميل البيانات."
-            pending.value = false
-        })
-}
-onServerPrefetch(fetchData)
-onBeforeMount(fetchData)
+import type { IChamp } from "@/Models/IChamp"
+const props = defineProps({
+    champ: {
+        required: true,
+        type: Object as PropType<IChamp>
+    }
+});
+
+const url = useRuntimeConfig().public.apiBaseUrl;
+
+const { $api } = useNuxtApp();
+const { data, error, pending } = await $api.champions.getChampTeamsByChampId(props.champ.leagueid.toString());
+const teams = computed(() => data.value?.teams);
+useHead({
+    title: `الفرق المشاركة - ${props.champ.name} `,
+})
 </script>
 
 <style scoped></style>

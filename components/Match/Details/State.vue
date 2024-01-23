@@ -1,40 +1,36 @@
 <template>
-    <div class="divider"> بيانات المباراة </div>
-    <div class="grid grid-cols-5  grid-flow-row gap-1 md:gap-4 place-items-center text-center">
-        <div class="col-start-1 col-end-3">
-            <p class="text-sm text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
-            <p class="text-sm text-amber-500 ">{{ match.tournament }}</p>
+    <UDivider> بيانات المباراة </UDivider>
+    <div class="flex items-center justify-around w-full text-center my-5">
+        <div class="w-1/3">
+            <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
+            <p class="text-sm lg:text-md text-amber-500 ">{{ match.tournament }}</p>
         </div>
-        <div>
-            <a v-if="match.url" :href="`${match.url}`" target="_blank">
-                <div class="bg-gray-100 h-10 w-10 rounded-full flex justify-center items-center  ">
-                    <Icon name="ion:logo-youtube" class="text-red-500" size="23"></Icon>
-                </div>
+        <div class="w-1/3 flex justify-center">
+            <a v-if="match.url" :href="match.url"
+                class="rounded-full clickable bg-white w-10 h-10 flex justify-center items-center">
+                <Icon name="ion:logo-youtube" class="text-red-500" size="28"></Icon>
             </a>
         </div>
-        <div class="col-start-4 col-end-6 ">
-            <p class="text-sm text-gray-400 dark:text-slate-300">
+        <div class="w-1/3">
+            <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300">
                 تاريخ المباراة
             </p>
-            <p class="text-sm text-amber-500 ">
+            <p class="text-sm lg:text-md text-amber-500 ">
                 {{ new Date(match.start_at).toLocaleDateString("ar-EG") }}
             </p>
         </div>
-        <div class="col-start-1 col-end-6 flex justify-around w-full items-center relative ">
-            <div>
-                <div class="avatar">
-                    <div class="mask mask-squircle bg-white p-3 ">
-                        <div class="overflow-hidden w-16 h-16  sm:h-24 sm:w-24 bg-no-repeat bg-contain bg-center"
-                            :style="`background-image:url(${url + match.team1.logo})`">
-                        </div>
-                    </div>
-                </div>
-                <p class="col-start-1 col-end-3">{{ match.team1.name }}</p>
+    </div>
 
-            </div>
-            <div>
+    <div class="flex items-center justify-around w-full text-center relative my-5">
+        <div class="w-1/3 flex flex-col items-center">
+            <Image :src="url + match.team1.logo" class="bg-white p-1 object-contain" :alt="match.team1.name"
+                icon="i-heroicons-user-group" />
+            <p class="text-xl font-semibold truncate mt-3"> {{ match.team1.name }} </p>
+        </div>
+        <div class="w-1/3">
+            <div class="h-20 md:h-24">
                 <template v-if="match.state === MatchState.Done">
-                    <p class="text-yellow-400 text-4xl md:text-6xl md:font-mono">
+                    <p class="text-yellow-400 text-5xl md:text-6xl md:font-mono">
                         {{ match.team1.score }} <span class="text-gray-600">-</span> {{ match.team2.score }}
                     </p>
                 </template>
@@ -44,47 +40,40 @@
                 <template v-else-if="match.state === MatchState.Live">
                     <Icon name="svg-spinners:pulse-rings-3" color="red" width="50" height="50" />
                 </template>
-                <div class="py-1 px-3 rounded-full text-xs absolute bottom-0 left-1/2 -translate-x-1/2"
-                    :class="Object.keys(MatchState)[Object.values(MatchState).indexOf(match.state)]">
-                    {{ match.state }}
-                </div>
             </div>
-            <div>
-                <div class="avatar">
-                    <div class="mask mask-squircle bg-white  p-3 ">
-                        <div class="overflow-hidden w-16 h-16  sm:h-24 sm:w-24 bg-no-repeat bg-contain bg-center"
-                            :style="`background-image:url(${url + match.team2.logo})`">
-                        </div>
-                    </div>
-                </div>
-                <p class="col-start-4 col-end-6">{{ match.team2.name }}</p>
-
+            <div class="py-1 px-3 rounded-full text-xs absolute bottom-0 left-1/2 -translate-x-1/2 text-white"
+                :class="[`${chipBg()}`]">
+                {{ match.state }}
             </div>
         </div>
-
-
+        <div class="w-1/3 flex flex-col items-center">
+            <Image :src="url + match.team2.logo" class="bg-white p-1 object-contain" :alt="match.team2.name"
+                icon="i-heroicons-user-group" />
+            <p class="text-xl font-semibold truncate mt-3"> {{ match.team2.name }} </p>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import type { IMatchFullDetails } from '@/Models/IMatchFullDetails';
 import MatchState from '@/Models/MatchState';
-
-const props = defineProps(["match"])
-const url = useStrapiUrl().slice(0, -4) // remove /api from strapi url 
-const match = toRef(props.match as IMatchFullDetails)
+import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
+const url = useRuntimeConfig().public.apiBaseUrl;
+const props = defineProps({
+    match: {
+        required: true,
+        type: Object as PropType<IMatchFullDetails>
+    }
+});
+const chipBg = () => {
+    switch (props.match.state) {
+        case MatchState.Done:
+            return 'bg-gray-500';
+        case MatchState.Live:
+            return 'bg-red-500';
+        case MatchState.Upcoming:
+            return 'bg-amber-500';
+    }
+}
 </script>
 
-<style scoped>
-.Upcoming {
-    @apply bg-amber-500 text-white
-}
-
-.Done {
-    @apply bg-gray-500 text-white
-}
-
-.Live {
-    @apply bg-red-500 text-white
-}
-</style>
+<style scoped></style>

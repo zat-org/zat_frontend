@@ -9,6 +9,7 @@ interface IPlayerFullDetails {
     player_name: string,
     twitter_link: string | null,
     tiktok_link: string | null,
+    youtube_link: string | null,
     snap_link: string | null,
     player_image: string,
     team_name: string,
@@ -78,6 +79,15 @@ interface ITransfer {
     to_team_logo: string,
     player_id: number
 }
+interface GetAllTeamsResponse {
+    teams: ITeamLessDetails[]
+}
+interface GetTeamByIdResponse {
+    data: ITeamFullDetails
+}
+interface GetPlayerByIdResponse {
+    data: IPlayerFullDetails
+}
 export type {
-    ITeam, ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails, IPlayerLessDetails, IChampLessDetails, ITransfer, ITeamStatistics
+    ITeam, ITeamLessDetails, ITeamFullDetails, IPlayerFullDetails, IPlayerLessDetails, IChampLessDetails, ITransfer, ITeamStatistics, GetAllTeamsResponse, GetTeamByIdResponse, GetPlayerByIdResponse
 }

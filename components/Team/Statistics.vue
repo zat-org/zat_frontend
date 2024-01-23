@@ -1,8 +1,8 @@
 <template>
-    <div class="container mx-auto rounded-lg shadow-lg mb-2 h-96 overflow-auto">
-        <table class="table table-zebra rounded-t-lg text-center  table-pin-rows">
+    <div class="mx-auto rounded-lg shadow-lg mb-2 h-96 overflow-auto">
+        <table class="rounded-t-lg text-center w-full">
             <thead>
-                <tr class="text-lg text-gray-100 bg-blue-400">
+                <tr class="text-lg text-amber-50 bg-gray-400 h-12">
                     <th>
                         الاحصائية
                     </th>
@@ -12,9 +12,10 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="value, key, index in statistics" :key="index">
+                <tr v-for="value, key, index in statistics" :key="index"
+                    class="h-10  even:bg-slate-100 even:dark:bg-slate-500 odd:bg-slate-200 odd:dark:bg-slate-600">
                     <td class="px-0 dark:text-slate-50 ">{{ key }}</td>
-                    <td class="font-semibold  text-md text-blue-950 dark:text-slate-50">{{ value }}
+                    <td class="font-semibold text-md text-blue-950 dark:text-slate-50">{{ value }}
                     </td>
                 </tr>
             </tbody>
@@ -23,22 +24,11 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
 import type { ITeamStatistics } from '@/Models/ITeam';
-
-
 const props = defineProps({
     statistics: { type: Object as PropType<ITeamStatistics>, required: true }
 })
+
 </script>
 
-<style scoped>
-tbody tr:nth-child(even) {
-    @apply bg-slate-100 dark:bg-slate-500 !important;
-}
-
-
-tbody tr:nth-child(odd) {
-    @apply bg-slate-200 dark:bg-slate-600 !important;
-}
-</style>
+<style scoped></style>

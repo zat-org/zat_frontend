@@ -13,10 +13,11 @@ const WebsiteUrl = "https://zatbaloot.com/"
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      youtubeApi: process.env.YOUTUBE_API_KEY
+      youtubeApi: process.env.YOUTUBE_API_KEY,
+      apiBaseUrl: process.env.STRAPI_URL
     }
   },
-  modules: ['@nuxt/ui', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxtjs/strapi', '@nuxt/image'],
+  modules: ['@nuxt/ui', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxt/image'],
   content: {
     markdown: {
       anchorLinks: false,
