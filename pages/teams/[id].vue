@@ -4,7 +4,7 @@
             <div class="flex flex-col justify-center items-center my-5 space-y-5">
                 <h2 class="font-semibold text-2xl">فريق {{ team.name }}</h2>
                 <UAvatar size="3xl"
-                    :ui="{ rounded: 'rounded-lg object-cover object-center shadow-lg', size: { '3xl': 'w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32' } }"
+                    :ui="{ rounded: 'rounded-lg object-contain object-center shadow-lg', size: { '3xl': 'w-24 sm:w-28 md:w-32 h-24 sm:h-28 md:h-32' } }"
                     :src="url + team.team_logo" icon="i-heroicons-users" :alt="team.name" />
                 <section class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 w-full">
                     <TeamBasicInfo class="md:col-span-2" v-bind:team="team" />

@@ -17,7 +17,7 @@
             </div>
             <div class="flex flex-col justify-center grow items-center py-2 space-y-1 hover:cursor-pointer hover:scale-105 active:scale-100 transition-transform duration-500 ease-out "
                 @click="$router.push(`/players/${trans.player_id}`)">
-                <UAvatar size="xl" :ui="{ rounded: 'rounded-lg object-cover object-center shadow-lg' }"
+                <UAvatar size="xl" :ui="{ rounded: 'rounded-lg object-cover object-top shadow-lg' }"
                     :src="url + trans.image" icon="i-heroicons-user" :alt="trans.name" />
                 <p class="text-xs md:text-sm text-center font-semibold truncate text-amber-900">
                     {{ trans.name }}

@@ -6,7 +6,7 @@
             <div class="flex flex-col justify-center items-center my-5 space-y-5">
                 <h2 class="font-semibold text-2xl">{{ player.player_name }}</h2>
                 <UAvatar size="3xl"
-                    :ui="{ rounded: 'rounded-lg object-cover object-center shadow-lg', size: { '3xl': 'w-40 h-40' } }"
+                    :ui="{ rounded: 'rounded-lg object-cover object-top shadow-lg', size: { '3xl': 'w-40 h-40' } }"
                     :src="`${url}${player.player_image}`" icon="i-heroicons-user" :alt="player.player_name" />
 
                 <section class="grid grid-cols-1 w-full md:w-2/3 lg:w-1/2">
@@ -27,7 +27,8 @@
                         <div class="flex flex-col justify-center items-center space-y-3">
                             <template v-if="player.transfers && player.transfers.length > 0">
                                 <template v-if="player.transfers[0].to_team_name">
-                                    <UAvatar size="3xl" :ui="{ rounded: 'rounded-lg object-cover object-center shadow-lg' }"
+                                    <UAvatar size="3xl"
+                                        :ui="{ rounded: 'rounded-lg object-contain object-center shadow-lg bg-white' }"
                                         :src="url + player.transfers[0].to_team_logo" icon="i-heroicons-users" />
                                     <p>لاعب فريق <span class="font-semibold">{{
                                         player.transfers[0].to_team_name }}</span>
