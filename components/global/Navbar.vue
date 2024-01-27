@@ -7,11 +7,13 @@
         </div>
 
         <div>
-            <NuxtLink to="/">
-                <img width="75" height="75"
-                    :src="colorMode.preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
-                    alt="zat logo" />
-            </NuxtLink>
+            <ClientOnly>
+                <NuxtLink to="/">
+                    <img width="75" height="75"
+                        :src="colorMode.preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
+                        alt="zat logo" />
+                </NuxtLink>
+            </ClientOnly>
         </div>
         <div class="me-3 w-1/3 text-left">
             <ClientOnly>
@@ -22,29 +24,24 @@
         </div>
 
         <USlideover v-model="isSidebarOpen" dir="ltr">
-            <UCard dir="rtl" :ui="{ rounded: 'rounded-none h-full', body: { padding: 'p-0' }, header: { padding: 'p-0' } }">
-                <template #header>
-                    <div class="flex justify-between items-center">
-                        <img width="75" height="75"
-                            :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
-                            alt="zat logo" />
-                        <UButton icon="i-heroicons-x-mark" square variant="solid" @click="isSidebarOpen = false" />
+            <div class="" dir="rtl">
+                <div class="flex justify-between items-center px-3 border-b">
+                    <img width="75" height="75"
+                        :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
+                        alt="zat logo" />
+                    <UButton icon="i-heroicons-x-mark" square variant="solid" @click="isSidebarOpen = false" />
+                </div>
+                <div class="mt-3 ms-1.5 font-medium	text-sm">
+                    <div v-for="itemGroup in items" class="mb-2">
+                        <ULink v-for="link in itemGroup" :exact-query="true" :to="link.to" @click="isSidebarOpen = false"
+                            class="ps-3 py-1 flex items-center border-r " active-class="text-primary border-amber-500"
+                            inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200  hover:dark:border-gray-300 hover:border-gray-600 dark:border-gray-600 border-gray-200">
+                            <UIcon :name="link.icon" class="me-2 text-[17px]" />
+                            <span>{{ link.label }}</span>
+                        </ULink>
                     </div>
-                </template>
-                <UVerticalNavigation :ui="{
-                    wrapper: 'border-s border-gray-200 dark:border-gray-800 space-y-2',
-                    base: 'group block border-s -ms-px lg:leading-6 before:hidden flex',
-                    padding: 'p-0 ps-4',
-                    rounded: '',
-                    active: 'text-primary-500 dark:text-primary-400 border-current font-semibold',
-                    font: '',
-                    ring: '',
-                    inactive: 'border-transparent hover:border-gray-400 dark:hover:border-gray-500 text-gray-700 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300'
-                }" :links="items" @click="isSidebarOpen = false">
-
-
-                </UVerticalNavigation>
-            </UCard>
+                </div>
+            </div>
         </USlideover>
     </div>
 </template>
@@ -53,12 +50,12 @@
 const isSidebarOpen = ref(false);
 
 const items = [
-    {
+    [{
         label: 'الرئيسية',
         icon: 'i-heroicons-home',
         to: "/"
-    },
-    {
+    }],
+    [{
         label: 'بطولات الدوري',
         icon: 'i-heroicons-table-cells',
         to: '/championships?type=league'
@@ -82,9 +79,9 @@ const items = [
         label: 'بطولات المتابعين',
         icon: 'i-heroicons-users',
         to: '/join-us'
-    }
+    }]
     ,
-    {
+    [{
         label: 'الاخبار',
         icon: 'i-heroicons-megaphone-solid',
         to: '/blogs?pageNum=1'
@@ -98,8 +95,8 @@ const items = [
         label: 'الحكام',
         icon: 'i-heroicons-scale',
         to: '/referees'
-    },
-    {
+    }],
+    [{
         label: 'من نحن',
         icon: 'i-heroicons-building-library',
         to: '/about-us'
@@ -113,7 +110,7 @@ const items = [
         label: 'وظائف زات',
         icon: 'i-heroicons-briefcase',
         to: '/jobs?pageNum=1'
-    }
+    }]
 ]
 
 const colorMode = useColorMode()

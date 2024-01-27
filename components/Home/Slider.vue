@@ -9,11 +9,10 @@
                         <!-- <p class="text-white font-family-aref text-sm sm:text-md md:text-lg">قريبا</p> -->
                         <nuxt-img :src="url + champ.champ_logo" class="w-36 sm:w-44 md:w-52" />
                         <!-- <p class="text-white font-family-aref text-sm sm:text-md md:text-lg">انتظرونا</p> -->
-                        <NuxtLink :to="`/championships/${champ.id}`"
-                            class="absolute top-1 right-1 text-white text-[0.7rem] hover:bg-blue-400 rounded-md py-1 px-3 flex justify-center items-center">
-                            <Icon name="ei:arrow-left" class="text-[1rem]" />
+                        <UButton :to="`/championships/${champ.id}`" variant="outline" class="absolute top-3 right-3"
+                            size="2xs" icon="i-heroicons-chevron-double-left-16-solid">
                             اذهب للبطولة
-                        </NuxtLink>
+                        </UButton>
                     </div>
                 </Slide>
                 <template #addons>

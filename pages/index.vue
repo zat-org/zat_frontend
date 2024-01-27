@@ -12,12 +12,13 @@
         <img src="https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/btolat_zat.jpg" class="mb-5 rounded-xl" />
         <HomeBlogs />
         <HomeJoinChampions />
+
         <div dir="ltr" class=" pb-8 text-slate-800 dark:text-white text-center -mb-5 dark:bg-slate-800  overflow-hidden">
-
-            <div :class="[colorMode.preference === 'dark' ? 'stars' : 'stars-light']"></div>
-            <div :class="[colorMode.preference === 'dark' ? 'stars2' : 'stars-light2']"></div>
-            <div :class="[colorMode.preference === 'dark' ? 'stars3' : 'stars-light3']"></div>
-
+            <ClientOnly>
+                <div :class="[colorMode.preference === 'dark' ? 'stars' : 'stars-light']"></div>
+                <div :class="[colorMode.preference === 'dark' ? 'stars2' : 'stars-light2']"></div>
+                <div :class="[colorMode.preference === 'dark' ? 'stars3' : 'stars-light3']"></div>
+            </ClientOnly>
             <HomeOurStatistics />
             <hr class="my-20">
             <HomeClientsSection />
