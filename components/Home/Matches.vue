@@ -1,6 +1,6 @@
 <template>
     <FetchDataWrapper :error="error ? 'تعذر تحميل المباريات' : null" :pending="pending">
-        <section class="mb-8 " v-if="matches && matches.length > 0">
+        <section class="mb-8  w-full" v-if="matches && matches.length > 0">
             <SectionHeader :title="champName === null ? ' احدث المباريات ' : `مباريات ${champName}`"
                 icon="i-heroicons-fire-16-solid" />
             <MatchList :matches="matches" />

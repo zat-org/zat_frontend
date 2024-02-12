@@ -1,4 +1,3 @@
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 const Title = "زات لبطولات البلوت الاحترافية"
 const Description = `قناة متخصصة ببث وتنظيم بطولات البلوت في المملكة العربية السعودية 
@@ -17,7 +16,13 @@ export default defineNuxtConfig({
       apiBaseUrl: process.env.STRAPI_URL
     }
   },
-  modules: ['@nuxt/ui', '@samk-dev/nuxt-vcalendar', "@nuxt/content", 'nuxt-icon', '@nuxt/image'],
+  modules: [
+    '@nuxt/ui',
+    '@samk-dev/nuxt-vcalendar',
+    "@nuxt/content",
+    'nuxt-icon',
+    "@nuxt/image"
+  ],
   content: {
     markdown: {
       anchorLinks: false,
@@ -26,7 +31,6 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
   },
-
   app: {
     head: {
       htmlAttrs: {
@@ -52,4 +56,7 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: ''
   },
+  devtools: {
+    enabled: false
+  }
 })

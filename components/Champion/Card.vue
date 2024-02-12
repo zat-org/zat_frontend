@@ -1,5 +1,5 @@
 <template>
-    <UCard :ui="ui" class="shadow-xl w-full clickable relative bg-gray-200 z-0"
+    <UCard :ui="ui" class="shadow-xl w-full clickable relative bg-gray-200 z-0 overflow-hidden"
         @click="$router.push(`/championships/${champion.leagueid}`)">
         <template #default>
             <div class="flex ">

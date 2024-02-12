@@ -1,10 +1,12 @@
 <template>
-    <FetchDataWrapper class="flex flex-col justify-center items-center text-zinc-700 dark:text-slate-50"
+    <FetchDataWrapper class="w-full flex flex-col grow justify-start items-center"
         :error="error ? 'تعذر تحميل البطولة برجاء المحاولة لاحقا.' : null" :pending="pending">
-        <Menubar :champ="champ" />
-        <KeepAlive max="4" class="w-full md:w-5/6">
-            <NuxtPage :champ="champ" />
-        </KeepAlive>
+        <template v-if="champ">
+            <Menubar :champ="champ" />
+            <KeepAlive max="4" class="w-full grow md:w-5/6">
+                <NuxtPage :champ="champ" />
+            </KeepAlive>
+        </template>
     </FetchDataWrapper>
 </template>
 

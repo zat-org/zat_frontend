@@ -5,7 +5,7 @@
             <SectionHeader title="زات فى أرقام" icon="i-heroicons-chart-bar" />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-5 align-content-center">
-            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44 overflow-hidden" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">
@@ -30,7 +30,7 @@
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44 overflow-hidden" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0 h-full">
                     <div class="flex flex-col justify-evenly h-full">
                         <h2 class="text-2xl font-semibold ">زيارات موقع زات</h2>
@@ -41,7 +41,7 @@
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44 overflow-hidden" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">
@@ -68,7 +68,7 @@
                 </div>
             </UCard>
 
-            <UCard class="bg-gray-200 h-44" :ui="{ body: { base: 'h-full' } }">
+            <UCard class="bg-gray-200 h-44 overflow-hidden" :ui="{ body: { base: 'h-full' } }">
                 <div class="relative z-0  flex justify-around items-center h-full">
                     <div class="flex flex-col justify-evenly">
                         <div class="flex justify-end items-center my-0.5">

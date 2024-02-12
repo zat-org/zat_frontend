@@ -25,20 +25,28 @@ a.active~span {
 </style>
 
 <script setup lang="ts">
-import LeagueType from "@/Models/ChampType";
+import ChampType from "@/Models/ChampType";
 
-const props = defineProps(["champ"])
+import type { IChamp } from "@/Models/IChamp"
+const props = defineProps({
+    champ: {
+        required: true,
+        type: Object as PropType<IChamp>
+    }
+});
 const route = useRoute();
 const navigation = [
-    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam] },
-    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
-    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
-    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
-    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [LeagueType.league, LeagueType.hezam], },
-    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [LeagueType.cup, LeagueType.league, LeagueType.super, LeagueType.hezam], },
+    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM] },
+    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [ChampType.LEAGUE, ChampType.HEZAM], },
+    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
 ]
+const champType = computed(() => props.champ.type as ChampType);
+
 const avialaleNavigation = computed(() => {
-    return navigation.filter(link => props.champ && props.champ.type ? link.availableAt.includes(LeagueType[props.champ.type] as unknown as LeagueType) : true)
+    return navigation.filter(link => props.champ && props.champ.type ? link.availableAt.includes(champType.value) : true)
 })
 </script>

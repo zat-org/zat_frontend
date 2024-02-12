@@ -1,8 +1,8 @@
 <template>
     <FetchDataWrapper :error="error ? 'تعذر تحميل الاخبار.' : null" :pending="pending">
-        <section class="mb-20" v-if="data && data.blogs && data.blogs.length > 0">
+        <section class="mb-20  w-full" v-if="data && data.blogs && data.blogs.length > 0">
             <SectionHeader title="احدث اخبار زات" icon="i-heroicons-newspaper" />
-            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <div class=" mx-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
                 <template v-for="(blog, index) in data.blogs" :key="index">
                     <BlogCard :blog="blog" />
                 </template>

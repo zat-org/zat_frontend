@@ -1,10 +1,11 @@
 <template>
     <FetchDataWrapper :error="error ? 'تعذر تحميل الاحصائيات برجاء المحاولة لاحقا.' : null" :pending="pending">
-        <div v-if="statistics && statistics.length > 0" class="w-full flex flex-col items-center space-y-5 justify-center">
+        <div v-if="statistics && statistics.length > 0"
+            class=" w-full flex flex-col  items-center space-y-5 justify-center">
             <FormSelectField v-model="selectedStatistic" :options="StatisticOptions" name="statisticOption"
                 icon="i-heroicons-chart-bar-square-16-solid" label="وجه المقارنة" />
-            <div class=" w-full flex justify-center mx-auto bg-white p-5 dark:bg-slate-200  rounded-lg shadow-lg">
-                <Bar id="statistics" class="w-full" :options="chartOptions" :data="chartData" />
+            <div class=" w-full grow flex justify-center mx-auto bg-white p-5 dark:bg-slate-200  rounded-lg shadow-lg">
+                <Bar id="statistics" :options="chartOptions" :data="chartData" />
             </div>
         </div>
         <div v-else class="text-zinc-700 dark:text-white text-lg h-50 flex flex-col justify-center items-center py-10">
@@ -35,6 +36,11 @@ ChartJS.defaults.font.weight = "bold";
 
 const chartOptions = {
     responsive: true,
+}
+const chartStyles = {
+    height: `100%`,
+    position: 'relative',
+    width: "100%"
 }
 useHead({ title: ` اجماليات الاحصائيات - ${props.champ.name} ` })
 const { data, error, pending } = await $api.champions.getChampStatisticsByChampId(props.champ.leagueid.toString());

@@ -24,7 +24,7 @@ import type { IBlog } from "@/Models/IBlog";
 
 const baseUrl = useRuntimeConfig().public.apiBaseUrl;
 
-const props = defineProps({
+defineProps({
     blog: {
         type: Object as PropType<IBlog>,
         required: true

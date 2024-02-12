@@ -9,7 +9,7 @@
                     <div class="carousel__item ">
                         <div
                             class="bg-white  overflow-hidden rounded-lg flex justify-center items-center w-36 sm:w-44 md:w-52 h-36 sm:h-44 md:h-52">
-                            <nuxt-img :src="img.url" class="w-36 sm:w-44 md:w-52 rounded-lg" />
+                            <nuxt-img :src="img.url" class="w-36 sm:w-44 md:w-52 rounded-lg" loading="lazy" />
                         </div>
                     </div>
                 </Slide>

@@ -23,8 +23,8 @@
             </ClientOnly>
         </div>
 
-        <USlideover v-model="isSidebarOpen" dir="ltr">
-            <div class="" dir="rtl">
+        <USlideover v-model="isSidebarOpen" :side="'left'">
+            <div>
                 <div class="flex justify-between items-center px-3 border-b">
                     <img width="75" height="75"
                         :src="useColorMode().preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"

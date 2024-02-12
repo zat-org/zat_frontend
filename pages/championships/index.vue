@@ -1,5 +1,5 @@
 <template>
-    <FetchDataWrapper class="w-full lg:w-5/6 mx-auto py-10" :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null"
+    <FetchDataWrapper class="lg:w-5/6 mx-auto py-10" :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null"
         :pending="pending">
         <SectionHeader title="بطولات زات" icon="i-heroicons-trophy" />
         <div class="list-grid">

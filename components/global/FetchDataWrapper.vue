@@ -1,4 +1,5 @@
 <template>
+    <!-- w-full flex flex-col grow justify-start items-center text-zinc-700 dark:text-slate-50 -->
     <div>
         <template v-if="!pending && !error">
             <slot name="default"></slot>
@@ -23,7 +24,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
+defineProps<{
     pending: boolean,
     error: string | null
 }>();

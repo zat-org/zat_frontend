@@ -11,12 +11,14 @@
 
 
 <script setup lang="ts">
-import { parseMarkdown } from "@/utils/parseMarkdown";
-const parsed = ref<Record<string, any>>({ data: "" });
+import markdownParser from '@nuxt/content/transformers/markdown'
 const props = defineProps({ markdownString: { required: true, type: String } })
-const parse = () => {
-  return props.markdownString && props.markdownString.length > 0 && parseMarkdown(props.markdownString)
-    .then((str: string) => parsed.value.data = str)
+const parsed = ref<Record<string, any>>({ data: "" });
+const parse = async () => {
+  if (markdownParser.parse && props.markdownString && props.markdownString.length > 0) {
+    let str = await markdownParser.parse('customId', props.markdownString, {});
+    parsed.value.data = str;
+  }
 }
 onServerPrefetch(parse)
 onBeforeMount(parse)

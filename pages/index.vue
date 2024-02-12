@@ -1,11 +1,11 @@
 <template>
-    <div class="text-gray-900 dark:text-slate-50 body-font container mx-auto my-5 ">
+    <div class="container mx-auto my-5 ">
         <HomeSlider />
         <div class="flex justify-around flex-col md:flex-row md:mb-10 ">
             <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
             <HomeMatches class="w-full md:w-7/12" />
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center ">
             <SectionHeader title="خارطة البطولات" icon="i-heroicons-map" />
         </div>
 

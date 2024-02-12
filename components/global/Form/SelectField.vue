@@ -13,8 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
-const props = defineProps({
+defineProps({
     name: { type: String, required: true },
     label: { type: String, required: true },
     modelValue: { required: true, type: [Object, String] as PropType<string | number | unknown[] | Record<string, any> | undefined> },
