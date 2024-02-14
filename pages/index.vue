@@ -2,7 +2,16 @@
     <div class="container mx-auto my-5 ">
         <HomeSlider />
         <div class="flex justify-around flex-col md:flex-row md:mb-10 ">
-            <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
+            <ClientOnly>
+                <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
+                <template #placeholder>
+                    <div
+                        class="w-full md:w-5/12 mb-16 md:mb-0 text-zinc-700 dark:text-slate-50 flex flex-col space-y-4 justify-center items-center p-10">
+                        <Icon name="svg-spinners:blocks-shuffle-3" class="text-4xl block" />
+                        <h2 class="font-semibold">تحميل</h2>
+                    </div>
+                </template>
+            </ClientOnly>
             <HomeMatches class="w-full md:w-7/12" />
         </div>
         <div class="flex justify-center ">
