@@ -25,7 +25,9 @@
     "@nuxt/content": "^2.12.0",
     "@nuxt/ui": "^2.13.0",
     "@vee-validate/yup": "^4.11.6",
+    "@vueuse/nuxt": "^10.8.0",
     "chart.js": "^4.3.3",
+    "swiper": "^11.0.6",
     "v-calendar": "^3.1.2",
     "vue-chartjs": "^5.2.0",
     "vue3-carousel": "^0.3.1"

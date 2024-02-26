@@ -1,7 +1,8 @@
+import type { IStartAt } from "./IStartAt";
 import MatchState from "./MatchState";
 
 
-interface IMatchLessDetails {
+interface IMatchLessDetails extends IStartAt {
     id: number,
     team_1_name: string,
     team_1_score: number,
@@ -11,7 +12,6 @@ interface IMatchLessDetails {
     team_2_logo: string,
     state: MatchState,
     url: string,
-    start_at: string,
     tournament_name: string,
     name: string,
     type: "official" | "friendly"

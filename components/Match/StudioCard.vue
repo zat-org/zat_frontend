@@ -1,39 +1,26 @@
 <template>
-    <div dir="rtl" class="bg-white dark:bg-slate-600 dark:text-slate-50 rounded-lg shadow-lg relative text-white">
-        <div class="flex items-center justify-between background-color px-2 py-1 rounded-t-lg">
-            <p class="w-1/3 flex justify-center items-center">
+    <div dir="rtl" class="relative background-color rounded-lg shadow-lg p-2 text-zinc-900">
+        <UIcon name="i-heroicons-microphone" class="absolute z-0 text-8xl text-[#264a52] left-0 bottom-0 opacity-10" />
 
+        <div class="flex items-center font-semibold justify-between text-xs mb-2">
+            <p class="w-2/5">
                 {{ props.studio.tournament_name }}
             </p>
-            <div class="w-1/3 flex justify-center items-center">
-                <div v-if="props.studio.url" @click.prevent="handleYoutubeClick" style="cursor: pointer;"
-                    class="h-10 w-10 bg-white rounded-full flex justify-center items-center">
-                    <Icon name="ion:logo-youtube" class="text-red-600" size="30"></Icon>
-                </div>
-            </div>
-            <p class="w-1/3 flex items-center justify-center">
-                {{ new Date(props.studio.start_at).toLocaleDateString("ar-EG") }}
-                <Icon name="fontisto:date" size="18" class="mx-1 text-white" />
+            <button class=" rounded-full bg-white w-8 h-6 cursor-pointer clickable" v-if="props.studio.url"
+                @click.prevent="handleYoutubeClick">
+                <Icon name="ion:logo-youtube" class="text-red-600 " size="20"></Icon>
+            </button>
+            <p class="flex justify-end items-end w-2/5">
+                <span> {{ new Date(props.studio.start_at).toLocaleDateString("ar-EG") }}</span>
+                <UIcon name="i-heroicons-calendar-days" class="text-xl ms-2" />
             </p>
         </div>
 
-        <div class="flex items-center justify-between p-3">
-            <div>
-                <div class=" bg-amber-400 text-4xl md:text-6xl p-4  rounded-full flex justify-center items-center">
-                    <Icon class="micro_icon" name="emojione-v1:studio-microphone" />
-                </div>
-            </div>
-            <div class="text-center text-black dark:text-slate-50 flex flex-col space-y-3  grow">
-                <h5 class="font-semibold text-md md:text-lg ">{{ props.studio.name }}</h5>
-                <div class="flex justify-center items-center">
-                    <span class="mx-2">{{ props.studio.analysts.length > 1 ? 'المحللين' : 'المحلل' }}</span>
-                    <div v-for="analyst in props.studio.analysts"
-                        class="bg-amber-400 px-5 py-0.5 font-semibold rounded-full text-black">
-                        {{ analyst.name }}
-                    </div>
-                </div>
-            </div>
+        <h5 class="font-semibold text-sm md:text-md mb-2 line-clamp-3">{{ props.studio.name }}</h5>
+        <div v-for="analyst in props.studio.analysts" class="text-sm text-center font-semibold ">
+            {{ analyst.name }}
         </div>
+
     </div>
 </template> 
 
@@ -55,8 +42,8 @@ function handleYoutubeClick(event: Event) {
 
 <style scoped>
 .background-color {
-    background: #ffb347;
-    background-image: linear-gradient(90.1deg, rgba(84, 212, 228, 1) 0.2%, rgba(68, 36, 164, 1) 99.9%);
+    background: #007991;
+    background-image: linear-gradient(to right, #78ffd6, #007991);
 }
 </style>    
 

@@ -11,6 +11,8 @@
 </template>
 
 <script setup lang="ts">
+import 'vue3-carousel/dist/carousel.css'
+
 const { $api } = useNuxtApp();
 await $api.websiteAssets.addOneToVisitorCounter();
 </script>

@@ -1,6 +1,7 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر تحميل المباريات برجاء المحاولة لاحقا.' : null" :pending="pending">
-            <MatchList v-if="matches" :matches="matches" />
+    <FetchDataWrapper :error="error ? 'تعذر تحميل المباريات برجاء المحاولة لاحقا.' : null" :pending="pending"
+        class="flex flex-col">
+        <MatchList v-if="matches" :matches="matches" />
     </FetchDataWrapper>
 </template>
 

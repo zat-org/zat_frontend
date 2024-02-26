@@ -1,13 +1,14 @@
+import type { IStartAt } from "./IStartAt";
+
 interface IAnalyst {
     id: number,
     name: string
 }
 
-interface IStudio {
+interface IStudio extends IStartAt {
     name: string,
     id: number,
     url: string,
-    start_at: string //date,
     tournament_name: string,
     analysts: IAnalyst[]
 }

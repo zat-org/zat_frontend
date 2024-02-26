@@ -41,7 +41,7 @@ const navigation = [
     { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
     { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
     { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [ChampType.LEAGUE, ChampType.HEZAM], },
+    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [ChampType.LEAGUE, ChampType.CUP, ChampType.HEZAM], },
     { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
 ]
 const champType = computed(() => props.champ.type as ChampType);

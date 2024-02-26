@@ -3,8 +3,8 @@
         :error="error ? 'تعذر تحميل البطولة برجاء المحاولة لاحقا.' : null" :pending="pending">
         <template v-if="champ">
             <Menubar :champ="champ" />
-            <KeepAlive max="4" class="w-full grow md:w-5/6">
-                <NuxtPage :champ="champ" />
+            <KeepAlive max="4">
+                <NuxtPage :champ="champ" class="grow w-full md:w-2/3 xl:w-1/2 mx-7 " />
             </KeepAlive>
         </template>
     </FetchDataWrapper>

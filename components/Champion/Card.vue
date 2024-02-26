@@ -2,7 +2,7 @@
     <UCard :ui="ui" class="shadow-xl w-full clickable relative bg-gray-200 z-0 overflow-hidden"
         @click="$router.push(`/championships/${champion.leagueid}`)">
         <template #default>
-            <div class="flex ">
+            <div class="flex">
                 <UChip size="2xl" :ui="{ background: 'h-[35px] w-[35px] ', position: { 'top-right': 'top-1 right-1' } }">
                     <div class="w-32 h-32 rounded-xl shrink-0 overflow-hidden bg-white flex justify-center items-center">
                         <object type="image/png" :data="url + champion.url" :aria-label="champion.name"
@@ -24,7 +24,7 @@
                         </div>
                     </template>
                 </UChip>
-                <div class=" ms-5 space-y-2 grow ">
+                <div class="ms-5 space-y-2 grow ">
                     <h2 class="font-semibold text-lg">{{ champion.name }}</h2>
                     <p class="text-sm line-clamp-4 ">{{ champion.description }}</p>
                 </div>
@@ -39,7 +39,7 @@
 import type { IChamp } from '@/Models/IChamp';
 import LeagueState from '@/Models/ChampState';
 
-const props = defineProps({
+defineProps({
     champion: {
         required: true,
         type: Object as PropType<IChamp>

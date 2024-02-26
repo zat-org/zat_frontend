@@ -1,4 +1,5 @@
 
+import type { IStartAt } from "./IStartAt";
 import MatchState from "./MatchState";
 
 interface Person {
@@ -10,10 +11,9 @@ interface KeyNamePair {
     value: number,
     name: string
 }
-interface IMatchFullDetails {
+interface IMatchFullDetails extends IStartAt {
     leagueName: string,
     state: MatchState,
-    start_at: string,
     url: string,
     numberOfRounds: number,
     tournament: string,

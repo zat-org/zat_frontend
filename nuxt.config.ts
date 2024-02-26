@@ -21,7 +21,8 @@ export default defineNuxtConfig({
     '@samk-dev/nuxt-vcalendar',
     "@nuxt/content",
     'nuxt-icon',
-    "@nuxt/image"
+    "@nuxt/image",
+    '@vueuse/nuxt'
   ],
   content: {
     markdown: {
@@ -58,5 +59,13 @@ export default defineNuxtConfig({
   },
   devtools: {
     enabled: false
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag) => {
+        return tag.startsWith("swiper-")
+      }
+    }
   }
+
 })
