@@ -1,5 +1,5 @@
 <template>
-    <UCard class="bg-gray-200">
+    <UCard class="bg-gray-200 overflow-hidden">
         <div class="relative z-0">
             <div class="space-y-5 text-center ">
                 <h2 class="text-lg md:text-xl font-semibold ">{{ champion.attributes.name }}</h2>

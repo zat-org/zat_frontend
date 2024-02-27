@@ -215,7 +215,7 @@
 
 @layer utilities {
     .clickable {
-        @apply  hover:cursor-pointer  hover:scale-105 active:scale-95 transition-transform duration-500 ease-out
+        @apply  hover:cursor-pointer hover:scale-105 active:scale-95 transition-transform duration-500 ease-out
     }
     .list-grid{
         @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mb-3

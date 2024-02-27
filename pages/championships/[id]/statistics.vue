@@ -1,11 +1,14 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر تحميل الاحصائيات برجاء المحاولة لاحقا.' : null" :pending="pending">
-        <div v-if="statistics && statistics.length > 0"
-            class=" w-full flex flex-col  items-center space-y-5 justify-center">
+    <FetchDataWrapper :error="error ? 'تعذر تحميل الاحصائيات برجاء المحاولة لاحقا.' : null" :pending="pending"
+        class="flex flex-col">
+        <div v-if="statistics && statistics.length > 0" class="grow text-center lg:space-y-5 flex flex-col items-center">
             <FormSelectField v-model="selectedStatistic" :options="StatisticOptions" name="statisticOption"
                 icon="i-heroicons-chart-bar-square-16-solid" label="وجه المقارنة" />
-            <div class=" w-full grow flex justify-center mx-auto bg-white p-5 dark:bg-slate-200  rounded-lg shadow-lg">
-                <Bar id="statistics" :options="chartOptions" :data="chartData" />
+            <div class="w-full grow bg-slate-200 px-5 py-3 rounded-lg shadow-lg">
+                <Bar id="statistics" :options="{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                }" :data="chartData" />
             </div>
         </div>
         <div v-else class="text-zinc-700 dark:text-white text-lg h-50 flex flex-col justify-center items-center py-10">
@@ -14,34 +17,17 @@
         </div>
     </FetchDataWrapper>
 </template>
+
     
 <script setup lang="ts">
 import StatisticOptions from "@/Models/StatisticOption"
 import { Bar } from 'vue-chartjs'
-import { Chart as ChartJS, Title, Colors, Tooltip, Legend, BarElement, CategoryScale, LinearScale } from 'chart.js'
 import type { IChamp } from "@/Models/IChamp"
 
-const props = defineProps({
-    champ: {
-        required: true,
-        type: Object as PropType<IChamp>
-    }
-})
-
-
+const props = defineProps<{ champ: IChamp }>()
 const { $api } = useNuxtApp();
-ChartJS.register(Title, Tooltip, Colors, Legend, BarElement, CategoryScale, LinearScale)
-ChartJS.defaults.font.size = 16;
-ChartJS.defaults.font.weight = "bold";
 
-const chartOptions = {
-    responsive: true,
-}
-const chartStyles = {
-    height: `100%`,
-    position: 'relative',
-    width: "100%"
-}
+
 useHead({ title: ` اجماليات الاحصائيات - ${props.champ.name} ` })
 const { data, error, pending } = await $api.champions.getChampStatisticsByChampId(props.champ.leagueid.toString());
 

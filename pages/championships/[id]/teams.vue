@@ -33,19 +33,9 @@
 <script setup lang="ts" >
 import type { IChamp } from "@/Models/IChamp"
 
-import { breakpointsTailwind } from '@vueuse/core'
-const props = defineProps({
-    champ: {
-        required: true,
-        type: Object as PropType<IChamp>
-    }
-});
+const props = defineProps<{ champ: IChamp }>();
 
 const url = useRuntimeConfig().public.apiBaseUrl;
-const breakpoints = useBreakpoints(breakpointsTailwind)
-const isSupported = useSupported(() => window)
-const isMounted = useMounted()
-const itemsToShow = computed(() => (isSupported.value && isMounted.value && breakpoints.greaterOrEqual('lg').value) ? 2 : 1)
 
 const { $api } = useNuxtApp();
 const { data, error, pending } = await $api.champions.getChampTeamsByChampId(props.champ.leagueid.toString());

@@ -8,7 +8,7 @@
                 </template>
             </div>
             <div class="flex justify-center">
-                <UButton to="/blogs" size="xl" class="my-8 px-32" icon="i-heroicons-megaphone">
+                <UButton to="/blogs" size="xl" class="my-8 px-10 lg:px-32" icon="i-heroicons-megaphone">
                     جميع الاخبار
                 </UButton>
             </div>

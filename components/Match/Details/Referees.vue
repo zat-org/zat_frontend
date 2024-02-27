@@ -2,7 +2,7 @@
     <div v-if="match.referees && match.referees.length > 0">
         <UDivider>حكام المباراة</UDivider>
         <div class="text-gray-500 dark:text-slate-300 text-sm text-center mt-3 mb-5">
-            <div class="flex justify-center">
+            <div v-if="match.referees[0]" class="flex justify-center">
                 <div class="w-1/3 flex flex-col justify-center items-center  ">
                     <Image :src="url + match.referees[0].image" class="object-cover object-top"
                         :alt="match.referees[0].name" icon="i-heroicons-user" />
@@ -15,7 +15,7 @@
                 </div>
             </div>
             <div class="flex justify-between ">
-                <div class="w-5/12 flex justify-center items-center flex-col  ">
+                <div v-if="match.referees[1]" class="w-5/12 flex justify-center items-center flex-col  ">
                     <Image :src="url + match.referees[1].image" class="object-cover object-top"
                         :alt="match.referees[1].name" icon="i-heroicons-user" />
                     <p class="text-gray-950 text-md lg:text-lg dark:text-slate-50 ">
@@ -25,7 +25,7 @@
                         حكم مساعد
                     </p>
                 </div>
-                <div class="w-5/12 flex justify-center items-center flex-col ">
+                <div v-if="match.referees[2]" class="w-5/12 flex justify-center items-center flex-col ">
                     <Image :src="url + match.referees[2].image" class="object-cover object-top"
                         :alt="match.referees[2].name" icon="i-heroicons-user" />
                     <p class="text-gray-950 text-md lg:text-lg dark:text-slate-50 ">
