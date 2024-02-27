@@ -1,6 +1,6 @@
 <template>
     <VerticalCarousal class="grow" v-if="matches && matches.length > 0" :startAtIndex="offsetOfComingMatch">
-        <VerticalCarousalItem v-for="event in matches" :key="event.id">
+        <VerticalCarousalItem v-for="event in matches" :key="event.id" class="md:ps-8 ">
             <MatchCard :match="event" :id="event.id" :champId="event.league_id" />
         </VerticalCarousalItem>
     </VerticalCarousal>

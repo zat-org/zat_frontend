@@ -3,7 +3,7 @@
         <section class="mb-8  w-full" v-if="matches && matches.length > 0">
             <SectionHeader :title="champName === null ? ' احدث المباريات ' : `مباريات ${champName}`"
                 icon="i-heroicons-fire-16-solid" />
-            <MatchList :matches="matches" />
+            <MatchList :matches="matches" class="md:h-[36rem]" />
         </section>
     </FetchDataWrapper>
 </template>

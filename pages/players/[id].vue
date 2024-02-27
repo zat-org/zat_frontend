@@ -1,7 +1,7 @@
 
 <template>
-    <FetchDataWrapper class="relative md:w-5/6 lg:w2/3 mx-auto" :error="getPlayerError ? 'تعذر تحميل بيانات اللاعب.' : null"
-        :pending="getPlayerPending">
+    <FetchDataWrapper class="relative  w-full md:w-5/6 lg:w2/3 mx-auto"
+        :error="getPlayerError ? 'تعذر تحميل بيانات اللاعب.' : null" :pending="getPlayerPending">
         <template v-if="player">
             <div class="flex flex-col justify-center items-center my-5 space-y-5">
                 <h2 class="font-semibold text-2xl">{{ player.player_name }}</h2>

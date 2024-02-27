@@ -1,14 +1,14 @@
 <template>
-    <div class="relative rounded-lg overflow-hidden scale-95 clickable hover:scale-100 active:scale-95  shadow-md text-slate-600 bg-gradient-to-r from-[#f2994a] to-[#f2c94c]"
+    <div class="relative rounded-lg overflow-hidden  shadow-md text-slate-600 bg-gradient-to-r from-[#f2994a] to-[#f2c94c]"
         @click.prevent="handleMatchCardClick">
 
-        <p class="text-center text-sm md:text-sm truncate pt-2"> {{ match.name }} - {{ match.tournament_name }} </p>
+        <p class="text-center text-sm truncate pt-2"> {{ match.name }} - {{ match.tournament_name }} </p>
 
         <div class="flex justify-between items-center my-2 ">
             <div class="w-1/3 text-center  flex flex-col items-center">
                 <Image :src="url + match.team_1_logo" class="bg-white object-contain mb-1" :alt="match.team_1_name"
                     icon="i-heroicons-user-group" />
-                <p class="font-semibold truncate"> {{ match.team_1_name }} </p>
+                <p class="font-semibold truncate text-sm"> {{ match.team_1_name }} </p>
             </div>
             <div class="w-1/3 flex flex-col justify-center items-center">
                 <template v-if="match.state === MatchState.Done">
@@ -25,7 +25,7 @@
             <div class="w-1/3 text-center flex flex-col items-center">
                 <Image :src="url + match.team_2_logo" class="bg-white  object-contain mb-1" :alt="match.team_2_name"
                     icon="i-heroicons-user-group" />
-                <p class="font-semibold truncate"> {{ match.team_2_name }} </p>
+                <p class="font-semibold truncate text-sm"> {{ match.team_2_name }} </p>
             </div>
         </div>
 

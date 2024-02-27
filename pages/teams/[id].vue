@@ -1,5 +1,6 @@
 <template>
-    <FetchDataWrapper class="relative md:w-5/6 lg:w2/3 mx-auto" :error="getTeamError ? '' : null" :pending="getTeamPending">
+    <FetchDataWrapper class="relative w-full md:w-5/6 lg:w2/3 mx-auto" :error="getTeamError ? '' : null"
+        :pending="getTeamPending">
         <template v-if="team">
             <div class="flex flex-col justify-center items-center my-5 space-y-5">
                 <h2 class="font-semibold text-2xl">فريق {{ team.name }}</h2>
