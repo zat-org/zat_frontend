@@ -4,7 +4,7 @@
         <div v-if="statistics && statistics.length > 0" class="grow text-center lg:space-y-5 flex flex-col items-center">
             <FormSelectField v-model="selectedStatistic" :options="StatisticOptions" name="statisticOption"
                 icon="i-heroicons-chart-bar-square-16-solid" label="وجه المقارنة" />
-            <div class="w-full grow bg-slate-200 px-5 py-3 rounded-lg shadow-lg">
+            <div class="w-full grow bg-white px-5 py-3 rounded-lg shadow-lg">
                 <Bar id="statistics" :options="{
                     responsive: true,
                     maintainAspectRatio: false,

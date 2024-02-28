@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto w-full lg:w-5/6 py-10">
+    <div class="mx-auto w-full lg:w-5/6 py-3 lg:py-10">
         <FetchDataWrapper :error="error ? 'تعذر تحميل البيانات برجاء المحاولة مرة اخري لاحقا.' : null" :pending="pending">
             <section class="mb-20" v-if="champions && champions.length > 0">
                 <SectionHeader title="بطولات المتابعين" icon="i-heroicons-trophy" />

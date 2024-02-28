@@ -1,6 +1,6 @@
 <template>
-    <FetchDataWrapper class="lg:w-5/6 mx-auto py-10" :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null"
-        :pending="pending">
+    <FetchDataWrapper class="w-full mx-10 lg:w-5/6 py-3 lg:py-10"
+        :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null" :pending="pending">
         <SectionHeader title="بطولات زات" icon="i-heroicons-trophy" />
         <div class="list-grid">
             <template v-if="champs && champs.length > 0" v-for="champ in champs">

@@ -1,9 +1,9 @@
 <template>
-    <FetchDataWrapper class="w-full lg:w-5/6  mx-auto py-10" :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : ''"
-        :pending="pending">
+    <FetchDataWrapper class="w-full lg:w-5/6  py-3 lg:py-10"
+        :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : ''" :pending="pending">
         <section class="" v-if="blogs && blogs.length > 0">
             <SectionHeader title=" اخبار زات" icon="i-heroicons-newspaper" />
-            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-20 justify-items-center">
+            <div class="mx-3 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-20 justify-items-center">
                 <template v-for="blog in blogs">
                     <BlogCard :blog="blog" />
                 </template>

@@ -1,23 +1,27 @@
 <template>
     <UDivider> بيانات المباراة </UDivider>
+    <div class="my-2">
+        <p class="text-center text-sm lg:text-md text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
+        <p class="text-center text-sm lg:text-md text-amber-500 ">{{ match.tournament }}</p>
+    </div>
     <div class="flex items-center justify-around w-full text-center my-5">
-        <div class="w-1/3">
-            <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
-            <p class="text-sm lg:text-md text-amber-500 ">{{ match.tournament }}</p>
-        </div>
-        <div class="w-1/3 flex justify-center">
-            <a v-if="match.url" :href="match.url"
-                class="rounded-full clickable bg-white w-10 h-10 flex justify-center items-center">
-                <Icon name="ion:logo-youtube" class="text-red-500" size="28"></Icon>
+        <div class="w-1/2 flex justify-center">
+            <a v-if="match.url" :href="match.url" target="_blank"
+                class="rounded-lg clickable bg-white flex py-2 px-2 justify-center items-center">
+                <Icon name="ion:logo-youtube" class="text-red-500 me-2" size="28"></Icon>
+                <p class="text-slate-700">شاهد المباراة</p>
             </a>
         </div>
-        <div class="w-1/3">
-            <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300">
-                تاريخ المباراة
-            </p>
-            <p class="text-sm lg:text-md text-amber-500 ">
-                {{ new Date(match.start_at).toLocaleDateString("ar-EG") }}
-            </p>
+        <div class="w-1/2 flex justify-center items-center text-amber-500">
+            <UIcon name="i-heroicons-calendar-days-solid" class="me-3 text-3xl" />
+            <div>
+                <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300">
+                    تاريخ المباراة
+                </p>
+                <p>
+                    {{ new Date(match.start_at).toLocaleDateString("ar-EG") }}
+                </p>
+            </div>
         </div>
     </div>
 
@@ -30,7 +34,7 @@
         <div class="w-1/3">
             <div class="h-20 md:h-24">
                 <template v-if="match.state === MatchState.Done">
-                    <p class="text-yellow-400 text-5xl md:text-6xl md:font-mono">
+                    <p class="text-yellow-400 text-5xl md:text-6xl font-mono">
                         {{ match.team1.score }} <span class="text-gray-600">-</span> {{ match.team2.score }}
                     </p>
                 </template>
