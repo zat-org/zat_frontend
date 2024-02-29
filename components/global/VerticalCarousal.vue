@@ -18,7 +18,7 @@ interface SwiperElement extends HTMLElement {
 }
 const swiperElm = ref<SwiperElement | null>(null);
 const slidesPerView = ref(1);
-const spaceBetween = ref(10)
+const spaceBetween = ref(1)
 onMounted(() => {
     swiperElm.value?.swiper.slideTo(props.startAtIndex)
 })
