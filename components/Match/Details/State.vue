@@ -23,7 +23,7 @@
                 <Icon name="ion:logo-youtube" class="text-red-500 me-3" size="28"></Icon>
                 <div>
                     <p class="text-sm lg:text-md text-slate-700">شاهد المباراة</p>
-                    <p class="text-sm lg:text-md text-slate-700"> علي قناة زات</p>
+                    <p class="text-sm lg:text-md text-slate-700"> على قناة زات</p>
                 </div>
             </a>
         </div>
@@ -38,7 +38,7 @@
         <div class="w-1/3">
             <div class="h-20 md:h-24">
                 <template v-if="match.state === MatchState.Done">
-                    <p class="text-yellow-400 text-5xl md:text-6xl font-mono">
+                    <p class="text-yellow-400 text-4xl md:text-6xl font-mono">
                         {{ match.team1.score }} <span class="text-gray-600">-</span> {{ match.team2.score }}
                     </p>
                 </template>
