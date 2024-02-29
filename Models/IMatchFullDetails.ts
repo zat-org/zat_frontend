@@ -23,6 +23,7 @@ interface IMatchFullDetails extends IStartAt {
         name: string,
         score: number,
         logo: string,
+        coach: Person | null,
         players: Person[],
         statistics: KeyNamePair[]
     },
@@ -30,10 +31,11 @@ interface IMatchFullDetails extends IStartAt {
         id: number,
         name: string,
         score: number,
+        coach: Person | null,
         logo: string,
         players: Person[],
         statistics: KeyNamePair[]
     },
 }
 
-export type { IMatchFullDetails };
+export type { IMatchFullDetails, Person };

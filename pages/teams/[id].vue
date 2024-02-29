@@ -10,8 +10,8 @@
                 <section class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 w-full">
                     <TeamBasicInfo class="md:col-span-2" v-bind:team="team" />
                     <section class="w-full">
-                        <UDivider class="mb-3" label="لاعبي الفريق" />
-                        <TeamPlayers v-bind:players="team.players" />
+                        <UDivider class="mb-3" label=" الفريق" />
+                        <TeamPlayers :players="team.players" :coaches="team.coaches" />
                     </section>
 
                     <section class="w-full">

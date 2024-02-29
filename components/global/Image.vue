@@ -1,6 +1,6 @@
 <template>
     <object type="image/png" :data="src" :aria-label="alt"
-        class="h-16 md:h-20 lg:h-24 w-16 md:w-20 xl:w-24 flex justify-center items-center  rounded-lg">
+        class="size-16 md:size-20 lg:size-24 flex justify-center items-center rounded-lg">
         <UIcon :name="icon" class="text-[60px] text-amber-500" />
     </object>
 </template>
@@ -16,7 +16,7 @@ defineProps({
 
     icon: {
         required: true, type: String
-    },
+    }
 })
 </script>
 

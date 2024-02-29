@@ -10,7 +10,8 @@
                         <h2 class="text-sm text-gray-500">المسمى الوظيفى</h2>
                         <h2 class="text-xl truncate">{{ job?.data.attributes.jobTitle }}</h2>
                     </div>
-                    <UButton to="/jobs" class="h-12 rounded-full w-12 md:w-32 transition-all text-center" :trailing="true">
+                    <UButton to="/jobs" class="size-12 rounded-full flex justify-center md:w-32 transition-all text-center"
+                        :trailing="true">
                         <UIcon name="i-heroicons-arrow-small-left" class="text-2xl" />
                         <span class="hidden md:block">وظائف زات</span>
                     </UButton>
@@ -23,7 +24,7 @@
                     class="fixed bottom-5 lg:hidden left-5 h-12 w-32 animate-bounce transition-all rounded-full flex justify-center items-center"
                     @click="isFormOpen = true">
                     <span>ارسل بياناتك الان</span>
-                    <UIcon name="i-heroicons-inbox" class="text-[45px]" />
+                    <UIcon name="i-heroicons-inbox" class="block size-10" />
                 </UButton>
             </div>
             <JobApplyForm class="w-1/2 hidden lg:block " :jobId="null" @cancel="isFormOpen = false"

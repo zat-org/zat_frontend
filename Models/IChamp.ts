@@ -3,7 +3,7 @@ import ChampType from "./ChampType"
 import type { ITeam } from "@/Models/ITeam"
 import type { IStudio } from "@/Models/IStudio"
 import type { IMatchLessDetails } from "@/Models/IMatchLessDetails"
-import type { ICupMatchNode } from "./ICupSummary"
+import type { ICupMatchData } from "./ICupSummary"
 
 interface IUpcomingChamp {
     id: number,
@@ -61,7 +61,7 @@ interface HezamTeamSummary extends TeamSummary {
     consecutiveWins: number,
 }
 interface IGetChampSummaryResponse extends IGetChampDetailsResponse {
-    table: HezamTeamSummary[] | LeagueTeamSummary[] | ICupMatchNode
+    table: HezamTeamSummary[] | LeagueTeamSummary[] | ICupMatchData[][]
 }
 interface IGetChampStudiosResponse extends IGetChampDetailsResponse {
     studios: IStudio[]

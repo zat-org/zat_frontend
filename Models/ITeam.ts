@@ -1,3 +1,5 @@
+import type { Person } from "./IMatchFullDetails"
+
 interface IPlayerLessDetails {
     id: number,
     name: string,
@@ -22,7 +24,8 @@ interface ITeam {
     name: string,
     id: number,
     team_logo: string,
-    players: IPlayerLessDetails[]
+    players: IPlayerLessDetails[],
+    coaches: Person[]
 }
 
 interface ITeamLessDetails {
@@ -41,7 +44,8 @@ interface ITeamFullDetails {
     players: IPlayerLessDetails[],
     champs: IChampLessDetails[],
     statistics: ITeamStatistics,
-    transfers: ITransfer[]
+    transfers: ITransfer[],
+    coaches: Person[]
 }
 interface ITeamStatistics {
     "عدد المباريات": number,

@@ -1,27 +1,31 @@
 <template>
     <UDivider> بيانات المباراة </UDivider>
     <div class="my-2">
-        <p class="text-center text-sm lg:text-md text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
-        <p class="text-center text-sm lg:text-md text-amber-500 ">{{ match.tournament }}</p>
+        <p class="text-center  text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
+        <p class="text-center  text-amber-500 ">{{ match.tournament }}</p>
     </div>
-    <div class="flex items-center justify-around w-full text-center my-5">
-        <div class="w-1/2 flex justify-center">
-            <a v-if="match.url" :href="match.url" target="_blank"
-                class="rounded-lg clickable bg-white flex py-2 px-2 justify-center items-center">
-                <Icon name="ion:logo-youtube" class="text-red-500 me-2" size="28"></Icon>
-                <p class="text-slate-700">شاهد المباراة</p>
-            </a>
-        </div>
-        <div class="w-1/2 flex justify-center items-center text-amber-500">
-            <UIcon name="i-heroicons-calendar-days-solid" class="me-3 text-3xl" />
+    <div class="flex items-center justify-evenly w-full text-center my-5">
+        <div class="bg-white px-3 py-2 rounded-lg flex justify-center items-center text-amber-500">
             <div>
-                <p class="text-sm lg:text-md text-gray-400 dark:text-slate-300">
+                <p class="text-sm lg:text-md text-gray-700">
                     تاريخ المباراة
                 </p>
                 <p>
                     {{ new Date(match.start_at).toLocaleDateString("ar-EG") }}
                 </p>
             </div>
+            <UIcon name="i-heroicons-calendar-days-solid" class="ms-3 text-3xl" />
+
+        </div>
+        <div class=" flex justify-center">
+            <a v-if="match.url" :href="match.url" target="_blank"
+                class="rounded-lg clickable bg-white flex py-2 px-3 justify-center items-center">
+                <Icon name="ion:logo-youtube" class="text-red-500 me-3" size="28"></Icon>
+                <div>
+                    <p class="text-sm lg:text-md text-slate-700">شاهد المباراة</p>
+                    <p class="text-sm lg:text-md text-slate-700"> علي قناة زات</p>
+                </div>
+            </a>
         </div>
     </div>
 
