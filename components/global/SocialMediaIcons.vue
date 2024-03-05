@@ -18,6 +18,7 @@ let socialMediaAccounts = [
     { iconName: "ri:twitter-x-fill", href: "https://x.com/zat_baloot" },
     { iconName: "fa-brands:twitch", href: "https://twitch.tv/zat_baloot" },
     { iconName: "lets-icons:insta", href: "https://www.instagram.com/zat_baloot?igsh=OGQ5ZDc2ODk2ZA==" },
+    { iconName: "ic:baseline-whatsapp", href: "https://wa.me/966545970009" },
 ];
 </script>
 
