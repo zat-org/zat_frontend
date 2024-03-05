@@ -6,7 +6,7 @@
             <slot name="default"></slot>
         </swiper-container>
     </div>
-</template>
+</template> 
   
 <script setup lang="ts">
 import Swiper from "swiper";

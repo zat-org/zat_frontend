@@ -12,7 +12,13 @@
 
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
+import { useUserStore } from '~/stores/useUserStore';
 
 const { $api } = useNuxtApp();
 await $api.websiteAssets.addOneToVisitorCounter();
+const userStore = useUserStore()
+
+onMounted(async () => {
+  await userStore.refetchUser();
+})
 </script>

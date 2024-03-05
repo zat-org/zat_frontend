@@ -22,8 +22,19 @@ export default defineNuxtConfig({
     "@nuxt/content",
     'nuxt-icon',
     "@nuxt/image",
-    '@vueuse/nuxt'
+    '@vueuse/nuxt',
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
   ],
+  piniaPersistedstate: {
+    cookieOptions: {
+      sameSite: 'strict',
+    },
+    storage: 'localStorage'
+  },
+  pinia: {
+    storesDirs: ['./stores/**', './custom-folder/stores/**'],
+  },
   content: {
     markdown: {
       anchorLinks: false,

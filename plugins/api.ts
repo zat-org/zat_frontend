@@ -9,6 +9,7 @@ import FollowerChampionModule from '~/Repository/modules/followersChampions';
 import WebsiteAssetsModule from '~/Repository/modules/websiteAssets';
 import ChampionsModule from '~/Repository/modules/champion';
 import MatchesModule from '~/Repository/modules/matches';
+import AuthModule from '~/Repository/modules/auth';
 
 
 interface IApiInstance {
@@ -21,7 +22,8 @@ interface IApiInstance {
     followersChampions: FollowerChampionModule,
     websiteAssets: WebsiteAssetsModule,
     champions: ChampionsModule,
-    matches: MatchesModule
+    matches: MatchesModule,
+    auth: AuthModule
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -45,7 +47,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         followersChampions: new FollowerChampionModule(apiFetcher),
         websiteAssets: new WebsiteAssetsModule(apiFetcher),
         champions: new ChampionsModule(apiFetcher),
-        matches: new MatchesModule(apiFetcher)
+        matches: new MatchesModule(apiFetcher),
+        auth: new AuthModule(apiFetcher)
     };
 
     return {

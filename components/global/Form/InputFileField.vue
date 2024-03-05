@@ -22,7 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
 
 const fileInput = ref<null | HTMLInputElement>(null)
 const textInput = ref<null | any>(null)

@@ -12,7 +12,6 @@
 </template>
 
 <script setup lang="ts">
-import type { PropType } from 'nuxt/dist/app/compat/capi';
 const props = defineProps({
     name: { type: String, required: true },
     label: { type: String, required: true },
