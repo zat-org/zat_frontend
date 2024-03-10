@@ -1,51 +1,54 @@
 <template>
-    <template v-if="userStore.isAuthenticated">
-        <template v-if="userSubmittedEstimationCount !== null">
-            <template v-if="userSubmittedEstimationCount === 0 && isMatchOpenForEstimations">
-                <UButton @click="isEstimationFormOpened = true"
-                    class="h-full relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
-                    <UIcon name="i-heroicons-document-chart-bar-solid"
-                        class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
-                    <p class="text-white w-4/5 text-right"> توقع نتيجة المباراة </p>
-                </UButton>
-                <MatchEstimationForm :match="match" v-model="isEstimationFormOpened"
-                    @estimationSubmitted="handleEstimationSubmitted" />
+    <div class="w-full">
+        <template v-if="userStore.isAuthenticated">
+            <template v-if="userSubmittedEstimationCount !== null">
+                <template v-if="userSubmittedEstimationCount === 0 && isMatchOpenForEstimations">
+                    <UButton @click="isEstimationFormOpened = true"
+                        class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
+                        <UIcon name="i-heroicons-document-chart-bar-solid"
+                            class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
+                        <p class="text-white w-4/5 text-right"> توقع نتيجة المباراة </p>
+                    </UButton>
+                    <MatchEstimationForm :match="match" v-model="isEstimationFormOpened"
+                        @estimationSubmitted="handleEstimationSubmitted" />
+                </template>
+
+                <template v-if="userSubmittedEstimationCount > 0">
+                    <UButton class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
+                        <UIcon name="i-heroicons-document-check"
+                            class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
+                        <p class="text-white w-4/5 text-right">تم استلام توقعك بالفعل</p>
+                    </UButton>
+                </template>
             </template>
 
-            <template v-if="userSubmittedEstimationCount > 0">
-                <UButton class="h-full relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
-                    <UIcon name="i-heroicons-document-check"
+            <template v-else>
+                <UButton v-if="pending" :loading="pending"
+                    class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
+                    <p class="text-white w-4/5 text-right">تحميل</p>
+                </UButton>
+                <UButton v-if="error"
+                    class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
+                    <UIcon name="i-heroicons-x-circle"
                         class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
-                    <p class="text-white w-4/5 text-right">تم استلام توقعك بالفعل</p>
+                    <p class="text-white w-4/5 text-right">حدث خطأ في تحميل اليبانات برجاء المحاولة لاحقا</p>
                 </UButton>
             </template>
+
         </template>
 
         <template v-else>
-            <UButton v-if="pending" :loading="pending"
-                class="h-full relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
-                <p class="text-white w-4/5 text-right">تحميل</p>
-            </UButton>
-            <UButton v-if="error" class="h-full relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
-                <UIcon name="i-heroicons-x-circle"
-                    class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
-                <p class="text-white w-4/5 text-right">حدث خطأ في تحميل اليبانات برجاء المحاولة لاحقا</p>
-            </UButton>
+            <template v-if="isMatchOpenForEstimations">
+                <UButton @click="isLoginFormOpened = true"
+                    class="h-[4rem] w-44  relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
+                    <UIcon name="i-heroicons-user-circle"
+                        class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
+                    <p class="text-white  text-right">سجل دخول <br> وتوقع النتيجة </p>
+                </UButton>
+                <LoginForm v-model="isLoginFormOpened" />
+            </template>
         </template>
-
-    </template>
-
-    <template v-else>
-        <template v-if="isMatchOpenForEstimations">
-            <UButton @click="isLoginFormOpened = true"
-                class="h-full w-44  relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
-                <UIcon name="i-heroicons-user-circle"
-                    class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
-                <p class="text-white  text-right">سجل دخول <br> وتوقع النتيجة </p>
-            </UButton>
-            <LoginForm v-model="isLoginFormOpened" />
-        </template>
-    </template>
+    </div>
 </template>
 
 <script setup lang="ts">
