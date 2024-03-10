@@ -6,6 +6,6 @@ export default defineAppConfig({
         primary: 'amber',
         gray: 'cool',
         divider: { border: { base: 'border-gray-300 dark:border-gray-400' } },
-        button: { base: " transition-transform duration-500 ease-out hover:scale-105 active:scale-95 " }
+        button: { base: " transition-transform duration-500 ease-out hover:scale-105 active:scale-95 " },
     }
 })

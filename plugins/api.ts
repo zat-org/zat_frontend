@@ -10,6 +10,7 @@ import WebsiteAssetsModule from '~/Repository/modules/websiteAssets';
 import ChampionsModule from '~/Repository/modules/champion';
 import MatchesModule from '~/Repository/modules/matches';
 import AuthModule from '~/Repository/modules/auth';
+import EstimationsModule from "~/Repository/modules/estimations";
 
 
 interface IApiInstance {
@@ -23,7 +24,8 @@ interface IApiInstance {
     websiteAssets: WebsiteAssetsModule,
     champions: ChampionsModule,
     matches: MatchesModule,
-    auth: AuthModule
+    auth: AuthModule,
+    estimation :  EstimationsModule
 }
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -48,7 +50,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         websiteAssets: new WebsiteAssetsModule(apiFetcher),
         champions: new ChampionsModule(apiFetcher),
         matches: new MatchesModule(apiFetcher),
-        auth: new AuthModule(apiFetcher)
+        auth: new AuthModule(apiFetcher),
+        estimation: new EstimationsModule(apiFetcher)
     };
 
     return {

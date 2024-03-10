@@ -4,8 +4,8 @@
         <p class="text-center  text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
         <p class="text-center  text-amber-500 ">{{ match.tournament }}</p>
     </div>
-    <div class="flex items-center justify-evenly w-full text-center my-5">
-        <div class="bg-white px-3 py-2 rounded-lg flex justify-center items-center text-amber-500">
+    <div class="flex items-center h-14  justify-around w-full text-center my-5">
+        <div class="bg-gray-50 border  h-full  px-3 py-2 rounded-lg flex justify-center items-center text-amber-500">
             <div>
                 <p class="text-sm lg:text-md text-gray-700">
                     تاريخ المباراة
@@ -15,11 +15,15 @@
                 </p>
             </div>
             <UIcon name="i-heroicons-calendar-days-solid" class="ms-3 text-3xl" />
-
         </div>
-        <div class=" flex justify-center">
-            <a v-if="match.url" :href="match.url" target="_blank"
-                class="rounded-lg clickable bg-white flex py-2 px-3 justify-center items-center">
+
+        <ClientOnly>
+            <MatchDetailsEstimation :match="match" />
+        </ClientOnly>
+
+        <div v-if="match.url" class=" h-full flex  justify-center">
+            <a :href="match.url" target="_blank"
+                class="rounded-lg clickable bg-gray-50 border flex py-2 px-3 justify-center items-center">
                 <Icon name="ion:logo-youtube" class="text-red-500 me-3" size="28"></Icon>
                 <div>
                     <p class="text-sm lg:text-md text-slate-700">شاهد المباراة</p>
@@ -37,14 +41,17 @@
         </div>
         <div class="w-1/3">
             <div class="h-20 md:h-24">
+
                 <template v-if="match.state === MatchState.Done">
                     <p class="text-yellow-400 text-4xl md:text-6xl font-mono">
                         {{ match.team1.score }} <span class="text-gray-600">-</span> {{ match.team2.score }}
                     </p>
                 </template>
+
                 <template v-else-if="match.state === MatchState.Upcoming">
                     <Icon name="fxemoji:squaredvs" width="50" height="50" />
                 </template>
+
                 <template v-else-if="match.state === MatchState.Live">
                     <Icon name="svg-spinners:pulse-rings-3" color="red" width="50" height="50" />
                 </template>
@@ -65,13 +72,10 @@
 <script setup lang="ts">
 import MatchState from '@/Models/MatchState';
 import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
+
+const props = defineProps<{ match: IMatchFullDetails }>();
 const url = useRuntimeConfig().public.apiBaseUrl;
-const props = defineProps({
-    match: {
-        required: true,
-        type: Object as PropType<IMatchFullDetails>
-    }
-});
+
 const chipBg = () => {
     switch (props.match.state) {
         case MatchState.Done:
@@ -82,6 +86,7 @@ const chipBg = () => {
             return 'bg-amber-500';
     }
 }
+
 </script>
 
 <style scoped></style>

@@ -12,6 +12,9 @@ interface KeyNamePair {
     name: string
 }
 interface IMatchFullDetails extends IStartAt {
+    id:number, 
+    startEstimationAt :Date | null,
+    endEstimationAt :Date | null , 
     leagueName: string,
     state: MatchState,
     url: string,
