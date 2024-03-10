@@ -21,7 +21,7 @@
                 <MatchEstimationBestPlayer v-model:bestPlayerId="state.bestPlayerId"
                     :bestPlayerOptions="bestPlayerOptions" />
 
-                <p class="text-red-500 flex items-center justify-center">
+                <p v-if="error" class="text-red-500 flex items-center justify-center">
                     <UIcon name="i-heroicons-x-circle" class="me-2" />
                     {{ error }}
                 </p>

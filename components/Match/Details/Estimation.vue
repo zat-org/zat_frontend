@@ -22,7 +22,7 @@
         </template>
 
         <template v-else>
-            <UButton :loading="pending"
+            <UButton v-if="pending" :loading="pending"
                 class="h-full relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
                 <p class="text-white w-4/5 text-right">تحميل</p>
             </UButton>
