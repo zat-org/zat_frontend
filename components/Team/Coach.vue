@@ -1,7 +1,6 @@
 <template>
     <div class="flex flex-col justify-center items-center ">
-        <UAvatar size="xl" :src="url + coach.image" class="object-top object-cover" :alt="coach.name"
-            icon="i-heroicons-user" />
+        <Image :src="url + coach.image" class="object-top object-cover" :alt="coach.name" icon="i-heroicons-user" />
         <div class="text-center">
             <p class="text-sm font-semibold mt-2 text-amber-900 dark:text-slate-50 truncate">
                 {{ coach.name }}

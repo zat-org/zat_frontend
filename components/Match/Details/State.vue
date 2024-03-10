@@ -4,8 +4,9 @@
         <p class="text-center  text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
         <p class="text-center  text-amber-500 ">{{ match.tournament }}</p>
     </div>
-    <div class="flex items-end flex-wrap justify-around w-full text-center my-5 space-y-2">
-        <div class="bg-gray-50 border   px-3 py-1 h-[4rem] rounded-lg flex justify-center items-center text-amber-500">
+    <div class="flex items-end flex-wrap justify-around w-full text-center my-5 ">
+        <div
+            class="bg-gray-50 border px-3 py-1 h-[4rem] rounded-lg flex justify-center my-1 items-center text-amber-500">
             <div>
                 <p class="text-sm lg:text-md text-gray-700">
                     تاريخ المباراة
@@ -18,10 +19,10 @@
         </div>
 
         <ClientOnly>
-            <MatchDetailsEstimation :match="match" class="order-first" />
+            <MatchDetailsEstimation :match="match" class="order-first my-1" />
         </ClientOnly>
 
-        <div v-if="match.url" class=" flex  justify-center h-[4rem]">
+        <div v-if="match.url" class=" flex  justify-center h-[4rem] my-1">
             <a :href="match.url" target="_blank"
                 class="rounded-lg clickable bg-gray-50 border flex py-2 px-3 justify-center items-center">
                 <Icon name="ion:logo-youtube" class="text-red-500 me-3" size="28"></Icon>

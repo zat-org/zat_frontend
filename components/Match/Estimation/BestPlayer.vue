@@ -3,11 +3,15 @@
         <USelectMenu v-model="bestPlayer" :options="bestPlayerOptions">
             <template #label>
                 <span class="flex items-center" v-if="bestPlayer === null">
-                    <UAvatar class="me-2" icon="i-hericons-user" />
+                    <span
+                        class="bg-slate-200 dark:bg-slate-700 flex justify-center me-1 items-center size-6 rounded-full">
+                        <UIcon name="i-heroicons-user" class="text-lg " />
+                    </span>
                     <span class="truncate">اختر احد لاعبى الفريقين</span>
                 </span>
                 <span v-else class="flex items-center">
-                    <UAvatar class="me-2" :src="`${url}${bestPlayer.image}`" icon="i-hericons-user" />
+                    <UAvatar class="me-2" :src="`${url}${bestPlayer.image}`" icon="i-hericons-user"
+                        imgClass="object-cover object-top" />
                     <span class="truncate">
                         {{ bestPlayer.name }}
                     </span>
@@ -15,7 +19,7 @@
             </template>
 
             <template #option="{ option: person }">
-                <UAvatar :src="`${url}${person.image}`" icon="i-heroicons-user" />
+                <UAvatar :src="`${url}${person.image}`" icon="i-heroicons-user" imgClass="object-cover object-top" />
                 <span class="truncate">{{ person.name }}</span>
             </template>
 
