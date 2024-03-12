@@ -1,102 +1,42 @@
 <template>
-    <UFormGroup name="selectedWinnerId" size="xl">
-        <URadioGroup :ui="uiRadioGroup" :uiRadio="uiRadio" v-model="selectedWinnerId" required
-            :options="winnerTeamOptions">
-            <template #legend>
-                <p class="flex items-center justify-center">
-                    <UIcon name="i-heroicons-user-group me-1 text-2xl text-amber-500" />
-                    توقع الفريق الفائز <span class="text-gray-400 ms-2"> نقطتان </span>
-                </p>
-            </template>
 
-            <template #label="{ option }">
-                <div class="py-2 px-4 rounded-md flex flex-col justify-center items-center"
-                    :class="{ 'outline outline-amber-500': selectedWinnerId === option.value }">
-                    <Image class="bg-white mb-1" :src="`${url}${option.logo}`" :alt="option.label"
-                        icon="i-heroicons-users" />
-                    <p class="text-center">{{ option.label }}</p>
-                </div>
-            </template>
-        </URadioGroup>
-
-        <template #error="{ error }">
-            <p :class="[error ? 'form-control-error  text-center' : '']">
-                {{ error ? error : '' }}
-            </p>
-        </template>
-    </UFormGroup>
-
-
-
-    <div v-if="isSelectedTeam1 !== null" class="w-full my-3 text-center">
-        <p class="mb-2"> توقع نتيجة الفريق الخاسر </p>
-        <div class="text-4xl font-mono flex justify-evenly items-center">
-
-            <template v-if="isSelectedTeam1">
-                <span class="w-1/5"> </span>
-                <span class="w-1/5 text-center"> 2 </span>
-                <span class="w-1/5"> - </span>
-            </template>
-
-            <span class="w-2/5" :class="{ 'text-left': !isSelectedTeam1, 'text-right': isSelectedTeam1 }">
-                <URadioGroup name="loserScore" :ui="uiLoserScoreRadioGroup" :uiRadio="uiRadio" v-model="loserScore"
-                    required :options="loserTeamScore">
-
-                    <template #label="{ option }">
-                        <div class="py-2 px-4 rounded-md flex flex-col justify-center items-center"
-                            :class="{ 'outline outline-amber-500': loserScore === option.value }">
-                            <span class="text-lg">{{ option.label }}</span>
-                        </div>
-                    </template>
-                </URadioGroup>
-            </span>
-
-            <template v-if="!isSelectedTeam1">
-                <span class="w-1/5"> - </span>
-                <span class="w-1/5 text-center"> 2 </span>
-                <span class="w-1/5"> </span>
-            </template>
+    <p class=" flex items-center justify-center">
+        <UIcon name="i-heroicons-users" class=" text-lg text-amber-500 me-2" />
+        توقع نتيجة المباراة
+        <span class="text-gray-600 dark:text-gray-300 ms-3">نقطتان</span>
+    </p>
+    <div class="flex justify-evenly">
+        <div class="py-2 px-4 rounded-md flex flex-col justify-center items-center"
+            :class="{ 'outline outline-amber-500': team1Score == 2 && team2Score != 2 }">
+            <p>{{ match.team1.name }}</p>
+            <Image class="bg-white my-2" :src="`${url}${match.team1.logo}`" :alt="match.team1.name"
+                icon="i-heroicons-users" />
+            <FormInputField type="number" name="team1Score" v-model="team1Score" class="w-24" label=""
+                placeholder="2" />
+        </div>
+        <div class="py-2 px-4 rounded-md flex flex-col justify-center items-center"
+            :class="{ 'outline outline-amber-500': team2Score == 2 && team1Score != 2 }">
+            <p>{{ match.team2.name }}</p>
+            <Image class="bg-white my-2" :src="`${url}${match.team2.logo}`" :alt="match.team2.name"
+                icon="i-heroicons-users" />
+            <FormInputField type="number" name="team2Score" v-model="team2Score" class="w-24" label=""
+                placeholder="1" />
         </div>
     </div>
+    <p v-if="error" class="text-red-500 flex items-center justify-center">
+        <UIcon name="i-heroicons-x-circle" class="me-2" />
+        {{ error }}
+    </p>
+
+
 </template>
 
 <script setup lang="ts">
-
-const props = defineProps<{
-    isSelectedTeam1: boolean | null,
-    winnerTeamOptions: {
-        value: number;
-        logo: string;
-        label: string;
-    }[]
-}>();
-const selectedWinnerId = defineModel("selectedWinnerId", { required: true, type: Number as PropType<null | number> });
-const loserScore = defineModel("loserScore", { required: true, type: Number as PropType<0 | 1> });
-
-
-
-const loserTeamScore = [
-    { value: 0, label: '0' }, { value: 1, label: '1' }
-]
+import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
+defineProps<{ match: IMatchFullDetails, error: string | null }>();
+const team1Score = defineModel("team1Score", { required: true, type: Number as PropType<0 | 1 | 2> });
+const team2Score = defineModel("team2Score", { required: true, type: Number as PropType<0 | 1 | 2> });
 const url = useRuntimeConfig().public.apiBaseUrl;
-
-const uiRadioGroup = {
-    fieldset: 'flex w-full flex-wrap flex-row justify-evenly',
-    legend: 'w-full mb-3 text-center text-md'
-}
-
-
-const uiLoserScoreRadioGroup = computed(() => {
-    return {
-        fieldset: 'flex flex-wrap flex-row justify-center',
-        wrapper: `items-center ${props.isSelectedTeam1 ? 'justify-start' : 'justify-end'}`
-    }
-})
-
-
-const uiRadio = {
-    container: "hidden"
-}
 </script>
 
 <style scoped></style>

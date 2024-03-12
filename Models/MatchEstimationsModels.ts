@@ -1,5 +1,5 @@
 interface ICreateMatchEstimation{
-    loserScore: 0 | 1 ,
+    loserScore: number ,
     countOf400: number,
     countOfKaboots: number,
     countOfRedCards: number,

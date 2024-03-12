@@ -18,7 +18,7 @@
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel'
 import type { ICupMatchData } from "@/Models/ICupSummary"
 import 'vue3-carousel/dist/carousel.css'
-defineProps<{ table: ICupMatchData[][] }>();
+const props = defineProps<{ table: ICupMatchData[][] }>();
 
 const breakpoints = {
 

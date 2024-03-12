@@ -27,13 +27,16 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 const updateModelValue = (e: Event) => {
     const elm = e.target as HTMLInputElement;
-    if (props.type === "number" && !isNumeric(elm.value)) {
-        elm.value = "0"
+    if (props.type === "number") {
+        if (!isNumeric(elm.value))
+            elm.value = "0"
+        if (elm.value.length > 1 && elm.value.charAt(0) === "0")
+            elm.value = elm.value.slice(1)
     }
     emit('update:modelValue', elm.value);
 }
 const isNumeric = (value: string) => {
-    return !isNaN(Number(value));
+    return !isNaN(parseInt(value));
 }
 </script>
 
