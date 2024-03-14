@@ -4,7 +4,7 @@
         <UTable :rows="rows" :ui="ui" :columns="columns" :loading="pending"
             :loading-state="{ icon: 'i-heroicons-arrow-path-20-solid', label: 'Loading...' }"
             :progress="{ color: 'primary', animation: 'carousel' }"
-            state=" { icon: 'i-heroicons-circle-stack-20-solid', label: 'لا يوجد توقعات' } ">
+            :empty-state="{ icon: 'i-heroicons-circle-stack-20-solid', label: 'لا يوجد توقعات' }">
             <template #index-data="{ row }">
                 <p class="text-center">
                     # {{ row.index }}
@@ -63,8 +63,8 @@ const rows = computed(() => {
             pageRows?.unshift(userRow.value)
             pageRows?.pop()
         }
-        return pageRows
     }
+    return pageRows
 })
 
 const columns = [{
