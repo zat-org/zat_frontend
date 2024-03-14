@@ -14,6 +14,17 @@ interface IGetEstimationResponse{
         countOf400: number,
         countOfKaboots: number,
         countOfRedCards: number,
+        estimation_score:number | null
     }
 }
-export type {  ICreateMatchEstimation ,IGetEstimationResponse } 
+interface IEstimationRecord {
+    id: number,
+    username: string,
+    avatar_url: string|null,
+    sum: string,
+    count: string
+}
+interface IEstimationTable {
+    data : IEstimationRecord[]
+}
+export type {  ICreateMatchEstimation ,IEstimationTable,IGetEstimationResponse } 

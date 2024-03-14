@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full">
+    <div class="w-full order-first my-1">
         <template v-if="userStore.isAuthenticated">
             <template v-if="userSubmittedEstimationCount !== null">
                 <template v-if="userSubmittedEstimationCount === 0 && isMatchOpenForEstimations">
@@ -17,7 +17,16 @@
                     <UButton class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
                         <UIcon name="i-heroicons-document-check"
                             class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
-                        <p class="text-white w-4/5 text-right">تم استلام توقعك بالفعل</p>
+                        <p class="text-white w-4/5 text-right">
+                            <span v-if="data?.data[0].attributes.estimation_score">
+                                نتيجة توقعك
+                                10 / {{ data?.data[0].attributes.estimation_score }}
+                            </span>
+                            <span v-else>
+                                تم استلام توقعك بالفعل
+                            </span>
+                        </p>
+
                     </UButton>
                 </template>
             </template>

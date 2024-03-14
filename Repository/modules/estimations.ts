@@ -1,13 +1,15 @@
 import type { IError } from '~/Models/AuthModels';
+import type { AsyncDataOptions } from '#app';
 import FetchFactory from '../factory';
 import type { IResponse } from '~/Models/IResponse';
-import type { ICreateMatchEstimation ,IGetEstimationResponse } from '~/Models/MatchEstimationsModels';
+import type { ICreateMatchEstimation ,IGetEstimationResponse ,IEstimationTable } from '~/Models/MatchEstimationsModels';
+import type { FetchOptions } from 'ofetch';
 
 class EstimationsModule extends FetchFactory {
     useGetByIds() {
         const error = ref<string | null>(null);
         const pending = ref<boolean>(false) ;
-        const data = ref<IResponse<IGetEstimationResponse> | null>(null);
+        const data = ref<IResponse<IGetEstimationResponse[]> | null>(null);
         const getData = async (matchId: number): Promise<unknown> => {
             const userStore = useUserStore()
             if(!userStore.user?.id || !userStore.jwtToken ){
@@ -17,7 +19,7 @@ class EstimationsModule extends FetchFactory {
             error.value = null;
             pending.value = true;
             try {
-                let res = await this.call<IResponse<IGetEstimationResponse>>(
+                let res = await this.call<IResponse<IGetEstimationResponse[]>>(
                     'GET',
                     `/api/match-estimations?filters[match][id][$eq]=${matchId}&filters[user][id][$eq]=${userStore.user.id}`,
                     undefined, // body
@@ -85,6 +87,25 @@ class EstimationsModule extends FetchFactory {
             }
         }
         return { error, pending, send }
+    }
+
+    getEstimationTableByChampId(champId: number, asyncDataOptions?: AsyncDataOptions<IEstimationTable>){
+        return useAsyncData(
+            () => {
+                const fetchOptions: FetchOptions<'json'> = {
+                    headers: {
+                        'Accept-Language': 'en-US'
+                    }
+                };
+                return this.call<IEstimationTable>(
+                    'GET',
+                    `/api/leagues/${champId}/estimations`,
+                    undefined, // body
+                    fetchOptions
+                )
+            },
+            asyncDataOptions
+        )
     }
 }
 

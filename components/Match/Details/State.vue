@@ -19,7 +19,7 @@
         </div>
 
         <ClientOnly>
-            <MatchDetailsEstimation :match="match" class="order-first my-1" />
+            <MatchDetailsEstimation :match="match"  />
         </ClientOnly>
 
         <div v-if="match.url" class=" flex  justify-center h-[4rem] my-1">
