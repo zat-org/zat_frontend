@@ -11,6 +11,8 @@
                     الان</UButton>
             </div>
 
+
+            
         </div>
         <HomeSlider />
         <div class="flex justify-around flex-col md:flex-row md:mb-10 ">
