@@ -4,15 +4,16 @@
             <img src="/assets/images/adv-banner.jpg" class="rounded-lg w-full object-cover h-48 object-top" />
             <h3
                 class="absolute hidden lg:block top-1/2  left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center  text-white lg:text-2xl  ">
-                ورق بلوت زات متاح حاليا بالاسواق
+                لا تفوتك ورق بلوت زات
             </h3>
             <div class="inline absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <UButton size="lg" class="animate-bounce" target="_blank" to="https://mtjr.at/d_9HVi7ll1">اشترى
-                    الان</UButton>
+                <UButton size="lg" class="animate-bounce" target="_blank" to="https://mtjr.at/d_9HVi7ll1">
+                    اطلبها اللحين
+                </UButton>
             </div>
 
 
-            
+
         </div>
         <HomeSlider />
         <div class="flex justify-around flex-col md:flex-row md:mb-10 ">
