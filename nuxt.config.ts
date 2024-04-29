@@ -6,7 +6,7 @@ const Description = `قناة متخصصة ببث وتنظيم بطولات ال
                     على مدار السنة وقد بلغ عدد الجوائز حتى الآن ما يتجاوز 200,000 ريال سعودي.
 `
 const Keywords = "زات , سام , بلوت , ورقة , لعب , اوساسيونا , الادهم , طويق , دوري , الحزام , كاس , سوبر , اوراق "
-const LogoURL = "https://sam-baloot-admin.online/uploads/Screenshot_2023_09_06_182305_1a642302ba.jpg"
+const LogoURL = "https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/zat-logo-black.png"
 const WebsiteUrl = "https://zatbaloot.com/"
 
 export default defineNuxtConfig({
