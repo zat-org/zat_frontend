@@ -5,8 +5,8 @@ const Description = `قناة متخصصة ببث وتنظيم بطولات ال
                     عالم اللعبة الشهيرة، تضم القناة عدد من اللاعبين المحترفين الذين يتنافسون لحصد الجوائز والألقاب الموسمية
                     على مدار السنة وقد بلغ عدد الجوائز حتى الآن ما يتجاوز 200,000 ريال سعودي.
 `
-const Keywords = "زات , سام , بلوت , ورقة , لعب , اوساسيونا , الادهم , طويق , دوري , الحزام , كاس , سوبر , اوراق "
-const LogoURL = "https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/zat-logo-black.png"
+const Keywords = "زات , سام , بلوت , ورقة , لعب , اوساسيونا , الادهم , طويق , دوري , الحزام , كاس , سوبر , اوراق , zat , baloot , sam , calculator"
+const LogoURL = "https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/zat.jpg"
 const WebsiteUrl = "https://zatbaloot.com/"
 
 export default defineNuxtConfig({
