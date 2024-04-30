@@ -50,12 +50,15 @@ export default defineNuxtConfig({
         dir: "rtl"
       },
       title: Title,
-      meta: [{ hid: 'description', name: 'description', content: Description }
+      meta: [
+         { name: 'image' , property : 'og:image', content: LogoURL }
+         , { name: 'og:title', content: Title }
+         , { name: 'og:description', content: Description }
+         , { name: 'og:image', content: LogoURL }
+         , { name: 'og:url', content: WebsiteUrl }
+         , { name: 'author', content: "Zat Compony" }
+         , { hid: 'description', name: 'description', content: Description }
         , { hid: 'keywords', name: 'keywords', content: Keywords }
-        , { name: 'og:title', content: Title }
-        , { name: 'og:description', content: Description }
-        , { name: 'og:image', content: LogoURL }
-        , { name: 'og:url', content: WebsiteUrl }
         , { "name": "viewport", "content": "width=device-width, initial-scale=1" }
         , { "charset": "utf-8" }],
       noscript: [{
