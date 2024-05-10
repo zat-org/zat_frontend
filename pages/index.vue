@@ -8,7 +8,7 @@
             </h3>
             <div class="inline absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <UButton size="lg" class="animate-bounce" target="_blank" to="https://mtjr.at/d_9HVi7ll1">
-                     اطلبها الآن
+                    اطلبها الآن
                 </UButton>
             </div>
 
@@ -17,7 +17,7 @@
         </div>
         <HomeSlider />
         <div class="flex justify-around flex-col md:flex-row md:mb-10 ">
-            <ClientOnly>
+            <!-- <ClientOnly>
                 <HomeCalender class="w-full md:w-5/12 mb-16 md:mb-0" />
                 <template #placeholder>
                     <div
@@ -26,15 +26,15 @@
                         <h2 class="font-semibold">تحميل</h2>
                     </div>
                 </template>
-            </ClientOnly>
-            <HomeMatches class="w-full md:w-7/12" />
+</ClientOnly> -->
+            <HomeMatches class="w-full " />
         </div>
-        <div class="flex justify-center ">
+        <!-- <div class="flex justify-center ">
             <SectionHeader title="خارطة البطولات" icon="i-heroicons-map" />
         </div>
 
         <img src="https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/btolat_zat.jpg"
-            class="mb-5 rounded-xl" />
+            class="mb-5 rounded-xl" /> -->
         <HomeBlogs />
         <HomeJoinChampions />
 
