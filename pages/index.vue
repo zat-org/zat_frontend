@@ -7,7 +7,7 @@
                 لا تفوتك ورق بلوت زات
             </h3>
             <div class="inline absolute bottom-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <UButton size="lg" class="animate-bounce" target="_blank" to="https://mtjr.at/d_9HVi7ll1">
+                <UButton size="lg" class="animate-bounce" target="_blank" to="https://zatbaloot.store/">
                     اطلبها الآن
                 </UButton>
             </div>
