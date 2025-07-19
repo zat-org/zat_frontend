@@ -12,7 +12,7 @@
                 <img src="/images/qydha_logo.png" class="w-20" />
             </div>
             <UForm :schema="usernameSchema" :state="state" class="space-y-3" @submit="onSubmitUsername">
-                <FormInputField :disabled="state.formState !== FormState.waitUsernameInput" dir="ltr"
+                <UInput :disabled="state.formState !== FormState.waitUsernameInput" dir="ltr"
                     v-model="state.username" type="text" name="username" label="يوزر قيدها" hint="مطلوب"
                     icon="i-heroicons-at-symbol-20-solid" placeholder="username" />
                 <span class="text-sm text-gray-500 dark:text-gray-300  flex items-center">
