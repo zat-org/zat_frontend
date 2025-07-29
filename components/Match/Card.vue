@@ -29,6 +29,11 @@
             </div>
         </div>
 
+        <!-- Estimation Section -->
+        <div class="mx-3 mb-3" @click.stop>
+            <MatchCardEstimation :match="match" :champ-id="champId" />
+        </div>
+
         <div class="flex items-center">
             <div class="w-1/3  flex justify-center">
                 <p class="w-24 text-center  text-xs md:text-sm text-white py-1 rounded-t-lg" :class="{

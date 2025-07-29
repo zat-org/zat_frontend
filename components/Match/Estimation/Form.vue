@@ -117,7 +117,9 @@ const selectedWinnerId = computed(() => {
 const onSubmit = async () => {
     if (winnerSelectionError.value) return;
     const loserScore = Math.min(state.team2Score, state.team1Score);
-    await sendEstimation({ ...state, loserScore, selectedWinnerId: selectedWinnerId.value || null, matchId: props.match.id })
+    // For draws (1-1), use -1 as selectedWinnerId since API expects a number
+    const winnerId = selectedWinnerId.value || -1;
+    await sendEstimation({ ...state, loserScore, selectedWinnerId: winnerId, matchId: props.match.id })
     if (!error.value) {
         toast.add({ title: "تم تسجيل توقعك بنجاح" });
         handleClose();
