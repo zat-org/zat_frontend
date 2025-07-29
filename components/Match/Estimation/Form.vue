@@ -44,7 +44,7 @@ import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
 
 const props = defineProps<{ match: IMatchFullDetails }>();
 const emit = defineEmits(['estimationSubmitted'])
-const isEstimationFormOpened = defineModel()
+const isEstimationFormOpened = defineModel<boolean>()
 
 const { $api } = useNuxtApp();
 const { error, pending, send: sendEstimation } = $api.estimation.useSendEstimation();
@@ -58,10 +58,10 @@ const bestPlayerOptions = computed(() => {
 const winnerSelectionError = computed(() => {
     let max = Math.max(state.team1Score, state.team2Score)
     let min = Math.min(state.team1Score, state.team2Score)
-    if (max === 2 && (min === 0 || min === 1)) {
+    if ((max === 2 && (min === 0 || min === 1)) || (max === 1 && min === 1)) {
         return null
     }
-    return "يجب ان تكون النتيجة ( 2-0 ) او ( 2-1 ) للفريق الفائز"
+    return "يجب ان تكون النتيجة ( 2-0 ) او ( 2-1 ) للفريق الفائز او ( 1-1 ) للتعادل"
 })
 type IState = {
     // selectedWinnerId: number,
@@ -115,9 +115,9 @@ const selectedWinnerId = computed(() => {
     return getWinner.value ? props.match[getWinner.value].id : null
 })
 const onSubmit = async () => {
-    if (winnerSelectionError.value || !selectedWinnerId.value) return;
+    if (winnerSelectionError.value) return;
     const loserScore = Math.min(state.team2Score, state.team1Score);
-    await sendEstimation({ ...state, loserScore, selectedWinnerId: selectedWinnerId.value, matchId: props.match.id })
+    await sendEstimation({ ...state, loserScore, selectedWinnerId: selectedWinnerId.value || null, matchId: props.match.id })
     if (!error.value) {
         toast.add({ title: "تم تسجيل توقعك بنجاح" });
         handleClose();
