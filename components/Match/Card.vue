@@ -30,7 +30,7 @@
         </div>
 
         <!-- Estimation Section -->
-        <div class="mx-3 mb-3" @click.stop>
+        <div class="mx-3 mb-3" v-if="isMatchOpenForEstimations" @click.stop>
             <MatchCardEstimation :match="match" :champ-id="champId" />
         </div>
 
@@ -87,6 +87,13 @@ function handleYoutubeClick(event: Event) {
     window.open(props.match.url, "_blank")
     event.stopImmediatePropagation()
 }
+const isMatchOpenForEstimations = computed(() => {
+    if (!props.match.start_estimations || !props.match.end_estimations) return false
+    const start = new Date(props.match.start_estimations)
+    const end = new Date(props.match.end_estimations)
+    const now = new Date()
+    return now >= start && now <= end
+})
 </script>
 
 <style scoped></style>    

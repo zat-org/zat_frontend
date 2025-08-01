@@ -12,6 +12,8 @@ interface IMatchLessDetails extends IStartAt {
     team_2_logo: string,
     state: MatchState,
     url: string,
+    start_estimations: string | null,
+    end_estimations: string | null,
     tournament_name: string,
     name: string,
     type: "official" | "friendly"

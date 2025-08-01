@@ -94,6 +94,7 @@ const isMatchOpenForEstimations = computed(() => {
     const end = new Date(props.match.endEstimationAt)
     const now = new Date()
     return now >= start && now <= end;
-}) </script>
+}) 
+</script>
 
 <style scoped></style>
