@@ -61,7 +61,7 @@ const winnerSelectionError = computed(() => {
     if ((max === 2 && (min === 0 || min === 1)) || (max === 1 && min === 1)) {
         return null
     }
-    return "يجب ان تكون النتيجة ( 2-0 ) او ( 2-1 ) للفريق الفائز او ( 1-1 ) للتعادل"
+    return "يجب ان تكون النتيجة ( 2-0 )   للفريق الفائز او ( 1-1 ) للتعادل"
 })
 type IState = {
     // selectedWinnerId: number,
