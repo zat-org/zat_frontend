@@ -111,7 +111,7 @@ const checkEstimationStatus = async () => {
         await getUserEstimation(props.match.id)
         
         if (userSubmittedEstimationCount.value !== null) {
-            if (userSubmittedEstimationCount.value > 0) {
+            if (userSubmittedEstimationCount.value >= 0) {
                 estimationStatus.value = 'submitted'
                 // Get the score if available
                 if (estimationData.value?.data[0]?.attributes.estimation_score) {
