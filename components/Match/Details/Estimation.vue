@@ -13,12 +13,12 @@
                         @estimationSubmitted="handleEstimationSubmitted" />
                 </template>
 
-                <template v-if="userSubmittedEstimationCount >= 0">
+                <template v-if="userSubmittedEstimationCount > 0">
                     <UButton class="h-[4rem] relative bg-gradient-to-r from-[#FDC830] to-[#F37335] overflow-hidden">
                         <UIcon name="i-heroicons-document-check"
                             class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
                         <p class="text-white w-4/5 text-right">
-                            <span v-if="data?.data[0].attributes.estimation_score">
+                            <span v-if="data?.data[0].attributes.estimation_score && data?.data[0].attributes.estimation_score >= 0">
                                 نتيجة توقعك
                                 10 / {{ data?.data[0].attributes.estimation_score }}
                             </span>
