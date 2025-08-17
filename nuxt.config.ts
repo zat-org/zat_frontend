@@ -20,7 +20,6 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@samk-dev/nuxt-vcalendar',
     "@nuxt/content",
-    'nuxt-icon',
     "@nuxt/image",
     '@vueuse/nuxt',
     '@pinia/nuxt',

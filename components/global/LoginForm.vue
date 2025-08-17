@@ -11,10 +11,12 @@
             <div class="flex justify-center">
                 <img src="/images/qydha_logo.png" class="w-20" />
             </div>
-            <UForm :schema="usernameSchema" :state="state" class="space-y-3" @submit="onSubmitUsername">
-                <UInput :disabled="state.formState !== FormState.waitUsernameInput" dir="ltr"
-                    v-model="state.username" type="text" name="username" label="يوزر قيدها" hint="مطلوب"
-                    icon="i-heroicons-at-symbol-20-solid" placeholder="username" />
+            <UForm :schema="usernameSchema" :state="{ username: state.username }" class="space-y-3"
+                @submit="onSubmitUsername">
+                <UInput :disabled="state.formState !== FormState.waitUsernameInput" dir="ltr" v-model="state.username"
+                    type="text" name="username" label="يوزر قيدها" hint="مطلوب" icon="i-heroicons-at-symbol-20-solid"
+                    placeholder="username" />
+
                 <span class="text-sm text-gray-500 dark:text-gray-300  flex items-center">
                     <UIcon name="i-heroicons-bell-alert-solid" class="text-xl me-2" />
                     بيوصلك إشعار على قيدها به رمز الدخول
@@ -32,10 +34,12 @@
                 </div>
             </UForm>
 
-            <UForm :schema="otpSchema" v-if="state.formState === FormState.waitOtpInput" :state="state"
+            <UForm :schema="otpSchema" v-if="state.formState === FormState.waitOtpInput" :state="{ otp: state.otp }"
                 class="space-y-3" @submit="onSubmitOtp">
-                <FormInputField dir="ltr" v-model="state.otp" type="text" name="otp" label="رمز الدخول" hint="مطلوب"
-                    icon="i-heroicons-key" placeholder="123456" />
+
+                    <UInput v-model="state.otp" type="text" name="otp" label="رمز الدخول" hint="مطلوب"
+                        icon="i-heroicons-key" placeholder="123456" dir="ltr" />
+
                 <div v-if="error && state.formState === FormState.waitOtpInput"
                     class="text-red-500 text-sm flex items-center">
                     <UIcon name="i-heroicons-x-circle" class="text-lg me-1" />
@@ -63,11 +67,12 @@ const handleClose = () => {
     isLoginFormOpened.value = false
     resetState()
 }
-const isLoginFormOpened = defineModel()
+const isLoginFormOpened = defineModel<boolean>()
 enum FormState {
     waitUsernameInput,
     waitOtpInput,
 }
+
 const state = reactive<{ username: string, otp: string, requestId: string, formState: FormState }>({
     username: "",
     otp: "",

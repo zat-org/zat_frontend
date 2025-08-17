@@ -47,6 +47,7 @@ interface IGetChampTeamsResponse extends IGetChampDetailsResponse {
 interface TeamSummary {
     id: number,
     win: number,
+    draw: number,
     lost: number,
     name: string,
     play: number,

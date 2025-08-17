@@ -7,10 +7,12 @@
 </template>
 
 <script setup lang="ts">
+
+
+import ChampType from "@/Models/ChampType"
 import type { IChamp, LeagueTeamSummary, HezamTeamSummary } from "@/Models/IChamp"
 import type { ICupMatchData } from "~/Models/ICupSummary";
 
-import ChampType from "@/Models/ChampType"
 
 const props = defineProps({
     champ: {

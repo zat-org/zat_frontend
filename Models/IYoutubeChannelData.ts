@@ -1,4 +1,4 @@
-interface IYoutubeChannelData {
+export interface IYoutubeChannelData {
     kind: string,
     etag: string,
     pageInfo: {

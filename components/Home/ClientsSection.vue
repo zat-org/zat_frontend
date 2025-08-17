@@ -4,6 +4,7 @@
             <SectionHeader icon="i-heroicons-sparkles" title="شركائنا بالنجاح" />
         </div>
         <div class="py-5 h-64 overflow-hidden">
+            <ClientOnly>
             <swiper-container class="w-full h-full" :loop="true" :slides-per-view="1" :space-between="30"
                 :keyboard="{ enabled: true }" :mousewheel="true" :autoplay-delay="1500">
                 <swiper-slide v-for="img in images" :key="img.id" class="flex justify-center">
@@ -13,6 +14,7 @@
                     </div>
                 </swiper-slide>
             </swiper-container>
+        </ClientOnly>
         </div>
     </section>
 </template>

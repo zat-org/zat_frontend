@@ -18,6 +18,7 @@ defineProps({
 
 const route = useRoute()
 const { $api } = useNuxtApp()
+
 const { data: match, error, pending } = await $api.matches.getById(route.params.mid as string);
 
 useHead({

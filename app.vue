@@ -15,10 +15,21 @@ import 'vue3-carousel/dist/carousel.css'
 import { useUserStore } from '~/stores/useUserStore';
 
 const { $api } = useNuxtApp();
-await $api.websiteAssets.addOneToVisitorCounter();
+
 const userStore = useUserStore()
+onMounted(async () => {
+  try{
+    await userStore.refetchUser();
+  } catch (error) {
+    console.log(error)
+  }
+})
 
 onMounted(async () => {
-  await userStore.refetchUser();
+ try{
+  await $api.websiteAssets.addOneToVisitorCounter()
+ } catch (error) {
+  console.log(error)
+ }
 })
 </script>

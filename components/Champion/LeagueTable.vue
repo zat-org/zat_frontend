@@ -12,6 +12,9 @@
                     فاز
                 </th>
                 <th class="px-1 w-1/12 md:w-1/12">
+                    تعادل
+                </th>
+                <th class="px-1 w-1/12 md:w-1/12">
                     خسر
                 </th>
                 <th class="px-1 w-1/12 md:w-1/12">
@@ -35,6 +38,7 @@
                 </td>
                 <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.play }}</td>
                 <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.win }}</td>
+                <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.draw }}</td>
                 <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.lost }}</td>
                 <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.abnat }}</td>
                 <td class="px-1 font-bold text-blue-900 dark:text-slate-50">

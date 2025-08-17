@@ -35,15 +35,16 @@ const props = defineProps({
     }
 });
 const route = useRoute();
+const champ_id = computed(() => route.params.id||'')
 const navigation = [
-    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${route.params.id}/laws`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM] },
-    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${route.params.id}/statistics`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${route.params.id}/matches`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${route.params.id}/`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${route.params.id}/studios`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${route.params.id}/table`, availableAt: [ChampType.LEAGUE, ChampType.CUP, ChampType.HEZAM], },
-    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${route.params.id}/teams`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'التوقعات', icon: "heroicons:presentation-chart-bar", href: `/championships/${route.params.id}/estimations`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${champ_id.value}/laws`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM] },
+    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${champ_id.value}/statistics`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${champ_id.value}/matches`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${champ_id.value}/`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${champ_id.value}/studios`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'الجدول', icon: "fa:table", href: `/championships/${champ_id.value}/table`, availableAt: [ChampType.LEAGUE, ChampType.CUP, ChampType.HEZAM], },
+    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${champ_id.value}/teams`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
+    { name: 'التوقعات', icon: "heroicons:presentation-chart-bar", href: `/championships/${champ_id.value}/estimations`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
 ]
 const champType = computed(() => props.champ.type as ChampType);
 

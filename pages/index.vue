@@ -48,6 +48,8 @@
             <HomeOurStatistics />
             <hr class="my-20">
             <HomeClientsSection />
+            <hr class="my-20">
+            <HomePlayersSection />
         </div>
     </div>
 </template>

@@ -9,7 +9,7 @@
                             class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
                         <p class="text-white w-4/5 text-right"> توقع نتيجة المباراة </p>
                     </UButton>
-                    <MatchEstimationForm :match="match" v-model="isEstimationFormOpened"
+                    <MatchEstimationForm :match="props.match" v-model="isEstimationFormOpened"
                         @estimationSubmitted="handleEstimationSubmitted" />
                 </template>
 
@@ -18,7 +18,7 @@
                         <UIcon name="i-heroicons-document-check"
                             class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
                         <p class="text-white w-4/5 text-right">
-                            <span v-if="data?.data[0].attributes.estimation_score && data?.data[0].attributes.estimation_score >= 0">
+                            <span v-if="data?.data[0].attributes.estimation_score! >= 0">
                                 نتيجة توقعك
                                 10 / {{ data?.data[0].attributes.estimation_score }}
                             </span>
@@ -61,10 +61,10 @@
 </template>
 
 <script setup lang="ts">
+const props = defineProps<{ match: IMatchFullDetails }>();
 import type { IMatchFullDetails } from "@/Models/IMatchFullDetails"
 const { $api } = useNuxtApp();
 const userStore = useUserStore();
-const props = defineProps<{ match: IMatchFullDetails }>();
 const isEstimationFormOpened = ref(false)
 const isLoginFormOpened = ref(false)
 
