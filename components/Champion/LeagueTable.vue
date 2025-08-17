@@ -27,13 +27,13 @@
         </thead>
         <tbody>
             <tr v-for=" teamSummary, index  in  table " :key="teamSummary.id"
-                class="h-10 even:bg-slate-100 even:dark:bg-slate-500 odd:bg-slate-200 odd:dark:bg-slate-600">
-                <td class="px-1 text-start relative">
+                class="  even:bg-slate-100 even:dark:bg-slate-500 odd:bg-slate-200 odd:dark:bg-slate-600">
+                <td class="flex items-center justify-start h-10  gap-2  ">
                     <div
-                        class="h-[100%] w-5 bg-transparent absolute top-0 right-0 flex justify-center items-center text-amber-500">
+                        class=" w-5 bg-transparent top-0 right-0 flex justify-center items-center text-amber-500">
                         <span class="">{{ index + 1 }}</span>
                     </div>
-                    <span class="font-semibold text-blue-900 dark:text-slate-50 pl-6 pr-0">
+                    <span class="font-semibold  flex-1 text-right   text-blue-900 dark:text-slate-50  min-w-[75px]   text-[12px] md:text-lg">
                         {{ teamSummary.name }}</span>
                 </td>
                 <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.play }}</td>
