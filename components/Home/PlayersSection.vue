@@ -50,7 +50,7 @@
 
 <script setup lang="ts">
 // const url = useRuntimeConfig().public.apiBaseUrl
-const url = computed(() => useRuntimeConfig().public.apiBaseUrl || 'https://sam-baloot-admin.online')
+const url ='https://sam-baloot-admin.online'
 
 const { $api } = useNuxtApp()
 const { data, error, pending } = await $api.websiteAssets.getPlayersImages();
@@ -59,7 +59,7 @@ const images = computed(() => data.value?.data.map((ele: any) => {
     return {
         id: ele.id,
         name: ele.attributes.playerName,
-        url: url.value + ele.attributes.playerImage.data.attributes.url
+        url: url + ele.attributes.playerImage.data.attributes.url
     }
 }))
 

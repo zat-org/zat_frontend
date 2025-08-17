@@ -20,11 +20,11 @@
 </template>
 
 <script setup lang="ts">
-const url = computed(() => useRuntimeConfig().public.apiBaseUrl || 'https://sam-baloot-admin.online')
+const url = 'https://sam-baloot-admin.online'
 
 const { $api } = useNuxtApp()
 const { data, error, pending } = await $api.websiteAssets.getClientsImages();
-const images = computed(() => data.value?.data.attributes.images.data.map((elm: any) => { return { id: elm.id, url: url.value + elm.attributes.url } }))
+const images = computed(() => data.value?.data.attributes.images.data.map((elm: any) => { return { id: elm.id, url: url + elm.attributes.url } }))
 
 </script>
 
