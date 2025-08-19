@@ -11,7 +11,7 @@
             <div class="flex justify-center">
                 <img src="/images/qydha_logo.png" class="w-20" />
             </div>
-            <UForm :schema="usernameSchema" :state="{ username: state.username }" class="space-y-3"
+            <UForm :schema="usernameSchema" :state="{ username: state.username }" class="space-y-3 mb-4"
                 @submit="onSubmitUsername">
                 <UInput :disabled="state.formState !== FormState.waitUsernameInput" dir="ltr" v-model="state.username"
                     type="text" name="username" label="يوزر قيدها" hint="مطلوب" icon="i-heroicons-at-symbol-20-solid"
@@ -32,13 +32,23 @@
                     <UButton v-if="state.formState === FormState.waitUsernameInput" :loading="pending" type="submit"
                         icon="i-heroicons-paper-airplane-16-solid">ارسال الرمز</UButton>
                 </div>
+                <div class="flex justify-center  items-center flex-col space-y-2 ">
+                    <UButton v-if="state.formState === FormState.waitOtpInput" :disabled="ResendDisabled"
+                        @click="onSubmitUsername" type="button" icon="i-heroicons-arrow-path-rounded-square">إعادة
+                        الارسال</UButton>
+                    <div v-if="state.formState === FormState.waitOtpInput && countdown > 0">
+                        {{ formatTimeFroms(countdown) }}
+                    </div>
+
+                </div>
+
             </UForm>
 
             <UForm :schema="otpSchema" v-if="state.formState === FormState.waitOtpInput" :state="{ otp: state.otp }"
                 class="space-y-3" @submit="onSubmitOtp">
 
-                    <UInput v-model="state.otp" type="text" name="otp" label="رمز الدخول" hint="مطلوب"
-                        icon="i-heroicons-key" placeholder="123456" dir="ltr" />
+                <UInput v-model="state.otp" type="text" name="otp" label="رمز الدخول" hint="مطلوب"
+                    icon="i-heroicons-key" placeholder="123456" dir="ltr" />
 
                 <div v-if="error && state.formState === FormState.waitOtpInput"
                     class="text-red-500 text-sm flex items-center">
@@ -61,6 +71,32 @@ import { object, string } from 'yup'
 import { useUserStore } from '~/stores/useUserStore';
 const userStore = useUserStore()
 const { $api } = useNuxtApp();
+// resend otp counter 
+const timeToWait = 60 * 5
+const countdown = ref(0)
+const ResendDisabled = ref(true)
+let timer = null as any
+const StartCountDown = (secounds: number) => {
+    countdown.value = secounds
+    ResendDisabled.value = true
+    timer = setInterval(() => {
+        countdown.value--
+        if (countdown.value <= 0) {
+            ResendDisabled.value = false
+            clearInterval(timer)
+        }
+    }, 1000)
+}
+function formatTimeFroms(secounds: number) {
+    const date = new Date(secounds * 1000)
+    const m = date.getUTCMinutes()
+    const s = date.getUTCSeconds()
+    return `${m}:${s.toString().padStart(2, "0")}`
+}
+onUnmounted(() => {
+    if (timer) clearInterval(timer)
+})
+
 const { error, pending, requestOtp, confirmOtp } = $api.auth.useLogin();
 const toast = useToast();
 const handleClose = () => {
@@ -92,7 +128,9 @@ const onSubmitUsername = async () => {
     if (!error.value && data) {
         state.requestId = data.RequestId;
         state.formState = FormState.waitOtpInput
+        StartCountDown(timeToWait)
     }
+
 }
 const onSubmitOtp = async () => {
     let data = await confirmOtp(state.requestId, state.otp);
