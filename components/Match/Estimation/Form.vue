@@ -93,9 +93,9 @@ const schema = object({
     // loserScore: number().required().integer().min(0).max(1),
     team1Score: number().required("هذا الحقل مطلوب").min(0, "الحد الأدنى 0").max(2, "الحد الأقصى 2").integer("يجب ان يكون عددا صحيحا"),
     team2Score: number().required("هذا الحقل مطلوب").min(0, "الحد الأدنى 0").max(2, "الحد الأقصى 2").integer("يجب ان يكون عددا صحيحا"),
-    countOf400: number().required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
-    countOfKaboots: number().required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
-    countOfRedCards: number().required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
+    countOf400: number().typeError("يجب ان يكون عددا صحيحا").required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
+    countOfKaboots: number().typeError("يجب ان يكون عددا صحيحا").required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
+    countOfRedCards: number().typeError("يجب ان يكون عددا صحيحا").required("هذا الحقل مطلوب").min(0, "لا يمكن ان يقل عن 0").integer("يجب ان يكون عددا صحيحا"),
     bestPlayerId: number().required().positive("اختر احد اللاعبين").integer().oneOf(
         [...props.match.team1.players.map(p => p.id), ...props.match.team2.players.map(p => p.id)], "اختر احد اللاعبين"
     )
