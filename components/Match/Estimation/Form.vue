@@ -11,12 +11,15 @@
             <UForm :schema="schema" :state="state" class="space-y-3" @submit="onSubmit">
                 <MatchEstimationWinner :match="match" :error="winnerSelectionError"
                     v-model:team1Score="state.team1Score" v-model:team2Score="state.team2Score" />
-                <FormInputField min="0" v-model="state.countOf400" type="number" name="countOf400"
-                    label="كم 400 فى المباراة" hint="نقطة" icon="i-heroicons-chart-bar-square" />
-                <FormInputField min="0" v-model="state.countOfRedCards" type="number" name="countOfRedCards"
-                    label="كم كبوت صن و حكم فى المباراة" hint=" 3 نقاط" icon="i-heroicons-chart-bar-square" />
-                <FormInputField min="0" v-model="state.countOfKaboots" type="number" name="countOfKaboots"
-                    label="كم كارت احمر للاعبين او المدربين" hint="نقطتان" icon="i-heroicons-chart-bar-square" />
+                <UFormGroup name="countOf400" size="xl" label="كم 400 فى المباراة" hint="نقطة" icon="i-heroicons-chart-bar-square">
+                    <UInput min="0" v-model="state.countOf400" type="number" name="countOf400" />
+                </UFormGroup>
+                <UFormGroup name="countOfRedCards" size="xl" label="كم كبوت صن و حكم فى المباراة" hint=" 3 نقاط" icon="i-heroicons-chart-bar-square">
+                    <UInput min="0" v-model="state.countOfRedCards" type="number" name="countOfRedCards" />
+                </UFormGroup>
+                <UFormGroup name="countOfKaboots" size="xl" label="كم كارت احمر للاعبين او المدربين" hint="نقطتان" icon="i-heroicons-chart-bar-square">
+                    <UInput min="0" v-model="state.countOfKaboots" type="number" name="countOfKaboots" />
+                </UFormGroup>
 
                 <MatchEstimationBestPlayer v-model:bestPlayerId="state.bestPlayerId"
                     :bestPlayerOptions="bestPlayerOptions" />
