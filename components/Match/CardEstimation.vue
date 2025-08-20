@@ -3,6 +3,7 @@
         <!-- If user is authenticated -->
         <template v-if="userStore.isAuthenticated">
             <!-- Loading state -->
+             
             <template v-if="estimationStatus === null">
                 <UButton size="sm" disabled 
                     class="bg-white/20 border-white/30 text-white backdrop-blur-sm px-4 py-2">
@@ -21,6 +22,7 @@
             </template>
 
             <!-- Estimation already submitted -->
+             
             <template v-else-if="estimationStatus === 'submitted'">
                 <UButton size="sm" disabled 
                     class="bg-green-600/90 text-white px-4 py-2">
@@ -88,10 +90,10 @@ const { data: estimationData, error: estimationError, getData: getUserEstimation
 
 // Computed
 const userSubmittedEstimationCount = computed(() => {
-    if (estimationData.value) {
+    if (estimationData.value && estimationData.value.data.length > 0) {
         return estimationData.value.meta.pagination.total
     }
-    return null
+    return 0
 })
 
 // Check if match is open for estimations
@@ -111,7 +113,8 @@ const checkEstimationStatus = async () => {
         await getUserEstimation(props.match.id)
         
         if (userSubmittedEstimationCount.value !== null) {
-            if (userSubmittedEstimationCount.value >= 0) {
+            if (userSubmittedEstimationCount.value > 0) {
+                console.log(userSubmittedEstimationCount.value)
                 estimationStatus.value = 'submitted'
                 // Get the score if available
                 if (estimationData.value?.data[0]?.attributes.estimation_score) {
