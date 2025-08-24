@@ -1,9 +1,10 @@
 <template>
     <FetchDataWrapper :error="error ? ' تعذر تحميل البيانات برجاء المحاولة لاحقا.' : null" :pending="pending"
         class="flex flex-col justify-center overflow-hidden">
-        <div class="h-fit px-5 md:px-14" v-if="teams && teams.length > 0">
-            <swiper-container class="w-full h-full" effect="cards" :loop="true" :slides-per-view="1" :space-between="10"
+        <div class="h-fit px-5 md:px-14" v-if="teams && teams.length > 0" :key="teams.length">
+            <swiper-container class="w-full h-full" effect="slide" :loop="true" :slides-per-view="1" :slides-per-group="1" :space-between="10"
                 :keyboard="{ enabled: true }" :pagination="true" :mousewheel="true">
+
                 <swiper-slide v-for="team in teams" :key="team.id">
                     <ChampionTeamCard :team="team" />
                 </swiper-slide>
