@@ -1,7 +1,7 @@
 <template>
     <section v-if="images && images.length > 0" id="players" class="mt-20">
         <div class="w-full flex justify-center" dir="rtl">
-            <SectionHeader icon="i-heroicons-users" title="اللاعبين في القناه " />
+            <SectionHeader icon="i-heroicons-users" title=" اعضاء زات  " />
         </div>
         <div class="py-8 h-80 sm:h-88 md:h-96 overflow-hidden">
             <ClientOnly>
