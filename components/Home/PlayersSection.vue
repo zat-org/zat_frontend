@@ -19,7 +19,7 @@
                         <div class="player-card group">
                             <!-- Image Container with fixed aspect ratio -->
                             <div class="image-container">
-                                <nuxt-img 
+                                <img
                                     :src="img.url" 
                                     :alt="img.name"
                                     class="player-image" 
@@ -30,7 +30,7 @@
                                     height="500"
                                     sizes="sm:300px md:400px lg:500px"
                                     densities="1x 2x"
-                                    placeholder
+                                  
                                 />
                                 <!-- Strong overlay for text visibility -->
                                 <div class="image-overlay"></div>
