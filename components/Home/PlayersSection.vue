@@ -56,6 +56,7 @@ const { $api } = useNuxtApp()
 const { data, error, pending } = await $api.websiteAssets.getPlayersImages();
 
 const images = computed(() => data.value?.data.map((ele: any) => {
+  console.log(ele.attributes.playerImage.data.attributes.url)
     return {
         id: ele.id,
         name: ele.attributes.playerName,

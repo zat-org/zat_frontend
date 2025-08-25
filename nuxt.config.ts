@@ -16,15 +16,7 @@ export default defineNuxtConfig({
       apiBaseUrl: process.env.STRAPI_URL
     }
   },
-  modules: [
-    '@nuxt/ui',
-    '@samk-dev/nuxt-vcalendar',
-    "@nuxt/content",
-    "@nuxt/image",
-    '@vueuse/nuxt',
-    '@pinia/nuxt',
-    '@pinia-plugin-persistedstate/nuxt',
-  ],
+  modules: ['@nuxt/ui', '@samk-dev/nuxt-vcalendar', "@nuxt/content", "@nuxt/image", '@vueuse/nuxt', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', 'nuxt-swiper'],
   piniaPersistedstate: {
     cookieOptions: {
       sameSite: 'strict',
