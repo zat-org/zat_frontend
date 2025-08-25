@@ -74,10 +74,10 @@ const handleImageError = (event: Event) => {
 
 <style scoped>
 .player-card {
-  @apply relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden;
+  @apply relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg  transition-all duration-300 overflow-hidden;
   @apply w-56 sm:w-64 md:w-72 h-64 sm:h-72 md:h-80;
   @apply border border-gray-200 dark:border-gray-700;
-  @apply hover:scale-105 hover:-translate-y-2;
+  
 }
 
 .image-container {
@@ -87,12 +87,12 @@ const handleImageError = (event: Event) => {
 
 .player-image {
   @apply w-full h-full object-cover object-center;
-  @apply transition-transform duration-500 group-hover:scale-105;
+  @apply transition-transform duration-500;
 }
 
 .image-overlay {
   @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent;
-  @apply opacity-80 group-hover:opacity-70 transition-opacity duration-300;
+  @apply opacity-80  transition-opacity duration-300;
 }
 
 .name-container {
