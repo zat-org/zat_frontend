@@ -32,6 +32,23 @@ definePageMeta({
     name: "ChampStudios"
 })
 
+useHead({
+    title: `الاستديو التحليلي - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `شاهد الاستديو التحليلي لبطولة ${props.champ.name}. تحليلات المباريات، لقاءات مع اللاعبين والمدربين، ومناقشات فنية.`
+        },
+        {
+            property: 'og:title',
+            content: `الاستديو التحليلي - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `شاهد الاستديو التحليلي لبطولة ${props.champ.name}. تحليلات المباريات، لقاءات مع اللاعبين والمدربين، ومناقشات فنية.`
+        }
+    ]
+})
 
 
 

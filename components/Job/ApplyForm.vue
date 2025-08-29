@@ -10,23 +10,27 @@
 
         <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
             <div class="row">
-                <FormInputField v-model="state.name" type="text" name="name" label="الاسم" hint="مطلوب"
-                    icon="i-heroicons-user" placeholder="الاسم" />
+                <UFormGroup name="name" label="الاسم" hint="مطلوب" size="xl">
+                    <UInput v-model="state.name" type="text" icon="i-heroicons-user" placeholder="الاسم" />
+                </UFormGroup>
 
-                <FormInputField v-model="state.email" dir="ltr" type="email" name="email" label="البريد الالكترونى"
-                    hint="مطلوب" icon="i-heroicons-envelope" placeholder="example@gmail.com" />
+                <UFormGroup size="xl" dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب">
+                    <UInput v-model="state.email" type="email" icon="i-heroicons-envelope"
+                        placeholder="example@gmail.com" />
+                </UFormGroup>
 
-                <FormInputField v-model="state.phone" dir="ltr" type="text" name="phone" label="رقم الجوال" hint="مطلوب"
-                    icon="i-heroicons-phone" placeholder="512345678" />
-
-                <FormInputField v-model="state.address" type="text" name="address" label="مدينة الاقامة" hint="مطلوب"
-                    icon="i-heroicons-map-pin" placeholder="الرياض" />
+                <UFormGroup dir="ltr" name="phone" label="رقم الجوال" hint="مطلوب" size="xl">
+                    <UInput v-model="state.phone" type="text" icon="i-heroicons-phone" placeholder="512345678" />
+                </UFormGroup>
+                <UFormGroup name="address" label="مدينة الاقامة" hint="مطلوب" size="xl">
+                    <UInput v-model="state.address" type="text" icon="i-heroicons-map-pin" placeholder="الرياض" />
+                </UFormGroup>
 
                 <FormTextArea v-model="state.aboutMe" name="aboutMe" label="نبذة عنك"
                     placeholder="تحدث عن نفسك بايجاز ... " />
 
-                <FormInputFileField name="cv" v-model="state.cv" label="السيرة الذاتية" placeholder="اضغط هنا لاختيار الملف"
-                    hint="مطلوب" icon="i-heroicons-document" />
+                <FormInputFileField name="cv" v-model="state.cv" label="السيرة الذاتية"
+                    placeholder="اضغط هنا لاختيار الملف" hint="مطلوب" icon="i-heroicons-document" />
             </div>
             <div class="flex justify-evenly w-full">
                 <UButton type="submit" :loading="sendApplyRequestPending" icon="i-heroicons-paper-airplane"
@@ -46,6 +50,7 @@
 import { object, string, mixed, type InferType } from 'yup'
 import type { FormSubmitEvent } from '#ui/types'
 import type { IApplyToJobRequest } from '@/Models/IJob';
+import { UFormGroup } from '#components';
 
 const { $api } = useNuxtApp();
 const toast = useToast();

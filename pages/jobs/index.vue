@@ -50,7 +50,12 @@ const totalJobsCount = computed(() => data.value ? data.value.meta.pagination.to
 const isFormOpen = ref(false)
 const jobId = ref<number | null>(null);
 useHead({
-    title: `وظائف زات`,
+    title: `وظائف زات - فرص العمل المتاحة`,
+    meta: [
+        { name: 'description', content: 'اكتشف فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت في المملكة.' },
+        { property: 'og:title', content: 'وظائف زات - فرص العمل المتاحة' },
+        { property: 'og:description', content: 'اكتشف فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت في المملكة.' }
+    ]
 })
 
 watch(pending, (newValue, oldValue) => {

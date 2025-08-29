@@ -24,7 +24,21 @@ const { $api } = useNuxtApp();
 const { data, error, pending } = await $api.champions.getChampTeamsByChampId(props.champ.leagueid.toString());
 const teams = computed(() => data.value?.teams);
 useHead({
-    title: `الفرق المشاركة - ${props.champ.name} `,
+    title: `الفرق المشاركة - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `تعرف على الفرق المشاركة في بطولة ${props.champ.name}. قائمة كاملة بجميع الفرق المتنافسة في البطولة.`
+        },
+        {
+            property: 'og:title',
+            content: `الفرق المشاركة - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `تعرف على الفرق المشاركة في بطولة ${props.champ.name}. قائمة كاملة بجميع الفرق المتنافسة في البطولة.`
+        }
+    ]
 })
 </script>
 

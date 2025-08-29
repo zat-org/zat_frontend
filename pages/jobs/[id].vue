@@ -43,7 +43,25 @@ const router = useRouter();
 
 const { error: getJobError, pending: getJobPending, data: job } = await $api.jobs.getById(route.params.id[0]);
 useHead({
-    title: ` وظائف زات - ${job.value?.data.attributes.jobTitle}`,
+    title: job.value?.data.attributes.jobTitle ? `وظائف زات - ${job.value.data.attributes.jobTitle}` : 'وظائف زات',
+    meta: computed(() => [
+        {
+            name: 'description',
+            content: job.value?.data.attributes.jobTitle ? 
+                `وظيفة ${job.value.data.attributes.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
+                'فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت.'
+        },
+        {
+            property: 'og:title',
+            content: job.value?.data.attributes.jobTitle ? `وظائف زات - ${job.value.data.attributes.jobTitle}` : 'وظائف زات'
+        },
+        {
+            property: 'og:description',
+            content: job.value?.data.attributes.jobTitle ? 
+                `وظيفة ${job.value.data.attributes.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
+                'فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت.'
+        }
+    ])
 })
 const isFormOpen = ref(false);
 

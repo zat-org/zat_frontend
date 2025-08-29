@@ -46,7 +46,21 @@ import type { FormSubmitEvent } from '#ui/types'
 import type { ContactUsMessage } from '~/Repository/modules/contactUsMessagesModule';
 
 useHead({
-    title: `زات - تواصل معنا`,
+    title: 'زات - تواصل معنا',
+    meta: [
+        {
+            name: 'description',
+            content: 'تواصل مع زات - نرحب باقتراحاتكم، استفساراتكم، وآرائكم. نحن هنا للاستماع إليكم وتقديم أفضل تجربة لمجتمع البلوت.'
+        },
+        {
+            property: 'og:title',
+            content: 'زات - تواصل معنا'
+        },
+        {
+            property: 'og:description',
+            content: 'تواصل مع زات - نرحب باقتراحاتكم، استفساراتكم، وآرائكم. نحن هنا للاستماع إليكم وتقديم أفضل تجربة لمجتمع البلوت.'
+        }
+    ]
 })
 
 const { $api } = useNuxtApp();

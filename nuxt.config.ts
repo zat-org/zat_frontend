@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@pinia-plugin-persistedstate/nuxt",
     "nuxt-swiper",
+    "nuxt-schema-org",
   ],
   piniaPersistedstate: {
     cookieOptions: {
@@ -59,14 +60,14 @@ export default defineNuxtConfig({
         { name: "og:image", content: LogoURL },
         { name: "og:url", content: WebsiteUrl },
         { name: "author", content: "Zat Compony" },
-        { hid: "description", name: "description", content: Description },
-        { hid: "keywords", name: "keywords", content: Keywords },
+        { key: "description", name: "description", content: Description },
+        { key: "keywords", name: "keywords", content: Keywords },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
         { charset: "utf-8" },
       ],
       noscript: [
         {
-          children: `
+          innerHTML: `
           <p style='text-align: center;color:white ; background-color:rgb(218, 55, 55); margin:5px 10px; padding: 10px 5px ;  border-radius:10px '>Warning: Please Enable Js</p>
         `,
         },
@@ -87,6 +88,6 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    domains: ['storage.googleapis.com'], // allow Google Cloud Storage images
-  }
+    domains: ["storage.googleapis.com"], // allow Google Cloud Storage images
+  },
 });

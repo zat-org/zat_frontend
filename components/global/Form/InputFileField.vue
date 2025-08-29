@@ -3,8 +3,7 @@
 
         <div :dir="dir" class="flex ">
             <input type="file" hidden ref="fileInput" @change="handleFileSelection" @keypress="">
-
-            <UInput class="w-full" type="text" readonly ref="textInput" :value="filename" :placeholder="placeholder"
+            <UInput class="w-full" type="text" readonly ref="textInput" v-model="filename" :placeholder="placeholder"
                 :icon="icon" :ui="{ icon: { trailing: { pointer: '' } } }" @click.prevent="handleClickOfTextInputField"
                 @keypress.prevent="handleClickOfTextInputField">
             </UInput>
@@ -36,9 +35,22 @@ const props = defineProps({
     placeholder: { type: String },
 });
 
-const filename = computed(() => {
-    if (!props.modelValue) return "";
-    return props.modelValue.name
+// const filename = computed(() => {
+//     if (!props.modelValue) {
+//         console.log("not found ")
+//         return "";
+//     }
+//     console.log("found ")
+//     console.log(props.modelValue.name)
+//     return props.modelValue.name
+// })
+const filename = ref("")
+watch(props, ()=>{
+    if(props.modelValue){
+        filename.value = props.modelValue.name
+    }else{
+        filename.value=""
+    }
 })
 
 

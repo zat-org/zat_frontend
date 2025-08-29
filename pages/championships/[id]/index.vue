@@ -71,7 +71,25 @@ const props = defineProps({
 });
 
 useHead({
-    title: `${props.champ.name} `,
+    title: props.champ.name,
+    meta: [
+        {
+            name: 'description',
+            content: props.champ.description || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`
+        },
+        {
+            property: 'og:title',
+            content: props.champ.name
+        },
+        {
+            property: 'og:description',
+            content: props.champ.description || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`
+        },
+        {
+            property: 'og:image',
+            content: url + props.champ.league_logo
+        }
+    ]
 })
 
 </script>

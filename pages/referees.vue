@@ -20,13 +20,22 @@
 </template>
 
 <script setup lang="ts">
+
+import { useHead } from '#imports';
+useHead({
+    title: 'حكام زات - قائمة الحكام الرسميين',
+    meta: [
+        { name: 'description', content: 'تعرف على حكام زات، قائمة الحكام الرسميين المشاركين في بطولات البلوت الاحترافية.' }
+    ]
+});
+
 const isOpen = ref(false)
 const { $api } = useNuxtApp();
 
 const {
-    data,
-    pending,
-    error
+        data,
+        pending,
+        error
 } = await $api.referees.getAll();
 
 </script>

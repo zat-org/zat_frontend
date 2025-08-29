@@ -14,6 +14,28 @@
 const { $api } = useNuxtApp();
 const route = useRoute()
 const { data: champ, error, pending } = await $api.champions.getById(route.params.id as string);
+
+useHead({
+    title: computed(() => champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات'),
+    meta: computed(() => [
+        { 
+            name: 'description', 
+            content: champ.value ? 
+                `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.` : 
+                'تفاصيل بطولات البلوت من زات'
+        },
+        { 
+            property: 'og:title', 
+            content: champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات'
+        },
+        { 
+            property: 'og:description', 
+            content: champ.value ? 
+                `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.` : 
+                'تفاصيل بطولات البلوت من زات'
+        }
+    ])
+});
 </script>
 
 <style scoped></style>

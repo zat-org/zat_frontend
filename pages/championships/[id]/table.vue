@@ -27,7 +27,21 @@ const table = computed(() => data.value?.table);
 const champType = computed(() => data.value?.type as ChampType);
 
 useHead({
-    title: `جدول بطولة - ${props.champ.name} `,
+    title: `جدول بطولة - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `جدول ترتيب بطولة ${props.champ.name}. تابع ترتيب الفرق، النقاط، والإحصائيات في البطولة.`
+        },
+        {
+            property: 'og:title',
+            content: `جدول بطولة - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `جدول ترتيب بطولة ${props.champ.name}. تابع ترتيب الفرق، النقاط، والإحصائيات في البطولة.`
+        }
+    ]
 })
 
 definePageMeta({

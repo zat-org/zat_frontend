@@ -52,7 +52,29 @@ const url = useRuntimeConfig().public.apiBaseUrl;
 const { error: getTeamError, pending: getTeamPending, data } = await $api.teams.getById(route.params.id as string);
 const team = computed(() => data.value?.data);
 useHead({
-    title: team.value?.name ? ` فرق زات - ${team.value?.name}` : ` فرق زات `,
+    title: team.value?.name ? `فرق زات - ${team.value?.name}` : 'فرق زات',
+    meta: computed(() => [
+        {
+            name: 'description',
+            content: team.value?.name ? 
+                `تعرف على فريق ${team.value.name} - احصائيات الفريق، قائمة اللاعبين، المدربين، والإنجازات في بطولات البلوت.` :
+                'استكشف فرق زات للبلوت - معلومات عن الفرق المشاركة في بطولات البلوت.'
+        },
+        {
+            property: 'og:title',
+            content: team.value?.name ? `فرق زات - ${team.value.name}` : 'فرق زات'
+        },
+        {
+            property: 'og:description',
+            content: team.value?.name ? 
+                `تعرف على فريق ${team.value.name} - احصائيات الفريق، قائمة اللاعبين، المدربين، والإنجازات في بطولات البلوت.` :
+                'استكشف فرق زات للبلوت - معلومات عن الفرق المشاركة في بطولات البلوت.'
+        },
+        {
+            property: 'og:image',
+            content: team.value ? url + team.value.team_logo : undefined
+        }
+    ])
 })
 
 </script>

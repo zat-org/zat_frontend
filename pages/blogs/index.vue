@@ -39,7 +39,12 @@ const handlePageChange = (val: number) => {
     router.replace(`/blogs?pageNum=${val}`);
 }
 useHead({
-    title: `اخبار زات`,
+    title: `اخبار زات - آخر أخبار وتحديثات بطولات البلوت`,
+    meta: [
+        { name: 'description', content: 'تابع آخر أخبار وتحديثات بطولات البلوت من زات. أحداث البطولات، نتائج المباريات، وأخبار اللاعبين.' },
+        { property: 'og:title', content: 'اخبار زات - آخر أخبار وتحديثات بطولات البلوت' },
+        { property: 'og:description', content: 'تابع آخر أخبار وتحديثات بطولات البلوت من زات. أحداث البطولات، نتائج المباريات، وأخبار اللاعبين.' }
+    ]
 })
 
 watch(pending, (newValue) => {

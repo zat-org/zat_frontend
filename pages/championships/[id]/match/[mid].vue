@@ -23,6 +23,24 @@ const { data: match, error, pending } = await $api.matches.getById(route.params.
 
 useHead({
     title: match.value ? `(${match.value.team1.name} ضد ${match.value.team2.name}) - ${match.value.leagueName}` : 'مباريات زات',
+    meta: computed(() => [
+        {
+            name: 'description',
+            content: match.value ? 
+                `تابع مباراة ${match.value.team1.name} ضد ${match.value.team2.name} في ${match.value.leagueName}. النتيجة المباشرة، التفاصيل الكاملة، والإحصائيات.` :
+                'مباريات بطولات البلوت في زات - نتائج مباشرة وتفاصيل كاملة'
+        },
+        {
+            property: 'og:title',
+            content: match.value ? `(${match.value.team1.name} ضد ${match.value.team2.name}) - ${match.value.leagueName}` : 'مباريات زات'
+        },
+        {
+            property: 'og:description',
+            content: match.value ? 
+                `تابع مباراة ${match.value.team1.name} ضد ${match.value.team2.name} في ${match.value.leagueName}. النتيجة المباشرة، التفاصيل الكاملة، والإحصائيات.` :
+                'مباريات بطولات البلوت في زات - نتائج مباشرة وتفاصيل كاملة'
+        }
+    ])
 })
 </script>
 

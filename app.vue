@@ -18,7 +18,7 @@ const { $api } = useNuxtApp();
 
 const userStore = useUserStore()
 onMounted(async () => {
-  try{
+  try {
     await userStore.refetchUser();
   } catch (error) {
     console.log(error)
@@ -26,10 +26,29 @@ onMounted(async () => {
 })
 
 onMounted(async () => {
- try{
-  await $api.websiteAssets.addOneToVisitorCounter()
- } catch (error) {
-  console.log(error)
- }
+  try {
+    await $api.websiteAssets.addOneToVisitorCounter()
+  } catch (error) {
+    console.log(error)
+  }
 })
+
+// scahema.org intialize globally 
+useSchemaOrg([
+  defineOrganization({
+    name: "زات",
+    url: "https://zatbaloot.com",
+    logo: "/images/zat-logo-black.svg",
+    sameAs: [
+      "https://www.instagram.com/zat_baloot/#",
+      "https://www.youtube.com/@zat_baloot",
+      "https://www.youtube.com/@ZAT_PLUS",
+    ]
+  }),
+  defineWebSite({
+    name: "زات - الموقع الرائد لبطولات البلوت في المملكة",
+    url: 'https://zatbaloot.com'
+  })
+])
+
 </script>

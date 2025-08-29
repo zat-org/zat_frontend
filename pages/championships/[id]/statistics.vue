@@ -30,7 +30,23 @@ import type { IChamp } from "@/Models/IChamp"
 const props = defineProps<{ champ: IChamp }>()
 const { $api } = useNuxtApp();
 
-useHead({ title: ` اجماليات الاحصائيات - ${props.champ.name} ` })
+useHead({
+    title: `اجماليات الاحصائيات - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `احصائيات وتحليلات بطولة ${props.champ.name}. تابع أداء الفرق واللاعبين من خلال الرسوم البيانية والإحصائيات التفصيلية.`
+        },
+        {
+            property: 'og:title',
+            content: `اجماليات الاحصائيات - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `احصائيات وتحليلات بطولة ${props.champ.name}. تابع أداء الفرق واللاعبين من خلال الرسوم البيانية والإحصائيات التفصيلية.`
+        }
+    ]
+})
 const { data, error, pending } = await $api.champions.getChampStatisticsByChampId(props.champ.leagueid.toString());
 
 const statistics = computed(() => {

@@ -71,7 +71,29 @@ const url = useRuntimeConfig().public.apiBaseUrl;
 const { error: getPlayerError, pending: getPlayerPending, data } = await $api.players.getById(route.params.id as string);
 const player = computed(() => data.value?.data);
 useHead({
-    title: player.value?.player_name ? ` لاعبى زات - ${player.value?.player_name}` : ` لاعبى زات `,
+    title: player.value?.player_name ? `لاعبي زات - ${player.value?.player_name}` : 'لاعبي زات',
+    meta: computed(() => [
+        {
+            name: 'description',
+            content: player.value?.player_name ? 
+                `الصفحة الشخصية للاعب ${player.value.player_name}. تعرف على مسيرته، انتقالاته، وتابع حساباته على مواقع التواصل الاجتماعي.` :
+                'لاعبو زات - تعرف على نجوم البلوت في المملكة'
+        },
+        {
+            property: 'og:title',
+            content: player.value?.player_name ? `لاعبي زات - ${player.value?.player_name}` : 'لاعبي زات'
+        },
+        {
+            property: 'og:description',
+            content: player.value?.player_name ? 
+                `الصفحة الشخصية للاعب ${player.value.player_name}. تعرف على مسيرته، انتقالاته، وتابع حساباته على مواقع التواصل الاجتماعي.` :
+                'لاعبو زات - تعرف على نجوم البلوت في المملكة'
+        },
+        {
+            property: 'og:image',
+            content: player.value?.player_image ? url + player.value.player_image : undefined
+        }
+    ])
 })
 const socialMediaAccounts = computed(() => {
     let accounts: { href: string, iconName: string }[] = []

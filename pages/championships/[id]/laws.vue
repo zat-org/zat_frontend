@@ -17,7 +17,21 @@ const props = defineProps({
     }
 });
 useHead({
-    title: ` قوانين البطولة - ${props.champ.name} `,
+    title: `قوانين البطولة - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `تعرف على قوانين وقواعد بطولة ${props.champ.name}. الأنظمة، الشروط، واللوائح التي تحكم المنافسة.`
+        },
+        {
+            property: 'og:title',
+            content: `قوانين البطولة - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `تعرف على قوانين وقواعد بطولة ${props.champ.name}. الأنظمة، الشروط، واللوائح التي تحكم المنافسة.`
+        }
+    ]
 })
 
 

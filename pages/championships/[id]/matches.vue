@@ -24,7 +24,21 @@ definePageMeta({
 })
 
 useHead({
-    title: ` المباريات - ${props.champ.name} `,
+    title: `المباريات - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `جدول مباريات بطولة ${props.champ.name}. تابع نتائج وتفاصيل جميع المباريات في البطولة.`
+        },
+        {
+            property: 'og:title',
+            content: `المباريات - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `جدول مباريات بطولة ${props.champ.name}. تابع نتائج وتفاصيل جميع المباريات في البطولة.`
+        }
+    ]
 })
 
 </script>

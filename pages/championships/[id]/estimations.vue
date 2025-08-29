@@ -82,7 +82,21 @@ definePageMeta({
 })
 
 useHead({
-    title: ` التوقعات - ${props.champ.name} `,
+    title: `التوقعات - ${props.champ.name}`,
+    meta: [
+        {
+            name: 'description',
+            content: `توقعات نتائج مباريات بطولة ${props.champ.name}. شارك في التوقعات، تابع ترتيب المتوقعين، واربح النقاط.`
+        },
+        {
+            property: 'og:title',
+            content: `التوقعات - ${props.champ.name}`
+        },
+        {
+            property: 'og:description',
+            content: `توقعات نتائج مباريات بطولة ${props.champ.name}. شارك في التوقعات، تابع ترتيب المتوقعين، واربح النقاط.`
+        }
+    ]
 })
 </script>
 
