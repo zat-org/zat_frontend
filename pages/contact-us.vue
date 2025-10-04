@@ -13,11 +13,14 @@
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
                 <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
                     <div class="flex flex-col items-center">
-                        <FormInputField v-model="state.name" type="text" name="name" label="الاسم" hint="مطلوب"
-                            icon="i-heroicons-user" placeholder="الاسم" />
+                        <UFormGroup name="name" label="الاسم" hint="مطلوب" size="xl">
+                            <UInput v-model="state.name" type="text" icon="i-heroicons-user" placeholder="الاسم" />
+                        </UFormGroup>
 
-                        <FormInputField v-model="state.email" dir="ltr" type="email" name="email" label="البريد الالكترونى"
-                            hint="مطلوب" icon="i-heroicons-envelope" placeholder="example@gmail.com" />
+                        <UFormGroup dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب" size="xl">
+                            <UInput v-model="state.email" type="email" icon="i-heroicons-envelope"
+                                placeholder="example@gmail.com" />
+                        </UFormGroup>
 
                         <FormTextArea v-model="state.message" name="message" label="الرسالة" hint="مطلوب"
                             placeholder="لا تبخل علينا بحديثك ..." />
@@ -62,6 +65,13 @@ useHead({
         }
     ]
 })
+useSchemaOrg([
+    defineWebPage({
+        '@type': "ContactPage",
+        name: 'اتصل بنا ',
+        url: "https://zatbaloot.com/contact"
+    })
+])
 
 const { $api } = useNuxtApp();
 const router = useRouter();

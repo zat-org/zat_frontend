@@ -20,9 +20,26 @@ const swiperElm = ref<SwiperElement | null>(null);
 const slidesPerView = ref(1);
 const spaceBetween = ref(2)
 onMounted(() => {
-    swiperElm.value?.swiper.slideTo(props.startAtIndex)
+    // Wait for Swiper to be fully initialized
+    nextTick(() => {
+        if (swiperElm.value?.swiper) {
+            swiperElm.value.swiper.slideTo(props.startAtIndex)
+        } else {
+            // If Swiper is not ready, wait a bit more
+            setTimeout(() => {
+                swiperElm.value?.swiper?.slideTo(props.startAtIndex)
+            }, 100)
+        }
+    })
 })
 const isSupported = useSupported(() => window)
+
+// Watch for changes in startAtIndex prop
+watch(() => props.startAtIndex, (newIndex) => {
+    if (swiperElm.value?.swiper) {
+        swiperElm.value.swiper.slideTo(newIndex)
+    }
+})
 
 const { height } = useElementBounding(swiperElm)
 watch(height, () => {

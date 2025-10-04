@@ -23,8 +23,13 @@ import { sortByTime, getIndexOfUpcomingEvent } from "@/utils/CollectionsWithTime
 const props = defineProps<{ matches: IMatchLessDetails[] }>();
 const matches = computed(() => props.matches.sort(sortByTime));
 const offsetOfComingMatch = computed(() => {
-    if (matches.value)
-        return getIndexOfUpcomingEvent(matches.value)
+    if (matches.value) {
+        const index = getIndexOfUpcomingEvent(matches.value)
+        console.log('Total matches:', matches.value.length)
+        console.log('Calculated index:', index)
+        console.log('Match at index:', matches.value[index])
+        return index
+    }
     return 0
 })
 </script>

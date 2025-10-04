@@ -27,6 +27,11 @@
 useHead({
     title: `زات - من نحن`,
 })
+defineWebPage({
+  '@type': 'AboutPage',
+  name: ' من نحن',
+  description: 'للمزيد من المعلومات عن زات - قناة متخصصة ببث وتنظيم بطولات البلوت في المملكة العربية السعودية',
+})
 </script>
 
 <style scoped></style>

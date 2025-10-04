@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     public: {
       youtubeApi: process.env.YOUTUBE_API_KEY,
       apiBaseUrl: process.env.STRAPI_URL,
+      websiteUrl: WebsiteUrl || "http://localhost:3000",
     },
   },
   modules: [

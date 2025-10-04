@@ -43,7 +43,15 @@ useSchemaOrg([
       "https://www.instagram.com/zat_baloot/#",
       "https://www.youtube.com/@zat_baloot",
       "https://www.youtube.com/@ZAT_PLUS",
-    ]
+    ],
+    contactPoint: [{
+      '@type': 'ContactPoint',
+      email:'zat@osasyona.com',
+      contactType: 'customer support',
+      areaServed: 'SA',
+      availableLanguage: ['Arabic', 'English'],
+      
+    }]
   }),
   defineWebSite({
     name: "زات - الموقع الرائد لبطولات البلوت في المملكة",
