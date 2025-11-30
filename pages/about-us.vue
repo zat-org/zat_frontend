@@ -4,7 +4,7 @@
       
 
         <!-- Vision Section -->
-        <div class="bg-gradient-to-l from-amber-50 to-amber-100/50 dark:from-amber-900/20 dark:to-amber-800/10 py-16 px-5">
+        <div class=" py-16 px-5">
             <div class="max-w-4xl mx-auto">
                 <div class="flex items-center gap-4 mb-6">
                     <div class="p-3 bg-amber-100 dark:bg-amber-900/30 rounded-lg">
