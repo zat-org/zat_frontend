@@ -27,10 +27,10 @@
             <HomeMatches class="w-full" />
         </section>
 
-        <!-- News Section -->
+        <!-- News Section
         <section aria-label="أخبار زات">
             <HomeBlogs />
-        </section>
+        </section> -->
 
         <!-- Join Champions Section -->
         <section aria-label="انضم للبطولات">
