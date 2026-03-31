@@ -158,6 +158,27 @@
             transform: translateY(-2000px);
         }
     }
+
+    /*
+     * Red starfield theme
+     * - Uses the existing white/black box-shadow lists
+     * - Tints them to red via CSS filters
+     * - Dark mode uses stronger glow; light mode stays subtle
+     */
+    .stars,
+    .stars2,
+    .stars3 {
+        filter: brightness(1.12)  saturate(0%) hue-rotate(0deg)
+            drop-shadow(0 0 6px red);
+    }
+
+    .dark .stars,
+    .dark .stars2,
+    .dark .stars3 {
+        filter: brightness(1.12)  saturate(50%) hue-rotate(0deg)
+            drop-shadow(0 0 10px red);
+    }
+
     .row{
         @apply flex  flex-wrap  justify-start items-start flex-col md:flex-row md:justify-evenly py-2  
     }

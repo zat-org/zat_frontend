@@ -11,7 +11,7 @@
 
         <!-- Starfield background (whole page) -->
         <ClientOnly>
-            <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+            <div aria-hidden="true" class="pointer-events-none fixed inset-0  overflow-hidden">
                 <div
                     class="absolute inset-0 zat-stars"
                     :class="[
@@ -594,8 +594,8 @@ useHead({
 
 <style scoped>
 .zat-stars {
-    /* Turn the global white starfield into red, without editing the long box-shadow list */
-    filter: sepia(1) saturate(5500%) hue-rotate(-10deg);
+    /* Color handled globally in `assets/css/tailwind.css` */
+    contain: layout paint;
 }
 
 .zat-stars :deep(.stars),
