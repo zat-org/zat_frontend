@@ -78,9 +78,9 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
-  devtools: {
-    enabled: false,
-  },
+  // devtools: {
+  //   enabled: false,
+  // },
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => {

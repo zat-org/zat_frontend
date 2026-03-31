@@ -1,5 +1,6 @@
 <template>
-  <div dir="rtl" lang="ar" class="flex flex-col min-h-screen bg-white  dark:bg-slate-800">
+  <div dir="rtl" lang="ar"
+    class="flex flex-col min-h-screen bg-white text-zinc-900 dark:bg-black dark:text-zinc-100 antialiased">
     <NuxtLoadingIndicator />
     <Navbar />
     <main class="p-2 grow w-full relative flex flex-col justify-start items-center">

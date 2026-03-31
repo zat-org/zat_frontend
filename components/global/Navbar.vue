@@ -1,5 +1,6 @@
 <template>
-    <div class="h-20 flex justify-between items-center border-b ">
+    <div
+        class="h-20 flex justify-between items-center border-b border-zinc-200 bg-white/90 backdrop-blur-md dark:border-zinc-800 dark:bg-black/90">
         <div class="ms-3 w-1/3 ">
             <UButton class="rounded-full transition-transform duration-500 ease-out hover:scale-105 active:scale-95"
                 icon="i-heroicons-ellipsis-horizontal-16-solid" size="lg" square variant="outline"

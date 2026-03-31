@@ -1,5 +1,6 @@
 <template>
-    <footer class="flex flex-col md:flex-row justify-around items-center border-t">
+    <footer
+        class="flex flex-col md:flex-row justify-around items-center border-t border-zinc-200 bg-white dark:border-zinc-800 dark:bg-black text-zinc-800 dark:text-zinc-100">
         <div class="flex justify-center items-center">
             <ClientOnly>
                 <img class="mx-3" width="75" height="75"
