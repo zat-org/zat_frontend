@@ -1,6 +1,6 @@
 <template>
     <div v-if="match.state === 'انتهت'">
-        <UDivider>احصائيات المباراة</UDivider>
+        <USeparator>احصائيات المباراة</USeparator>
         <table class="w-full rounded-t-lg text-center table-fixed table-pin-rows my-3 shadow-lg">
             <thead>
                 <tr class="h-12 bg-gray-200 dark:bg-slate-700">

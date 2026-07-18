@@ -8,7 +8,7 @@
                         icon="i-heroicons-briefcase" />
                     <div class="grow">
                         <h2 class="text-sm text-gray-500">المسمى الوظيفى</h2>
-                        <h2 class="text-xl truncate">{{ job?.data.attributes.jobTitle }}</h2>
+                        <h2 class="text-xl truncate">{{ job?.jobTitle }}</h2>
                     </div>
                     <UButton to="/jobs" class="size-12 rounded-full flex justify-center md:w-32 transition-all text-center"
                         :trailing="true">
@@ -17,8 +17,8 @@
                     </UButton>
                 </div>
                 <div class="mt-5">
-                    <MarkdownRender v-if="job?.data.attributes.responsibilities"
-                        :markdownString="job?.data.attributes.responsibilities" class="mt-2 ms-2 " />
+                    <MarkdownRender v-if="job?.responsibilities"
+                        :markdownString="job?.responsibilities" class="mt-2 ms-2 " />
                 </div>
                 <UButton
                     class="fixed bottom-5 lg:hidden left-5 h-12 w-32 animate-bounce transition-all rounded-full flex justify-center items-center"
@@ -31,7 +31,7 @@
                 @done="router.push('/')" />
         </div>
     </FetchDataWrapper>
-    <UModal v-model="isFormOpen">
+    <UModal v-model:open="isFormOpen">
         <JobApplyForm :jobId="null" @cancel="isFormOpen = false" @done="router.push('/')" />
     </UModal>
 </template>
@@ -43,22 +43,22 @@ const router = useRouter();
 
 const { error: getJobError, pending: getJobPending, data: job } = await $api.jobs.getById(route.params.id[0]);
 useHead({
-    title: job.value?.data.attributes.jobTitle ? `وظائف زات - ${job.value.data.attributes.jobTitle}` : 'وظائف زات',
+    title: job.value?.jobTitle ? `وظائف زات - ${job.value.jobTitle}` : 'وظائف زات',
     meta: computed(() => [
         {
             name: 'description',
-            content: job.value?.data.attributes.jobTitle ? 
-                `وظيفة ${job.value.data.attributes.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
+            content: job.value?.jobTitle ?
+                `وظيفة ${job.value.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
                 'فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت.'
         },
         {
             property: 'og:title',
-            content: job.value?.data.attributes.jobTitle ? `وظائف زات - ${job.value.data.attributes.jobTitle}` : 'وظائف زات'
+            content: job.value?.jobTitle ? `وظائف زات - ${job.value.jobTitle}` : 'وظائف زات'
         },
         {
             property: 'og:description',
-            content: job.value?.data.attributes.jobTitle ? 
-                `وظيفة ${job.value.data.attributes.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
+            content: job.value?.jobTitle ?
+                `وظيفة ${job.value.jobTitle} في زات. تعرف على المسؤوليات والمتطلبات وقدم على الوظيفة الآن.` :
                 'فرص العمل المتاحة في زات. انضم إلى فريقنا وكن جزءاً من تطوير مجتمع البلوت.'
         }
     ])

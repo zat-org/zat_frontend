@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup class="form-control" :name="name" size="xl" :label="label" :hint="hint">
+    <UFormField class="form-control" :name="name" size="xl" :label="label" :hint="hint">
         <div :dir="dir">
             <UTextarea class="w-full" :rows="5" :value="modelValue" @input="updateModelValue" :placeholder="placeholder" />
         </div>
@@ -8,7 +8,7 @@
                 {{ error ? error : '' }}
             </span>
         </template>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

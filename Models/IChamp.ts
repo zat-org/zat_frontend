@@ -71,4 +71,44 @@ interface IGetChampStudiosResponse extends IGetChampDetailsResponse {
 interface IGetChampMatchesResponse extends IGetChampDetailsResponse {
     matches: IMatchLessDetails[]
 }
-export type { IChamp, IUpcomingChamp, IJoinChamp, IGetAllChampionsResponse, IGetChampTeamsResponse, IGetChampSummaryResponse, HezamTeamSummary, LeagueTeamSummary, IGetChampStudiosResponse, IGetChampMatchesResponse }
+
+interface IChampSummaryWinner {
+    teamId: number | null
+    name: string | null
+    logo: string | null
+    play: number | null
+    win: number | null
+    lost: number | null
+    tie: number | null
+    points: number | null
+    abnat: string | number | null
+}
+
+interface IGetChampSummaryWinnerResponse {
+    id: number
+    name: string | null
+    url: string | null
+    end_at: string | null
+    type: ChampType
+    state: ChampState
+    winner: IChampSummaryWinner | null
+}
+
+interface IChampWinnerStats {
+    win: number | null
+    draw: number | null
+    lost: number | null
+    play: number | null
+    points: number | null
+    abnat: number | null
+}
+
+interface IRecentChamp extends IChamp {
+    winner_stats: IChampWinnerStats | null
+}
+
+interface IGetRecentChampsResponse {
+    champs: IRecentChamp[]
+}
+
+export type { IChamp, IUpcomingChamp, IJoinChamp, IGetAllChampionsResponse, IGetChampTeamsResponse, IGetChampSummaryResponse, HezamTeamSummary, LeagueTeamSummary, IGetChampStudiosResponse, IGetChampMatchesResponse, IChampSummaryWinner, IGetChampSummaryWinnerResponse, IChampWinnerStats, IRecentChamp, IGetRecentChampsResponse }

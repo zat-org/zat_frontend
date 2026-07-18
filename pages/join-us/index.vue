@@ -39,7 +39,7 @@ useHead({
 
 const { $api } = useNuxtApp();
 const { error: error, pending: pending, data } = await $api.followersChampions.getAll();
-const champions = computed(() => data.value?.data);
+const champions = computed(() => data.value ?? [])
 
 </script>
 

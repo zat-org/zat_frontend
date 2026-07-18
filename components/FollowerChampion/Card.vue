@@ -2,8 +2,8 @@
     <UCard class="bg-gray-200 overflow-hidden">
         <div class="relative z-0">
             <div class="space-y-5 text-center ">
-                <h2 class="text-lg md:text-xl font-semibold ">{{ champion.attributes.name }}</h2>
-                <p class="text-sm ms-3 grow">{{ champion.attributes.descriptions }}</p>
+                <h2 class="text-lg md:text-xl font-semibold ">{{ champion.name }}</h2>
+                <p class="text-sm ms-3 grow">{{ champion.descriptions }}</p>
                 <UButton :to="`/join-us/${champion.id}`" class="px-5 self-end" icon="i-heroicons-paper-airplane-20-solid">
                     انضم الان
                 </UButton>

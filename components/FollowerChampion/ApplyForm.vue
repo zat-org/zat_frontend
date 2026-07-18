@@ -3,83 +3,83 @@
         aria-label="نموذج التسجيل في البطولة">
         <fieldset>
             <legend class="sr-only">بيانات الفريق</legend>
-            <UDivider label="بيانات الفريق" />
+            <USeparator label="بيانات الفريق" />
             <div class="row" role="group" aria-labelledby="team-info">
-                <UFormGroup dir="ltr" name="email" label="البريد الالكترونى" size="xl" hint="مطلوب">
+                <UFormField dir="ltr" name="email" label="البريد الالكترونى" size="xl" hint="مطلوب">
                     <UInput v-model="state.email" type="email" icon="i-heroicons-envelope"
                         placeholder="example@gmail.com" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup name="teamName" label="اسم الفريق" hint="مطلوب" size="xl">
+                <UFormField name="teamName" label="اسم الفريق" hint="مطلوب" size="xl">
                     <UInput v-model="state.teamName" type="text" icon="i-heroicons-users" placeholder="اسم الفريق" />
-                </UFormGroup>
+                </UFormField>
             </div>
         </fieldset>
         <fieldset>
             <legend class="sr-only">بيانات اللاعب الاول</legend>
-            <UDivider label="بيانات اللاعب الاول" />
+            <USeparator label="بيانات اللاعب الاول" />
             <div class="row" role="group" aria-labelledby="player1-info">
 
-                <UFormGroup name="fpName" label="الاسم" hint="مطلوب" aria-required="true">
+                <UFormField name="fpName" label="الاسم" hint="مطلوب" aria-required="true">
                     <UInput v-model="state.fpName" type="text" icon="i-heroicons-user" placeholder="اللاعب الاول" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup name="fpCity" label="مدينة الاقامة" hint="مطلوب" size="xl" aria-required="true">
+                <UFormField name="fpCity" label="مدينة الاقامة" hint="مطلوب" size="xl" aria-required="true">
                     <UInput v-model="state.fpCity" type="text" icon="i-heroicons-map-pin" placeholder="الرياض" />
-                </UFormGroup>
+                </UFormField>
 
 
-                <UFormGroup dir="ltr" name="fpPhone" label="رقم الجوال" hint="مطلوب" size="xl" aria-required="true">
+                <UFormField dir="ltr" name="fpPhone" label="رقم الجوال" hint="مطلوب" size="xl" aria-required="true">
                     <UInput v-model="state.fpPhone" type="tel" icon="i-heroicons-phone" placeholder="512345678" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup type="date" label="تاريخ الميلاد" hint="مطلوب" aria-required="true" size="xl">
+                <UFormField type="date" label="تاريخ الميلاد" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.fpBirthDate" name="fpBirthDate" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup name="fpExperience" label="سنوات الخبرة" hint="مطلوب" aria-required="true" size="xl">
+                <UFormField name="fpExperience" label="سنوات الخبرة" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.fpExperience" type="number" icon="i-heroicons-academic-cap" />
-                </UFormGroup>
+                </UFormField>
             </div>
         </fieldset>
         <fieldset>
             <legend class="sr-only">بيانات اللاعب الثاني</legend>
-            <UDivider label="بيانات اللاعب الثاني" />
+            <USeparator label="بيانات اللاعب الثاني" />
             <div class="row" role="group" aria-labelledby="player2-info">
 
-                <UFormGroup name="spName" label="الاسم" hint="مطلوب" aria-required="true" size="xl">
+                <UFormField name="spName" label="الاسم" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.spName" type="text" icon="i-heroicons-user" placeholder="اللاعب الثاني" />
-                </UFormGroup>
-                <UFormGroup name="spCity" label="مدينة الاقامة" hint="مطلوب" aria-required="true" size="xl">
+                </UFormField>
+                <UFormField name="spCity" label="مدينة الاقامة" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.spCity" type="text" icon="i-heroicons-map-pin" placeholder="الرياض" />
-                </UFormGroup>
-                <UFormGroup dir="ltr" name="spPhone" label="رقم الجوال" hint="مطلوب" aria-required="true" size="xl">
+                </UFormField>
+                <UFormField dir="ltr" name="spPhone" label="رقم الجوال" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.spPhone" type="tel" icon="i-heroicons-phone" placeholder="512345678" />
-                </UFormGroup>
-                <UFormGroup name="spBirthDate" label="تاريخ الميلاد" hint="مطلوب" aria-required="true" size="xl">
+                </UFormField>
+                <UFormField name="spBirthDate" label="تاريخ الميلاد" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.spBirthDate" type="date" />
-                </UFormGroup>
-                <UFormGroup name="spExperience" label="سنوات الخبرة" hint="مطلوب" aria-required="true" size="xl">
+                </UFormField>
+                <UFormField name="spExperience" label="سنوات الخبرة" hint="مطلوب" aria-required="true" size="xl">
                     <UInput v-model="state.spExperience" type="number" icon="i-heroicons-academic-cap" />
-                </UFormGroup>
+                </UFormField>
             </div>
         </fieldset>
         <fieldset>
             <legend class="sr-only">استفسارات عامة</legend>
-            <UDivider label="استفسارات عامة" />
-            <UFormGroup class="form-control" name="IsPlayedBefore" size="xl">
+            <USeparator label="استفسارات عامة" />
+            <UFormField class="form-control" name="IsPlayedBefore" size="xl">
                 <URadioGroup v-model="state.IsPlayedBefore" legend="هل سبق لكم المشاركة ببطولات زات سابقاً ؟"
                     :options="IsPlayedBeforeOptions" role="radiogroup" aria-required="true" />
-            </UFormGroup>
+            </UFormField>
         </fieldset>
 
-        <fieldset v-if="champion && champion.attributes.Commitments.length > 0">
+        <fieldset v-if="champion && champion.Commitments.length > 0">
             <legend class="sr-only">تعهد والتزام</legend>
-            <UDivider label="تعهد" />
+            <USeparator label="تعهد" />
             <FormCheckbox v-model="state.approveCommitments" name="approveCommitments"
                 label="اوافق علي جميع  الشروط المرفقة ادناه." aria-required="true" />
 
-            <MarkdownRender :markdownString="champion.attributes.Commitments" class="mt-2 ms-2 w-full" role="region"
+            <MarkdownRender :markdownString="champion.Commitments" class="mt-2 ms-2 w-full" role="region"
                 aria-label="شروط وأحكام البطولة" />
         </fieldset>
 
@@ -101,7 +101,7 @@
 import { object, string, number, boolean, date, type InferType } from 'yup'
 import type { FormSubmitEvent } from '#ui/types'
 import type { IFollowerChampion, IFollowerChampionApplyRequest } from "@/Models/IFollowerChampion";
-import { UFormGroup } from '#components';
+import { UFormField } from '#components';
 const props = defineProps({
     champion: {
         type: Object as PropType<IFollowerChampion>,
@@ -130,7 +130,7 @@ const state = reactive<IFollowerChampionApplyRequest>({
     spBirthDate: "",
     spExperience: 0,
     IsPlayedBefore: "no",
-    approveCommitments: (props.champion.attributes.Commitments.length > 0) ? false : true,
+    approveCommitments: (props.champion.Commitments.length > 0) ? false : true,
 })
 
 //#region validation

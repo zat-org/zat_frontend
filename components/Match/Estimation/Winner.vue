@@ -11,23 +11,23 @@
             <p>{{ match.team1.name }}</p>
             <Image class="bg-white my-2" :src="`${url}${match.team1.logo}`" :alt="match.team1.name"
                 icon="i-heroicons-users" />
-            <UFormGroup name="team1Score" size="xl"  hint="نقطتان"
+            <UFormField name="team1Score" size="xl"  hint="نقطتان"
                 icon="i-heroicons-chart-bar-square">
                 <UInput type="number" name="team1Score" v-model="team1Score" class="w-24" label="" placeholder="2" 
                     min="0" max="2" @input="onInput"
                 />
-            </UFormGroup>
+            </UFormField>
         </div>
         <div class="py-2 px-4 rounded-md flex flex-col justify-center items-center"
             :class="{ 'outline outline-amber-500': team2Score == 2 && team1Score != 2 }">
             <p>{{ match.team2.name }}</p>
             <Image class="bg-white my-2" :src="`${url}${match.team2.logo}`" :alt="match.team2.name"
                 icon="i-heroicons-users" />
-            <UFormGroup name="team2Score" size="xl"  hint="نقطتان"
+            <UFormField name="team2Score" size="xl"  hint="نقطتان"
                 icon="i-heroicons-chart-bar-square">
                 <UInput type="number" name="team2Score" v-model="team2Score" class="w-24" label="" placeholder="1" 
                 min="0" max="2" @input="onInput" />
-            </UFormGroup>
+            </UFormField>
         </div>
     </div>
     <p v-if="error" class="text-red-500 flex items-center justify-center">

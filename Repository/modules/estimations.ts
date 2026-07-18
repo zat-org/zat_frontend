@@ -1,112 +1,100 @@
-import type { IError } from '~/Models/AuthModels';
-import type { AsyncDataOptions } from '#app';
-import FetchFactory from '../factory';
-import type { IResponse } from '~/Models/IResponse';
-import type { ICreateMatchEstimation ,IGetEstimationResponse ,IEstimationTable } from '~/Models/MatchEstimationsModels';
-import type { FetchOptions } from 'ofetch';
+import type { AsyncDataOptions } from '#app'
+import type { IError } from '~/Models/AuthModels'
+import FetchFactory from '../factory'
+import type { IResponse } from '~/Models/IResponse'
+import type {
+  ICreateMatchEstimation,
+  IEstimationTable,
+  IMatchEstimation,
+  IUserEstimationsResult,
+} from '~/Models/MatchEstimationsModels'
+import { unwrapStrapiPaginatedCollection } from '~/utils/strapiMappers'
+
+type StrapiEstimationAttributes = Omit<IMatchEstimation, 'id'>
 
 class EstimationsModule extends FetchFactory {
-    useGetByIds() {
-        const error = ref<string | null>(null);
-        const pending = ref<boolean>(false) ;
-        const data = ref<IResponse<IGetEstimationResponse[]> | null>(null);
-        const getData = async (matchId: number): Promise<unknown> => {
-            const userStore = useUserStore()
-            if(!userStore.user?.id || !userStore.jwtToken ){
-                error.value = "برجاء تسجيل الدخول اولا."
-                return;
-            }
-            error.value = null;
-            pending.value = true;
-            try {
-                let res = await this.call<IResponse<IGetEstimationResponse[]>>(
-                    'GET',
-                    `/api/match-estimations?filters[match][id][$eq]=${matchId}&filters[user][id][$eq]=${userStore.user.id}`,
-                    undefined, // body
-                    {
-                        headers: {
-                        "Authorization":`Bearer ${userStore.jwtToken}`
-                        }
-                    }
-                )
-                data.value = res ;
-            } catch (err) {
-                console.error(err);
-                data.value = null ;
-                error.value = "تعذر تحميل البيانات برجاء المحاولة مرة اخري لاحقا."
-            }
-            finally {
-                pending.value = false;
-            }
-        }
-        return { error, pending, data,getData }
-    }
+  useGetByIds() {
+    const error = ref<string | null>(null)
+    const pending = ref<boolean>(false)
+    const data = ref<IUserEstimationsResult | null>(null)
 
-    useSendEstimation() {
-        const error = ref<string | null>(null);
-        const pending = ref<boolean>(false);
+    const getData = async (matchId: number): Promise<unknown> => {
+      const userStore = useUserStore()
+      if (!userStore.user?.id || !userStore.jwtToken) {
+        error.value = 'برجاء تسجيل الدخول اولا.'
+        return
+      }
 
-        const send = async (request: ICreateMatchEstimation): Promise<unknown> => {
-            const userStore = useUserStore()
-            if(!userStore.user?.id || !userStore.jwtToken ){
-                error.value = "برجاء تسجيل الدخول اولا."
-                return;
-            }
-            error.value = null;
-            pending.value = true;
-            let data = {
-                winner_team:request.selectedWinnerId,
-                best_player:request.bestPlayerId,
-                user: userStore.user.id,
-                match: request.matchId,
-                countOf400: request.countOf400,
-                countOfKaboots: request.countOfKaboots,
-                countOfRedCards: request.countOfRedCards,
-                loserScore: request.loserScore
-            };
-            try {
-                let res = await this.call<unknown>(
-                    'POST',
-                    "/api/match-estimations",
-                    {data}, // body
-                    {headers: {
-                        "Authorization":`Bearer ${userStore.jwtToken}`
-                    }}
-                )
-                return res ;
-            } catch (err: any) {
-                let errorData = err.data as IError;
-                if (errorData.error.name === "BadRequestError") {
-                    error.value = errorData.error.details.message;
-                } else {
-                    error.value = "تعذر تسجيل الدخول برجاء المحاولة مرة اخري لاحقا."
-                }
-            }
-            finally {
-                pending.value = false;
-            }
-        }
-        return { error, pending, send }
-    }
+      error.value = null
+      pending.value = true
 
-    getEstimationTableByChampId(champId: number, asyncDataOptions?: AsyncDataOptions<IEstimationTable>){
-        return useAsyncData(
-            () => {
-                const fetchOptions: FetchOptions<'json'> = {
-                    headers: {
-                        'Accept-Language': 'en-US'
-                    }
-                };
-                return this.call<IEstimationTable>(
-                    'GET',
-                    `/api/leagues/${champId}/estimations`,
-                    undefined, // body
-                    fetchOptions
-                )
-            },
-            asyncDataOptions
+      try {
+        const raw = await this.get<IResponse<Array<{ id: number, attributes: StrapiEstimationAttributes }>>>(
+          `/api/match-estimations?filters[match][id][$eq]=${matchId}&filters[user][id][$eq]=${userStore.user.id}`,
         )
+        const { items, pagination } = unwrapStrapiPaginatedCollection<StrapiEstimationAttributes>(raw)
+        data.value = { items, total: pagination.total }
+      } catch (err) {
+        console.error(err)
+        data.value = null
+        error.value = 'تعذر تحميل البيانات برجاء المحاولة مرة اخري لاحقا.'
+      } finally {
+        pending.value = false
+      }
     }
+
+    return { error, pending, data, getData }
+  }
+
+  useSendEstimation() {
+    const error = ref<string | null>(null)
+    const pending = ref<boolean>(false)
+
+    const send = async (request: ICreateMatchEstimation): Promise<unknown> => {
+      const userStore = useUserStore()
+      if (!userStore.user?.id || !userStore.jwtToken) {
+        error.value = 'برجاء تسجيل الدخول اولا.'
+        return
+      }
+
+      error.value = null
+      pending.value = true
+
+      const payload = {
+        winner_team: request.selectedWinnerId,
+        best_player: request.bestPlayerId,
+        user: userStore.user.id,
+        match: request.matchId,
+        countOf400: request.countOf400,
+        countOfKaboots: request.countOfKaboots,
+        countOfRedCards: request.countOfRedCards,
+        loserScore: request.loserScore,
+      }
+
+      try {
+        return await this.post<unknown>('/api/match-estimations', { data: payload })
+      } catch (err: unknown) {
+        const errorData = (err as { data: IError }).data
+        if (errorData.error.name === 'BadRequestError') {
+          error.value = errorData.error.details.message
+        } else {
+          error.value = 'تعذر تسجيل الدخول برجاء المحاولة مرة اخري لاحقا.'
+        }
+      } finally {
+        pending.value = false
+      }
+    }
+
+    return { error, pending, send }
+  }
+
+  getEstimationTableByChampId(champId: number, asyncDataOptions?: AsyncDataOptions<IEstimationTable>) {
+    return this.asyncData(
+      `estimations:table:${champId}`,
+      () => this.get<IEstimationTable>(`/api/leagues/${champId}/estimations`),
+      asyncDataOptions,
+    )
+  }
 }
 
-export default EstimationsModule;
+export default EstimationsModule

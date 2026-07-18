@@ -27,10 +27,10 @@
                 <FormInputField v-model="state.experience" type="number" name="experience" label="سنوات الخبرة بالبلوت"
                     hint="مطلوب" icon="i-heroicons-academic-cap" />
 
-                <UFormGroup class="form-control" name="isJudgedBefore" size="xl">
+                <UFormField class="form-control" name="isJudgedBefore" size="xl">
                     <URadioGroup v-model="state.IsJudgedBefore" legend="هل سبق لك التحكيم سابقا ؟"
                         :options="IsJudgedBeforeOptions" />
-                </UFormGroup>
+                </UFormField>
 
 
             </div>
@@ -40,7 +40,7 @@
                     ارسال
                 </UButton>
 
-                <UButton type="button" :loading="pending" color="white" variant="outline" trailing-icon="i-heroicons-x-mark"
+                <UButton type="button" :loading="pending" color="neutral" variant="outline" trailing-icon="i-heroicons-x-mark"
                     class="flex justify-center text-md w-1/3 md:w-1/4" @click="emit('cancel')">
                     الغاء
                 </UButton>

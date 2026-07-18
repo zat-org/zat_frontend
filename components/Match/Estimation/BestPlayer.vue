@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup name="bestPlayerId" size="xl" hint="نقطتان" label="افضل لاعب بالمباراة">
+    <UFormField name="bestPlayerId" size="xl" hint="نقطتان" label="افضل لاعب بالمباراة">
         <USelectMenu v-model="bestPlayer" :options="bestPlayerOptions">
             <template #label>
                 <span class="flex items-center" v-if="bestPlayer === null">
@@ -29,7 +29,7 @@
                 </span>
             </template>
         </USelectMenu>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

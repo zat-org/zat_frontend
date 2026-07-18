@@ -1,10 +1,10 @@
 <template>
-    <UModal v-model="isLoginFormOpened" prevent-close>
+    <UModal v-model:open="isLoginFormOpened" :dismissible="false">
         <UCard>
             <template #header>
                 <div class="flex justify-between">
                     <h2>عندك قيدها ؟! سجل دخول بيوزرك </h2>
-                    <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1"
+                    <UButton color="neutral" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1"
                         @click="handleClose" />
                 </div>
             </template>

@@ -10,17 +10,17 @@
                 <section class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 w-full">
                     <TeamBasicInfo class="md:col-span-2" v-bind:team="team" />
                     <section class="w-full">
-                        <UDivider class="mb-3" label=" الفريق" />
+                        <USeparator class="mb-3" label=" الفريق" />
                         <TeamPlayers :players="team.players" :coaches="team.coaches" />
                     </section>
 
                     <section class="w-full">
-                        <UDivider class="mb-3" label="بطولات الفريق" />
+                        <USeparator class="mb-3" label="بطولات الفريق" />
                         <TeamChampList v-bind:champs="team.champs" />
                     </section>
 
                     <section class="w-full">
-                        <UDivider class="mb-3" label="انتقالات الاعبين" />
+                        <USeparator class="mb-3" label="انتقالات الاعبين" />
                         <TeamTransferList v-bind:transfers="team.transfers" :currentTeamName="team.name">
                             <template #noTransText>
                                 لم يجري الفريق اي انتقالات حتي الان
@@ -28,7 +28,7 @@
                         </TeamTransferList>
                     </section>
                     <section class="w-full">
-                        <UDivider class="mb-3" label="احصائيات الفريق" />
+                        <USeparator class="mb-3" label="احصائيات الفريق" />
                         <div class="divider my-5"> </div>
                         <TeamStatistics v-bind:statistics="team.statistics" />
                     </section>

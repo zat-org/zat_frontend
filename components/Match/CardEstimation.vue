@@ -89,12 +89,7 @@ const estimationScore = ref<number | null>(null)
 const { data: estimationData, error: estimationError, getData: getUserEstimation } = $api.estimation.useGetByIds()
 
 // Computed
-const userSubmittedEstimationCount = computed(() => {
-    if (estimationData.value && estimationData.value.data.length > 0) {
-        return estimationData.value.meta.pagination.total
-    }
-    return 0
-})
+const userSubmittedEstimationCount = computed(() => estimationData.value?.total ?? 0)
 
 // Check if match is open for estimations
 const isMatchOpenForEstimations = (matchData: IMatchFullDetails | null) => {
@@ -117,8 +112,8 @@ const checkEstimationStatus = async () => {
                 console.log(userSubmittedEstimationCount.value)
                 estimationStatus.value = 'submitted'
                 // Get the score if available
-                if (estimationData.value?.data[0]?.attributes.estimation_score) {
-                    estimationScore.value = estimationData.value.data[0].attributes.estimation_score
+                if (estimationData.value?.items[0]?.estimation_score) {
+                    estimationScore.value = estimationData.value.items[0].estimation_score
                 }
             } else {
                 // Check if match is open for estimations

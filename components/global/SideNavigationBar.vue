@@ -3,8 +3,8 @@
         <div v-for="itemGroup in items" class="mb-2">
             <ULink v-for="link in itemGroup" :exact-query="true" :to="link.to"
                 @click="isSidebarOpen = false" class="ps-3 py-1 flex items-center border-r "
-                active-class="text-primary border-amber-500"
-                inactive-class="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200  hover:dark:border-gray-300 hover:border-gray-600 dark:border-gray-600 border-gray-200">
+                active-class="text-zat-500 border-zat-500"
+                inactive-class="text-text-subtitle hover:text-text-body hover:border-surface-tone border-surface-tone/60">
                 <UIcon :name="link.icon" class="me-2 text-[17px]" />
                 <span>{{ link.label }}</span>
             </ULink>
@@ -24,22 +24,22 @@ const items = [
     [{
         label: 'بطولات الدوري',
         icon: 'i-heroicons-table-cells',
-        to: '/championships?type=league'
+        to: '/championships/league'
     },
     {
         label: 'بطولات الكأس',
         icon: 'i-heroicons-trophy',
-        to: '/championships?type=cup'
+        to: '/championships/cup'
     },
     {
         label: 'بطولات السوبر',
         icon: 'i-heroicons-trophy-20-solid',
-        to: '/championships?type=super'
+        to: '/championships/super'
     },
     {
         label: 'بطولات الحزام',
         icon: 'i-heroicons-banknotes-20-solid',
-        to: '/championships?type=hezam'
+        to: '/championships/hezam'
     },
     {
         label: 'بطولات المتابعين',

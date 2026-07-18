@@ -44,7 +44,7 @@
 
 
                     <section>
-                        <UDivider class="my-5"> انتقالات اللاعب </UDivider>
+                        <USeparator class="my-5"> انتقالات اللاعب </USeparator>
                         <TeamTransferList v-bind:transfers="player.transfers">
                             <template #noTransText>
                                 لم يجري اللاعب اي انتقالات حتي الان

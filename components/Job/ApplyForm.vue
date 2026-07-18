@@ -10,21 +10,21 @@
 
         <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
             <div class="row">
-                <UFormGroup name="name" label="الاسم" hint="مطلوب" size="xl">
+                <UFormField name="name" label="الاسم" hint="مطلوب" size="xl">
                     <UInput v-model="state.name" type="text" icon="i-heroicons-user" placeholder="الاسم" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup size="xl" dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب">
+                <UFormField size="xl" dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب">
                     <UInput v-model="state.email" type="email" icon="i-heroicons-envelope"
                         placeholder="example@gmail.com" />
-                </UFormGroup>
+                </UFormField>
 
-                <UFormGroup dir="ltr" name="phone" label="رقم الجوال" hint="مطلوب" size="xl">
+                <UFormField dir="ltr" name="phone" label="رقم الجوال" hint="مطلوب" size="xl">
                     <UInput v-model="state.phone" type="text" icon="i-heroicons-phone" placeholder="512345678" />
-                </UFormGroup>
-                <UFormGroup name="address" label="مدينة الاقامة" hint="مطلوب" size="xl">
+                </UFormField>
+                <UFormField name="address" label="مدينة الاقامة" hint="مطلوب" size="xl">
                     <UInput v-model="state.address" type="text" icon="i-heroicons-map-pin" placeholder="الرياض" />
-                </UFormGroup>
+                </UFormField>
 
                 <FormTextArea v-model="state.aboutMe" name="aboutMe" label="نبذة عنك"
                     placeholder="تحدث عن نفسك بايجاز ... " />
@@ -37,7 +37,7 @@
                     class="flex justify-center text-md w-1/3">
                     ارسال
                 </UButton>
-                <UButton type="button" color="white" variant="outline" trailing-icon="i-heroicons-x-mark"
+                <UButton type="button" color="neutral" variant="outline" trailing-icon="i-heroicons-x-mark"
                     class="flex justify-center text-md w-1/3 lg:hidden" @click="emit('cancel')">
                     الغاء
                 </UButton>
@@ -50,7 +50,7 @@
 import { object, string, mixed, type InferType } from 'yup'
 import type { FormSubmitEvent } from '#ui/types'
 import type { IApplyToJobRequest } from '@/Models/IJob';
-import { UFormGroup } from '#components';
+import { UFormField } from '#components';
 
 const { $api } = useNuxtApp();
 const toast = useToast();

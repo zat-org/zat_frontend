@@ -1,44 +1,59 @@
 <template>
-    <div class="h-20 flex justify-between items-center border-b ">
-        <div class="ms-3 w-1/3 ">
-            <UButton class="rounded-full transition-transform duration-500 ease-out hover:scale-105 active:scale-95"
-                icon="i-heroicons-ellipsis-horizontal-16-solid" size="lg" square variant="outline"
-                @click="isSidebarOpen = true" />
-        </div>
+    <UHeader v-model:open="isHeaderOpen" title="زات" to="/" toggle-side="left" mode="slideover">
+        <template #title>
+            <ClientOnly>
+                <img src="/images/zat-logo-white.svg" alt="زات" class="h-auto" width="83" height="48" />
+                <template #fallback>
+                    <img src="/images/zat-logo-white.svg" alt="زات" class="h-auto" width="83" height="48" />
+                </template>
+            </ClientOnly>
+        </template>
 
-        <div>
+        <template #right>
             <ClientOnly>
-                <NuxtLink to="/">
-                    <img width="75" height="75"
-                        :src="colorMode.preference === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
-                        alt="zat logo" />
-                </NuxtLink>
+                <UButton square variant="solid" color="white" class="theme-toggle-btn"
+                    :aria-label="isDark ? 'تفعيل الوضع الفاتح' : 'تفعيل الوضع الداكن'" @click="toggleTheme">
+                    <UIcon :name="isDark ? 'zat:sun' : 'zat:moon'" class="size-5 text-black" />
+                </UButton>
+                <template #fallback>
+                    <UButton square variant="solid" color="neutral" disabled aria-hidden="true" />
+                </template>
             </ClientOnly>
-        </div>
-        <div class="me-3 w-1/3 text-left">
-            <ClientOnly>
-                <UButton class="rounded-full transition-transform duration-1000 ease-out active:rotate-180"
-                    :icon="isDark ? 'i-heroicons-moon-20-solid' : 'i-heroicons-sun-20-solid'" size="lg" square
-                    variant="outline" @click="isDark = !isDark" aria-label="Theme" />
-            </ClientOnly>
-        </div>
-        <SideBar v-model="isSidebarOpen"  />      
-    </div>
+        </template>
+
+        <UNavigationMenu :items="items" variant="link" color="neutral" content-orientation="horizontal"
+            class="nav-menu hidden md:flex grow"
+            :ui="{
+                viewportWrapper: 'nav-dropdown-viewport-wrapper !bg-white dark:!bg-white',
+                viewport: 'nav-dropdown-viewport !bg-white dark:!bg-white',
+                content: 'nav-dropdown-viewport-content !bg-white dark:!bg-white',
+            }">
+            <template #teams-content="{ item }">
+                <NavbarDropdownContent :item="item" />
+            </template>
+
+            <template #tournaments-content="{ item }">
+                <NavbarDropdownContent :item="item" />
+            </template>
+        </UNavigationMenu>
+
+        <template #body>
+            <UNavigationMenu orientation="vertical" :items="items" variant="link" color="neutral" class="-mx-2.5" />
+
+            <div class="mt-6 pt-4 border-t border-surface-tone">
+                <NavbarAccountSection @close="isHeaderOpen = false" />
+            </div>
+        </template>
+    </UHeader>
 </template>
-  
+
 <script setup lang="ts">
-const isSidebarOpen = ref(false);
+const { items } = useSiteNavItems()
 const colorMode = useColorMode()
+const isDark = computed(() => colorMode.value === 'dark')
 
-const isDark = computed({
-    get() {
-        return colorMode.value === 'dark'
-    },
-    set() {
-        colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
-    }
-})
-
-
+function toggleTheme() {
+    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+}
+const isHeaderOpen = ref(false)
 </script>
-<style scoped></style>

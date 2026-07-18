@@ -1,6 +1,6 @@
 <template>
     <div v-if="match.team1.coach && match.team2.coach">
-        <UDivider>مدربى الفريقين</UDivider>
+        <USeparator>مدربى الفريقين</USeparator>
         <div class="flex text-gray-500 justify-around  text-sm">
             <div class="flex justify-start  items-center  mb-3">
 

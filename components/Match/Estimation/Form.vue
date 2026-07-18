@@ -1,25 +1,25 @@
 <template>
-    <UModal v-model="isEstimationFormOpened" prevent-close>
+    <UModal v-model:open="isEstimationFormOpened" :dismissible="false">
         <UCard>
             <template #header>
                 <div class="flex justify-between">
                     <h2>توقع نتيجة المباراة</h2>
-                    <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1"
+                    <UButton color="neutral" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1"
                         @click="handleClose" />
                 </div>
             </template>
             <UForm :schema="schema" :state="state" class="space-y-3" @submit="onSubmit">
                 <MatchEstimationWinner :match="match" :error="winnerSelectionError"
                     v-model:team1Score="state.team1Score" v-model:team2Score="state.team2Score" />
-                <UFormGroup name="countOf400" size="xl" label="كم 400 فى المباراة" hint="نقطة" icon="i-heroicons-chart-bar-square">
+                <UFormField name="countOf400" size="xl" label="كم 400 فى المباراة" hint="نقطة" icon="i-heroicons-chart-bar-square">
                     <UInput min="0" v-model="state.countOf400" type="number" name="countOf400" />
-                </UFormGroup>
-                <UFormGroup name="countOfRedCards" size="xl" label="كم كبوت صن و حكم فى المباراة" hint=" 3 نقاط" icon="i-heroicons-chart-bar-square">
+                </UFormField>
+                <UFormField name="countOfRedCards" size="xl" label="كم كبوت صن و حكم فى المباراة" hint=" 3 نقاط" icon="i-heroicons-chart-bar-square">
                     <UInput min="0" v-model="state.countOfRedCards" type="number" name="countOfRedCards" />
-                </UFormGroup>
-                <UFormGroup name="countOfKaboots" size="xl" label="كم كارت احمر للاعبين او المدربين" hint="نقطتان" icon="i-heroicons-chart-bar-square">
+                </UFormField>
+                <UFormField name="countOfKaboots" size="xl" label="كم كارت احمر للاعبين او المدربين" hint="نقطتان" icon="i-heroicons-chart-bar-square">
                     <UInput min="0" v-model="state.countOfKaboots" type="number" name="countOfKaboots" />
-                </UFormGroup>
+                </UFormField>
 
                 <MatchEstimationBestPlayer v-model:bestPlayerId="state.bestPlayerId"
                     :bestPlayerOptions="bestPlayerOptions" />
@@ -33,7 +33,7 @@
                 <div class="flex justify-center">
                     <UButton type="submit" class="mx-5 " icon="i-heroicons-paper-airplane" :loading="pending">ارسال
                     </UButton>
-                    <UButton color="gray" class="mx-5" @click="handleClose" trailing-icon="i-heroicons-x-circle">الغاء
+                    <UButton color="neutral" class="mx-5" @click="handleClose" trailing-icon="i-heroicons-x-circle">الغاء
                     </UButton>
                 </div>
             </UForm>

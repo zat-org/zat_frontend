@@ -1,10 +1,10 @@
 <template>
     <div>
         <UButtonGroup size="sm" orientation="horizontal">
-            <UButton icon="i-heroicons-chevron-right-20-solid" color="gray"
+            <UButton icon="i-heroicons-chevron-right-20-solid" color="neutral"
                 @click=" $emit('goToPage', props.currentPage - 1)" :disabled="currentPage <= 1" />
             <UButton :label="currentPage.toString()" />
-            <UButton icon="i-heroicons-chevron-left-20-solid" color="gray"
+            <UButton icon="i-heroicons-chevron-left-20-solid" color="neutral"
                 @click=" $emit('goToPage', props.currentPage + 1)" :disabled="availablePages <= currentPage" />
         </UButtonGroup>
     </div>

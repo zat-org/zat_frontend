@@ -1,30 +1,27 @@
 <template>
     <FetchDataWrapper :error="error ? 'تعذر تحميل التوقعات برجاء المحاولة لاحقا.' : null" :pending="pending"
         class="flex flex-col">
-        <UTable :rows="rows" :ui="ui" :columns="columns" :loading="pending"
-            :loading-state="{ icon: 'i-heroicons-arrow-path-20-solid', label: 'Loading...' }"
-            :progress="{ color: 'primary', animation: 'carousel' }"
-            :empty-state="{ icon: 'i-heroicons-circle-stack-20-solid', label: 'لا يوجد توقعات' }">
-            <template #index-data="{ row }">
+        <UTable :data="rows" :columns="columns" :loading="pending">
+            <template #index-cell="{ row }">
                 <p class="text-center">
-                    # {{ row.index }}
+                    # {{ row.original.index }}
                 </p>
             </template>
-            <template #username-data="{ row }">
+            <template #username-cell="{ row }">
                 <div class="flex items-center justify-center ">
-                    <p>{{ row.username }}@</p>
-                    <UAvatar icon="i-heroicons-user" class="ms-2" :src="row.avatar_url"
+                    <p>{{ row.original.username }}@</p>
+                    <UAvatar icon="i-heroicons-user" class="ms-2" :src="row.original.avatar_url"
                         imgClass="object-cover object-top" />
                 </div>
             </template>
-            <template #sum-data="{ row }">
+            <template #sum-cell="{ row }">
                 <p class="text-center font-bold">
-                    {{ row.sum }}
+                    {{ row.original.sum }}
                 </p>
             </template>
         </UTable>
         <div class="flex justify-center px-3 py-3.5 border-t border-gray-200 dark:border-gray-700">
-            <UPagination v-if="estimationResults" v-model="page" :page-count="pageCount"
+            <UPagination v-if="estimationResults" v-model:page="page" :page-count="pageCount"
                 :total="estimationResults.length" />
         </div>
     </FetchDataWrapper>
@@ -46,7 +43,6 @@ const userStore = useUserStore()
 const { $api } = useNuxtApp();
 const { data, error, pending } = await $api.estimation.getEstimationTableByChampId(props.champ.leagueid);
 const estimationResults = computed(() => data.value?.data.map((elm, index) => { return { ...elm, index: index + 1, class: elm.id === userStore.user?.id ? "bg-amber-100" : "" } }));
-const ui = { th: { base: 'text-center rtl:text-center' } }
 const page = ref(1)
 const pageCount = 7
 const userRow = computed(() => {
@@ -66,16 +62,15 @@ const rows = computed(() => {
     }
     return pageRows
 })
-
 const columns = [{
-    key: 'index',
-    label: 'الترتيب'
+    accessorKey: 'index',
+    header: 'الترتيب'
 }, {
-    key: 'username',
-    label: 'اسم المستخدم'
+    accessorKey: 'username',
+    header: 'اسم المستخدم'
 }, {
-    key: 'sum',
-    label: 'النقاط'
+    accessorKey: 'sum',
+    header: 'النقاط'
 }]
 definePageMeta({
     name: "champEstimations"

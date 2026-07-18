@@ -18,9 +18,9 @@
                         <UIcon name="i-heroicons-document-check"
                             class="text-6xl absolute text-gray-100  opacity-60 top-1/2 -left-4  -translate-y-1/2 " />
                         <p class="text-white w-4/5 text-right">
-                            <span v-if="data?.data[0].attributes.estimation_score! >= 0">
+                            <span v-if="data?.items[0]?.estimation_score! >= 0">
                                 نتيجة توقعك
-                                10 / {{ data?.data[0].attributes.estimation_score }}
+                                10 / {{ data?.items[0].estimation_score }}
                             </span>
                             <span v-else>
                                 تم استلام توقعك بالفعل
@@ -70,12 +70,7 @@ const isLoginFormOpened = ref(false)
 
 
 const { data, error, pending, getData: GetUserEstimationForMatch } = $api.estimation.useGetByIds();
-const userSubmittedEstimationCount = computed(() => {
-    if (data.value) {
-        return data.value.meta.pagination.total
-    }
-    return null;
-})
+const userSubmittedEstimationCount = computed(() => data.value?.total ?? null)
 
 onMounted(async () => {
     await GetUserEstimationForMatch(props.match.id)

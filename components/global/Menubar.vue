@@ -19,6 +19,8 @@
 </template>
 
 <style scoped>
+@reference "~/assets/css/tailwind.css";
+
 a.active~span {
     @apply -translate-y-4 opacity-100
 }
