@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col ">
-        <UCard v-if="champ" :ui="{ base: 'shadow-xl w-full ', body: { padding: 'p-0' } }">
+        <UCard v-if="champ" :ui="{ base: 'shadow-xl w-full '}">
             <div class="w-full h-44 flex justify-center items-center dark:bg-white bg-gray-100 rounded-t-lg md:rounded-lg">
                 <object type="image/png" :data="url + champ.league_logo" :aria-label="champ.name"
                     class="object-center flex justify-center h-40 items-center">
@@ -9,7 +9,7 @@
             </div>
             <div class="p-5 space-y-5 text-center">
                 <h2 class="text-2xl">{{ champ.name }}</h2>
-                <p class="text-md "> {{ champ.description }}</p>
+                <p class="text-md "> {{ champ.description    }}</p>
 
                 <div class="flex justify-around">
                     <div class="p-0 flex items-center">
