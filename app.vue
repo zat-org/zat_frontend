@@ -1,12 +1,16 @@
 <template>
   <div dir="rtl" lang="ar" class="flex flex-col min-h-screen bg-white  dark:bg-slate-800">
     <NuxtLoadingIndicator />
-    <Navbar />
-    <main class="p-2 grow w-full relative flex flex-col justify-start items-center">
-      <NuxtPage />
+    <Navbar v-if="!isUnderDevelopment" />
+    <main
+      :class="isUnderDevelopment
+        ? 'grow w-full relative flex flex-col justify-center items-center'
+        : 'p-2 grow w-full relative flex flex-col justify-start items-center'"
+    >
+    <NuxtPage />
       <UNotifications />
     </main>
-    <AppFooter />
+    <AppFooter v-if="!isUnderDevelopment" />
   </div>
 </template>
 
@@ -14,10 +18,14 @@
 import 'vue3-carousel/dist/carousel.css'
 import { useUserStore } from '~/stores/useUserStore';
 
+const route = useRoute()
+const isUnderDevelopment = computed(() => route.path === '/under-development')
+
 const { $api } = useNuxtApp();
 
 const userStore = useUserStore()
 onMounted(async () => {
+  if (isUnderDevelopment.value) return
   try {
     await userStore.refetchUser();
   } catch (error) {
@@ -26,6 +34,7 @@ onMounted(async () => {
 })
 
 onMounted(async () => {
+  if (isUnderDevelopment.value) return
   try {
     await $api.websiteAssets.addOneToVisitorCounter()
   } catch (error) {
