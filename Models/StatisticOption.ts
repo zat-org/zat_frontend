@@ -23,4 +23,5 @@ const StatisticOptions: IStatisticViewData[] = [
     { id: "kababit_sun_count", label: "عدد الكبابيت صن", data: [] },
     { id: "kababit_hakam_count", label: "عدد الكبابيت حكم", data: [] },
 ]
-export default StatisticOptions;
+export default StatisticOptions
+export type { IStatisticViewData, StatisticOptionName }

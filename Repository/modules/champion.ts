@@ -7,8 +7,8 @@ import type { IStatistics } from '~/Models/IStatistics'
 class ChampionsModule extends FetchFactory {
   async getAll(champType: Ref<string>, asyncDataOptions?: AsyncDataOptions<IGetAllChampionsResponse>) {
     return this.asyncData(
-      () => `champions:all:${champType.value}`,
-      () => this.get<IGetAllChampionsResponse>(`/api/leagues/get?type=${champType.value}`),
+      () => `champions:all:${champType.value}:ready`,
+      () => this.get<IGetAllChampionsResponse>(`/api/leagues/get?type=${champType.value}&ready=true`),
       {
         ...asyncDataOptions,
         watch: [...(asyncDataOptions?.watch ?? []), champType],
@@ -20,7 +20,7 @@ class ChampionsModule extends FetchFactory {
     return this.asyncData(  
       'champions:recent-done',
       async () => {
-        const { champs } = await this.get<IGetAllChampionsResponse>('/api/leagues/get?type=done&excludeType=super')
+        const { champs } = await this.get<IGetAllChampionsResponse>('/api/leagues/get?type=done&excludeType=super&ready=true')
         const recent = champs.slice(0, limit)
 
         const enriched = await Promise.all(
