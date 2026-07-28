@@ -1,16 +1,16 @@
 # Graph Report - zat_frontend  (2026-07-28)
 
 ## Corpus Check
-- 219 files · ~338,888 words
+- 219 files · ~338,923 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1078 nodes · 1502 edges · 136 communities (113 shown, 23 thin omitted)
+- 1079 nodes · 1503 edges · 134 communities (112 shown, 22 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 5 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7cb0d860`
+- Built from commit: `888e02d8`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -119,8 +119,6 @@
 - [[_COMMUNITY_Community 130|Community 130]]
 - [[_COMMUNITY_Community 131|Community 131]]
 - [[_COMMUNITY_Community 132|Community 132]]
-- [[_COMMUNITY_Community 133|Community 133]]
-- [[_COMMUNITY_Community 134|Community 134]]
 - [[_COMMUNITY_Community 135|Community 135]]
 
 ## God Nodes (most connected - your core abstractions)
@@ -142,19 +140,19 @@
   types/nuxt.d.ts → Repository/modules/blogs.ts
 - `IApiInstance` --references--> `ChampionsModule`  [EXTRACTED]
   types/nuxt.d.ts → Repository/modules/champion.ts
+- `IApiInstance` --references--> `ContactUsMessagesModule`  [EXTRACTED]
+  types/nuxt.d.ts → Repository/modules/contactUsMessagesModule.ts
 - `IApiInstance` --references--> `EstimationsModule`  [EXTRACTED]
   types/nuxt.d.ts → Repository/modules/estimations.ts
-- `IApiInstance` --references--> `FollowersChampionsModule`  [EXTRACTED]
-  types/nuxt.d.ts → Repository/modules/followersChampions.ts
 
 ## Import Cycles
 - None detected.
 
-## Communities (136 total, 23 thin omitted)
+## Communities (134 total, 22 thin omitted)
 
 ### Community 0 - "Community 0"
-Cohesion: 0.13
-Nodes (15): day, displayPoints(), isUpcoming, matchDate, month, pointsValue(), props, showScoreHints (+7 more)
+Cohesion: 0.15
+Nodes (13): day, displayPoints(), isUpcoming, matchDate, month, pointsValue(), props, showScoreHints (+5 more)
 
 ### Community 1 - "Community 1"
 Cohesion: 0.05
@@ -173,24 +171,24 @@ Cohesion: 0.12
 Nodes (14): activeMatch, activeTab, { $api }, countdown, endedMatches, error, hasContent, matchDate (+6 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.06
-Nodes (28): isExpanded, isHovered, playerSlots, props, showMembersPeek, bestPlayer, bestPlayerId, ChampWinText (+20 more)
+Cohesion: 0.22
+Nodes (7): props, props, props, IPlayerFullDetails, IPlayerLessDetails, ITeamStatistics, ITransfer
 
 ### Community 6 - "Community 6"
 Cohesion: 0.22
 Nodes (13): getStrapiMediaAltText(), getStrapiMediaAttributes(), getStrapiMediaItem(), getStrapiMediaLargePath(), getStrapiMediaPath(), mapHeroSlides(), MediaUrlFn, StrapiMediaAttributes (+5 more)
 
 ### Community 7 - "Community 7"
-Cohesion: 0.24
-Nodes (9): edges, graph, nodes, nodeTypes, props, buildCupBracketGraph(), CupBracketNodeData, cupRoundLabel() (+1 more)
+Cohesion: 0.20
+Nodes (6): imageErrors, isExpanded, isHovered, playerSlots, props, showMembersPeek
 
 ### Community 8 - "Community 8"
-Cohesion: 0.12
-Nodes (14): props, { $api }, currentDate, emit, IsJudgedBeforeOptions, maxBirthDate, minBirthDate, { pending, error, send: sendJoinAsRefereeRequest } (+6 more)
+Cohesion: 0.15
+Nodes (11): { $api }, currentDate, emit, IsJudgedBeforeOptions, maxBirthDate, minBirthDate, { pending, error, send: sendJoinAsRefereeRequest }, router (+3 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.11
-Nodes (15): { $api }, currentDate, { error, pending, send: sendJoinRequest }, IsPlayedBeforeOptions, maxBirthDate, minBirthDate, props, router (+7 more)
+Cohesion: 0.12
+Nodes (13): { $api }, currentDate, { error, pending, send: sendJoinRequest }, IsPlayedBeforeOptions, maxBirthDate, minBirthDate, props, router (+5 more)
 
 ### Community 10 - "Community 10"
 Cohesion: 0.14
@@ -201,20 +199,20 @@ Cohesion: 0.14
 Nodes (16): { $api }, bestPlayerOptions, emit, { error, pending, send: sendEstimation }, getWinner, handleClose(), isEstimationFormOpened, IState (+8 more)
 
 ### Community 12 - "Community 12"
-Cohesion: 0.12
-Nodes (17): HezamTeamSummary, LeagueTeamSummary, TeamSummary, { $api }, champType, estimationRecords, logosById, pending (+9 more)
+Cohesion: 0.26
+Nodes (9): HezamTeamSummary, IJoinChamp, LeagueTeamSummary, TeamSummary, { $api }, champType, logosById, props (+1 more)
 
 ### Community 13 - "Community 13"
-Cohesion: 0.14
-Nodes (13): GetAllTeamsResponse, GetPlayerByIdResponse, GetTeamByIdResponse, AuthModule, ContactUsMessagesModule, JobsModule, PlayersModule, RefereesModule (+5 more)
+Cohesion: 0.43
+Nodes (3): GetPlayerByIdResponse, PlayersModule, createStrapiClient()
 
 ### Community 14 - "Community 14"
-Cohesion: 0.13
-Nodes (14): props, rows, selected, selectedId, IStatistics, IStatisticViewData, StatisticOptionName, StatisticOptions (+6 more)
+Cohesion: 0.15
+Nodes (13): props, rows, selected, selectedId, IStatisticViewData, StatisticOptionName, StatisticOptions, { $api } (+5 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.26
-Nodes (3): props, IMatchFullDetails, KeyNamePair
+Cohesion: 0.24
+Nodes (4): team1Score, team2Score, IMatchFullDetails, KeyNamePair
 
 ### Community 16 - "Community 16"
 Cohesion: 0.17
@@ -229,12 +227,12 @@ Cohesion: 0.33
 Nodes (5): { $api }, champs, champType, moreLink, props
 
 ### Community 19 - "Community 19"
-Cohesion: 0.18
-Nodes (9): IGetAllChampionsResponse, IGetChampDetailsResponse, IGetChampMatchesResponse, IGetChampStudiosResponse, IGetChampSummaryResponse, IGetChampTeamsResponse, IGetRecentChampsResponse, IUpcomingChamp (+1 more)
+Cohesion: 0.13
+Nodes (11): IGetAllChampionsResponse, IGetChampDetailsResponse, IGetChampMatchesResponse, IGetChampStudiosResponse, IGetChampSummaryResponse, IGetChampSummaryWinnerResponse, IGetChampTeamsResponse, IGetRecentChampsResponse (+3 more)
 
 ### Community 21 - "Community 21"
-Cohesion: 0.16
-Nodes (10): ui, props, LeagueState, IChamp, IGetChampSummaryWinnerResponse, IJoinChamp, IRecentChamp, props (+2 more)
+Cohesion: 0.10
+Nodes (13): ui, props, LeagueState, IChamp, props, { $api }, route, { $api } (+5 more)
 
 ### Community 22 - "Community 22"
 Cohesion: 0.20
@@ -265,16 +263,16 @@ Cohesion: 0.20
 Nodes (9): { $api }, emit, { error: errorAtSendApplyRequest, pending: sendApplyRequestPending, send: sendApplyJobRequest }, onSubmit(), props, schema, state, toast (+1 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.20
-Nodes (10): { $api }, { error, pending, send: sendContactUsMessage }, MessagesTypes, onSubmit(), resetState(), router, schema, state (+2 more)
+Cohesion: 0.22
+Nodes (9): { $api }, { error, pending, send: sendContactUsMessage }, MessagesTypes, onSubmit(), resetState(), router, schema, state (+1 more)
 
 ### Community 34 - "Community 34"
 Cohesion: 0.50
 Nodes (3): emit, props, updateModelValue()
 
 ### Community 35 - "Community 35"
-Cohesion: 0.19
-Nodes (11): nameClass, props, scoreClass, scoreDisplay, teamName, isModalOpen, props, scoreLine (+3 more)
+Cohesion: 0.06
+Nodes (39): dateParts, isDone, isUpcoming, props, statusLabel, team1IsWinner, team2IsWinner, activeBreakpoints (+31 more)
 
 ### Community 37 - "Community 37"
 Cohesion: 0.40
@@ -329,8 +327,8 @@ Cohesion: 0.50
 Nodes (3): { $api }, blog, route
 
 ### Community 52 - "Community 52"
-Cohesion: 0.25
-Nodes (6): emit, ui, IApplyToJobRequest, IJob, IJobsListResult, StrapiJobAttributes
+Cohesion: 0.23
+Nodes (7): emit, ui, IApplyToJobRequest, IJob, IJobsListResult, JobsModule, StrapiJobAttributes
 
 ### Community 53 - "Community 53"
 Cohesion: 0.18
@@ -373,24 +371,24 @@ Cohesion: 0.33
 Nodes (4): activeIndex, colorMode, images, logoSrc
 
 ### Community 101 - "Community 101"
-Cohesion: 0.12
-Nodes (16): { $api }, champLogoSrc, featuredMatch, hasWinner, pointsDisplay, props, stateMessage, stats (+8 more)
+Cohesion: 0.11
+Nodes (17): { $api }, champLogoSrc, featuredMatch, hasWinner, pointsDisplay, props, stateMessage, stats (+9 more)
 
 ### Community 103 - "Community 103"
 Cohesion: 0.13
 Nodes (13): { $api }, cardChamps, cardsType, champs, emptyCardsMessage, emptyListMessage, historyParams, isUpcoming (+5 more)
 
 ### Community 104 - "Community 104"
-Cohesion: 0.11
-Nodes (14): props, rows, props, rows, ScoreRow, matchHref, props, IChampSummaryWinner (+6 more)
+Cohesion: 0.08
+Nodes (21): props, rows, props, rows, ScoreRow, matchHref, props, detailStats (+13 more)
 
 ### Community 105 - "Community 105"
-Cohesion: 0.15
-Nodes (12): { $api }, champs, champType, route, sectionTitle, CHAMPIONSHIP_CARD_SHARED, CHAMPIONSHIP_TYPE_CARDS, CHAMPIONSHIP_TYPE_SLUGS (+4 more)
+Cohesion: 0.06
+Nodes (35): { $api }, champs, champType, route, sectionTitle, dateSource, displayDate, displayDateIso (+27 more)
 
 ### Community 106 - "Community 106"
-Cohesion: 0.36
-Nodes (4): props, IStartAt, IAnalyst, IStudio
+Cohesion: 0.20
+Nodes (9): { $api }, champType, estimationRecords, logosById, pending, props, scoreRows, sectionError (+1 more)
 
 ### Community 108 - "Community 108"
 Cohesion: 0.27
@@ -401,8 +399,8 @@ Cohesion: 0.17
 Nodes (10): moreHref, props, rows, ICreateMatchEstimation, IEstimationRecord, IEstimationTable, IMatchEstimation, IUserEstimationsResult (+2 more)
 
 ### Community 110 - "Community 110"
-Cohesion: 0.24
-Nodes (9): availableNavigation, champId, champType, isActive(), navigation, normalizePath(), props, route (+1 more)
+Cohesion: 0.21
+Nodes (10): availableNavigation, champId, champType, isActive(), navigation, normalizePath(), props, route (+2 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.18
@@ -421,92 +419,88 @@ Cohesion: 0.23
 Nodes (9): analystsLabel, displayDate, displayDateIso, props, thumbnail, props, thumbnail, extractYoutubeVideoId() (+1 more)
 
 ### Community 115 - "Community 115"
-Cohesion: 0.17
-Nodes (11): activeBreakpoints, carouselWrapper, disconnectObservers(), fullBreakpoints, isVisibleArr, observersArr, previewBreakpoints, props (+3 more)
+Cohesion: 0.27
+Nodes (5): AuthModule, FollowersChampionsModule, ComponentCustomProperties, IApiInstance, NuxtApp
 
 ### Community 116 - "Community 116"
 Cohesion: 0.29
 Nodes (6): useClientImages(), useHeroSlides(), useMediaUrl(), usePlayerImages(), StrapiFindParams, useStrapiCollection()
 
 ### Community 117 - "Community 117"
-Cohesion: 0.18
-Nodes (10): dateSource, displayDate, displayDateIso, props, statusClass, statusLabel, typeConfig, typeEmblem (+2 more)
+Cohesion: 0.33
+Nodes (5): ChampWinText, props, IBlog, IBlogFullDetails, getElapsedTime()
 
 ### Community 118 - "Community 118"
-Cohesion: 0.20
-Nodes (7): cardBoxRef, preferredReducedMotion, props, reduceMotion, shineRef, titleStyle, ChampionshipTypeConfig
+Cohesion: 0.33
+Nodes (4): props, IJoinAsRefereeRequest, IReferee, RefereesModule
 
 ### Community 119 - "Community 119"
-Cohesion: 0.70
-Nodes (3): IError, ILoginConfirmed, IUser
+Cohesion: 0.36
+Nodes (5): IError, ILoginConfirmed, IUser, HttpMethod, RequestBody
 
 ### Community 120 - "Community 120"
 Cohesion: 0.40
 Nodes (4): FALLBACK_SLIDES, IHeroSlide, StrapiEntity, StrapiHeroSlideAttributes
 
+### Community 121 - "Community 121"
+Cohesion: 0.24
+Nodes (3): FetchFactory, ContactUsMessage, ContactUsMessagesModule
+
 ### Community 122 - "Community 122"
 Cohesion: 0.19
-Nodes (7): open, isSmUp, open, timerSize, isMatchOpenForEstimations, props, IMatchLessDetails
+Nodes (9): open, emit, onSelect(), open, isSmUp, open, timerSize, IMatchLessDetails (+1 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.29
-Nodes (6): { $api }, pending, previewMatches, previewStudios, props, sectionError
+Cohesion: 0.18
+Nodes (9): { $api }, pending, previewMatches, previewStudios, props, sectionError, props, IAnalyst (+1 more)
 
 ### Community 124 - "Community 124"
-Cohesion: 0.22
-Nodes (7): detailStats, endMonth, endYear, mobileWdlPills, props, stats, wdlStats
+Cohesion: 0.29
+Nodes (5): bestPlayer, bestPlayerId, Person, ITeam, ITeamFullDetails
 
 ### Community 125 - "Community 125"
-Cohesion: 0.29
-Nodes (6): { $api }, champs, champType, pageTitle, props, typeConfig
+Cohesion: 0.33
+Nodes (5): IMatchHistoryChamp, IMatchHistoryGroup, IMatchHistoryMatch, IMatchHistoryTeam, MatchHistoryStatus
 
 ### Community 126 - "Community 126"
-Cohesion: 0.25
-Nodes (7): dateParts, isDone, isUpcoming, props, statusLabel, team1IsWinner, team2IsWinner
-
-### Community 127 - "Community 127"
-Cohesion: 0.25
-Nodes (6): ChampType, IMatchHistoryChamp, IMatchHistoryGroup, IMatchHistoryParams, IMatchHistoryResponse, MatchHistoryStatus
+Cohesion: 0.47
+Nodes (3): GetAllTeamsResponse, GetTeamByIdResponse, TeamsModule
 
 ### Community 128 - "Community 128"
 Cohesion: 0.47
 Nodes (3): IBlogResponse, IBlogsResponse, BlogsModule
 
-### Community 130 - "Community 130"
-Cohesion: 0.50
-Nodes (3): { $api }, matches, props
-
 ### Community 131 - "Community 131"
-Cohesion: 0.50
-Nodes (3): { $api }, props, teams
+Cohesion: 0.40
+Nodes (3): props, props, IChampLessDetails
 
 ### Community 132 - "Community 132"
 Cohesion: 0.50
-Nodes (3): emit, onSelect(), open
+Nodes (3): ChampWinText, props, ITeamLessDetails
 
 ### Community 135 - "Community 135"
-Cohesion: 0.50
-Nodes (3): IMeta, IPagination, IResponse
+Cohesion: 0.40
+Nodes (4): IMeta, IPagination, IResponse, StrapiFollowerChampionAttributes
 
 ## Knowledge Gaps
-- **568 isolated node(s):** `nuxt`, `nuxt-ui`, `SelectOption`, `IJoinChamp`, `IClientsImages` (+563 more)
+- **569 isolated node(s):** `nuxt`, `nuxt-ui`, `SelectOption`, `IJoinChamp`, `IClientsImages` (+564 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **23 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **22 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `FetchFactory` connect `Community 121` to `Community 128`, `Community 129`, `Community 134`, `Community 9`, `Community 107`, `Community 108`, `Community 13`, `Community 109`, `Community 19`, `Community 52`, `Community 119`?**
-  _High betweenness centrality (0.066) - this node is a cross-community bridge._
-- **Why does `MatchState` connect `Community 35` to `Community 0`, `Community 3`, `Community 4`, `Community 101`, `Community 15`, `Community 17`, `Community 122`, `Community 123`, `Community 126`, `Community 127`?**
+- **Why does `FetchFactory` connect `Community 121` to `Community 128`, `Community 129`, `Community 135`, `Community 107`, `Community 108`, `Community 109`, `Community 13`, `Community 15`, `Community 19`, `Community 115`, `Community 52`, `Community 118`, `Community 119`, `Community 126`?**
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
+- **Why does `MatchState` connect `Community 35` to `Community 0`, `Community 130`, `Community 3`, `Community 4`, `Community 101`, `Community 15`, `Community 17`, `Community 122`, `Community 123`, `Community 125`?**
   _High betweenness centrality (0.047) - this node is a cross-community bridge._
-- **Why does `IMatchLessDetails` connect `Community 122` to `Community 3`, `Community 4`, `Community 132`, `Community 35`, `Community 134`, `Community 104`, `Community 10`, `Community 106`, `Community 107`, `Community 112`, `Community 19`, `Community 21`, `Community 123`?**
-  _High betweenness centrality (0.036) - this node is a cross-community bridge._
+- **Why does `IMatchLessDetails` connect `Community 122` to `Community 130`, `Community 3`, `Community 4`, `Community 35`, `Community 104`, `Community 10`, `Community 107`, `Community 12`, `Community 15`, `Community 112`, `Community 19`, `Community 123`?**
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **What connects `nuxt`, `nuxt-ui`, `SelectOption` to the rest of the system?**
-  _568 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `Community 0` be split into smaller, more focused modules?**
-  _Cohesion score 0.13333333333333333 - nodes in this community are weakly interconnected._
+  _569 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.05454545454545454 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.0425531914893617 - nodes in this community are weakly interconnected._
+- **Should `Community 3` be split into smaller, more focused modules?**
+  _Cohesion score 0.07816091954022988 - nodes in this community are weakly interconnected._
