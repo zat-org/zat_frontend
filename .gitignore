@@ -21,3 +21,7 @@ logs
 .env
 .env.*
 !.env.example
+
+# Netlify files
+netlify.toml
+.netlify
