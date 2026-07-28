@@ -20,7 +20,6 @@ const { $api } = useNuxtApp();
 
 const userStore = useUserStore()
 onMounted(async () => {
-  if (isUnderDevelopment.value) return
   try {
     await userStore.refetchUser();
   } catch (error) {
@@ -29,7 +28,6 @@ onMounted(async () => {
 })
 
 onMounted(async () => {
-  if (isUnderDevelopment.value) return
   try {
     await $api.websiteAssets.addOneToVisitorCounter()
   } catch (error) {
