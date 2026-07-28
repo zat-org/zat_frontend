@@ -109,7 +109,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_champtype",
-      "community": 127,
+      "community": 110,
       "norm_label": "champtype.ts"
     },
     {
@@ -119,7 +119,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_champtype_champtype",
-      "community": 127,
+      "community": 110,
       "norm_label": "champtype"
     },
     {
@@ -149,7 +149,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_iblog",
-      "community": 5,
+      "community": 117,
       "norm_label": "iblog.ts"
     },
     {
@@ -159,7 +159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_iblog_iblog",
-      "community": 5,
+      "community": 117,
       "norm_label": "iblog"
     },
     {
@@ -169,7 +169,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "models_iblog_iblogfulldetails",
-      "community": 5,
+      "community": 117,
       "norm_label": "iblogfulldetails"
     },
     {
@@ -199,7 +199,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_ichamp",
-      "community": 21,
+      "community": 12,
       "norm_label": "ichamp.ts"
     },
     {
@@ -219,7 +219,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "models_ichamp_ijoinchamp",
-      "community": 21,
+      "community": 12,
       "norm_label": "ijoinchamp"
     },
     {
@@ -339,7 +339,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "models_ichamp_igetchampsummarywinnerresponse",
-      "community": 21,
+      "community": 19,
       "norm_label": "igetchampsummarywinnerresponse"
     },
     {
@@ -349,7 +349,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "models_ichamp_ichampwinnerstats",
-      "community": 104,
+      "community": 101,
       "norm_label": "ichampwinnerstats"
     },
     {
@@ -359,7 +359,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "models_ichamp_irecentchamp",
-      "community": 21,
+      "community": 104,
       "norm_label": "irecentchamp"
     },
     {
@@ -539,7 +539,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "models_imatchfulldetails_person",
-      "community": 5,
+      "community": 124,
       "norm_label": "person"
     },
     {
@@ -569,7 +569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_imatchhistory",
-      "community": 127,
+      "community": 125,
       "norm_label": "imatchhistory.ts"
     },
     {
@@ -579,7 +579,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "models_imatchhistory_matchhistorystatus",
-      "community": 127,
+      "community": 125,
       "norm_label": "matchhistorystatus"
     },
     {
@@ -589,7 +589,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "models_imatchhistory_imatchhistoryteam",
-      "community": 0,
+      "community": 125,
       "norm_label": "imatchhistoryteam"
     },
     {
@@ -599,7 +599,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "models_imatchhistory_imatchhistorymatch",
-      "community": 0,
+      "community": 125,
       "norm_label": "imatchhistorymatch"
     },
     {
@@ -609,7 +609,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "models_imatchhistory_imatchhistorygroup",
-      "community": 127,
+      "community": 125,
       "norm_label": "imatchhistorygroup"
     },
     {
@@ -619,7 +619,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "models_imatchhistory_imatchhistorychamp",
-      "community": 127,
+      "community": 125,
       "norm_label": "imatchhistorychamp"
     },
     {
@@ -669,7 +669,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_ireferee",
-      "community": 8,
+      "community": 118,
       "norm_label": "ireferee.ts"
     },
     {
@@ -679,7 +679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_ireferee_ireferee",
-      "community": 8,
+      "community": 118,
       "norm_label": "ireferee"
     },
     {
@@ -689,7 +689,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "models_ireferee_ijoinasrefereerequest",
-      "community": 8,
+      "community": 118,
       "norm_label": "ijoinasrefereerequest"
     },
     {
@@ -739,7 +739,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_istartat",
-      "community": 106,
+      "community": 122,
       "norm_label": "istartat.ts"
     },
     {
@@ -749,7 +749,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_istartat_istartat",
-      "community": 106,
+      "community": 122,
       "norm_label": "istartat"
     },
     {
@@ -759,7 +759,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_istatistics",
-      "community": 14,
+      "community": 19,
       "norm_label": "istatistics.ts"
     },
     {
@@ -769,7 +769,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_istatistics_istatistics",
-      "community": 14,
+      "community": 19,
       "norm_label": "istatistics"
     },
     {
@@ -779,7 +779,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "models_istudio",
-      "community": 106,
+      "community": 123,
       "norm_label": "istudio.ts"
     },
     {
@@ -789,7 +789,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "models_istudio_ianalyst",
-      "community": 106,
+      "community": 123,
       "norm_label": "ianalyst"
     },
     {
@@ -799,7 +799,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "models_istudio_istudio",
-      "community": 106,
+      "community": 123,
       "norm_label": "istudio"
     },
     {
@@ -839,7 +839,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "models_iteam_iteam",
-      "community": 5,
+      "community": 124,
       "norm_label": "iteam"
     },
     {
@@ -849,7 +849,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "models_iteam_iteamlessdetails",
-      "community": 5,
+      "community": 132,
       "norm_label": "iteamlessdetails"
     },
     {
@@ -859,7 +859,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "models_iteam_iteamfulldetails",
-      "community": 5,
+      "community": 124,
       "norm_label": "iteamfulldetails"
     },
     {
@@ -879,7 +879,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "models_iteam_ichamplessdetails",
-      "community": 5,
+      "community": 131,
       "norm_label": "ichamplessdetails"
     },
     {
@@ -899,7 +899,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "models_iteam_getallteamsresponse",
-      "community": 13,
+      "community": 126,
       "norm_label": "getallteamsresponse"
     },
     {
@@ -909,7 +909,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "models_iteam_getteambyidresponse",
-      "community": 13,
+      "community": 126,
       "norm_label": "getteambyidresponse"
     },
     {
@@ -1109,7 +1109,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_factory",
-      "community": 134,
+      "community": 119,
       "norm_label": "factory.ts"
     },
     {
@@ -1119,7 +1119,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "repository_factory_httpmethod",
-      "community": 134,
+      "community": 119,
       "norm_label": "httpmethod"
     },
     {
@@ -1129,7 +1129,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "repository_factory_requestbody",
-      "community": 134,
+      "community": 119,
       "norm_label": "requestbody"
     },
     {
@@ -1229,7 +1229,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "repository_modules_auth_authmodule",
-      "community": 13,
+      "community": 115,
       "norm_label": "authmodule"
     },
     {
@@ -1239,7 +1239,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "repository_modules_auth_authmodule_uselogin",
-      "community": 13,
+      "community": 115,
       "norm_label": ".uselogin()"
     },
     {
@@ -1339,7 +1339,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "repository_modules_champion_championsmodule_getbyid",
-      "community": 21,
+      "community": 19,
       "norm_label": ".getbyid()"
     },
     {
@@ -1369,7 +1369,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "repository_modules_champion_championsmodule_getchampsummarywinnerbychampid",
-      "community": 21,
+      "community": 19,
       "norm_label": ".getchampsummarywinnerbychampid()"
     },
     {
@@ -1409,7 +1409,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "repository_modules_champion_championsmodule_getchampstatisticsbychampid",
-      "community": 14,
+      "community": 19,
       "norm_label": ".getchampstatisticsbychampid()"
     },
     {
@@ -1419,7 +1419,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_modules_contactusmessagesmodule",
-      "community": 13,
+      "community": 121,
       "norm_label": "contactusmessagesmodule.ts"
     },
     {
@@ -1429,7 +1429,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "repository_modules_contactusmessagesmodule_contactusmessage",
-      "community": 32,
+      "community": 121,
       "norm_label": "contactusmessage"
     },
     {
@@ -1439,7 +1439,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "repository_modules_contactusmessagesmodule_contactusmessagesmodule",
-      "community": 13,
+      "community": 121,
       "norm_label": "contactusmessagesmodule"
     },
     {
@@ -1449,7 +1449,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "repository_modules_contactusmessagesmodule_contactusmessagesmodule_usesendmessage",
-      "community": 13,
+      "community": 121,
       "norm_label": ".usesendmessage()"
     },
     {
@@ -1519,7 +1519,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_modules_followerschampions",
-      "community": 9,
+      "community": 135,
       "norm_label": "followerschampions.ts"
     },
     {
@@ -1529,7 +1529,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "repository_modules_followerschampions_strapifollowerchampionattributes",
-      "community": 9,
+      "community": 135,
       "norm_label": "strapifollowerchampionattributes"
     },
     {
@@ -1539,7 +1539,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "repository_modules_followerschampions_followerschampionsmodule",
-      "community": 9,
+      "community": 115,
       "norm_label": "followerschampionsmodule"
     },
     {
@@ -1569,7 +1569,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "repository_modules_followerschampions_followerschampionsmodule_usesendapplyrequest",
-      "community": 9,
+      "community": 115,
       "norm_label": ".usesendapplyrequest()"
     },
     {
@@ -1579,7 +1579,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "repository_modules_followerschampions_followerschampionsmodule_getagerange",
-      "community": 9,
+      "community": 115,
       "norm_label": ".getagerange()"
     },
     {
@@ -1589,7 +1589,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "repository_modules_followerschampions_followerschampionsmodule_calculateage",
-      "community": 9,
+      "community": 115,
       "norm_label": ".calculateage()"
     },
     {
@@ -1619,7 +1619,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "repository_modules_jobs_jobsmodule",
-      "community": 13,
+      "community": 52,
       "norm_label": "jobsmodule"
     },
     {
@@ -1649,7 +1649,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "repository_modules_jobs_jobsmodule_usesendapplyrequest",
-      "community": 13,
+      "community": 52,
       "norm_label": ".usesendapplyrequest()"
     },
     {
@@ -1659,7 +1659,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_modules_matches",
-      "community": 134,
+      "community": 15,
       "norm_label": "matches.ts"
     },
     {
@@ -1809,7 +1809,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_modules_referees",
-      "community": 13,
+      "community": 118,
       "norm_label": "referees.ts"
     },
     {
@@ -1819,7 +1819,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "repository_modules_referees_refereesmodule",
-      "community": 13,
+      "community": 118,
       "norm_label": "refereesmodule"
     },
     {
@@ -1829,7 +1829,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "repository_modules_referees_refereesmodule_getall",
-      "community": 8,
+      "community": 118,
       "norm_label": ".getall()"
     },
     {
@@ -1839,7 +1839,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "repository_modules_referees_refereesmodule_usesendjoinrequest",
-      "community": 13,
+      "community": 118,
       "norm_label": ".usesendjoinrequest()"
     },
     {
@@ -1849,7 +1849,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "repository_modules_teams",
-      "community": 13,
+      "community": 126,
       "norm_label": "teams.ts"
     },
     {
@@ -1859,7 +1859,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "repository_modules_teams_teamsmodule",
-      "community": 13,
+      "community": 126,
       "norm_label": "teamsmodule"
     },
     {
@@ -1869,7 +1869,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "repository_modules_teams_teamsmodule_getall",
-      "community": 13,
+      "community": 126,
       "norm_label": ".getall()"
     },
     {
@@ -1879,7 +1879,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "repository_modules_teams_teamsmodule_getbyid",
-      "community": 13,
+      "community": 126,
       "norm_label": ".getbyid()"
     },
     {
@@ -1999,7 +1999,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_blog_card",
-      "community": 5,
+      "community": 117,
       "norm_label": "card.vue"
     },
     {
@@ -2029,7 +2029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard",
-      "community": 126,
+      "community": 35,
       "norm_label": "cupbracketcard.vue"
     },
     {
@@ -2039,7 +2039,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_props",
-      "community": 126,
+      "community": 35,
       "norm_label": "props"
     },
     {
@@ -2049,7 +2049,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_isupcoming",
-      "community": 126,
+      "community": 35,
       "norm_label": "isupcoming"
     },
     {
@@ -2059,7 +2059,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_isdone",
-      "community": 126,
+      "community": 35,
       "norm_label": "isdone"
     },
     {
@@ -2069,7 +2069,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_statuslabel",
-      "community": 126,
+      "community": 35,
       "norm_label": "statuslabel"
     },
     {
@@ -2079,7 +2079,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_team1iswinner",
-      "community": 126,
+      "community": 35,
       "norm_label": "team1iswinner"
     },
     {
@@ -2089,7 +2089,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_team2iswinner",
-      "community": 126,
+      "community": 35,
       "norm_label": "team2iswinner"
     },
     {
@@ -2099,7 +2099,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "components_champion_cupbracketcard_dateparts",
-      "community": 126,
+      "community": 35,
       "norm_label": "dateparts"
     },
     {
@@ -2109,7 +2109,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel",
-      "community": 115,
+      "community": 35,
       "norm_label": "cupbracketcarousel.vue"
     },
     {
@@ -2119,7 +2119,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_props",
-      "community": 115,
+      "community": 35,
       "norm_label": "props"
     },
     {
@@ -2129,7 +2129,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_previewbreakpoints",
-      "community": 115,
+      "community": 35,
       "norm_label": "previewbreakpoints"
     },
     {
@@ -2139,7 +2139,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_fullbreakpoints",
-      "community": 115,
+      "community": 35,
       "norm_label": "fullbreakpoints"
     },
     {
@@ -2149,7 +2149,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_activebreakpoints",
-      "community": 115,
+      "community": 35,
       "norm_label": "activebreakpoints"
     },
     {
@@ -2159,7 +2159,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_showaddons",
-      "community": 115,
+      "community": 35,
       "norm_label": "showaddons"
     },
     {
@@ -2169,7 +2169,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_wrapperclass",
-      "community": 115,
+      "community": 35,
       "norm_label": "wrapperclass"
     },
     {
@@ -2179,7 +2179,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_carouselwrapper",
-      "community": 115,
+      "community": 35,
       "norm_label": "carouselwrapper"
     },
     {
@@ -2189,7 +2189,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_isvisiblearr",
-      "community": 115,
+      "community": 35,
       "norm_label": "isvisiblearr"
     },
     {
@@ -2199,7 +2199,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_observersarr",
-      "community": 115,
+      "community": 35,
       "norm_label": "observersarr"
     },
     {
@@ -2209,7 +2209,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_roundlabel",
-      "community": 115,
+      "community": 35,
       "norm_label": "roundlabel()"
     },
     {
@@ -2219,7 +2219,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_disconnectobservers",
-      "community": 115,
+      "community": 35,
       "norm_label": "disconnectobservers()"
     },
     {
@@ -2229,7 +2229,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "components_champion_cupbracketcarousel_setupvisibilitywatchers",
-      "community": 115,
+      "community": 35,
       "norm_label": "setupvisibilitywatchers()"
     },
     {
@@ -2239,7 +2239,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_champion_cupbracketmatchnode",
-      "community": 7,
+      "community": 35,
       "norm_label": "cupbracketmatchnode.vue"
     },
     {
@@ -2309,7 +2309,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree",
-      "community": 7,
+      "community": 35,
       "norm_label": "cupbrackettree.vue"
     },
     {
@@ -2319,7 +2319,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree_props",
-      "community": 7,
+      "community": 35,
       "norm_label": "props"
     },
     {
@@ -2329,7 +2329,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree_nodetypes",
-      "community": 7,
+      "community": 35,
       "norm_label": "nodetypes"
     },
     {
@@ -2339,7 +2339,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree_graph",
-      "community": 7,
+      "community": 35,
       "norm_label": "graph"
     },
     {
@@ -2349,7 +2349,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree_nodes",
-      "community": 7,
+      "community": 35,
       "norm_label": "nodes"
     },
     {
@@ -2359,7 +2359,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "components_champion_cupbrackettree_edges",
-      "community": 7,
+      "community": 35,
       "norm_label": "edges"
     },
     {
@@ -2609,87 +2609,97 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_champion_teamcard",
-      "community": 5,
+      "community": 7,
       "norm_label": "teamcard.vue"
     },
     {
       "label": "props",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L111",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "components_champion_teamcard_props",
-      "community": 5,
+      "community": 7,
       "norm_label": "props"
     },
     {
       "label": "isHovered",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L114",
+      "source_location": "L115",
       "_origin": "ast",
       "id": "components_champion_teamcard_ishovered",
-      "community": 5,
+      "community": 7,
       "norm_label": "ishovered"
     },
     {
       "label": "isExpanded",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L115",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "components_champion_teamcard_isexpanded",
-      "community": 5,
+      "community": 7,
       "norm_label": "isexpanded"
+    },
+    {
+      "label": "imageErrors",
+      "file_type": "code",
+      "source_file": "components/Champion/TeamCard.vue",
+      "source_location": "L117",
+      "_origin": "ast",
+      "id": "components_champion_teamcard_imageerrors",
+      "community": 7,
+      "norm_label": "imageerrors"
     },
     {
       "label": "showMembersPeek",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L117",
+      "source_location": "L119",
       "_origin": "ast",
       "id": "components_champion_teamcard_showmemberspeek",
-      "community": 5,
+      "community": 7,
       "norm_label": "showmemberspeek"
     },
     {
       "label": "playerSlots",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L119",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "components_champion_teamcard_playerslots",
-      "community": 5,
+      "community": 7,
       "norm_label": "playerslots"
     },
     {
       "label": "onMouseLeave()",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L126",
+      "source_location": "L134",
       "_origin": "ast",
       "id": "components_champion_teamcard_onmouseleave",
-      "community": 5,
+      "community": 7,
       "norm_label": "onmouseleave()"
     },
     {
       "label": "expand()",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L130",
+      "source_location": "L138",
       "_origin": "ast",
       "id": "components_champion_teamcard_expand",
-      "community": 5,
+      "community": 7,
       "norm_label": "expand()"
     },
     {
       "label": "collapse()",
       "file_type": "code",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L134",
+      "source_location": "L142",
       "_origin": "ast",
       "id": "components_champion_teamcard_collapse",
-      "community": 5,
+      "community": 7,
       "norm_label": "collapse()"
     },
     {
@@ -4009,7 +4019,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_championships_titlebar",
-      "community": 117,
+      "community": 105,
       "norm_label": "titlebar.vue"
     },
     {
@@ -4019,7 +4029,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "components_championships_titlebar_props",
-      "community": 117,
+      "community": 105,
       "norm_label": "props"
     },
     {
@@ -4029,7 +4039,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "components_championships_titlebar_typeconfig",
-      "community": 117,
+      "community": 105,
       "norm_label": "typeconfig"
     },
     {
@@ -4039,7 +4049,7 @@
       "source_location": "L88",
       "_origin": "ast",
       "id": "components_championships_titlebar_typepagetitle",
-      "community": 117,
+      "community": 105,
       "norm_label": "typepagetitle"
     },
     {
@@ -4049,7 +4059,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "components_championships_titlebar_typehref",
-      "community": 117,
+      "community": 105,
       "norm_label": "typehref"
     },
     {
@@ -4059,7 +4069,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "components_championships_titlebar_typeemblem",
-      "community": 117,
+      "community": 105,
       "norm_label": "typeemblem"
     },
     {
@@ -4069,7 +4079,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "components_championships_titlebar_statuslabel",
-      "community": 117,
+      "community": 105,
       "norm_label": "statuslabel"
     },
     {
@@ -4079,7 +4089,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "components_championships_titlebar_statusclass",
-      "community": 117,
+      "community": 105,
       "norm_label": "statusclass"
     },
     {
@@ -4089,7 +4099,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "components_championships_titlebar_datesource",
-      "community": 117,
+      "community": 105,
       "norm_label": "datesource"
     },
     {
@@ -4099,7 +4109,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "components_championships_titlebar_displaydateiso",
-      "community": 117,
+      "community": 105,
       "norm_label": "displaydateiso"
     },
     {
@@ -4109,7 +4119,7 @@
       "source_location": "L122",
       "_origin": "ast",
       "id": "components_championships_titlebar_displaydate",
-      "community": 117,
+      "community": 105,
       "norm_label": "displaydate"
     },
     {
@@ -4129,7 +4139,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_championships_typecard",
-      "community": 118,
+      "community": 105,
       "norm_label": "typecard.vue"
     },
     {
@@ -4139,7 +4149,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "components_championships_typecard_props",
-      "community": 118,
+      "community": 105,
       "norm_label": "props"
     },
     {
@@ -4149,7 +4159,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "components_championships_typecard_preferredreducedmotion",
-      "community": 118,
+      "community": 105,
       "norm_label": "preferredreducedmotion"
     },
     {
@@ -4159,7 +4169,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "components_championships_typecard_reducemotion",
-      "community": 118,
+      "community": 105,
       "norm_label": "reducemotion"
     },
     {
@@ -4169,7 +4179,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "components_championships_typecard_cardboxref",
-      "community": 118,
+      "community": 105,
       "norm_label": "cardboxref"
     },
     {
@@ -4179,7 +4189,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "components_championships_typecard_shineref",
-      "community": 118,
+      "community": 105,
       "norm_label": "shineref"
     },
     {
@@ -4189,7 +4199,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "components_championships_typecard_titlestyle",
-      "community": 118,
+      "community": 105,
       "norm_label": "titlestyle"
     },
     {
@@ -4199,7 +4209,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "components_championships_typecard_onhoverstart",
-      "community": 118,
+      "community": 105,
       "norm_label": "onhoverstart()"
     },
     {
@@ -4209,7 +4219,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "components_championships_typecard_onhoverend",
-      "community": 118,
+      "community": 105,
       "norm_label": "onhoverend()"
     },
     {
@@ -4229,7 +4239,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_championships_typepage",
-      "community": 125,
+      "community": 105,
       "norm_label": "typepage.vue"
     },
     {
@@ -4239,7 +4249,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "components_championships_typepage_props",
-      "community": 125,
+      "community": 105,
       "norm_label": "props"
     },
     {
@@ -4249,7 +4259,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "components_championships_typepage_champtype",
-      "community": 125,
+      "community": 105,
       "norm_label": "champtype"
     },
     {
@@ -4259,7 +4269,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "components_championships_typepage_api",
-      "community": 125,
+      "community": 105,
       "norm_label": "{ $api }"
     },
     {
@@ -4269,7 +4279,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "components_championships_typepage_champs",
-      "community": 125,
+      "community": 105,
       "norm_label": "champs"
     },
     {
@@ -4279,7 +4289,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "components_championships_typepage_typeconfig",
-      "community": 125,
+      "community": 105,
       "norm_label": "typeconfig"
     },
     {
@@ -4289,7 +4299,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "components_championships_typepage_pagetitle",
-      "community": 125,
+      "community": 105,
       "norm_label": "pagetitle"
     },
     {
@@ -4909,7 +4919,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_home_matchstatssidepanel",
-      "community": 132,
+      "community": 122,
       "norm_label": "matchstatssidepanel.vue"
     },
     {
@@ -4919,7 +4929,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "components_home_matchstatssidepanel_emit",
-      "community": 132,
+      "community": 122,
       "norm_label": "emit"
     },
     {
@@ -4929,7 +4939,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "components_home_matchstatssidepanel_open",
-      "community": 132,
+      "community": 122,
       "norm_label": "open"
     },
     {
@@ -4939,7 +4949,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "components_home_matchstatssidepanel_onselect",
-      "community": 132,
+      "community": 122,
       "norm_label": "onselect()"
     },
     {
@@ -4949,7 +4959,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "components_home_matchstatssidepanel_formatmatchdate",
-      "community": 132,
+      "community": 122,
       "norm_label": "formatmatchdate()"
     },
     {
@@ -5249,7 +5259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard",
-      "community": 124,
+      "community": 104,
       "norm_label": "recenttournamentcard.vue"
     },
     {
@@ -5259,7 +5269,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_props",
-      "community": 124,
+      "community": 104,
       "norm_label": "props"
     },
     {
@@ -5269,7 +5279,7 @@
       "source_location": "L181",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_stats",
-      "community": 124,
+      "community": 104,
       "norm_label": "stats"
     },
     {
@@ -5279,7 +5289,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_wdlstats",
-      "community": 124,
+      "community": 104,
       "norm_label": "wdlstats"
     },
     {
@@ -5289,7 +5299,7 @@
       "source_location": "L189",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_mobilewdlpills",
-      "community": 124,
+      "community": 104,
       "norm_label": "mobilewdlpills"
     },
     {
@@ -5299,7 +5309,7 @@
       "source_location": "L207",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_detailstats",
-      "community": 124,
+      "community": 104,
       "norm_label": "detailstats"
     },
     {
@@ -5309,7 +5319,7 @@
       "source_location": "L213",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_endmonth",
-      "community": 124,
+      "community": 104,
       "norm_label": "endmonth"
     },
     {
@@ -5319,7 +5329,7 @@
       "source_location": "L219",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_endyear",
-      "community": 124,
+      "community": 104,
       "norm_label": "endyear"
     },
     {
@@ -5329,7 +5339,7 @@
       "source_location": "L225",
       "_origin": "ast",
       "id": "components_home_recenttournamentcard_gotochamp",
-      "community": 124,
+      "community": 104,
       "norm_label": "gotochamp()"
     },
     {
@@ -5649,7 +5659,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_match_card",
-      "community": 122,
+      "community": 130,
       "norm_label": "card.vue"
     },
     {
@@ -5659,7 +5669,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "components_match_card_props",
-      "community": 122,
+      "community": 130,
       "norm_label": "props"
     },
     {
@@ -5669,7 +5679,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "components_match_card_handlematchcardclick",
-      "community": 122,
+      "community": 130,
       "norm_label": "handlematchcardclick()"
     },
     {
@@ -5679,7 +5689,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "components_match_card_handleyoutubeclick",
-      "community": 122,
+      "community": 130,
       "norm_label": "handleyoutubeclick()"
     },
     {
@@ -5689,7 +5699,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "components_match_card_ismatchopenforestimations",
-      "community": 122,
+      "community": 130,
       "norm_label": "ismatchopenforestimations"
     },
     {
@@ -6009,7 +6019,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_match_details_state",
-      "community": 15,
+      "community": 35,
       "norm_label": "state.vue"
     },
     {
@@ -6019,7 +6029,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "components_match_details_state_props",
-      "community": 15,
+      "community": 35,
       "norm_label": "props"
     },
     {
@@ -6029,7 +6039,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "components_match_details_state_chipbg",
-      "community": 15,
+      "community": 35,
       "norm_label": "chipbg()"
     },
     {
@@ -6049,7 +6059,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_match_estimation_bestplayer",
-      "community": 5,
+      "community": 124,
       "norm_label": "bestplayer.vue"
     },
     {
@@ -6059,7 +6069,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "components_match_estimation_bestplayer_bestplayerid",
-      "community": 5,
+      "community": 124,
       "norm_label": "bestplayerid"
     },
     {
@@ -6069,7 +6079,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "components_match_estimation_bestplayer_bestplayer",
-      "community": 5,
+      "community": 124,
       "norm_label": "bestplayer"
     },
     {
@@ -6249,7 +6259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_match_estimation_winner",
-      "community": 133,
+      "community": 15,
       "norm_label": "winner.vue"
     },
     {
@@ -6259,7 +6269,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "components_match_estimation_winner_team1score",
-      "community": 133,
+      "community": 15,
       "norm_label": "team1score"
     },
     {
@@ -6269,7 +6279,7 @@
       "source_location": "L45",
       "_origin": "ast",
       "id": "components_match_estimation_winner_team2score",
-      "community": 133,
+      "community": 15,
       "norm_label": "team2score"
     },
     {
@@ -6279,7 +6289,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "components_match_estimation_winner_oninput",
-      "community": 133,
+      "community": 15,
       "norm_label": "oninput()"
     },
     {
@@ -6329,7 +6339,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_match_studiocard",
-      "community": 106,
+      "community": 123,
       "norm_label": "studiocard.vue"
     },
     {
@@ -6339,7 +6349,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "components_match_studiocard_props",
-      "community": 106,
+      "community": 123,
       "norm_label": "props"
     },
     {
@@ -6349,7 +6359,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "components_match_studiocard_handleyoutubeclick",
-      "community": 106,
+      "community": 123,
       "norm_label": "handleyoutubeclick()"
     },
     {
@@ -6359,7 +6369,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_referee_card",
-      "community": 8,
+      "community": 118,
       "norm_label": "card.vue"
     },
     {
@@ -6369,7 +6379,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "components_referee_card_props",
-      "community": 8,
+      "community": 118,
       "norm_label": "props"
     },
     {
@@ -6509,7 +6519,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_team_basicinfo",
-      "community": 5,
+      "community": 117,
       "norm_label": "basicinfo.vue"
     },
     {
@@ -6519,7 +6529,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "components_team_basicinfo_props",
-      "community": 5,
+      "community": 117,
       "norm_label": "props"
     },
     {
@@ -6529,7 +6539,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "components_team_basicinfo_champwintext",
-      "community": 5,
+      "community": 117,
       "norm_label": "champwintext"
     },
     {
@@ -6539,7 +6549,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_team_champ",
-      "community": 5,
+      "community": 131,
       "norm_label": "champ.vue"
     },
     {
@@ -6549,7 +6559,7 @@
       "source_location": "L25",
       "_origin": "ast",
       "id": "components_team_champ_props",
-      "community": 5,
+      "community": 131,
       "norm_label": "props"
     },
     {
@@ -6559,7 +6569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_team_champlist",
-      "community": 5,
+      "community": 131,
       "norm_label": "champlist.vue"
     },
     {
@@ -6569,7 +6579,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "components_team_champlist_props",
-      "community": 5,
+      "community": 131,
       "norm_label": "props"
     },
     {
@@ -6579,7 +6589,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_team_coach",
-      "community": 15,
+      "community": 124,
       "norm_label": "coach.vue"
     },
     {
@@ -6589,7 +6599,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "components_team_lessdetails",
-      "community": 5,
+      "community": 132,
       "norm_label": "lessdetails.vue"
     },
     {
@@ -6599,7 +6609,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "components_team_lessdetails_props",
-      "community": 5,
+      "community": 132,
       "norm_label": "props"
     },
     {
@@ -6609,7 +6619,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "components_team_lessdetails_champwintext",
-      "community": 5,
+      "community": 132,
       "norm_label": "champwintext"
     },
     {
@@ -8999,7 +9009,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_index",
-      "community": 12,
+      "community": 106,
       "norm_label": "index.vue"
     },
     {
@@ -9009,7 +9019,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "pages_championships_id_index_props",
-      "community": 12,
+      "community": 106,
       "norm_label": "props"
     },
     {
@@ -9019,7 +9029,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "pages_championships_id_index_api",
-      "community": 12,
+      "community": 106,
       "norm_label": "{ $api }"
     },
     {
@@ -9029,7 +9039,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "pages_championships_id_index_pending",
-      "community": 12,
+      "community": 106,
       "norm_label": "pending"
     },
     {
@@ -9039,7 +9049,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "pages_championships_id_index_sectionerror",
-      "community": 12,
+      "community": 106,
       "norm_label": "sectionerror"
     },
     {
@@ -9049,7 +9059,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "pages_championships_id_index_champtype",
-      "community": 12,
+      "community": 106,
       "norm_label": "champtype"
     },
     {
@@ -9059,7 +9069,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "pages_championships_id_index_showscorestable",
-      "community": 12,
+      "community": 106,
       "norm_label": "showscorestable"
     },
     {
@@ -9069,7 +9079,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "pages_championships_id_index_scorerows",
-      "community": 12,
+      "community": 106,
       "norm_label": "scorerows"
     },
     {
@@ -9079,7 +9089,7 @@
       "source_location": "L102",
       "_origin": "ast",
       "id": "pages_championships_id_index_logosbyid",
-      "community": 12,
+      "community": 106,
       "norm_label": "logosbyid"
     },
     {
@@ -9089,7 +9099,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "pages_championships_id_index_estimationrecords",
-      "community": 12,
+      "community": 106,
       "norm_label": "estimationrecords"
     },
     {
@@ -9149,7 +9159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_matches",
-      "community": 130,
+      "community": 21,
       "norm_label": "matches.vue"
     },
     {
@@ -9159,7 +9169,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "pages_championships_id_matches_props",
-      "community": 130,
+      "community": 21,
       "norm_label": "props"
     },
     {
@@ -9169,7 +9179,7 @@
       "source_location": "L17",
       "_origin": "ast",
       "id": "pages_championships_id_matches_api",
-      "community": 130,
+      "community": 21,
       "norm_label": "{ $api }"
     },
     {
@@ -9179,7 +9189,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "pages_championships_id_matches_matches",
-      "community": 130,
+      "community": 21,
       "norm_label": "matches"
     },
     {
@@ -9369,7 +9379,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_teams",
-      "community": 131,
+      "community": 21,
       "norm_label": "teams.vue"
     },
     {
@@ -9379,7 +9389,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "pages_championships_id_teams_props",
-      "community": 131,
+      "community": 21,
       "norm_label": "props"
     },
     {
@@ -9389,7 +9399,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "pages_championships_id_teams_api",
-      "community": 131,
+      "community": 21,
       "norm_label": "{ $api }"
     },
     {
@@ -9399,7 +9409,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "pages_championships_id_teams_teams",
-      "community": 131,
+      "community": 21,
       "norm_label": "teams"
     },
     {
@@ -10119,7 +10129,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "types_nuxt_d",
-      "community": 13,
+      "community": 115,
       "norm_label": "nuxt.d.ts"
     },
     {
@@ -10129,7 +10139,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "types_nuxt_d_iapiinstance",
-      "community": 13,
+      "community": 115,
       "norm_label": "iapiinstance"
     },
     {
@@ -10139,7 +10149,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "types_nuxt_d_nuxtapp",
-      "community": 13,
+      "community": 115,
       "norm_label": "nuxtapp"
     },
     {
@@ -10149,7 +10159,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "types_nuxt_d_componentcustomproperties",
-      "community": 13,
+      "community": 115,
       "norm_label": "componentcustomproperties"
     },
     {
@@ -10259,7 +10269,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "utils_championshiptypes_championshiptypeconfig",
-      "community": 118,
+      "community": 105,
       "norm_label": "championshiptypeconfig"
     },
     {
@@ -10369,7 +10379,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_cupbracketlayout",
-      "community": 7,
+      "community": 35,
       "norm_label": "cupbracketlayout.ts"
     },
     {
@@ -10379,7 +10389,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "utils_cupbracketlayout_cupbracketnodedata",
-      "community": 7,
+      "community": 35,
       "norm_label": "cupbracketnodedata"
     },
     {
@@ -10389,7 +10399,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "utils_cupbracketlayout_cuproundlabel",
-      "community": 7,
+      "community": 35,
       "norm_label": "cuproundlabel()"
     },
     {
@@ -10399,7 +10409,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "utils_cupbracketlayout_buildcupbracketgraph",
-      "community": 7,
+      "community": 35,
       "norm_label": "buildcupbracketgraph()"
     },
     {
@@ -10409,7 +10419,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "utils_cupbracketlayout_nodeid",
-      "community": 7,
+      "community": 35,
       "norm_label": "nodeid()"
     },
     {
@@ -10419,7 +10429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_getelapsedtime",
-      "community": 5,
+      "community": 117,
       "norm_label": "getelapsedtime.ts"
     },
     {
@@ -10429,7 +10439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "utils_getelapsedtime_getelapsedtime",
-      "community": 5,
+      "community": 117,
       "norm_label": "getelapsedtime()"
     },
     {
@@ -14821,7 +14831,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L108",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "models_iteam",
@@ -15063,7 +15073,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L108",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "models_iteam_iplayerlessdetails",
@@ -15096,7 +15106,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L108",
+      "source_location": "L109",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "models_iteam_iteam",
@@ -18614,7 +18624,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L134",
+      "source_location": "L142",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_collapse",
@@ -18624,7 +18634,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L130",
+      "source_location": "L138",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_expand",
@@ -18634,7 +18644,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L115",
+      "source_location": "L117",
+      "weight": 1.0,
+      "source": "components_champion_teamcard",
+      "target": "components_champion_teamcard_imageerrors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "components/Champion/TeamCard.vue",
+      "source_location": "L116",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_isexpanded",
@@ -18644,7 +18664,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L114",
+      "source_location": "L115",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_ishovered",
@@ -18654,7 +18674,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L126",
+      "source_location": "L134",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_onmouseleave",
@@ -18664,7 +18684,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L119",
+      "source_location": "L121",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_playerslots",
@@ -18674,7 +18694,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L111",
+      "source_location": "L112",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_props",
@@ -18684,7 +18704,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L117",
+      "source_location": "L119",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "components_champion_teamcard_showmemberspeek",
@@ -18695,7 +18715,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L109",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "utils_championwinnerstats",
@@ -18706,7 +18726,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "components/Champion/TeamCard.vue",
-      "source_location": "L109",
+      "source_location": "L110",
       "weight": 1.0,
       "source": "components_champion_teamcard",
       "target": "utils_championwinnerstats_displaytextvalue",
@@ -26458,5 +26478,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7cb0d86067cf317f0d12141af0dc43472a043409"
+  "built_at_commit": "888e02d86d2317a8ef18cf803c65a110ce8fe8c6"
 }

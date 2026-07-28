@@ -68,7 +68,15 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    preset: "netlify",
     compressPublicAssets: true,
+    prerender: {
+      crawlLinks: false,
+      routes: [],
+    },
+  },
+  routeRules: {
+    "/**": { prerender: false },
   },
   app: {
     head: {
