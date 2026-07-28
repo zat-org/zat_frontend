@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup class="form-control" :name="name" size="xl" :label="label" :hint="hint">
+    <UFormField class="form-control" :name="name" size="xl" :label="label" :hint="hint">
 
         <div :dir="dir" class="flex ">
             <input type="file" hidden ref="fileInput" @change="handleFileSelection" @keypress="">
@@ -17,7 +17,7 @@
                 {{ error ? error : '' }}
             </span>
         </template>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

@@ -1,25 +1,20 @@
 <template>
-  <div dir="rtl" lang="ar" class="flex flex-col min-h-screen bg-white  dark:bg-slate-800">
-    <NuxtLoadingIndicator />
-    <Navbar v-if="!isUnderDevelopment" />
-    <main
-      :class="isUnderDevelopment
-        ? 'grow w-full relative flex flex-col justify-center items-center'
-        : 'p-2 grow w-full relative flex flex-col justify-start items-center'"
-    >
-    <NuxtPage />
-      <UNotifications />
-    </main>
-    <AppFooter v-if="!isUnderDevelopment" />
-  </div>
+  <UApp :locale="ar">
+    <div dir="rtl" lang="ar" class="flex flex-col min-h-screen bg-surface-base">
+      <NuxtLoadingIndicator />
+      <Navbar />
+      <main class="grow w-full relative flex flex-col justify-start items-stretch">
+        <NuxtPage />
+      </main>
+      <AppFooter />
+    </div>
+  </UApp>
 </template>
 
 <script setup lang="ts">
 import 'vue3-carousel/dist/carousel.css'
 import { useUserStore } from '~/stores/useUserStore';
-
-const route = useRoute()
-const isUnderDevelopment = computed(() => route.path === '/under-development')
+import { ar } from '@nuxt/ui/locale'
 
 const { $api } = useNuxtApp();
 

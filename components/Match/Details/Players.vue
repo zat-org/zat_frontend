@@ -1,6 +1,6 @@
 <template>
     <div v-if="match.team1.players?.length > 0 && match.team2.players?.length > 0">
-        <UDivider>لاعبي الفريقين</UDivider>
+        <USeparator>لاعبي الفريقين</USeparator>
         <div class="flex text-gray-500 justify-around  text-sm">
             <div>
                 <div v-for="player, index in match.team1.players" :key="player.id"

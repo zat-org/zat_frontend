@@ -1,97 +1,135 @@
 <template>
-    <div class="flex flex-col ">
-        <UCard v-if="champ" :ui="{ base: 'shadow-xl w-full ', body: { padding: 'p-0' } }">
-            <div class="w-full h-44 flex justify-center items-center dark:bg-white bg-gray-100 rounded-t-lg md:rounded-lg">
-                <object type="image/png" :data="url + champ.league_logo" :aria-label="champ.name"
-                    class="object-center flex justify-center h-40 items-center">
-                    <UIcon name="i-heroicons-trophy" class="text-[75px] text-amber-500" />
-                </object>
-            </div>
-            <div class="p-5 space-y-5 text-center">
-                <h2 class="text-2xl">{{ champ.name }}</h2>
-                <p class="text-md "> {{ champ.description }}</p>
+    <section
+        class="w-full bg-surface-off-base "
+        aria-label="لوحة المتصدرين"
+        dir="rtl"
+    >
+        <FetchDataWrapper
+            class="page-container"
+            :error="sectionError"
+            :pending="pending"
+        >
+            <div
+                v-if="!pending"
+                class="flex flex-col gap-6 lg:flex-row lg:items-stretch"
+            >
+                <ChampionshipsOverviewScoresTable
+                    v-if="showScoresTable"
+                    class="min-w-0 flex-2"
+                    :table="scoreRows"
+                    :logos-by-id="logosById"
+                />
 
-                <div class="flex justify-around">
-                    <div class="p-0 flex items-center">
-                        <UIcon name="i-heroicons-calendar-days-solid" class="text-amber-500 text-[35px] me-3" />
-                        <div class="text-sm">
-                            <p> بداية البطولة</p>
-                            <p>{{ new Date(champ.start_at).toLocaleDateString("ar-eg") }}</p>
-                        </div>
-                    </div>
-                    <div class="p-0 flex items-center">
-                        <UIcon name="i-heroicons-calendar-days-solid" class="text-amber-500 text-[35px] me-3" />
-                        <div class="text-sm">
-                            <p> نهاية البطولة</p>
-                            <p>{{ new Date(champ.end_at).toLocaleDateString("ar-eg") }}</p>
-                        </div>
-                    </div>
-
+                <div
+                    v-else
+                    class="flex min-h-48 min-w-0 flex-2 flex-col items-center justify-center gap-3 rounded-zat-md border border-surface-tone2 bg-surface-raised px-4 py-8 text-center"
+                >
+                    <p class="text-base text-text-caption">
+                        يمكنك متابعة جدول البطولة من الصفحة المخصصة
+                    </p>
+                    <NuxtLink
+                        :to="`/championships/${champ.leagueid}/table`"
+                        class="text-base font-bold text-text-action underline"
+                    >
+                        جدول البطولة
+                    </NuxtLink>
                 </div>
 
-                <div class="stat p-0 flex flex-col justify-center items-center space-y-2">
-                    <template v-if="champ.state === LeagueState.done">
-                        <p class="font-semibold"> الفائز فريق {{ champ.winner_name }}</p>
-                        <div class="flex justify-center items-center">
-                            <Icon name="fluent-emoji:1st-place-medal" size="30" class="mx-3" />
-                            <div class="avatar avatar-contain">
-                                <object type="image/png" :data="url + champ.winner_logo" :aria-label="champ.winner_name!"
-                                    class="object-center w-28 flex justify-center items-center rounded-lg">
-                                    <UIcon name="i-heroicons-user-group" class="text-[75px] text-amber-500" />
-                                </object>
-                            </div>
-                            <Icon name="fluent-emoji:1st-place-medal" size="30" class="mx-3" />
-                        </div>
-                    </template>
-                    <template v-else-if="champ.state === LeagueState.upcoming">
-                        <Icon name="fluent-emoji:fire" size="50" />
-                        <p class="font-semibold">تبدأ قريبا كن متيقظا</p>
-                    </template>
-                    <template v-else-if="champ.state === LeagueState.live">
-                        <Icon name="fluent-emoji:crossed-swords" class="text-4xl" />
-                        <p class="font-semibold">يجري الان وفي انتظار حسم اللقب</p>
-                    </template>
-                </div>
-
+                <ChampionshipsOverviewEstimationsCard
+                    class="w-full shrink-0 lg:max-w-102 lg:flex-1"
+                    :records="estimationRecords"
+                    :champ-id="champ.leagueid"
+                />
             </div>
-        </UCard>
-    </div>
+        </FetchDataWrapper>
+    </section>
 </template>
 
 <script setup lang="ts">
-import LeagueState from "@/Models/ChampState";
-import type { IChamp } from "@/Models/IChamp"
+import ChampType from '@/Models/ChampType'
+import type {
+    HezamTeamSummary,
+    IChamp,
+    LeagueTeamSummary,
+} from '@/Models/IChamp'
 
-const url = useRuntimeConfig().public.apiBaseUrl;
 const props = defineProps({
     champ: {
         required: true,
-        type: Object as PropType<IChamp>
+        type: Object as PropType<IChamp>,
+    },
+})
+
+const { $api } = useNuxtApp()
+const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
+
+const [
+    { data: summaryData, error: summaryError, pending: summaryPending },
+    { data: teamsData, error: teamsError, pending: teamsPending },
+    { data: estimationData, error: estimationError, pending: estimationPending },
+] = await Promise.all([
+    $api.champions.getChampSummaryByChampId(props.champ.leagueid.toString()),
+    $api.champions.getChampTeamsByChampId(props.champ.leagueid.toString()),
+    $api.estimation.getEstimationTableByChampId(props.champ.leagueid),
+])
+
+const pending = computed(
+    () => summaryPending.value || teamsPending.value || estimationPending.value,
+)
+
+const sectionError = computed(() => {
+    if (summaryError.value || teamsError.value || estimationError.value) {
+        return 'تعذر تحميل لوحة المتصدرين برجاء المحاولة لاحقاً.'
     }
-});
+    return null
+})
+
+const champType = computed(
+    () => (summaryData.value?.type ?? props.champ.type) as ChampType,
+)
+
+const showScoresTable = computed(
+    () => champType.value === ChampType.LEAGUE || champType.value === ChampType.HEZAM,
+)
+
+const scoreRows = computed(() => {
+    const table = summaryData.value?.table
+    if (!table || !Array.isArray(table) || table.length === 0) return []
+    if (Array.isArray(table[0])) return [] as Array<LeagueTeamSummary | HezamTeamSummary>
+    return table as Array<LeagueTeamSummary | HezamTeamSummary>
+})
+
+const logosById = computed(() => {
+    const map: Record<number, string> = {}
+    for (const team of teamsData.value?.teams ?? []) {
+        if (team.team_logo) map[team.id] = team.team_logo
+    }
+    return map
+})
+
+const estimationRecords = computed(() => estimationData.value?.data ?? [])
 
 useHead({
     title: props.champ.name,
     meta: [
         {
             name: 'description',
-            content: props.champ.description || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`
+            content: props.champ.description
+                || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`,
         },
         {
             property: 'og:title',
-            content: props.champ.name
+            content: props.champ.name,
         },
         {
             property: 'og:description',
-            content: props.champ.description || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`
+            content: props.champ.description
+                || `تفاصيل بطولة ${props.champ.name}. موعد البداية والنهاية، الفرق المشاركة، والمزيد من المعلومات.`,
         },
         {
             property: 'og:image',
-            content: url + props.champ.league_logo
-        }
-    ]
+            content: mediaBaseUrl + (props.champ.league_logo || props.champ.url || ''),
+        },
+    ],
 })
-
 </script>
-
-<style scoped></style>

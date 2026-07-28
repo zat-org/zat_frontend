@@ -1,6 +1,6 @@
 <template>
     <div v-if="match.referees && match.referees.length > 0">
-        <UDivider>حكام المباراة</UDivider>
+        <USeparator>حكام المباراة</USeparator>
         <div class="text-gray-500 dark:text-slate-300 text-sm text-center mt-3 mb-5">
             <div v-if="match.referees[0]" class="flex justify-center">
                 <div class="w-1/3 flex flex-col justify-center items-center  ">

@@ -23,7 +23,7 @@ interface IApiInstance {
     champions: ChampionsModule,
     matches: MatchesModule,
     auth: AuthModule,
-    estimation: EstimationsModule
+    estimation: EstimationsModule,
 }
 
 declare module '#app' {

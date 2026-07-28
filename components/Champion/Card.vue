@@ -11,7 +11,7 @@
                         </object>
                     </div>
                     <template #content>
-                        <div class="text-white-500 text-[35px] flex justify-center items-center">
+                        <div class="text-white text-[35px] flex justify-center items-center">
                             <template v-if="champion.state === LeagueState.done">
                                 <UIcon name="i-heroicons-check-badge" />
                             </template>

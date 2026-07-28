@@ -6,7 +6,7 @@
             <article v-if="champion">
                 <header>
                     <h1 class="text-center text-2xl my-5 dark:text-slate-50">
-                        استمارة الالتحاق ب{{ champion.attributes.name }}
+                        استمارة الالتحاق ب{{ champion.name }}
                     </h1>
                 </header>
                 <section>
@@ -22,24 +22,24 @@ const route = useRoute();
 
 const { $api } = useNuxtApp();
 const { error, pending, data } = await $api.followersChampions.getById(route.params.id as string);
-const champion = computed(() => data.value?.data);
+const champion = computed(() => data.value)
 useHead({
-    title: champion.value ? `انضم لبطولة ${champion.value.attributes.name}` : 'انضم لبطولات زات للبلوت',
+    title: champion.value ? `انضم لبطولة ${champion.value.name}` : 'انضم لبطولات زات للبلوت',
     meta: computed(() => [
         {
             name: 'description',
-            content: champion.value ? 
-                `التحق ببطولة ${champion.value.attributes.name}. املأ استمارة المشاركة وانضم إلى أقوى بطولات البلوت في المملكة.` :
+            content: champion.value ?
+                `التحق ببطولة ${champion.value.name}. املأ استمارة المشاركة وانضم إلى أقوى بطولات البلوت في المملكة.` :
                 'انضم إلى بطولات زات للبلوت. شارك في أقوى بطولات البلوت في المملكة.'
         },
         {
             property: 'og:title',
-            content: champion.value ? `انضم لبطولة ${champion.value.attributes.name}` : 'انضم لبطولات زات للبلوت'
+            content: champion.value ? `انضم لبطولة ${champion.value.name}` : 'انضم لبطولات زات للبلوت'
         },
         {
             property: 'og:description',
-            content: champion.value ? 
-                `التحق ببطولة ${champion.value.attributes.name}. املأ استمارة المشاركة وانضم إلى أقوى بطولات البلوت في المملكة.` :
+            content: champion.value ?
+                `التحق ببطولة ${champion.value.name}. املأ استمارة المشاركة وانضم إلى أقوى بطولات البلوت في المملكة.` :
                 'انضم إلى بطولات زات للبلوت. شارك في أقوى بطولات البلوت في المملكة.'
         }
     ])

@@ -14,7 +14,7 @@
 <script setup lang="ts">
 const { $api } = useNuxtApp();
 const { data, pending, error } = await $api.followersChampions.getAll();
-const champs = computed(() => data.value?.data);
+const champs = computed(() => data.value ?? [])
 </script>
 
 <style scoped></style>

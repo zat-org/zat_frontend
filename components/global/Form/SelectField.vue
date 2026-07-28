@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup class="form-control" :name="name" size="xl" :label="label" :hint="hint">
+    <UFormField class="form-control" :name="name" size="xl" :label="label" :hint="hint">
         <div :dir="dir">
             <USelectMenu :model-value="modelValue" @update:model-value="updateModelValue" :options="options"
                 :placeholder="placeholder" :icon="icon" />
@@ -9,7 +9,7 @@
                 {{ error ? error : '' }}
             </span>
         </template>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

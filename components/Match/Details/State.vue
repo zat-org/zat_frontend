@@ -1,5 +1,5 @@
 <template>
-    <UDivider> بيانات المباراة </UDivider>
+    <USeparator> بيانات المباراة </USeparator>
     <div class="my-2">
         <p class="text-center  text-gray-400 dark:text-slate-300"> {{ match.leagueName }}</p>
         <p class="text-center  text-amber-500 ">{{ match.tournament }}</p>

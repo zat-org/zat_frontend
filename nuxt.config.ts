@@ -11,25 +11,48 @@ const LogoURL =
   "https://storage.googleapis.com/qydha_bucket/zatbaloot_assets/zat.jpg";
 const WebsiteUrl = "https://zatbaloot.com/";
 
+const strapiUrl = process.env.STRAPI_URL || "http://localhost:1337";
+let strapiHostname = "localhost";
+try {
+  strapiHostname = new URL(strapiUrl).hostname;
+} catch {
+  /* keep default */
+}
+
 export default defineNuxtConfig({
+  css: ['~/assets/css/tailwind.css', '~/assets/css/styles.css'],
   runtimeConfig: {
     public: {
       youtubeApi: process.env.YOUTUBE_API_KEY,
       apiBaseUrl: process.env.STRAPI_URL,
       websiteUrl: WebsiteUrl || "http://localhost:3000",
+      strapi: {
+        url: process.env.STRAPI_URL || "http://localhost:1337",
+      },
     },
   },
   modules: [
+    "@nuxtjs/strapi",
     "@nuxt/ui",
-    "@samk-dev/nuxt-vcalendar",
     "@nuxt/content",
     "@nuxt/image",
     "@vueuse/nuxt",
     "@pinia/nuxt",
-    "@pinia-plugin-persistedstate/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
     "nuxt-swiper",
     "nuxt-schema-org",
+    "motion-v/nuxt",
   ],
+  strapi: {
+    url: process.env.STRAPI_URL || "http://localhost:1337",
+    prefix: "/api",
+    version: "v4",
+    cookie: {
+      path: "/",
+      maxAge: 14 * 24 * 60 * 60,
+      sameSite: "strict",
+    },
+  },
   piniaPersistedstate: {
     cookieOptions: {
       sameSite: "strict",
@@ -77,6 +100,9 @@ export default defineNuxtConfig({
   },
   colorMode: {
     classSuffix: "",
+    preference: "light",
+    fallback: "light",
+    storageKey: "zat-color-mode",
   },
   devtools: {
     enabled: false,
@@ -89,6 +115,28 @@ export default defineNuxtConfig({
     },
   },
   image: {
-    domains: ["storage.googleapis.com"], // allow Google Cloud Storage images
+    domains: ["storage.googleapis.com", "picsum.photos", strapiHostname],
+  },
+  ui:{
+    theme: {
+      colors: [
+        "primary",
+        "secondary",
+        "success",
+        "info",
+        "warning",
+        "error",
+        "neutral",
+        "white", 
+      ],
+    }
+  },
+  icon: {
+    customCollections: [
+      {
+        prefix: 'zat',
+        dir: './assets/icons',
+      },
+    ],
   },
 });

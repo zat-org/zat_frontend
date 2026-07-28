@@ -1,34 +1,52 @@
-import type { $Fetch, FetchOptions } from 'ofetch';
+import type { $Fetch, FetchOptions } from 'ofetch'
+import type { AsyncDataOptions } from '#app'
+
+type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+type RequestBody = object | FormData | null | undefined
 
 class FetchFactory {
-    protected $fetch: $Fetch;
+  protected client: $Fetch
 
-    constructor(fetcher: $Fetch) {
-        this.$fetch = fetcher;
-    }
-    /**
-     * The HTTP client is utilized to control the process of making API requests.
-     * @param method the HTTP method (GET, POST, ...)
-     * @param url the endpoint url
-     * @param data the body data
-     * @param fetchOptions fetch options
-     * @returns 
-     */
-    async call<T>(
-        method: string,
-        url: string,
-        data?: object,
-        fetchOptions?: FetchOptions<'json'>
-    ): Promise<T> {
-        return this.$fetch<T>(
-            url,
-            {
-                method,
-                body: data,
-                ...fetchOptions
-            }
-        )
-    }
+  constructor(client: $Fetch) {
+    this.client = client
+  }
+
+  protected call<T>(
+    method: HttpMethod | string,
+    url: string,
+    data?: RequestBody,
+    fetchOptions?: FetchOptions<'json'>,
+  ): Promise<T> {
+    return this.client<T>(url, {
+      method,
+      body: data ?? undefined,
+      ...fetchOptions,
+    })
+  }
+
+  protected get<T>(url: string, fetchOptions?: FetchOptions<'json'>) {
+    return this.call<T>('GET', url, undefined, fetchOptions)
+  }
+
+  protected post<T>(url: string, data?: RequestBody, fetchOptions?: FetchOptions<'json'>) {
+    return this.call<T>('POST', url, data, fetchOptions)
+  }
+
+  protected put<T>(url: string, data?: RequestBody, fetchOptions?: FetchOptions<'json'>) {
+    return this.call<T>('PUT', url, data, fetchOptions)
+  }
+
+  protected delete<T>(url: string, fetchOptions?: FetchOptions<'json'>) {
+    return this.call<T>('DELETE', url, undefined, fetchOptions)
+  }
+
+  protected asyncData<T>(
+    key: string | (() => string),
+    handler: () => Promise<T>,
+    asyncDataOptions?: AsyncDataOptions<T>,
+  ) {
+    return useAsyncData(key, handler, asyncDataOptions)
+  }
 }
 
-export default FetchFactory;
+export default FetchFactory

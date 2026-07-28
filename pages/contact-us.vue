@@ -13,14 +13,14 @@
             <div class="lg:w-1/2 md:w-2/3 mx-auto">
                 <UForm :schema="schema" :state="state" class="space-y-4" @submit="onSubmit">
                     <div class="flex flex-col items-center">
-                        <UFormGroup name="name" label="الاسم" hint="مطلوب" size="xl">
+                        <UFormField name="name" label="الاسم" hint="مطلوب" size="xl">
                             <UInput v-model="state.name" type="text" icon="i-heroicons-user" placeholder="الاسم" />
-                        </UFormGroup>
+                        </UFormField>
 
-                        <UFormGroup dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب" size="xl">
+                        <UFormField dir="ltr" name="email" label="البريد الالكترونى" hint="مطلوب" size="xl">
                             <UInput v-model="state.email" type="email" icon="i-heroicons-envelope"
                                 placeholder="example@gmail.com" />
-                        </UFormGroup>
+                        </UFormField>
 
                         <FormTextArea v-model="state.message" name="message" label="الرسالة" hint="مطلوب"
                             placeholder="لا تبخل علينا بحديثك ..." />
@@ -29,7 +29,7 @@
                             label="نوع الرسالة" />
                     </div>
                     <div class="flex justify-center items-center">
-                        <UButton type="submit" :loading="pending" block color="amber" icon="i-heroicons-paper-airplane"
+                        <UButton type="submit" :loading="pending" block color="primary" icon="i-heroicons-paper-airplane"
                             class="flex justify-center text-md shadow-md border-0  px-5 w-1/4">
                             ارسال
                         </UButton>

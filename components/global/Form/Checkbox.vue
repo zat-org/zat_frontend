@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup class="" size="xl" :name="name">
+    <UFormField class="" size="xl" :name="name">
         <div :dir="dir">
             <UCheckbox :label="label" :checked="modelValue" @change="updateModelValue" />
         </div>
@@ -8,7 +8,7 @@
                 {{ error ? error : '' }}
             </span>
         </template>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

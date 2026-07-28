@@ -1,5 +1,5 @@
 <template>
-    <UFormGroup :name="name" size="xl" :label="label" :hint="hint">
+    <UFormField :name="name" size="xl" :label="label" :hint="hint">
         <div :dir="dir">
             <UInput class="" :disabled="disabled ?? false" :value="modelValue" @input="updateModelValue" :type="type"
                 :placeholder="placeholder" :icon="icon" />
@@ -9,7 +9,7 @@
                 {{ error ? error : '' }}
             </span>
         </template>
-    </UFormGroup>
+    </UFormField>
 </template>
 
 <script setup lang="ts">

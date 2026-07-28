@@ -1,176 +1,154 @@
 <template>
-    <section v-if="images && images.length > 0" id="players" class="mt-20">
-        <div class="w-full flex justify-center" dir="rtl">
-            <SectionHeader icon="i-heroicons-users" title=" اعضاء زات  " />
-        </div>
-        <div class="py-8 h-80 sm:h-88 md:h-96 overflow-hidden">
-            <ClientOnly>
-                <swiper-container 
-                    class="w-full h-full" 
-                    :loop="true" 
-                    :slides-per-view="1" 
-                    :space-between="30"
-                    :keyboard="{ enabled: true }" 
-                    :mousewheel="true" 
-                    :autoplay-delay="3000"
-                    :autoplay-disable-on-interaction="false"
-                >
-                    <swiper-slide v-for="img in images" :key="img.id" class="flex justify-center items-center">
-                        <div class="player-card group">
-                            <!-- Image Container with fixed aspect ratio -->
-                            <div class="image-container">
+    <section
+        v-if="images.length > 0"
+        id="players"
+        dir="rtl"
+        class="relative overflow-hidden bg-surface-base py-8 sm:py-10"
+        aria-label="اعضاء زات"
+    >
+     
+
+        <div class="page-container relative z-10 flex min-w-0 flex-col items-center gap-8 lg:flex-row lg:items-center lg:gap-6">
+            <!-- Copy + CTAs (visual right in RTL) -->
+            <div class="flex w-full min-w-0 max-w-[644px] flex-col items-center gap-6 text-center lg:max-w-none lg:flex-1">
+                <div class="flex w-full flex-col items-center gap-1">
+                    <p class="text-xl font-bold leading-9 text-text-caption">
+                        ما هي زات؟
+                    </p>
+                    <img
+                        :src="logoSrc"
+                        alt="زات"
+                        class="h-20 w-auto object-contain"
+                        width="83"
+                        height="48"
+                    >
+                    <h2 class="text-xl font-bold leading-9 text-text-body">
+                        أول منصة احترافية للعبة البلوت
+                    </h2>
+                    <p class="max-w-xl text-xl font-normal leading-9 text-text-subtitle">
+                        ننظم سلسلة من بطولات البلوت ونقدم تغطية شاملة للأخبار والتحليلات ومحتوى تطويري للعبة.
+                    </p>
+                </div>
+
+                <div class="flex w-full flex-row items-center justify-center gap-2 sm:gap-4">
+                    <UButton
+                        to="https://www.youtube.com/@zat_baloot"
+                        target="_blank"
+                        color="primary"
+                        size="sm"
+                        class="h-10 min-w-0 flex-1 px-3 text-[clamp(14px,3.5vw,16px)] font-bold sm:h-14 sm:min-w-[200px] sm:flex-none sm:px-4 sm:text-[clamp(16px,1.5vw,20px)]"
+                    >
+                        <span class="flex items-center justify-center gap-1">
+                            <Icon name="zat:youtube" class="size-5 sm:size-6" />
+                            <span>تابعنا على يوتيوب</span>
+                        </span>
+                    </UButton>
+                    <UButton
+                        to="https://twitch.tv/zat_baloot"
+                        target="_blank"
+                        color="neutral"
+                        size="sm"
+                        class="h-10 min-w-0 flex-1 px-3 text-[clamp(14px,3.5vw,16px)] font-bold sm:h-14 sm:min-w-[200px] sm:flex-none sm:px-4 sm:text-[clamp(16px,1.5vw,20px)]"
+                    >
+                        <span class="flex items-center justify-center gap-1">
+                            <Icon name="zat:twitch" class="size-5 sm:size-6" />
+                            <span>تابعنا على تويتش</span>
+                        </span>
+                    </UButton>
+                </div>
+            </div>
+
+            <!-- Members carousel (visual left in RTL) -->
+            <div class="relative flex w-full min-w-0 max-w-[500px] flex-col items-center py-4 sm:max-w-[500px] lg:max-w-none lg:w-[clamp(280px,42%,550px)] lg:flex-none">
+                <div class="mb-2 flex w-full items-center justify-between gap-4 px-1">
+                    <p class="font-numbers text-xl text-text-subtitle">
+                        {{ activeIndex + 1 }}/{{ images.length }}
+                    </p>
+                    <div class="inline-flex h-14 items-center gap-1 rounded-zat-full px-4 text-xl font-bold text-text-body">
+                        <UIcon name="i-heroicons-arrow-long-left" class="size-6" />
+                        <span>اعضاء زات</span>
+                    </div>
+                </div>
+
+                <div class="relative h-[440px] w-full overflow-hidden sm:h-[500px] lg:h-[clamp(380px,46vw,520px)] xl:h-[580px]">
+                    <!-- Red circle backdrop -->
+                    <div
+                        class="absolute inset-e-[5%] top-[15%] z-0 w-[66%] aspect-square rounded-full bg-[#F14950]"
+                        aria-hidden="true"
+                    />
+
+                    <ClientOnly>
+                        <swiper-container
+                            class="absolute inset-s-0 h-full w-full"
+                            :loop="images.length > 1"
+                            :slides-per-view="1"
+                            :autoplay-delay="4000"
+                            :autoplay-disable-on-interaction="true"
+                            @swiperslidechange="onSlideChange"
+                        >
+                            <swiper-slide
+                                v-for="img in images"
+                                :key="img.id"
+                                class="relative h-full"
+                            >
+                                <div class="relative flex h-full w-full items-end justify-start ">
+                                    <img
+                                        :src="img.url"
+                                        :alt="img.name"
+                                        class="relative z-10 h-full aspect-4/5  w-full object-cover object-top  grayscale "
+                                        loading="lazy"
+
+                                    >
+                                    <div
+                                        class="absolute z-20 w-[40%]  px-3 py-1 top-[25%] inset-e-[0%]  "
+                                    >
+                                        <p class="w-full text-[clamp(1.5rem,3.5vw,3rem)] text-center leading-tight text-text-body font-zaatar">
+                                            <span
+                                                v-for="(word, i) in img.name.trim().split(/\s+/)"
+                                                :key="`${img.id}-${i}`"
+                                                class="block w-full"
+                                            >
+                                                {{ word }}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </swiper-slide>
+                        </swiper-container>
+                        <template #fallback>
+                            <div class="relative flex h-full w-full items-end justify-center">
                                 <img
-                                    :src="img.url" 
-                                    :alt="img.name"
-                                    class="player-image" 
-                                    loading="lazy"
-                                    format="webp"
-                                    quality="80"
+                                    v-if="images[0]"
+                                    :src="images[0].url"
+                                    :alt="images[0].name"
+                                    class="relative z-10 h-[92%] aspect-[4/5] w-auto max-w-[90%] object-cover object-bottom grayscale"
                                     width="400"
                                     height="500"
-                                    sizes="sm:300px md:400px lg:500px"
-                                    densities="1x 2x"
-                                  
-                                />
-                                <!-- Strong overlay for text visibility -->
-                                <div class="image-overlay"></div>
-                                
-                                <!-- Player Name positioned over image -->
-                                <div class="name-container">
-                                    <h3 class="player-name">{{ img.name }}</h3>
-                                </div>
+                                >
                             </div>
-                        </div>
-                    </swiper-slide>
-                </swiper-container>
-            </ClientOnly>
+                        </template>
+                    </ClientOnly>
+                </div>
+            </div>
         </div>
-    </section> 
+    </section>
 </template>
 
 <script setup lang="ts">
-// const url = useRuntimeConfig().public.apiBaseUrl
-const url ='https://sam-baloot-admin.online'
+const colorMode = useColorMode()
+const logoSrc = computed(() =>
+    colorMode.value === 'dark' ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg',
+)
 
-const { $api } = useNuxtApp()
-const { data, error, pending } = await $api.websiteAssets.getPlayersImages();
+const { data } = await usePlayerImages()
+const images = computed(() => data.value ?? [])
 
-const images = computed(() => data.value?.data.map((ele: any) => {
-  // console.log(ele.attributes.playerImage.data.attributes.url)
-    return {
-        id: ele.id,
-        name: ele.attributes.playerName,
-        url: url + ele.attributes.playerImage.data.attributes.url
+const activeIndex = ref(0)
+
+function onSlideChange(event: CustomEvent) {
+    const swiper = (event as CustomEvent & { detail?: Array<{ realIndex?: number }> }).detail?.[0]
+    if (swiper && typeof swiper.realIndex === 'number') {
+        activeIndex.value = swiper.realIndex
     }
-}))
-
-// Handle image loading errors
-const handleImageError = (event: Event) => {
-    const img = event.target as HTMLImageElement;
-    // You can set a fallback image here
-    console.warn('Failed to load player image:', img.src);
 }
 </script>
-
-<style scoped>
-.player-card {
-  @apply relative bg-white dark:bg-gray-800 rounded-2xl shadow-lg  transition-all duration-300 overflow-hidden;
-  @apply w-56 sm:w-64 md:w-72 h-64 sm:h-72 md:h-80;
-  @apply border border-gray-200 dark:border-gray-700;
-  
-}
-
-.image-container {
-  @apply relative w-full h-full overflow-hidden rounded-2xl;
-  @apply bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-700 dark:to-gray-800;
-}
-
-.player-image {
-  @apply w-full h-full object-cover object-center;
-  @apply transition-transform duration-500;
-}
-
-.image-overlay {
-  @apply absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent;
-  @apply opacity-80  transition-opacity duration-300;
-}
-
-.name-container {
-  @apply absolute bottom-0 left-0 right-0 z-10;
-  @apply bg-gradient-to-t from-black/95 via-black/80 to-transparent;
-  @apply p-4 sm:p-5 md:p-6;
-  @apply min-h-[80px] flex items-center justify-center;
-}
-
-.player-name {
-  @apply text-white font-bold text-lg sm:text-xl md:text-2xl;
-  @apply text-center leading-tight;
-  @apply drop-shadow-2xl;
-  @apply group-hover:text-amber-300 transition-colors duration-300;
-  /* Enhanced text shadow for better visibility */
-  /* RTL text alignment for Arabic names */
-  direction: rtl;
-  text-align: center;
-  /* Ensure text is always on top */
-  position: relative;
-  z-index: 20;
-}
-
-/* Responsive adjustments */
-@media (max-width: 640px) {
-  .player-card {
-    @apply w-48 h-56;
-  }
-  
-  .player-name {
-    @apply text-sm font-extrabold;
-    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.9), 0 0 12px rgba(0, 0, 0, 0.8);
-  }
-  
-  .name-container {
-    @apply p-2 min-h-[50px];
-  }
-  
-  .image-overlay {
-    @apply opacity-85;
-  }
-}
-
-/* Dark mode specific adjustments */
-@media (prefers-color-scheme: dark) {
-  .player-card {
-    @apply bg-gray-900 border-gray-600;
-  }
-  
-  .image-container {
-    @apply from-gray-800 to-gray-900;
-  }
-}
-
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-  .player-name {
-    @apply text-white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  }
-  
-  .image-overlay {
-    @apply opacity-80;
-  }
-}
-
-/* Animation for loading states */
-.player-image[src=""] {
-  @apply animate-pulse bg-gray-300 dark:bg-gray-600;
-}
-
-/* Focus states for accessibility */
-.player-card:focus-within {
-  @apply ring-4 ring-amber-500 ring-opacity-50 outline-none;
-}
-
-/* Smooth transitions for theme switching */
-* {
-  @apply transition-colors duration-200;
-}
-</style>

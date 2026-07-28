@@ -1,9 +1,153 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities; 
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "@nuxt/ui";
 
+@source "../../app.config.ts";
 
+@font-face {
+    font-family: 'Cascadia Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.2.1/files/cascadia-mono-latin-400-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Cascadia Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/cascadia-mono@5.2.1/files/cascadia-mono-latin-700-normal.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Zaatar';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('../fonts/zaatar-regular.otf') format('opentype');
+}
+
+/* Runtime theme tokens — updated by .dark / .light from @nuxtjs/color-mode */
+:root,
+.light {
+    --zat-surface-base: #f8f8f6;
+    --zat-surface-primary: #131111;
+    --zat-surface-secondary: #231f1f;
+    --zat-surface-raised: #ffffff;
+    --zat-surface-overlay: #f0f0f0;
+    --zat-surface-off-base: #f0eeea;
+    --zat-surface-tone: #f0f0f0;
+    --zat-surface-tone2: #b9b9b9;
+    --zat-nav-bar: #131111;
+
+    --zat-text-heading: #080707;
+    --zat-text-body: #231f1f;
+    --zat-text-subtitle: #5c5a5a;
+    --zat-text-caption: #737171;
+    --zat-text-action: #ed1c24;
+    --zat-text-on-action: #ffffff;
+
+    --zat-shadow-zat: 0 4px 32px rgba(22, 19, 19, 0.25);
+    --zat-shadow-zat-sm: 0 2px 16px rgba(22, 19, 19, 0.15);
+
+    /* Must contrast with surface-base — light was #F8F8F6 on #f8f8f6 (invisible) */
+    --zat-poker-pattern-color: #231f1f;
+    --zat-poker-pattern-opacity: 0.08;
+
+    /* Stats cards decorative SVG fills (Figma Content-Surface) */
+    --zat-stats-decor: #FBD2D3;
+    --zat-surface-error: #5F0B0E;
+    --zat-surface-warning: #fef0d7;
+}
+
+.dark {
+    --zat-surface-base: #131111;
+    --zat-surface-primary: #0a0909;
+    --zat-surface-secondary: #1a1717;
+    --zat-surface-raised: #231f1f;
+    --zat-surface-overlay: #2e2a2a;
+    --zat-surface-off-base: #1a1717;
+    --zat-surface-tone: #3a3636;
+    --zat-surface-tone2: #b9b9b9;
+    --zat-nav-bar: #131111;
+
+    --zat-text-heading: #f8f8f6;
+    --zat-text-body: #f0f0f0;
+    --zat-text-subtitle: #a8a6a6;
+    --zat-text-caption: #8a8888;
+    --zat-text-action: #ed1c24;
+    --zat-text-on-action: #ffffff;
+
+    --zat-shadow-zat: 0 4px 32px rgba(0, 0, 0, 0.45);
+    --zat-shadow-zat-sm: 0 2px 16px rgba(0, 0, 0, 0.35);
+
+    --zat-poker-pattern-color: #f0f0f0;
+    --zat-poker-pattern-opacity: 0.12;
+
+    /* Stats cards decorative SVG fills */
+    --zat-stats-decor: #5F0B0E;
+    --zat-surface-error: #5F0B0E;
+    --zat-surface-warning: #3d2a14;
+}
+
+@theme {
+    /* Brand primary — Figma action-2 */
+    --color-zat-50: #fef2f2;
+    --color-zat-100: #fee2e2;
+    --color-zat-200: #fecaca;
+    --color-zat-300: #fca5a5;
+    --color-zat-400: #f87171;
+    --color-zat-500: #ed1c24;
+    --color-zat-600: #d41920;
+    --color-zat-700: #b9151c;
+    --color-zat-800: #9b1218;
+    --color-zat-900: #7d0f14;
+    --color-zat-950: #5c0b0f;
+
+    /* Single white — restores bg-white / text-white utilities */
+    --color-white: #ffffff;
+
+    /* Typography */
+    --font-sans: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+    --font-numbers: 'Cascadia Mono', ui-monospace, monospace;
+    --font-mono: var(--font-numbers);
+    --font-zaatar: 'Zaatar', 'Cairo', 'Noto Kufi Arabic', sans-serif;
+
+    /* Layout */
+    --spacing-page: 5rem;
+    --ui-header-height: 5rem;
+    --radius-zat-sm: 0.5rem;
+    --radius-zat-md: 1rem;
+    --radius-zat-lg: 1.5rem;
+    --radius-zat-full: 1000px;
+}
+
+/* Map runtime tokens to Tailwind utilities (reacts instantly on .dark toggle) */
+@theme inline {
+    --color-surface-base: var(--zat-surface-base);
+    --color-surface-primary: var(--zat-surface-primary);
+    --color-surface-secondary: var(--zat-surface-secondary);
+    --color-surface-raised: var(--zat-surface-raised);
+    --color-surface-overlay: var(--zat-surface-overlay);
+    --color-surface-off-base: var(--zat-surface-off-base);
+    --color-surface-tone: var(--zat-surface-tone);
+    --color-surface-tone2: var(--zat-surface-tone2);
+    --color-surface-error: var(--zat-surface-error);
+    --color-surface-warning: var(--zat-surface-warning);
+    --color-stats-decor: var(--zat-stats-decor);
+    --color-nav-bar: var(--zat-nav-bar);
+
+    --color-text-heading: var(--zat-text-heading);
+    --color-text-body: var(--zat-text-body);
+    --color-text-subtitle: var(--zat-text-subtitle);
+    --color-text-caption: var(--zat-text-caption);
+    --color-text-action: var(--zat-text-action);
+    --color-text-on-action: var(--zat-text-on-action);
+
+    --shadow-zat: var(--zat-shadow-zat);
+    --shadow-zat-sm: var(--zat-shadow-zat-sm);
+}
 
 @layer base {
 
@@ -28,7 +172,25 @@
         background: #555;
     }
     html {
-        font-family: 'Noto Kufi Arabic', sans-serif;
+        font-family: var(--font-sans);
+        color: var(--zat-text-body);
+        background-color: var(--zat-surface-base);
+    }
+
+    /* Keep brand primary identical in light and dark (Nuxt UI defaults to -400 in dark;
+       if that shade alias is missing, bg-primary becomes transparent) */
+    :root,
+    .light,
+    .dark {
+        --ui-primary: var(--ui-color-primary-500);
+    }
+
+    .dark ::-webkit-scrollbar-thumb {
+        background: #555;
+    }
+
+    .dark ::-webkit-scrollbar-thumb:hover {
+        background: #777;
     }
 
     
@@ -190,7 +352,102 @@
 }
 
 @layer components {
-   
+    /* Section-scoped poker pattern — add `bg-poker-pattern` on any section wrapper */
+    .bg-poker-pattern {
+        position: relative;
+        isolation: isolate;
+        background-color: var(--zat-surface-base);
+    }
+
+    .bg-poker-pattern::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        opacity: var(--zat-poker-pattern-opacity, 0.1);
+        background-color: var(--zat-poker-pattern-color);
+        mask-image: url('../images/bgpoker.svg');
+        mask-repeat: repeat;
+        mask-size: auto;
+        -webkit-mask-image: url('../images/bgpoker.svg');
+        -webkit-mask-repeat: repeat;
+        -webkit-mask-size: auto;
+    }
+
+    .bg-poker-pattern > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    .page-container {
+        @apply w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[var(--spacing-page)];
+    }
+
+    .section-title {
+        @apply text-text-heading font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight;
+    }
+
+    .section-link {
+        @apply text-text-action! font-bold text-lg flex items-center gap-1 hover:opacity-80 transition-opacity ;
+    }
+
+    .zat-card {
+        @apply bg-surface-raised border-2 border-surface-tone rounded-zat-md shadow-zat
+               transition-colors duration-300;
+    }
+
+    .dark .zat-card {
+        @apply shadow-none ring-1 ring-surface-tone;
+    }
+
+    .nav-link {
+        @apply flex items-center gap-1 h-14 px-4 py-2 rounded-zat-sm font-bold text-xl leading-9 text-text-on-action
+               hover:bg-white/10 transition-colors whitespace-nowrap;
+    }
+
+    .nav-link-active {
+        @apply bg-white/15;
+    }
+
+    .nav-dropdown-panel {
+        @apply absolute top-full inset-x-0 z-50 bg-white border border-[#f0f0f0]
+               shadow-zat py-6 px-[var(--spacing-page)];
+    }
+
+    /* Force solid white navbar dropdown in dark mode */
+    .dark .nav-dropdown-viewport-wrapper,
+    .dark .nav-dropdown-viewport,
+    .dark .nav-dropdown-viewport-content,
+    .dark .nav-dropdown-content {
+        background-color: #ffffff !important;
+    }
+
+    .nav-dropdown-title {
+        @apply font-bold text-2xl leading-[48px] text-right mb-2.5 pb-2.5 border-b border-[#f0f0f0]
+               text-[#5c5a5a] dark:text-[#5c5a5a];
+    }
+
+    .nav-dropdown-rows {
+        @apply flex flex-col ;
+    }
+
+    .nav-dropdown-row {
+        @apply flex flex-wrap items-center justify-start gap-x-4 ;
+    }
+
+    .nav-dropdown-link {
+        @apply inline-flex h-14 items-center font-bold text-xl leading-9
+               text-[#231f1f] dark:text-[#231f1f]
+               py-2 px-4 rounded-zat-sm transition-colors whitespace-nowrap
+               hover:bg-[#f0f0f0] dark:hover:bg-[#f0f0f0] hover:text-text-action;
+    }
+
+    .theme-toggle-btn {
+        @apply flex items-center justify-center size-12 rounded-zat-sm bg-white text-surface-primary
+               hover:bg-white/90 transition-colors shrink-0 ring-0;
+    }
+
     .input{
         @apply bg-slate-200  dark:placeholder:text-slate-500 w-full  text-slate-900 dark:text-slate-50 dark:bg-slate-600;
     }

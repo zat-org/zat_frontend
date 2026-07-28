@@ -1,30 +1,29 @@
 interface IFollowerChampion {
-    id: number,
-    attributes: {
-        name: string,
-        descriptions: string,
-        IsApplyOpen: boolean,
-        Commitments: string,
-        createdAt: Date,
-        updatedAt: Date,
-        publishedAt: Date
-    }
-}
-interface IFollowerChampionApplyRequest {
-    teamName: string,
-    email: string,
-    fpPhone: string,
-    spPhone: string,
-    fpName: string,
-    fpCity: string,
-    fpBirthDate: string,
-    fpExperience: number,
-    spName: string,
-    spCity: string,
-    spBirthDate: string,
-    spExperience: number,
-    IsPlayedBefore: string,
-    approveCommitments: boolean,
+  id: number
+  name: string
+  descriptions: string
+  IsApplyOpen: boolean
+  Commitments: string
+  createdAt: Date
+  updatedAt: Date
+  publishedAt: Date
 }
 
-export type { IFollowerChampion, IFollowerChampionApplyRequest }; 
+interface IFollowerChampionApplyRequest {
+  teamName: string
+  email: string
+  fpPhone: string
+  spPhone: string
+  fpName: string
+  fpCity: string
+  fpBirthDate: string
+  fpExperience: number
+  spName: string
+  spCity: string
+  spBirthDate: string
+  spExperience: number
+  IsPlayedBefore: string
+  approveCommitments: boolean
+}
+
+export type { IFollowerChampion, IFollowerChampionApplyRequest }

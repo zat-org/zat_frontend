@@ -13,7 +13,7 @@ export const useUserStore = defineStore('user', () => {
         if (isAuthenticated.value && jwtToken.value) {
             const { $api } = useNuxtApp();
             const { fetchAuthUserData } = $api.auth.useLogin();
-            let res = await fetchAuthUserData(jwtToken.value);
+            let res = await fetchAuthUserData();
             console.log(res);
             if (res) {
                 user.value = res
@@ -38,7 +38,5 @@ export const useUserStore = defineStore('user', () => {
     }
     return { user, jwtToken, logoutUser, loginUser, isAuthenticated, refetchUser }
 }, {
-    persist: {
-        storage: persistedState.localStorage,
-    },
+    persist: true,
 })

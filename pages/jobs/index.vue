@@ -30,7 +30,7 @@
             </UButton>
         </div>
     </FetchDataWrapper>
-    <UModal v-model="isFormOpen">
+    <UModal v-model:open="isFormOpen">
         <JobApplyForm :jobId="jobId" @cancel="() => { isFormOpen = false; jobId = null }" @done="router.push('/')" />
     </UModal>
 </template>
@@ -45,8 +45,8 @@ const pgSize = 10;
 const pgNumStr = route.query.pageNum as string;
 const pageNumber = ref<number>((pgNumStr && !isNaN(parseInt(pgNumStr))) ? parseInt(pgNumStr) : 1);
 const { data, pending, error } = await $api.jobs.getAll(pageNumber, pgSize, { watch: [pageNumber] });
-const jobs = computed(() => data.value?.data)
-const totalJobsCount = computed(() => data.value ? data.value.meta.pagination.total : 1)
+const jobs = computed(() => data.value?.jobs ?? [])
+const totalJobsCount = computed(() => data.value?.pagination.total ?? 1)
 const isFormOpen = ref(false)
 const jobId = ref<number | null>(null);
 useHead({

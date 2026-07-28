@@ -1,27 +1,32 @@
 <template>
-    <div class="absolute w-full h-full flex flex-col justify-around right-0.25 z-[-1]">
-        <div class="border dark:border-zinc-200 border-slate-700  rounded-l-md border-r-0 relative" :class="{
-            'h-[15%]': levelIndex + 1 === 1,
-            'h-[25%]': levelIndex + 1 === 2,
-            'h-[50%]': levelIndex + 1 === 3
-        }" v-for="x in Array.from({ length: levelsLength / 2 }, (_, i) => i + 1)">
-            <hr class="absolute w-32 top-1/2 left-0 -translate-x-full border-slate-700 dark:border-zinc-200 "
-                :class="{ '-translate-y-full': x % 2 === 0 }">
+    <div class="absolute inset-y-0 inset-e-0 z-0 flex w-full flex-col justify-around ps-1">
+        <div
+            v-for="x in pairCount"
+            :key="x"
+            class="relative rounded-s-md  border-4 border-s-0   border-surface-tone2 bg-red-500"
+            :class="heightClass"
+        >
+        {{ x }}
+            <hr
+                class="absolute inset-e-0 top-1/2 w-16 -translate-x-full border-surface-tone2"
+                :class="{ '-translate-y-full': x % 2 === 0 }"
+            >
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-defineProps({
-    levelIndex: {
-        required: true,
-        type: Number
-    },
-    levelsLength: {
-        required: true,
-        type: Number
-    },
-});
-</script>
+const props = defineProps<{
+    levelIndex: number
+    levelsLength: number
+}>()
 
-<style scoped></style>
+const pairCount = computed(() => Math.max(1, Math.floor(props.levelsLength / 2)))
+
+const heightClass = computed(() => {
+    const round = props.levelIndex + 1
+    if (round === 1) return 'h-[15%]'
+    if (round === 2) return 'h-[25%]'
+    return 'h-[50%]'
+})
+</script>

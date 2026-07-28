@@ -1,5 +1,5 @@
 <template>
-    <UModal v-model="isOpen">
+    <UModal v-model:open="isOpen">
         <RefereeJoinRequestForm @cancel="isOpen = false" />
     </UModal>
     <FetchDataWrapper class="mx-auto w-full lg:w-5/6 py-10" :error="error ? 'تعذر تحميل الحكام' : null"

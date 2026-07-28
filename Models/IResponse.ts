@@ -12,4 +12,4 @@ interface IMeta {
     pagination: IPagination
 }
 
-export type { IResponse };
+export type { IResponse, IPagination, IMeta }

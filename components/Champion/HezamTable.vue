@@ -1,61 +1,128 @@
 <template>
-    <table class="shadow-lg text-center w-full table-auto border-separate border-spacing-0">
-        <thead>
-            <tr class="bg-amber-500 text-slate-50 text-sm  md:text-lg h-12">
-                <th class="px-1 w-2/12 md:w-6/12 text-start ps-6">
-                    الفريق
-                </th>
-                <th class="px-1 w-1/12 md:w-1/12">
-                    لعب
-                </th>
-                <th class="px-1 w-1/12 md:w-1/12">
-                    فاز
-                </th>
-                <th class="px-1 w-1/12 md:w-1/12">
-                    فوز متتالى
-                </th>
-                <th class="px-1 w-1/12 md:w-1/12">
-                    خسر
-                </th>
-                <th class="px-1 w-1/12 md:w-1/12">
-                    أبناط
-                </th>
+    <article
+        class="flex min-h-0 w-full flex-col overflow-hidden rounded-zat-md border border-surface-tone2 bg-surface-raised"
+        aria-label="جدول الترتيب"
+        dir="rtl"
+    >
+        <header
+            class="flex h-17 shrink-0 items-center justify-between gap-6 bg-[#343232] px-4 text-base font-bold leading-7 text-white"
+        >
+            <div class="flex min-w-0 flex-1 items-center justify-start gap-6">
+                <span class="w-9 shrink-0 text-center">مركز</span>
+                <span class="min-w-14 shrink-0 text-end">الفريق</span>
+            </div>
+            <div class="flex items-center gap-3 sm:gap-6">
+                <span class="w-12 shrink-0 text-center">لعب</span>
+                <span class="w-12 shrink-0 text-center">فاز</span>
+                <span class="hidden w-20 shrink-0 text-center sm:block">فوز متتالى</span>
+                <span class="w-12 shrink-0 text-center">خسر</span>
+                <span class="w-16 shrink-0 text-center">ابناط</span>
+            </div>
+        </header>
 
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for=" teamSummary, index  in  table " :key="teamSummary.id"
-                class="h-10 even:bg-slate-100 even:dark:bg-slate-500 odd:bg-slate-200 odd:dark:bg-slate-600">
-                <td class="px-1 text-start relative">
-                    <div
-                        class="h-[100%] w-5 bg-transparent absolute top-0 right-0 flex justify-center items-center text-amber-500">
-                        <span class="">{{ index + 1 }}</span>
+        <div v-if="rows.length" class="flex flex-col gap-2 px-4 py-2">
+            <div
+                v-for="(row, index) in rows"
+                :key="row.id"
+                class="flex items-center justify-between gap-4 rounded-zat-sm px-1 py-2 sm:gap-6"
+                :class="index % 2 === 0 ? 'bg-[#F8F8F6]' : 'bg-surface-off-base'"
+            >
+                <div class="flex min-w-0 flex-1 items-center justify-start gap-4 sm:gap-6">
+                    <span class="w-9 shrink-0 text-center font-numbers text-base leading-7 text-text-body">
+                        {{ index + 1 }}
+                    </span>
+                    <div class="flex min-w-0 flex-1 items-center justify-start gap-2">
+                        <div
+                            class="flex size-7 shrink-0 items-center justify-center overflow-hidden rounded-zat-full bg-surface-off-base"
+                        >
+                            <Image
+                                v-if="logoFor(row.id)"
+                                :src="logoFor(row.id)"
+                                :alt="displayTextValue(row.name)"
+                                icon="i-heroicons-user-group"
+                                class="size-7 object-contain"
+                            />
+                            <UIcon
+                                v-else
+                                name="i-heroicons-user-group"
+                                class="size-4 text-text-caption"
+                            />
+                        </div>
+                        <p class="truncate text-base font-semibold leading-7 text-text-body">
+                            {{ displayTextValue(row.name) }}
+                        </p>
                     </div>
-                    <span class="font-semibold text-blue-900 dark:text-slate-50 pl-6 pr-0">
-                        {{ teamSummary.name }}</span>
-                </td>
-                <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.play }}</td>
-                <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.win }}</td>
-                <td class="px-1 font-bold text-blue-900 dark:text-slate-50">
-                    {{ teamSummary.consecutiveWins }}
-                </td>
+                </div>
 
-                <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.lost }}</td>
-                <td class="px-1 text-gray-700 dark:text-slate-300">{{ teamSummary.abnat }}</td>
+                <div class="flex items-center gap-3 sm:gap-6">
+                    <span
+                        class="flex w-12 shrink-0 items-center justify-center rounded-zat-sm bg-[rgba(252,196,93,0.25)] px-2 py-1 font-numbers text-base leading-7 text-text-body"
+                    >
+                        {{ displayStatValue(row.play) }}
+                    </span>
+                    <span
+                        class="flex w-12 shrink-0 items-center justify-center rounded-zat-sm bg-[rgba(252,196,93,0.25)] px-2 py-1 font-numbers text-base leading-7 text-text-body"
+                    >
+                        {{ displayStatValue(row.win) }}
+                    </span>
+                    <span
+                        class="hidden w-20 shrink-0 items-center justify-center rounded-zat-sm bg-[rgba(252,196,93,0.25)] px-2 py-1 font-numbers text-base font-bold leading-7 text-text-body sm:flex"
+                    >
+                        {{ displayStatValue(row.consecutiveWins) }}
+                    </span>
+                    <span
+                        class="flex w-12 shrink-0 items-center justify-center rounded-zat-sm bg-[rgba(252,196,93,0.25)] px-2 py-1 font-numbers text-base leading-7 text-text-body"
+                    >
+                        {{ displayStatValue(row.lost) }}
+                    </span>
+                    <span
+                        class="flex w-16 shrink-0 items-center justify-center rounded-zat-sm bg-[rgba(252,196,93,0.25)] px-2 py-1 font-numbers text-base leading-7 text-text-body"
+                    >
+                        {{ displayAbnatValue(parseAbnat(row.abnat)) }}
+                    </span>
+                </div>
+            </div>
+        </div>
 
-            </tr>
-        </tbody>
-    </table>
+        <div
+            v-else
+            class="flex min-h-40 items-center justify-center px-4 py-8 text-base text-text-caption"
+        >
+            لا توجد نتائج حالياً
+        </div>
+    </article>
 </template>
 
 <script setup lang="ts">
-import type { HezamTeamSummary } from "@/Models/IChamp"
-defineProps({
-    table: {
-        required: true,
-        type: Object as PropType<HezamTeamSummary[]>
-    }
-});
-</script>
+import type { HezamTeamSummary } from '@/Models/IChamp'
+import {
+    displayAbnatValue,
+    displayStatValue,
+    displayTextValue,
+} from '~/utils/championWinnerStats'
 
-<style scoped></style>
+const props = defineProps<{
+    table: HezamTeamSummary[]
+    logosById?: Record<number, string>
+    limit?: number
+}>()
+
+const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
+
+function parseAbnat(value: string | number | null | undefined): number | null {
+    if (value === null || value === undefined) return null
+    if (typeof value === 'number') return Number.isFinite(value) ? value : null
+    const parsed = Number.parseFloat(value)
+    return Number.isFinite(parsed) ? parsed : null
+}
+
+const rows = computed(() => {
+    if (props.limit == null) return props.table
+    return props.table.slice(0, props.limit)
+})
+
+function logoFor(teamId: number) {
+    const logo = props.logosById?.[teamId]
+    return logo ? mediaBaseUrl + logo : ''
+}
+</script>

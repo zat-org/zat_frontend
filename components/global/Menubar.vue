@@ -1,54 +1,115 @@
 <template>
-    <ul v-if="avialaleNavigation"
-        :class="`bg-zinc-100 dark:bg-slate-700 flex my-5 px-2  justify-center items-center rounded-xl `">
-        <template v-for="link in avialaleNavigation" :key="link.href">
-            <li class="flex flex-col items-center relative mx-0.5">
-                <NuxtLink :to="link.href" exact-active-class="text-amber-500 -translate-y-5 active"
-                    class="h-10 w-10 flex justify-center items-center transition-all relative top-0 rounded-full bg-zinc-100 dark:bg-slate-700 duration-200">
-                    <Icon :name="link.icon" class="text-2xl" />
+    <nav
+        v-if="availableNavigation.length"
+        class="w-full border-b-2 border-surface-primary bg-surface-primary"
+        aria-label="أقسام البطولة"
+        dir="rtl"
+    >
+        <ul
+            class="page-container flex h-18 items-stretch justify-start gap-4 overflow-x-auto pt-4 sm:gap-6"
+        >
+            <li
+                v-for="link in availableNavigation"
+                :key="link.href"
+                class="flex shrink-0"
+            >
+                <NuxtLink
+                    :to="link.href"
+                    class="flex h-full items-center justify-center border-b-4 px-1 text-xl leading-9 whitespace-nowrap transition-colors"
+                    :class="tabClass(link.href)"
+                >
+                    {{ link.name }}
                 </NuxtLink>
-                <span
-                    class="text-[0.7rem] bg-amber-500 text-white px-1 rounded-full  absolute z-[2] pt-[0.05rem] -bottom-2 transition-all opacity-0 duration-100">
-                    {{
-        link.name
-    }}
-                </span>
             </li>
-        </template>
-    </ul>
+        </ul>
+    </nav>
 </template>
 
-<style scoped>
-a.active~span {
-    @apply -translate-y-4 opacity-100
-}
-</style>
-
 <script setup lang="ts">
-import ChampType from "@/Models/ChampType";
+import ChampType from '@/Models/ChampType'
+import type { IChamp } from '@/Models/IChamp'
 
-import type { IChamp } from "@/Models/IChamp"
 const props = defineProps({
     champ: {
         required: true,
-        type: Object as PropType<IChamp>
-    }
-});
-const route = useRoute();
-const champ_id = computed(() => route.params.id||'')
-const navigation = [
-    { name: 'القوانين', icon: "octicon:law-24", href: `/championships/${champ_id.value}/laws`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM] },
-    { name: 'الاحصائيات', icon: "wpf:statistics", href: `/championships/${champ_id.value}/statistics`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'المباريات', icon: "game-icons:card-random", href: `/championships/${champ_id.value}/matches`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'الرئيسة', icon: "teenyicons:home-outline", href: `/championships/${champ_id.value}/`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'التحليل', icon: "fluent-emoji-high-contrast:studio-microphone", href: `/championships/${champ_id.value}/studios`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'الجدول', icon: "fa:table", href: `/championships/${champ_id.value}/table`, availableAt: [ChampType.LEAGUE, ChampType.CUP, ChampType.HEZAM], },
-    { name: 'الفرق', icon: "fluent:people-team-24-filled", href: `/championships/${champ_id.value}/teams`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-    { name: 'التوقعات', icon: "heroicons:presentation-chart-bar", href: `/championships/${champ_id.value}/estimations`, availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM], },
-]
-const champType = computed(() => props.champ.type as ChampType);
-
-const avialaleNavigation = computed(() => {
-    return navigation.filter(link => props.champ && props.champ.type ? link.availableAt.includes(champType.value) : true)
+        type: Object as PropType<IChamp>,
+    },
 })
+
+const route = useRoute()
+const champId = computed(() => String(route.params.id || ''))
+
+const navigation = computed(() => {
+    const id = champId.value
+    return [
+        {
+            name: 'لوحة المتصدرين',
+            href: `/championships/${id}/`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+            exact: true,
+        },
+        {
+            name: 'الاحصائيات',
+            href: `/championships/${id}/statistics`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+        {
+            name: 'جدول البطولة',
+            href: `/championships/${id}/table`,
+            availableAt: [ChampType.LEAGUE, ChampType.CUP, ChampType.HEZAM],
+        },
+        {
+            name: 'الفرق',
+            href: `/championships/${id}/teams`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+        {
+            name: 'القوانين',
+            href: `/championships/${id}/laws`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+        {
+            name: 'المباريات',
+            href: `/championships/${id}/matches`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+        {
+            name: 'التحليل',
+            href: `/championships/${id}/studios`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+        {
+            name: 'التوقعات',
+            href: `/championships/${id}/estimations`,
+            availableAt: [ChampType.CUP, ChampType.LEAGUE, ChampType.SUPER, ChampType.HEZAM],
+        },
+    ]
+})
+
+const champType = computed(() => props.champ.type as ChampType)
+
+const availableNavigation = computed(() =>
+    navigation.value.filter(link =>
+        props.champ?.type ? link.availableAt.includes(champType.value) : true,
+    ),
+)
+
+function normalizePath(path: string) {
+    return path.replace(/\/+$/, '') || '/'
+}
+
+function isActive(href: string, exact = false) {
+    const current = normalizePath(route.path)
+    const target = normalizePath(href)
+    if (exact) return current === target
+    return current === target || current.startsWith(`${target}/`)
+}
+
+function tabClass(href: string) {
+    const item = availableNavigation.value.find(link => link.href === href)
+    const active = isActive(href, item?.exact)
+    return active
+        ? 'border-white font-bold text-text-on-action'
+        : 'border-transparent font-normal text-text-on-action/90 hover:text-text-on-action'
+}
 </script>

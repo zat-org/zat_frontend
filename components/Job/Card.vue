@@ -7,23 +7,23 @@
                 <div class="grow">
                     <h2 class="text-sm text-gray-500 relative">المسمى الوظيفى
                         <span class=" text-gray-400 text-xs absolute left-2 top-0">
-                            منذ {{ getElapsedTime(job.attributes.createdAt.toLocaleString()) }}
+                            منذ {{ getElapsedTime(job.createdAt.toLocaleString()) }}
                         </span>
                     </h2>
-                    <h2 class="text-xl truncate">{{ job.attributes.jobTitle }}</h2>
+                    <h2 class="text-xl truncate">{{ job.jobTitle }}</h2>
                 </div>
             </div>
         </template>
         <template #default>
             <div class="text-sm">
                 <h2 class="text-amber-500 text-lg">وصف الوظيفة</h2>
-                <p class="mt-2 ms-2 ">{{ job.attributes.jobDescription }}</p>
+                <p class="mt-2 ms-2 ">{{ job.jobDescription }}</p>
             </div>
         </template>
 
         <template #footer>
             <div class="flex justify-around">
-                <UButton :to="`/jobs/${job.id}`" class=" flex justify-center " color="gray"
+                <UButton :to="`/jobs/${job.id}`" class=" flex justify-center " color="neutral"
                     icon="i-heroicons-cursor-arrow-ripple-16-solid">تعرف علي المزيد</UButton>
                 <UButton @click="emit('callus')" class=" flex justify-center " icon="i-heroicons-paper-airplane">
                     راسلنا الان</UButton>
