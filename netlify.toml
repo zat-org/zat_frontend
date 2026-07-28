@@ -1,6 +1,5 @@
 [build]
   command = "npm run build"
-  publish = ".netlify/static"
 
 [build.environment]
   NODE_OPTIONS = "--max-old-space-size=4096"
