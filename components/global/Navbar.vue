@@ -1,5 +1,12 @@
 <template>
-    <UHeader v-model:open="isHeaderOpen" title="زات" to="/" toggle-side="left" mode="slideover">
+    <UHeader
+        v-model:open="isHeaderOpen"
+        title="زات"
+        to="/"
+        toggle-side="left"
+        mode="slideover"
+        :menu="mobileMenuProps"
+    >
         <template #title>
             <ClientOnly>
                 <img src="/images/zat-logo-white.svg" alt="زات" class="h-auto" width="83" height="48" />
@@ -37,14 +44,15 @@
             </template>
         </UNavigationMenu>
 
-        <template #body>
-            <UNavigationMenu orientation="vertical" :items="items" variant="link" color="neutral" class="-mx-2.5" />
-
-            <div class="mt-6 pt-4 border-t border-surface-tone">
-                <NavbarAccountSection @close="isHeaderOpen = false" />
-            </div>
+        <template #content="{ close }">
+            <NavbarMobileMenu
+                @close="closeSidebar(close)"
+                @open-login="openLoginForm"
+            />
         </template>
     </UHeader>
+
+    <LoginForm v-model="isLoginFormOpened" />
 </template>
 
 <script setup lang="ts">
@@ -56,4 +64,23 @@ function toggleTheme() {
     colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
 }
 const isHeaderOpen = ref(false)
+const isLoginFormOpened = ref(false)
+
+const mobileMenuProps = {
+    side: 'right' as const,
+    ui: {
+        content: 'max-w-[343px] w-[min(343px,100vw)] bg-surface-off-base p-0 shadow-zat ring-0',
+        header: 'hidden',
+        body: 'p-0',
+    },
+}
+
+function closeSidebar(close?: () => void) {
+    close?.()
+    isHeaderOpen.value = false
+}
+
+function openLoginForm() {
+    isLoginFormOpened.value = true
+}
 </script>

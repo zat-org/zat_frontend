@@ -100,13 +100,13 @@
 
                                     >
                                     <div
-                                        class="absolute z-20 w-[40%]  px-3 py-1 top-[25%] inset-e-[0%]  "
+                                        class="absolute z-20 top-[18%] inset-e-0 w-[42%] min-w-0 px-1 sm:top-[22%] sm:w-[40%] sm:px-2 md:top-[25%] md:px-3"
                                     >
-                                        <p class="w-full text-[clamp(1.5rem,3.5vw,3rem)] text-center leading-tight text-text-body font-zaatar">
+                                        <p class="w-full text-center font-zaatar leading-[0.95] text-text-body text-[clamp(0.875rem,4.5vw,3rem)] sm:leading-tight md:text-[clamp(1.25rem,3.5vw,3rem)]">
                                             <span
                                                 v-for="(word, i) in img.name.trim().split(/\s+/)"
                                                 :key="`${img.id}-${i}`"
-                                                class="block w-full"
+                                                class="block w-full break-words"
                                             >
                                                 {{ word }}
                                             </span>

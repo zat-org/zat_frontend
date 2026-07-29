@@ -31,7 +31,10 @@
                                     class="absolute inset-0 opacity-50 bg-[radial-gradient(ellipse_at_center,rgba(35,31,31,1)_0%,rgba(22,19,19,0.25)_100%)]"
                                     aria-hidden="true"
                                 />
-                                <Icon name="zat:youtube" class="size-9 text-white!  relative w-full h-full flex items-center justify-center sm:size-11 lg:size-14" />
+                                <Icon
+                                    name="zat:youtube"
+                                    class="relative z-10 size-9 shrink-0 text-white sm:size-11 lg:size-14"
+                                />
                                 
                             </a>
                         </swiper-slide>

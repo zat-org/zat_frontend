@@ -7,7 +7,7 @@
         <template v-if="champ">
             <ChampionshipsTitleBar :champ="champ" />
             <ChampionshipsDetailHero
-                v-if="isOverview"
+                
                 :champ="champ"
                 :summary="summary ?? null"
             />

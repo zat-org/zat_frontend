@@ -448,6 +448,78 @@
                hover:bg-white/90 transition-colors shrink-0 ring-0;
     }
 
+    .nav-sidebar-tile {
+        @apply relative flex w-full min-h-12 items-center gap-2 overflow-hidden
+               rounded-zat-sm border border-[#d0d0d0] bg-surface-off-base px-2 py-1
+               text-sm font-bold leading-[22px] text-text-body transition-colors
+               hover:bg-surface-overlay/50;
+    }
+
+    .nav-sidebar-tile-blur {
+        @apply pointer-events-none absolute -top-[71px] end-[22px] size-[190px]
+               rounded-full bg-surface-off-base blur-xl opacity-90;
+    }
+
+    .nav-sidebar-tile-label {
+        @apply relative z-10;
+    }
+
+    .nav-sidebar-tile-icon,
+    .nav-sidebar-tile-leading {
+        @apply relative z-10;
+    }
+
+    .nav-sidebar-partition {
+        @apply flex w-full flex-col items-center gap-4 border-t-2 border-surface-tone2 py-4;
+    }
+
+    .nav-sidebar-partition-title {
+        @apply w-full max-w-[311px] text-right text-base font-bold leading-6 text-text-subtitle;
+    }
+
+    .nav-sidebar-dropdown-trigger {
+        @apply border-[#231f1f] bg-surface-off-base;
+    }
+
+    .nav-sidebar-dropdown-panel .nav-sidebar-tile {
+        @apply rounded-none border-0 border-t border-[#231f1f] bg-surface-off-base;
+    }
+
+    .nav-mobile-menu-social {
+        @apply flex size-10 items-center justify-center rounded-zat-sm bg-white
+               text-text-action transition-transform duration-300 hover:-translate-y-0.5;
+    }
+
+    .nav-mobile-menu,
+    .dark .nav-mobile-menu {
+        background-color: #f0eeea !important;
+        color: #231f1f;
+    }
+
+    .dark .nav-mobile-menu .nav-sidebar-partition-title {
+        color: #5c5a5a !important;
+    }
+
+    .dark .nav-mobile-menu .nav-sidebar-tile {
+        background-color: #f0eeea !important;
+        border-color: #d0d0d0 !important;
+        color: #231f1f !important;
+    }
+
+    .dark .nav-mobile-menu .nav-sidebar-dropdown-trigger,
+    .dark .nav-mobile-menu .nav-sidebar-dropdown-panel .nav-sidebar-tile {
+        border-color: #231f1f !important;
+    }
+
+    .dark .nav-mobile-menu .nav-sidebar-tile-blur {
+        background-color: #f0eeea !important;
+    }
+
+    .dark .nav-mobile-menu .nav-mobile-menu-header h2,
+    .dark .nav-mobile-menu .nav-mobile-menu-close {
+        color: #231f1f !important;
+    }
+
     .input{
         @apply bg-slate-200  dark:placeholder:text-slate-500 w-full  text-slate-900 dark:text-slate-50 dark:bg-slate-600;
     }

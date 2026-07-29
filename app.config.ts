@@ -82,10 +82,10 @@ export default defineAppConfig({
 
         toggle: "md:hidden text-white hover:bg-white/10",
 
-        body: "p-4 sm:p-6 overflow-y-auto bg-surface-raised text-text-body",
+        body: "p-0 overflow-hidden bg-surface-off-base text-text-body",
 
         header:
-          "px-4 sm:px-6 h-16 shrink-0 flex items-center justify-between gap-3 bg-nav-bar",
+          "hidden",
       },
     },
 

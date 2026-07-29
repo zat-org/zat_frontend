@@ -6,7 +6,7 @@
     >
         <section
             v-if="teams && teams.length > 0"
-            class="flex w-full flex-wrap items-center justify-center gap-6 px-5 pb-4 md:px-20"
+            class="flex w-full flex-col items-stretch gap-4 px-5 pb-4 md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-6 md:px-20"
             dir="rtl"
             aria-label="الفرق المشاركة"
         >
@@ -14,7 +14,7 @@
                 v-for="team in teams"
                 :key="team.id"
                 :team="team"
-                class="w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:max-w-102.5"
+                class="w-full md:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] xl:max-w-102.5"
             />
         </section>
 
