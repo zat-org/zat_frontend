@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { IUser } from '~/Models/AuthModels';
+import type { IUser } from '~/features/auth/types/AuthModels';
 
 export const useUserStore = defineStore('user', () => {
 

@@ -1,15 +1,15 @@
-import type RefereesModule from '~/Repository/modules/referees';
-import type ContactUsMessagesModule from '~/Repository/modules/contactUsMessagesModule';
-import type JobsModule from '~/Repository/modules/jobs';
-import type BlogsModule from '~/Repository/modules/blogs';
-import type TeamsModule from '~/Repository/modules/teams';
-import type PlayersModule from '~/Repository/modules/players';
-import type FollowerChampionModule from '~/Repository/modules/followersChampions';
-import type WebsiteAssetsModule from '~/Repository/modules/websiteAssets';
-import type ChampionsModule from '~/Repository/modules/champion';
-import type MatchesModule from '~/Repository/modules/matches';
-import type AuthModule from '~/Repository/modules/auth';
-import type EstimationsModule from "~/Repository/modules/estimations";
+import type RefereesModule from '~/features/referees/api/referees'
+import type ContactUsMessagesModule from '~/features/shared/api/contactUsMessagesModule'
+import type JobsModule from '~/features/jobs/api/jobs'
+import type BlogsModule from '~/features/blogs/api/blogs'
+import type TeamsModule from '~/features/teams/api/teams'
+import type PlayersModule from '~/features/teams/api/players'
+import type FollowerChampionModule from '~/features/followers/api/followersChampions'
+import type WebsiteAssetsModule from '~/features/website/api/websiteAssets'
+import type ChampionsModule from '~/features/championships/api/champion'
+import type MatchesModule from '~/features/matches/api/matches'
+import type AuthModule from '~/features/auth/api/auth'
+import type EstimationsModule from '~/features/matches/api/estimations'
 
 interface IApiInstance {
     referees: RefereesModule;

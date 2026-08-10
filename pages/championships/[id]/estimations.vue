@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IChamp } from "@/Models/IChamp"
+import type { IChamp } from "~/features/championships/types/IChamp"
 import { useUserStore } from '~/stores/useUserStore';
 
 const props = defineProps({

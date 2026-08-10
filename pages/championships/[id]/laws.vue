@@ -1,7 +1,7 @@
 <template>
     <div>
         <MarkdownRender v-if="champ.laws !== ''" :markdownString="champ.laws" />
-        <div v-else class="text-zinc-700 text-lg h-50 flex flex-col justify-center items-center py-10">
+        <div v-else class="flex h-50 flex-col items-center justify-center py-10 text-lg text-text-body">
             <Icon name="line-md:alert-circle" class="block text-9xl" />
             <h3>لا توجد قوانين حاليا</h3>
         </div>
@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import type { IChamp } from "@/Models/IChamp"
+import type { IChamp } from "~/features/championships/types/IChamp"
 const props = defineProps({
     champ: {
         required: true,

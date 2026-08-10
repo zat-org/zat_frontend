@@ -46,12 +46,12 @@
 </template>
 
 <script setup lang="ts">
-import ChampType from '@/Models/ChampType'
+import ChampType from '~/features/championships/types/ChampType'
 import type {
     HezamTeamSummary,
     IChamp,
     LeagueTeamSummary,
-} from '@/Models/IChamp'
+} from '~/features/championships/types/IChamp'
 
 const props = defineProps({
     champ: {

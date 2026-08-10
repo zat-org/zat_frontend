@@ -10,7 +10,7 @@
                 </div>
             </section>
             <div v-else
-                class="text-zinc-700 dark:text-slate-50 text-lg h-50 flex flex-col justify-center items-center py-10">
+                class="flex h-50 flex-col items-center justify-center py-10 text-lg text-text-body">
                 <Icon name="line-md:alert-circle" class="block text-9xl" />
                 <h3>لا يوجد بطولات للمتابعين حاليا</h3>
             </div>

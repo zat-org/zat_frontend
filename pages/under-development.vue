@@ -49,7 +49,7 @@
         الموقع تحت التطوير
       </h1>
 
-      <p class="ud-desc text-base md:text-lg text-slate-600 dark:text-slate-300 max-w-md mb-8 leading-relaxed">
+      <p class="ud-desc mb-8 max-w-md text-base leading-relaxed text-text-subtitle md:text-lg">
         نعمل على تجربة جديدة لبطولات زات — أجمل، أسرع، وأقوى.
         <br />
         نعود قريباً بإذن الله.
@@ -57,11 +57,11 @@
 
       <!-- Progress -->
       <div class="w-full max-w-xs">
-        <div class="flex justify-between text-xs text-slate-500 dark:text-slate-400 mb-2">
+        <div class="mb-2 flex justify-between text-xs text-text-caption">
           <span>قيد البناء</span>
           <span>{{ displayProgress }}%</span>
         </div>
-        <div class="ud-progress h-2 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+        <div class="ud-progress h-2 overflow-hidden rounded-full bg-surface-tone">
           <div class="ud-progress-bar h-full rounded-full" :style="{ width: `${displayProgress}%` }" />
         </div>
       </div>

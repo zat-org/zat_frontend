@@ -2,7 +2,7 @@
     <div>
         <UAccordion :items="items" :default-open="false" :ui="ui">
             <template #default="{ open }">
-                <div class="text-zinc-700 dark:text-slate-50 bg-zinc-100 dark:bg-slate-700 h-12 rounded-t-lg text-lg font-semibold flex items-center justify-center px-5"
+                <div class="flex h-12 items-center justify-center rounded-t-lg bg-surface-overlay px-5 text-lg font-semibold text-text-heading"
                     :class="[!open && 'rounded-b-lg ']">
                     <Icon v-if="icon" :name="icon" :color="color" class="text-2xl mx-1 text-amber-500 " />
 
@@ -42,7 +42,7 @@ const props = defineProps({
 const items = [{
     defaultOpen: false,
 }]
-const ui = { wrapper: 'flex flex-col w-full my-3', item: { base: "bg-zinc-300 dark:bg-slate-600 text-zinc-950 dark:text-slate-50 rounded-b-lg py-2 ", padding: 'p-0' } }
+const ui = { wrapper: 'flex flex-col w-full my-3', item: { base: 'rounded-b-lg bg-surface-tone py-2 text-text-heading', padding: 'p-0' } }
 </script>
   
 <style scoped></style>

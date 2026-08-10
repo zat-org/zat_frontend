@@ -21,6 +21,26 @@ try {
 
 export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css', '~/assets/css/styles.css'],
+  components: [
+    { path: '~/features/matches/components', prefix: 'Match' },
+    { path: '~/features/championships/components', prefix: 'Championships' },
+    { path: '~/features/championships/champion-components', prefix: 'Champion' },
+    { path: '~/features/teams/components', prefix: 'Team' },
+    { path: '~/features/auth/components', pathPrefix: false },
+    { path: '~/features/jobs/components', prefix: 'Job' },
+    { path: '~/features/blogs/components', prefix: 'Blog' },
+    { path: '~/features/followers/components', prefix: 'FollowerChampion' },
+    { path: '~/features/referees/components', prefix: 'Referee' },
+    { path: '~/features/home/components', prefix: 'Home' },
+    { path: '~/features/shared/components', pathPrefix: true, global: true },
+  ],
+  imports: {
+    dirs: [
+      'features/**/composables',
+      'features/**/composables/**',
+      'features/**/utils',
+    ],
+  },
   runtimeConfig: {
     public: {
       youtubeApi: process.env.YOUTUBE_API_KEY,
@@ -60,7 +80,7 @@ export default defineNuxtConfig({
     storage: "localStorage",
   },
   pinia: {
-    storesDirs: ["./stores/**", "./custom-folder/stores/**"],
+    storesDirs: ["./stores/**", "./features/**/stores/**"],
   },
   content: {
     markdown: {

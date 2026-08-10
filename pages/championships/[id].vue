@@ -1,5 +1,11 @@
 <template>
+    <NuxtPage
+        v-if="isMatchDetail"
+        class="w-full grow"
+    />
+
     <FetchDataWrapper
+        v-else
         class="flex w-full grow flex-col justify-start items-stretch"
         :error="error ? 'تعذر تحميل البطولة برجاء المحاولة لاحقا.' : null"
         :pending="pending"
@@ -7,19 +13,20 @@
         <template v-if="champ">
             <ChampionshipsTitleBar :champ="champ" />
             <ChampionshipsDetailHero
-                v-if="isOverview"
                 :champ="champ"
                 :summary="summary ?? null"
             />
             <Menubar :champ="champ" />
             <KeepAlive max="4">
                 <div class="w-full grow p-4">
-
-                    <NuxtPage :champ="champ" class="w-full grow" />
+                    <NuxtPage
+                        :champ="champ"
+                        class="w-full grow"
+                    />
                 </div>
             </KeepAlive>
             <ChampionshipsOverviewMatchesSection
-            v-if="isOverview"
+                v-if="isOverview"
                 :champ="champ"
             />
         </template>
@@ -29,6 +36,15 @@
 <script setup lang="ts">
 const { $api } = useNuxtApp()
 const route = useRoute()
+
+const isMatchDetail = computed(() => {
+    const id = String(route.params.id || '')
+    const mid = String(route.params.mid || '')
+    if (!id || !mid) return false
+    const path = route.path.replace(/\/+$/, '') || '/'
+    return path === `/championships/${id}/match/${mid}`
+})
+
 const { data: champ, error, pending } = await $api.champions.getById(route.params.id as string)
 
 const { data: summary } = champ.value?.leagueid
@@ -43,24 +59,30 @@ const isOverview = computed(() => {
 })
 
 useHead({
-    title: computed(() => champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات'),
-    meta: computed(() => [
-        {
-            name: 'description',
-            content: champ.value
-                ? `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.`
-                : 'تفاصيل بطولات البلوت من زات',
-        },
-        {
-            property: 'og:title',
-            content: champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات',
-        },
-        {
-            property: 'og:description',
-            content: champ.value
-                ? `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.`
-                : 'تفاصيل بطولات البلوت من زات',
-        },
-    ]),
+    title: computed(() => {
+        if (isMatchDetail.value) return undefined
+        return champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات'
+    }),
+    meta: computed(() => {
+        if (isMatchDetail.value) return []
+        return [
+            {
+                name: 'description',
+                content: champ.value
+                    ? `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.`
+                    : 'تفاصيل بطولات البلوت من زات',
+            },
+            {
+                property: 'og:title',
+                content: champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات',
+            },
+            {
+                property: 'og:description',
+                content: champ.value
+                    ? `تفاصيل بطولة ${champ.value.name} من زات. تابع الفرق المشاركة، جدول المباريات، والنتائج المباشرة.`
+                    : 'تفاصيل بطولات البلوت من زات',
+            },
+        ]
+    }),
 })
 </script>

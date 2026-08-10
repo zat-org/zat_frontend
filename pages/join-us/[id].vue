@@ -5,7 +5,7 @@
             :pending="pending">
             <article v-if="champion">
                 <header>
-                    <h1 class="text-center text-2xl my-5 dark:text-slate-50">
+                    <h1 class="my-5 text-center text-2xl text-text-heading">
                         استمارة الالتحاق ب{{ champion.name }}
                     </h1>
                 </header>

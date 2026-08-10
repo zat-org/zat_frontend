@@ -26,8 +26,8 @@
 </template>
 
 <script setup lang="ts">
-import StatisticOptions, { type IStatisticViewData } from '@/Models/StatisticOption'
-import type { IChamp } from '@/Models/IChamp'
+import StatisticOptions, { type IStatisticViewData } from '~/features/championships/types/StatisticOption'
+import type { IChamp } from '~/features/championships/types/IChamp'
 
 const props = defineProps<{ champ: IChamp }>()
 const { $api } = useNuxtApp()

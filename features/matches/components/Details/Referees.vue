@@ -1,0 +1,54 @@
+<template>
+    <div v-if="match.referees && match.referees.length > 0">
+        <USeparator>حكام المباراة</USeparator>
+        <div class="mb-5 mt-3 text-center text-sm text-text-caption">
+            <div v-if="match.referees[0]" class="flex justify-center">
+                <div class="w-1/3 flex flex-col justify-center items-center  ">
+                    <Image :src="url + match.referees[0].image" class="object-cover object-top"
+                        :alt="match.referees[0].name" icon="i-heroicons-user" />
+                    <p class="text-md text-text-heading lg:text-lg">
+                        {{ match.referees[0].name }}
+                    </p>
+                    <p class="text-xs lg:text-sm ">
+                        حكم الطاولة
+                    </p>
+                </div>
+            </div>
+            <div class="flex justify-between ">
+                <div v-if="match.referees[1]" class="w-5/12 flex justify-center items-center flex-col  ">
+                    <Image :src="url + match.referees[1].image" class="object-cover object-top"
+                        :alt="match.referees[1].name" icon="i-heroicons-user" />
+                    <p class="text-md text-text-heading lg:text-lg">
+                        {{ match.referees[1].name }}
+                    </p>
+                    <p class="text-xs lg:text-sm ">
+                        حكم مساعد
+                    </p>
+                </div>
+                <div v-if="match.referees[2]" class="w-5/12 flex justify-center items-center flex-col ">
+                    <Image :src="url + match.referees[2].image" class="object-cover object-top"
+                        :alt="match.referees[2].name" icon="i-heroicons-user" />
+                    <p class="text-md text-text-heading lg:text-lg">
+                        {{ match.referees[2].name }}
+                    </p>
+                    <p class="text-xs lg:text-sm ">
+                        حكم النشرة
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script setup lang="ts">
+import type { IMatchFullDetails } from "~/features/matches/types/IMatchFullDetails"
+const url = useRuntimeConfig().public.apiBaseUrl;
+defineProps({
+    match: {
+        required: true,
+        type: Object as PropType<IMatchFullDetails>
+    }
+});
+</script>
+
+<style scoped></style>

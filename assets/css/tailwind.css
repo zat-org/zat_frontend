@@ -381,7 +381,7 @@
     }
 
     .page-container {
-        @apply w-full max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[var(--spacing-page)];
+        @apply w-full max-w-[1600px]  mx-auto px-4 sm:px-8 lg:px-[var(--spacing-page)];
     }
 
     .section-title {

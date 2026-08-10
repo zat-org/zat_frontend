@@ -1,58 +1,101 @@
 <template>
-    <FetchDataWrapper class="w-full lg:w-5/6  py-3 lg:py-10"
-        :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : ''" :pending="pending">
-        <section class="" v-if="blogs && blogs.length > 0">
-            <SectionHeader title=" اخبار زات" icon="i-heroicons-newspaper" />
-            <div class="mx-3 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 mb-20 justify-items-center">
-                <template v-for="blog in blogs">
-                    <BlogCard :blog="blog" />
-                </template>
-            </div>
-            <div class="flex justify-center mt-8 absolute bottom-3 left-1/2 -translate-x-1/2">
-                <Pagination :pageSize="pgSize" :totalItemsCount="totalBlogsCount" :currentPage="pageNumber"
-                    @goToPage="handlePageChange">
-                </Pagination>
-            </div>
-        </section>
-        <div v-else class="text-zinc-700 dark:text-slate-50 text-lg h-50 flex flex-col justify-center items-center py-10">
-            <Icon name="line-md:alert-circle" class="block text-9xl" />
-            <h3>لا يوجد اخبار حاليا</h3>
-        </div>
-    </FetchDataWrapper>
+    <div class="flex w-full flex-col bg-surface-base">
+        <BlogPageHero />
+
+        <FetchDataWrapper
+            class="w-full"
+            :error="error ? 'تعذر تحميل البيانات برجاء المحاولة لاحقا' : null"
+            :pending="pending"
+        >
+            <section
+                class="w-full bg-surface-base py-6"
+                aria-label="اخبار زات"
+                dir="rtl"
+            >
+                <div class="page-container flex flex-col gap-6">
+                    <ChampionshipsSectionDivider title="الاخبار" />
+
+                    <div
+                        v-if="blogs?.length"
+                        class="columns-1 gap-6 md:columns-2 xl:columns-3"
+                    >
+                        <div
+                            v-for="blog in blogs"
+                            :key="blog.id"
+                            class="mb-6 break-inside-avoid"
+                        >
+                            <BlogCard :blog="blog" />
+                        </div>
+                    </div>
+                    <div
+                        v-else
+                        class="flex h-50 flex-col items-center justify-center py-10 text-lg text-text-subtitle"
+                    >
+                        <UIcon
+                            name="i-heroicons-newspaper"
+                            class="mb-2 size-16"
+                        />
+                        <h3>لا يوجد اخبار حاليا</h3>
+                    </div>
+
+                    <div
+                        v-if="blogs?.length && totalBlogsCount > pgSize"
+                        class="flex justify-center pt-2"
+                    >
+                        <Pagination
+                            :page-size="pgSize"
+                            :total-items-count="totalBlogsCount"
+                            :current-page="pageNumber"
+                            @go-to-page="handlePageChange"
+                        />
+                    </div>
+                </div>
+            </section>
+        </FetchDataWrapper>
+    </div>
 </template>
 
 <script setup lang="ts">
-const { $api } = useNuxtApp();
+const { $api } = useNuxtApp()
 const route = useRoute()
 const router = useRouter()
 
-const pgSize = 10;
+const pgSize = 9
+const pgNumStr = route.query.pageNum as string
+const indicator = useLoadingIndicator()
+const pageNumber = ref<number>(
+    pgNumStr && !Number.isNaN(Number.parseInt(pgNumStr, 10))
+        ? Number.parseInt(pgNumStr, 10)
+        : 1,
+)
 
-let pgNumStr = route.query.pageNum as string;
-const indicator = useLoadingIndicator();
-const pageNumber = ref<number>((pgNumStr && !isNaN(parseInt(pgNumStr))) ? parseInt(pgNumStr) : 1);
-const { data, pending, error } = await $api.blogs.getAll(pageNumber, pgSize, { watch: [pageNumber] })
-const blogs = computed(() => data.value?.blogs);
-const totalBlogsCount = computed(() => data.value ? parseInt(data.value.totalCount) : 1);
+const { data, pending, error } = await $api.blogs.getAll(pageNumber, pgSize, {
+    watch: [pageNumber],
+})
+
+const blogs = computed(() => data.value?.blogs)
+const totalBlogsCount = computed(() =>
+    data.value ? Number.parseInt(data.value.totalCount, 10) : 0,
+)
+
 const handlePageChange = (val: number) => {
     pageNumber.value = val
-    router.replace(`/blogs?pageNum=${val}`);
+    router.replace(`/blogs?pageNum=${val}`)
 }
+
 useHead({
-    title: `اخبار زات - آخر أخبار وتحديثات بطولات البلوت`,
+    title: 'اخبار زات - آخر أخبار وتحديثات بطولات البلوت',
     meta: [
         { name: 'description', content: 'تابع آخر أخبار وتحديثات بطولات البلوت من زات. أحداث البطولات، نتائج المباريات، وأخبار اللاعبين.' },
         { property: 'og:title', content: 'اخبار زات - آخر أخبار وتحديثات بطولات البلوت' },
-        { property: 'og:description', content: 'تابع آخر أخبار وتحديثات بطولات البلوت من زات. أحداث البطولات، نتائج المباريات، وأخبار اللاعبين.' }
-    ]
+        { property: 'og:description', content: 'تابع آخر أخبار وتحديثات بطولات البلوت من زات. أحداث البطولات، نتائج المباريات، وأخبار اللاعبين.' },
+    ],
 })
 
 watch(pending, (newValue) => {
     if (newValue)
-        indicator.start();
+        indicator.start()
     else
-        indicator.finish();
+        indicator.finish()
 })
 </script>
-
-<style scoped></style>

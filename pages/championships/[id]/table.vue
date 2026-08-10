@@ -1,5 +1,7 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر البيانات برجاء المحاولة لاحقا.' : null" :pending="pending">
+    <FetchDataWrapper :error="error ? 'تعذر البيانات برجاء المحاولة لاحقا.' : null" :pending="pending"
+    class="page-container"
+    >
         <ChampionLeagueTable
                     v-if="champType === ChampType.LEAGUE"
             :table="(table as LeagueTeamSummary[])"
@@ -18,9 +20,9 @@
 </template>
 
 <script setup lang="ts">
-import ChampType from '@/Models/ChampType'
-import type { IChamp, LeagueTeamSummary, HezamTeamSummary } from '@/Models/IChamp'
-import type { ICupMatchData } from '~/Models/ICupSummary'
+import ChampType from '~/features/championships/types/ChampType'
+import type { IChamp, LeagueTeamSummary, HezamTeamSummary } from '~/features/championships/types/IChamp'
+import type { ICupMatchData } from '~/features/championships/types/ICupSummary'
 
 const props = defineProps({
     champ: {

@@ -1,12 +1,23 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر تحميل المباريات برجاء المحاولة لاحقا.' : null" :pending="pending"
-        class="flex flex-col">
-        <MatchList v-if="matches" :matches="matches" />
+    <FetchDataWrapper
+        :error="error ? 'تعذر تحميل المباريات برجاء المحاولة لاحقا.' : null"
+        :pending="pending"
+        class="flex flex-col"
+    >
+        <div
+            v-if="matches"
+            class="page-container flex w-full flex-col gap-4 py-2"
+        >
+            <MatchList
+                :matches="matches"
+                :champ-id="champ.leagueid"
+            />
+        </div>
     </FetchDataWrapper>
 </template>
 
 <script setup lang="ts">
-import type { IChamp } from "@/Models/IChamp"
+import type { IChamp } from "~/features/championships/types/IChamp"
 const props = defineProps({
     champ: {
         required: true,
