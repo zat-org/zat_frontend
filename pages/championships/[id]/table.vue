@@ -1,21 +1,25 @@
 <template>
-    <FetchDataWrapper :error="error ? 'تعذر البيانات برجاء المحاولة لاحقا.' : null" :pending="pending"
-    class="page-container"
+    <FetchDataWrapper
+        :error="error ? 'تعذر البيانات برجاء المحاولة لاحقا.' : null"
+        :pending="pending"
+        class="w-full"
     >
-        <ChampionLeagueTable
-                    v-if="champType === ChampType.LEAGUE"
-            :table="(table as LeagueTeamSummary[])"
-            :logos-by-id="logosById"
-        />
-        <ChampionHezamTable
-            v-else-if="champType === ChampType.HEZAM"
-            :table="(table as HezamTeamSummary[])"
-            :logos-by-id="logosById"
-        />
-        <ChampionCupMap
-            v-else-if="champType === ChampType.CUP"
-            :table="(table as ICupMatchData[][])"
-        />
+        <div class="page-container w-full overflow-x-hidden py-2 sm:py-4">
+            <ChampionLeagueTable
+                v-if="champType === ChampType.LEAGUE"
+                :table="(table as LeagueTeamSummary[])"
+                :logos-by-id="logosById"
+            />
+            <ChampionHezamTable
+                v-else-if="champType === ChampType.HEZAM"
+                :table="(table as HezamTeamSummary[])"
+                :logos-by-id="logosById"
+            />
+            <ChampionCupMap
+                v-else-if="champType === ChampType.CUP"
+                :table="(table as ICupMatchData[][])"
+            />
+        </div>
     </FetchDataWrapper>
 </template>
 

@@ -78,21 +78,30 @@
                     </div>
 
                     <div class="flex flex-col items-center justify-center gap-1 px-1 sm:gap-2 sm:px-2">
-                        <p class="flex items-center gap-2 font-numbers text-[28px] font-bold leading-none text-[#ED1C24] sm:gap-4 sm:text-[40px] lg:text-[48px]">
-                            <template v-if="match.state === MatchState.Done">
+                        <template v-if="match.state === MatchState.Done">
+                            <p class="flex items-center gap-2 font-numbers text-[28px] font-bold leading-none text-[#ED1C24] sm:gap-4 sm:text-[40px] lg:text-[48px]">
                                 <span>{{ scoreDisplay(match.team2.score) }}</span>
                                 <span>-</span>
                                 <span>{{ scoreDisplay(match.team1.score) }}</span>
-                            </template>
-                            <template v-else-if="match.state === MatchState.Live">
-                                <span class="text-sm font-bold text-zat-500 sm:text-xl">مباشر</span>
-                            </template>
-                            <template v-else>
-                                <span class="text-xl font-bold text-text-subtitle sm:text-3xl">VS</span>
-                            </template>
-                        </p>
-                        <p class="text-xs font-semibold leading-5 text-text-subtitle sm:text-base sm:leading-7">
-                            النتيجة
+                            </p>
+                            <p
+                                v-if="hasScore"
+                                class="text-xs font-semibold leading-5 text-text-subtitle sm:text-base sm:leading-7"
+                            >
+                                النتيجة
+                            </p>
+                        </template>
+                        <span
+                            v-else-if="match.state === MatchState.Live"
+                            class="rounded-zat-sm bg-zat-500/15 px-4 py-0.5 font-zaatar text-sm font-bold leading-7 text-zat-500 sm:text-base"
+                        >
+                            مباشر
+                        </span>
+                        <p
+                            v-else
+                            class="text-xl font-bold leading-none text-text-subtitle sm:text-3xl"
+                        >
+                            VS
                         </p>
                     </div>
 
@@ -126,7 +135,12 @@
                     />
 
                     <ClientOnly>
-                        <MatchDetailsEstimation :match="match" />
+                        <MatchCardEstimation
+                            :match="estimationMatch"
+                            :champ-id="Number(champId)"
+                            :full-match="match"
+                            tone="light"
+                        />
                     </ClientOnly>
                 </div>
             </article>
@@ -153,6 +167,29 @@ const { prevMatch, nextMatch } = await useChampMatchNeighbors(
     () => props.match.id,
 )
 
+const estimationMatch = computed<IMatchLessDetails>(() => ({
+    id: props.match.id,
+    team_1_name: props.match.team1.name,
+    team_1_score: props.match.team1.score,
+    team_1_logo: props.match.team1.logo,
+    team_2_name: props.match.team2.name,
+    team_2_score: props.match.team2.score,
+    team_2_logo: props.match.team2.logo,
+    state: props.match.state,
+    url: props.match.url,
+    start_estimations: props.match.startEstimationAt
+        ? new Date(props.match.startEstimationAt).toISOString()
+        : null,
+    end_estimations: props.match.endEstimationAt
+        ? new Date(props.match.endEstimationAt).toISOString()
+        : null,
+    tournament_name: props.match.tournament || props.match.leagueName,
+    name: props.match.tournament || props.match.leagueName,
+    type: 'official',
+    league_id: Number(props.champId),
+    start_at: props.match.start_at,
+}))
+
 function matchHref(matchId: number) {
     return `/championships/${props.champId}/match/${matchId}`
 }
@@ -160,6 +197,13 @@ function matchHref(matchId: number) {
 function neighborLabel(neighbor: IMatchLessDetails) {
     return `${displayTextValue(neighbor.team_1_name)} ضد ${displayTextValue(neighbor.team_2_name)}`
 }
+
+const hasScore = computed(() => {
+    const s1 = props.match.team1.score
+    const s2 = props.match.team2.score
+    return s1 !== null && s1 !== undefined && !Number.isNaN(s1)
+        && s2 !== null && s2 !== undefined && !Number.isNaN(s2)
+})
 
 function scoreDisplay(score: number | null | undefined) {
     if (score === null || score === undefined || Number.isNaN(score)) return '-'

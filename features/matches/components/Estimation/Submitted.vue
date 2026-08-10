@@ -29,7 +29,7 @@
         <template #body>
             <div class="flex flex-col items-center gap-6 p-4 sm:p-6">
                 <div
-                    v-if="estimation.estimation_score !== null"
+                    v-if="isMatchEnded && estimation.estimation_score !== null"
                     class="rounded-zat-md bg-green-600/10 px-4 py-2 text-center text-base font-bold text-green-700 dark:text-green-400"
                 >
                     نقاطك: {{ estimation.estimation_score }}/10
@@ -146,6 +146,7 @@
 import type { IMatchLessDetails } from '~/features/matches/types/IMatchLessDetails'
 import type { IMatchFullDetails } from '~/features/matches/types/IMatchFullDetails'
 import type { IEstimationRelation, IMatchEstimation } from '~/features/matches/types/MatchEstimationsModels'
+import MatchState from '~/features/matches/types/MatchState'
 
 const props = defineProps<{
     match: IMatchLessDetails
@@ -155,6 +156,11 @@ const props = defineProps<{
 
 const isOpen = defineModel<boolean>({ default: false })
 const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
+
+const isMatchEnded = computed(() =>
+    String(props.match.state) === MatchState.Done
+    || String(props.fullMatch?.state) === MatchState.Done,
+)
 
 function relationId(value: IMatchEstimation['winner_team'] | IMatchEstimation['best_player']): number | null {
     if (value === null || value === undefined) return null

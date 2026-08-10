@@ -58,13 +58,16 @@
 import type { IMatchLessDetails } from '~/features/matches/types/IMatchLessDetails'
 import type { IMatchFullDetails } from '~/features/matches/types/IMatchFullDetails'
 import type { IMatchEstimation } from '~/features/matches/types/MatchEstimationsModels'
+import MatchState from '~/features/matches/types/MatchState'
 
 const props = withDefaults(defineProps<{
     match: IMatchLessDetails
     champId: number
     tone?: 'dark' | 'light'
+    fullMatch?: IMatchFullDetails | null
 }>(), {
     tone: 'dark',
+    fullMatch: null,
 })
 
 const { $api } = useNuxtApp()
@@ -74,12 +77,14 @@ const isLoginFormOpened = ref(false)
 const isEstimationFormOpened = ref(false)
 const isSubmittedOpen = ref(false)
 const openFormAfterLogin = ref(false)
-const fullMatchData = ref<IMatchFullDetails | null>(null)
+const fetchedFullMatch = ref<IMatchFullDetails | null>(null)
 const estimationStatus = ref<'available' | 'submitted' | 'closed' | null>(null)
 const estimationScore = ref<number | null>(null)
 const submittedEstimation = ref<IMatchEstimation | null>(null)
 
 const { data: estimationData, getData: getUserEstimation } = $api.estimation.useGetByIds()
+
+const fullMatchData = computed(() => props.fullMatch ?? fetchedFullMatch.value)
 
 const isWindowOpen = computed(() => {
     if (!props.match.start_estimations || !props.match.end_estimations) return false
@@ -98,11 +103,17 @@ const shouldShow = computed(() => {
     return false
 })
 
-const submittedLabel = computed(() =>
-    estimationScore.value !== null
-        ? `نقاطك: ${estimationScore.value}/10`
-        : 'تم التوقع',
+const isMatchEnded = computed(() =>
+    String(props.match.state) === MatchState.Done
+    || String(fullMatchData.value?.state) === MatchState.Done,
 )
+
+const submittedLabel = computed(() => {
+    if (isMatchEnded.value && estimationScore.value !== null) {
+        return `نقاطك: ${estimationScore.value}/10`
+    }
+    return 'تم التوقع'
+})
 
 async function checkEstimationStatus() {
     if (!userStore.isAuthenticated) {
@@ -137,8 +148,9 @@ async function checkEstimationStatus() {
 }
 
 async function fetchFullMatchData() {
+    if (props.fullMatch || fetchedFullMatch.value) return
     try {
-        fullMatchData.value = await $api.matches.fetchById(props.match.id.toString())
+        fetchedFullMatch.value = await $api.matches.fetchById(props.match.id.toString())
     }
     catch (error) {
         console.error('Error fetching full match data:', error)
@@ -192,7 +204,7 @@ watch(() => userStore.isAuthenticated, async (authenticated) => {
 })
 
 watch(() => props.match.id, () => {
-    fullMatchData.value = null
+    fetchedFullMatch.value = null
     checkEstimationStatus()
 })
 </script>

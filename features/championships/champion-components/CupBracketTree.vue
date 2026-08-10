@@ -2,26 +2,26 @@
     <ClientOnly>
         <div
             class="cup-bracket-tree relative w-full overflow-hidden rounded-zat-md bg-surface-raised"
-            :class="variant === 'preview' ? 'h-full min-h-80' : 'h-[min(70vh,720px)] min-h-[420px]'"
+            :class="variant === 'preview' ? 'h-full min-h-56 sm:min-h-80' : 'h-[min(80vh,720px)] min-h-[320px] sm:min-h-[420px]'"
             dir="ltr"
         >
             <VueFlow
                 :nodes="nodes"
                 :edges="edges"
                 :node-types="nodeTypes"
-                :min-zoom=".5"
+                :min-zoom=".35"
                 :max-zoom="1.5"
-                :default-viewport="{ zoom: 0.85, x: 24, y: 24 }"
+                :default-viewport="{ zoom: 0.7, x: 16, y: 16 }"
                 :nodes-draggable="false"
                 :nodes-connectable="false"
                 :elements-selectable="false"
                 :pan-on-drag="variant === 'full'"
                 :zoom-on-scroll="variant === 'full'"
-                :zoom-on-pinch="variant === 'full'"
+                :zoom-on-pinch="true"
                 :zoom-on-double-click="false"
                 :prevent-scrolling="variant === 'full'"
                 fit-view-on-init
-                :fit-view-options="{ padding: 0.12, includeHiddenNodes: true }"
+                :fit-view-options="{ padding: 0.08, includeHiddenNodes: true }"
                 class="h-full w-full"
             >
                 <Background
@@ -36,7 +36,7 @@
         <template #fallback>
             <div
                 class="flex items-center justify-center rounded-zat-md bg-surface-raised text-text-caption"
-                :class="variant === 'preview' ? 'h-80' : 'min-h-[420px]'"
+                :class="variant === 'preview' ? 'h-56 sm:h-80' : 'min-h-[320px] sm:min-h-[420px]'"
             >
                 جاري تحميل شجرة البطولة...
             </div>

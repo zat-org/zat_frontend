@@ -187,7 +187,7 @@
 
                     <div
                         v-if="hasUpcomingEstimation"
-                        class="relative z-10 flex w-full items-center justify-start pt-2"
+                        class="relative z-10 flex w-full items-center justify-center  pt-2"
                         @click.stop
                     >
                         <MatchCardEstimation
@@ -220,52 +220,15 @@
                 <template v-if="previousMatches.length">
                     <ChampionshipsSectionDivider title="المباريات السابقة" />
 
-                    <div class="flex w-full flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
-                        <article
+                    <div class="flex w-full flex-col gap-4 sm:flex-row sm:items-stretch sm:justify-between sm:gap-6">
+                        <ChampionshipsOverviewMatchCard
                             v-for="match in previousMatches"
                             :key="match.id"
-                            class="flex min-w-0 flex-1 flex-col items-center justify-center gap-4 rounded-zat-md border-2 border-surface-tone2 bg-surface-raised p-4 sm:max-w-xs"
-                        >
-                            <p class="w-full truncate text-center text-base font-semibold leading-7 text-text-subtitle">
-                                {{ displayTextValue(match.name) }}
-                            </p>
-
-                            <div class="flex items-center justify-center gap-6">
-                                <div class="flex w-26 flex-col items-center">
-                                    <Image
-                                        :src="mediaBaseUrl + match.team_1_logo"
-                                        class="size-12 object-contain"
-                                        :alt="match.team_1_name"
-                                        icon="i-heroicons-user-group"
-                                    />
-                                    <p class="w-full truncate text-center text-xl font-bold leading-10 text-text-heading">
-                                        {{ displayTextValue(match.team_1_name) }}
-                                    </p>
-                                </div>
-
-                                <div class="flex flex-col items-center justify-center gap-1">
-                                    <p class="flex items-center gap-3 font-numbers text-2xl font-bold leading-12 text-text-action">
-                                        <span>{{ scoreDisplay(match.team_1_score) }}</span>
-                                        <span>{{ scoreDisplay(match.team_2_score) }}</span>
-                                    </p>
-                                    <!-- <p class="text-base font-semibold leading-7 text-text-caption">
-                                        النتيجة النهائية
-                                    </p> -->
-                                </div>
-
-                                <div class="flex w-26 flex-col items-center">
-                                    <Image
-                                        :src="mediaBaseUrl + match.team_2_logo"
-                                        class="size-12 object-contain"
-                                        :alt="match.team_2_name"
-                                        icon="i-heroicons-user-group"
-                                    />
-                                    <p class="w-full truncate text-center text-xl font-bold leading-10 text-text-heading">
-                                        {{ displayTextValue(match.team_2_name) }}
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
+                            :match="match"
+                            :champ-id="champ.leagueid"
+                            compact
+                            class="min-w-0 flex-1"
+                        />
                     </div>
                 </template>
             </div>
@@ -420,9 +383,4 @@ const videoMeta = computed(() => {
         year: 'numeric',
     })
 })
-
-function scoreDisplay(score: number | null | undefined) {
-    if (score === null || score === undefined || Number.isNaN(score)) return '-'
-    return String(score)
-}
 </script>

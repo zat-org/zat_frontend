@@ -2,7 +2,7 @@
     <FetchDataWrapper :error="error ? 'تعذر تحميل بيانات المباريات' : null" :pending="pending">
         <div
             v-if="hasContent"
-            class="zat-card flex h-[264px] w-full flex-col items-center justify-between px-4 py-4 sm:px-6"
+            class="zat-card flex min-h-[264px] w-full flex-col items-center justify-between gap-3 px-4 py-4 sm:px-6"
             aria-label="رادار المباريات"
         >
             <!-- Title bar: tabs (start/right in RTL) + match details (end/left) -->
@@ -91,13 +91,25 @@
                 </div>
             </div>
 
-            <div class="flex w-full items-center justify-center">
+            <div class="flex w-full flex-col items-center justify-center gap-2">
                 <p
                     v-if="tournamentName"
                     class="truncate text-center text-xl font-bold leading-10 text-text-subtitle"
                 >
                     {{ tournamentName }}
                 </p>
+
+                <div
+                    v-if="activeTab === 'upcoming' && activeMatch && hasEstimationWindow"
+                    class="relative z-10 flex justify-center"
+                    @click.stop
+                >
+                    <MatchCardEstimation
+                        :match="activeMatch"
+                        :champ-id="activeMatch.league_id"
+                        tone="light"
+                    />
+                </div>
             </div>
         </div>
     </FetchDataWrapper>
@@ -153,6 +165,10 @@ const matchDate = computed(() => {
 })
 
 const hasContent = computed(() => Boolean(previousMatch.value || upcomingMatch.value))
+
+const hasEstimationWindow = computed(() =>
+    Boolean(upcomingMatch.value?.start_estimations && upcomingMatch.value?.end_estimations),
+)
 
 function tabClass(tab: 'previous' | 'upcoming') {
     const isActive = activeTab.value === tab

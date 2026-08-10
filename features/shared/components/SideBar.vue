@@ -3,62 +3,84 @@
         v-model:open="isSidebarOpen"
         side="right"
         :close="false"
+        :ui="{
+            content: 'max-w-[343px] w-full bg-surface-off-base shadow-zat',
+        }"
     >
         <template #content>
-            <div class="flex flex-col justify-center h-full overflow-y-auto bg-surface-raised text-text-body">
-                <div class="flex justify-between items-center px-3 py-2 border-b border-surface-tone">
-                    <img
-                        width="75"
-                        height="75"
-                        :src="isDark ? '/images/zat-logo-white.svg' : '/images/zat-logo-black.svg'"
-                        alt="zات"
-                    />
-                    <UButton icon="i-heroicons-x-mark" square variant="ghost" color="neutral" @click="closeSidebar" />
-                </div>
-                <div class="grow">
-                    <SideNavigationBar v-model="isSidebarOpen" />
-                </div>
-                <div class="text-center my-5 ps-3">
-                    <div class="mb-3" v-if="userStore.isAuthenticated && userStore.user">
-                        <div class="flex justify-center items-center ">
-                            <UAvatar imgClass="object-contain bg-white p-1" size="2xl" class="me-3" alt="user-image"
-                                :src="userStore.user.avatar_url || ''" icon="i-heroicons-user" />
-                            <div class="text-sm text-right">
-                                <p>يوزر قيدها : <span>{{ userStore.user.username }}@</span></p>
-                                <p>جوالك : <span dir="ltr">{{ userStore.user.phone }}</span></p>
-                            </div>
-                        </div>
-                    </div>
-                    <UButton
-                        v-if="!userStore.isAuthenticated"
-                        to="/qydha"
+            <div
+                class="flex h-full flex-col bg-surface-off-base text-text-body"
+                dir="rtl"
+            >
+                <header class="flex shrink-0 items-center justify-between px-4 pb-4 pt-6">
+                    <h2 class="text-xl font-bold leading-8 text-text-body">
+                        القائمة
+                    </h2>
+                    <button
+                        type="button"
+                        class="flex size-6 items-center justify-center text-text-body transition-opacity hover:opacity-70"
+                        aria-label="اغلاق القائمة"
                         @click="closeSidebar"
                     >
-                        <img src="/images/qydha_logo.png" class="w-12 -mt-2 " />
-                        <span class="flex items-center">عندك قيدها؟! سجل دخول بيوزرك
-                            <UIcon class="text-lg ms-1 animate-pulse"
-                                name="i-heroicons-cursor-arrow-ripple-16-solid" />
-                        </span>
-                    </UButton>
-                    <UButton v-else @click="userStore.logoutUser()"
-                        trailing-icon="i-heroicons-arrow-left-start-on-rectangle-20-solid">
-                        تسجيل خروج
-                    </UButton>
+                        <UIcon
+                            name="zat:close-square"
+                            class="size-6"
+                        />
+                    </button>
+                </header>
+
+                <div class="min-h-0 flex-1 overflow-y-auto px-4 pb-4">
+                    <SideNavigationBar @navigate="closeSidebar" />
                 </div>
-                <USeparator />
-                <SocialMediaIcons />
+
+                <footer class="flex shrink-0 flex-col items-start gap-2 px-4 pb-6 pt-2">
+                    <img
+                        src="/images/zat-logo-black.svg"
+                        alt="زات"
+                        class="h-9 w-auto dark:hidden"
+                        width="62"
+                        height="36"
+                    >
+                    <img
+                        src="/images/zat-logo-white.svg"
+                        alt="زات"
+                        class="hidden h-9 w-auto dark:block"
+                        width="62"
+                        height="36"
+                    >
+
+                    <div class="flex items-center gap-4">
+                        <a
+                            v-for="social in socialLinks"
+                            :key="social.href"
+                            :href="social.href"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="flex size-8 items-center justify-center rounded-lg bg-surface-raised text-text-body transition-opacity hover:opacity-80"
+                            :aria-label="social.label"
+                        >
+                            <UIcon
+                                :name="social.icon"
+                                class="size-4"
+                            />
+                        </a>
+                    </div>
+                </footer>
             </div>
         </template>
     </USlideover>
 </template>
 
 <script setup lang="ts">
-import { useUserStore } from '~/stores/useUserStore'
-
-const userStore = useUserStore()
-const colorMode = useColorMode()
-const isDark = computed(() => colorMode.value === 'dark')
 const isSidebarOpen = defineModel<boolean>('open', { default: false })
+
+const socialLinks = [
+    { icon: 'zat:instagram', href: 'https://www.instagram.com/zat_baloot', label: 'Instagram' },
+    { icon: 'zat:whatsapp', href: 'https://wa.me/966545970009', label: 'WhatsApp' },
+    { icon: 'zat:facebook', href: 'https://www.facebook.com/zatbaloot', label: 'Facebook' },
+    { icon: 'zat:youtube', href: 'https://youtube.com/@zat_baloot', label: 'YouTube' },
+    { icon: 'zat:twitch', href: 'https://twitch.tv/zat_baloot', label: 'Twitch' },
+]
 
 function closeSidebar() {
     isSidebarOpen.value = false

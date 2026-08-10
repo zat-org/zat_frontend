@@ -5,8 +5,28 @@
         aria-label="أقسام البطولة"
         dir="rtl"
     >
+        <div class="page-container py-3 md:hidden">
+            <USelectMenu
+                v-model="selectedHref"
+                :items="dropdownItems"
+                value-key="value"
+                label-key="label"
+                :search-input="false"
+                trailing-icon="i-heroicons-chevron-down-20-solid"
+                color="neutral"
+                variant="soft"
+                size="lg"
+                class="w-full"
+                :ui="{
+                    base: 'bg-white/10 text-white ring-0',
+                    trailingIcon: 'text-white',
+                    content: 'min-w-60',
+                }"
+            />
+        </div>
+
         <ul
-            class="page-container flex h-18 items-stretch justify-start gap-4 overflow-x-auto pt-4 sm:gap-6"
+            class="page-container hidden h-18 items-stretch justify-start gap-4 overflow-x-auto pt-4 sm:gap-6 md:flex"
         >
             <li
                 v-for="link in availableNavigation"
@@ -93,6 +113,30 @@ const availableNavigation = computed(() =>
         props.champ?.type ? link.availableAt.includes(champType.value) : true,
     ),
 )
+
+const dropdownItems = computed(() =>
+    availableNavigation.value.map(link => ({
+        label: link.name,
+        value: normalizePath(link.href),
+    })),
+)
+
+const selectedHref = computed({
+    get() {
+        const active = availableNavigation.value.find(link =>
+            isActive(link.href, link.exact),
+        )
+        return normalizePath(active?.href ?? availableNavigation.value[0]?.href ?? '')
+    },
+    set(href: string) {
+        const target = availableNavigation.value.find(
+            link => normalizePath(link.href) === normalizePath(href),
+        )
+        if (target && normalizePath(route.path) !== normalizePath(target.href)) {
+            navigateTo(target.href)
+        }
+    },
+})
 
 function normalizePath(path: string) {
     return path.replace(/\/+$/, '') || '/'

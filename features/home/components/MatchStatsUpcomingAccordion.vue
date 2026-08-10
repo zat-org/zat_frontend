@@ -51,6 +51,29 @@
                     </div>
 
                     <div class="relative z-10 flex flex-col items-center gap-4">
+                        <div class="flex w-full items-center justify-between gap-2">
+                            <NuxtLink
+                                :to="matchHref"
+                                class="flex size-8 items-center justify-center rounded-zat-full text-text-body transition-opacity hover:opacity-70"
+                                :aria-label="`تفاصيل مباراة ${match.team_1_name} ضد ${match.team_2_name}`"
+                                @click.stop
+                            >
+                                <UIcon
+                                    name="zat:external-website"
+                                    class="size-8"
+                                />
+                            </NuxtLink>
+
+                            <p class="min-w-0 flex-1 truncate text-center text-xl font-bold text-text-subtitle sm:text-2xl">
+                                {{ match.tournament_name || tournamentName }}
+                            </p>
+
+                            <span
+                                class="size-8 shrink-0"
+                                aria-hidden="true"
+                            />
+                        </div>
+
                         <div class="flex w-full max-w-xl items-center justify-center gap-6 sm:gap-8">
                             <div class="flex w-24 flex-col items-center gap-2 sm:w-[104px]">
                                 <Image
@@ -82,10 +105,6 @@
                                 </p>
                             </div>
                         </div>
-
-                        <p class="text-center text-xl font-bold text-text-subtitle sm:text-2xl">
-                            {{ match.tournament_name || tournamentName }}
-                        </p>
 
                         <div
                             v-if="hasEstimationWindow"
@@ -122,6 +141,10 @@ const props = defineProps<{
 }>()
 
 const open = defineModel<boolean>('open', { default: false })
+
+const matchHref = computed(
+    () => `/championships/${props.match.league_id}/match/${props.match.id}`,
+)
 
 const hasEstimationWindow = computed(() =>
     Boolean(props.match.start_estimations && props.match.end_estimations),

@@ -96,15 +96,13 @@
                     <p class="text-center text-[10px] leading-4 text-text-subtitle">
                         كورس عملي لتعلم البلوت خطوة بخطوة: من القواعد الأساسية لحد استراتيجيات الفوز. هتتعلم إزاي تفكر زي المحترفين، تقرأ اللعب، وتاخد قرارات ذكية تخليك تكسب بثقة في كل جولة.
                     </p>
-                    <div>
-
-                    <NuxtLink
-                        to="/learn-baloot"
-                        class="inline-flex h-10 w-full items-center justify-center gap-2 rounded-lg bg-surface-secondary px-2 text-xs font-bold text-white transition-opacity hover:opacity-90"
-                    >
-                            احترف معنا الان
-                            <UIcon name="zat:teacher" class="size-4" />
-                        </NuxtLink>
+                    <div class="flex justify-center">
+                        <AppButton
+                            label="احترف معنا الان"
+                            icon="zat:teacher"
+                            to="/learn-baloot"
+                            variant="secondary"
+                        />
                     </div>
                 </aside>
             </div>

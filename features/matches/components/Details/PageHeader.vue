@@ -49,9 +49,12 @@
                         aria-hidden="true"
                     >
 
-                    <h1 class="truncate text-base font-bold leading-7 text-text-body">
+                    <NuxtLink
+                        :to="`/championships/${champ.leagueid}`"
+                        class="truncate text-base font-bold leading-7 text-text-body transition-opacity hover:opacity-70"
+                    >
                         {{ champ.name }}
-                    </h1>
+                    </NuxtLink>
                 </div>
             </div>
 
