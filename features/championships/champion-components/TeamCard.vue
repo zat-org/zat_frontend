@@ -44,14 +44,14 @@
         >
             <div class="grid h-full w-full grid-cols-5 gap-2 px-2 py-4">
                 <div
-                    v-for="(slot, index) in playerSlots"
-                    :key="slot?.id ?? `empty-${index}`"
+                    v-for="(slot, index) in memberSlots"
+                    :key="slot ? `${slot.role}-${slot.id}` : `empty-${index}`"
                     class="relative flex min-h-0 min-w-0 items-end justify-center overflow-hidden rounded-lg bg-[#F36166]"
                 >
                     <img
                         v-if="slot?.image && !imageErrors[index]"
                         :src="mediaBaseUrl + slot.image"
-                        :alt="slot.name || 'لاعب'"
+                        :alt="slot.name || (slot.role === 'coach' ? 'مدرب' : 'لاعب')"
                         class="absolute inset-0 size-full object-cover object-top"
                         loading="lazy"
                         @error="imageErrors[index] = true"
@@ -63,6 +63,12 @@
                     >
                         <UIcon name="i-heroicons-user" class="size-10 text-[#737171]" />
                     </div>
+                    <span
+                        v-if="slot?.role === 'coach'"
+                        class="absolute inset-x-0 bottom-0 z-10 bg-black/50 py-0.5 text-center text-[10px] font-bold leading-4 text-white"
+                    >
+                        مدرب
+                    </span>
                 </div>
             </div>
         </div>
@@ -78,7 +84,7 @@
         <button
             v-if="showMembersPeek && !isExpanded"
             type="button"
-            class="absolute inset-s-1/2  top-38 z-20 flex size-8  items-center justify-center rounded-full bg-[#ED1C24] text-white shadow-[0_2px_16px_0_rgba(241,73,80,0.5)]"
+            class="absolute inset-end-1/2  top-38 z-20 flex size-8  items-center justify-center rounded-full bg-[#ED1C24] text-white shadow-[0_2px_16px_0_rgba(241,73,80,0.5)]"
             aria-label="عرض أعضاء الفريق"
             @click.stop="expand"
         >
@@ -88,7 +94,7 @@
         <template v-if="isExpanded">
             <button
                 type="button"
-                class="absolute inset-s-1/2 top-0 z-30 flex size-8  -translate-y-1/2 items-center justify-center rounded-full bg-[#ED1C24] text-white shadow-[0_2px_16px_0_rgba(241,73,80,0.5)]"
+                class="absolute inset-end-1/2 top-0 z-30 flex size-8  -translate-y-1/2 items-center justify-center rounded-full bg-[#ED1C24] text-white shadow-[0_2px_16px_0_rgba(241,73,80,0.5)]"
                 aria-label="إخفاء أعضاء الفريق"
                 @click.stop="collapse"
             >
@@ -97,7 +103,7 @@
 
             <NuxtLink
                 :to="`/teams/${team.id}`"
-                class="absolute bottom-10 start-1/2 z-30 -translate-x-1/2 rounded-zat-sm bg-text-body px-3 py-2 text-xs font-bold leading-6 text-white transition-opacity hover:opacity-90"
+                class="absolute bottom-10 inset-end-1/2 z-30  rounded-zat-sm bg-text-body px-3 py-2 text-xs font-bold leading-6 text-white transition-opacity hover:opacity-90"
             >
                 تفاصيل الفريق
             </NuxtLink>
@@ -106,8 +112,15 @@
 </template>
 
 <script setup lang="ts">
-import type { IPlayerLessDetails, ITeam } from '~/features/teams/types/ITeam'
+import type { ITeam } from '~/features/teams/types/ITeam'
 import { displayTextValue } from '~/features/championships/utils/championWinnerStats'
+
+type TeamMemberSlot = {
+    id: number
+    name: string
+    image: string
+    role: 'coach' | 'player'
+}
 
 const props = defineProps<{ team: ITeam }>()
 
@@ -118,14 +131,35 @@ const imageErrors = reactive<Record<number, boolean>>({})
 
 const showMembersPeek = computed(() => isHovered.value || isExpanded.value)
 
-const playerSlots = computed<(IPlayerLessDetails | null)[]>(() => {
-    const players = props.team.players ?? []
-    const slots: (IPlayerLessDetails | null)[] = players.slice(0, 5)
-    while (slots.length < 5) slots.push(null)
-    return slots
+const memberSlots = computed<(TeamMemberSlot | null)[]>(() => {
+    const slots: TeamMemberSlot[] = []
+    const coach = props.team.coaches?.[0]
+
+    if (coach) {
+        slots.push({
+            id: coach.id,
+            name: coach.name,
+            image: coach.image,
+            role: 'coach',
+        })
+    }
+
+    for (const player of props.team.players ?? []) {
+        if (slots.length >= 5) break
+        slots.push({
+            id: player.id,
+            name: player.name,
+            image: player.image,
+            role: 'player',
+        })
+    }
+
+    const padded: (TeamMemberSlot | null)[] = [...slots]
+    while (padded.length < 5) padded.push(null)
+    return padded
 })
 
-watch(playerSlots, () => {
+watch(memberSlots, () => {
     Object.keys(imageErrors).forEach((key) => {
         delete imageErrors[Number(key)]
     })
