@@ -41,6 +41,7 @@ interface ITeamFullDetails {
     founded_in: string,
     team_logo: string,
     winning_count: string,
+    participation_count: number,
     players: IPlayerLessDetails[],
     champs: IChampLessDetails[],
     statistics: ITeamStatistics,

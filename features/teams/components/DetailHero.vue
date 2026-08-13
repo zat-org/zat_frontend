@@ -94,7 +94,10 @@ const props = defineProps<{
 
 const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
 
-const champsCount = computed(() => props.team.champs?.length ?? 0)
+const champsCount = computed(() => {
+    const raw = Number(props.team.participation_count)
+    return Number.isFinite(raw) ? Math.max(0, raw) : 0
+})
 
 const winsCount = computed(() => {
     const raw = Number(props.team.winning_count)
