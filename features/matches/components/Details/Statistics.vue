@@ -1,8 +1,7 @@
 <template>
     <section
         v-if="showStats"
-        class="w-full bg-surface-off-base bg-repeat py-6"
-        :style="{ backgroundImage: `url(${statsPattern})` }"
+        class="w-full bg-poker-pattern bg-surface-off-base py-6"
         aria-label="احصائية المباراة"
         dir="rtl"
     >
@@ -50,7 +49,6 @@ import {
     displayStatValue,
     displayTextValue,
 } from '~/features/championships/utils/championWinnerStats'
-import statsPattern from '~/assets/images/matches/stats-diagonal-pattern.svg'
 
 const props = defineProps<{
     match: IMatchFullDetails

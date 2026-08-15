@@ -1130,8 +1130,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Statistics.vue": {
-    "mtime": 1786262804.764164,
-    "ast_hash": "54ba5a37313466d59ec522ca0091da35",
+    "mtime": 1786806602.6332893,
+    "ast_hash": "7ee828b5c5154ece7f70a1bd18b937f5",
     "semantic_hash": ""
   },
   "features/matches/components/Estimation/BestPlayer.vue": {
@@ -1525,8 +1525,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Teams.vue": {
-    "mtime": 1786262804.7731671,
-    "ast_hash": "1683ff6ac125d8dbfc566a62961ca801",
+    "mtime": 1786806629.4518812,
+    "ast_hash": "f6ee310ecbf8fce55e3a7f47b53cac7b",
     "semantic_hash": ""
   },
   "features/matches/composables/useChampMatchNeighbors.ts": {
