@@ -52,6 +52,17 @@
                         </div>
                     </div>
                 </section>
+
+                <section
+                    class="w-full bg-surface-off-base py-6"
+                    aria-label="اخر مباريات الفريق"
+                    dir="rtl"
+                >
+                    <div class="page-container flex flex-col gap-4">
+                        <ChampionshipsSectionDivider title="اخر مباريات الفريق" />
+                        <TeamLastMatches :team-id="team.id" />
+                    </div>
+                </section>
             </div>
         </template>
 
