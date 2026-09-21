@@ -55,11 +55,11 @@
 
                 <section
                     class="w-full bg-surface-off-base py-6"
-                    aria-label="اخر مباريات الفريق"
+                    aria-label="مباريات الفريق"
                     dir="rtl"
                 >
                     <div class="page-container flex flex-col gap-4">
-                        <ChampionshipsSectionDivider title="اخر مباريات الفريق" />
+                        <ChampionshipsSectionDivider title="مباريات الفريق" />
                         <TeamLastMatches :team-id="team.id" />
                     </div>
                 </section>
