@@ -75,6 +75,7 @@ import { CHAMPIONSHIP_TYPE_CARDS } from '~/features/championships/utils/champion
 const MATCH_LIMIT = 6
 
 const typeTabs = [...CHAMPIONSHIP_TYPE_CARDS]
+    .filter(card => card.label !== 'followers')
     .reverse()
     .map(card => ({ label: card.label, title: card.title }))
 
@@ -85,7 +86,7 @@ const timeTab = ref<'previous' | 'upcoming'>('previous')
 const typeTab = ref('league')
 
 const historyParams = computed<IMatchHistoryParams>(() => ({
-    type: typeTab.value === 'followers' ? 'league' : typeTab.value,
+    type: typeTab.value,
     status: timeTab.value,
     limit: MATCH_LIMIT,
 }))
@@ -93,18 +94,12 @@ const historyParams = computed<IMatchHistoryParams>(() => ({
 const { data, pending, error } = await $api.matches.getHistory(historyParams)
 
 const champs = computed<IMatchHistoryChamp[]>(() => {
-    if (typeTab.value === 'followers') {
-        return []
-    }
     return (data.value?.champs ?? []).filter(champ =>
         (champ.groups ?? []).some(group => group.matches.length > 0),
     )
 })
 
 const emptyMessage = computed(() => {
-    if (typeTab.value === 'followers') {
-        return 'بطولات المتابعين عبر صفحة الانضمام'
-    }
     return timeTab.value === 'previous'
         ? 'لا توجد مباريات سابقة لهذا النوع'
         : 'لا توجد مباريات قادمة لهذا النوع'

@@ -27,7 +27,8 @@
                             <img
                                 :src="logo.url"
                                 alt="شريك"
-                                class="h-12 w-auto max-h-12 object-contain brightness-0 dark:invert"
+                                class="h-12 w-auto max-h-12 object-contain"
+                                :class="{ 'brightness-0 dark:invert': !logo.marked }"
                                 loading="eager"
                                 draggable="false"
                             >
@@ -45,7 +46,8 @@
                             <img
                                 :src="logo.url"
                                 alt=""
-                                class="h-12 w-auto max-h-12 object-contain brightness-0 dark:invert"
+                                class="h-12 w-auto max-h-12 object-contain"
+                                :class="{ 'brightness-0 dark:invert': !logo.marked }"
                                 loading="eager"
                                 draggable="false"
                             >
@@ -73,7 +75,7 @@ const trackLogos = computed(() => {
     if (!list.length) return []
 
     const minCount = Math.max(list.length * 4, 20)
-    const out: Array<{ key: string, id: string | number, url: string }> = []
+    const out: Array<{ key: string, id: string | number, url: string, marked: boolean }> = []
     let i = 0
     while (out.length < minCount) {
         const img = list[i % list.length]!
@@ -81,6 +83,7 @@ const trackLogos = computed(() => {
             key: `${out.length}-${img.id}`,
             id: img.id,
             url: img.url,
+            marked: img.marked,
         })
         i++
     }

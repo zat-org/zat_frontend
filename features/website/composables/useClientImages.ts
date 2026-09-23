@@ -7,7 +7,13 @@ export function useClientImages() {
   return useStrapiCollection(
     'website:clients-images',
     'clients-image',
-    { populate: '*' },
+    {
+      populate: {
+        images: {
+          populate: ['image'],
+        },
+      },
+    },
     response => mapClientImages(response, toMediaUrl),
   )
 }

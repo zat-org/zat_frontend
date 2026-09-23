@@ -115,17 +115,60 @@ export function mapPlayerImages(
   })
 }
 
+type ClientImageComponent = {
+  id?: number
+  marked?: boolean
+  image?: StrapiMediaRelation | { id?: number, url?: string, attributes?: StrapiMediaAttributes }
+}
+
 export function mapClientImages(
   response: {
     data?: {
       attributes?: {
-        images?: { data?: Array<{ id: number, attributes?: { url?: string } }> }
+        images?: ClientImageComponent[] | { data?: Array<{ id: number, attributes?: { url?: string } }> }
       }
     } | null
   },
   toMediaUrl: MediaUrlFn,
-): Array<{ id: number, url: string }> {
-  const imageList = response?.data?.attributes?.images?.data
+): Array<{ id: number, url: string, marked: boolean }> {
+  const imagesField = response?.data?.attributes?.images
+  if (!imagesField) {
+    return []
+  }
+
+  // New shape: component array [{ image, marked }]
+  if (Array.isArray(imagesField)) {
+    return imagesField.flatMap((item, index) => {
+      const media = item.image
+      let path: string | undefined
+      let mediaId: number | undefined
+
+      if (media && 'data' in media) {
+        path = getStrapiMediaPath(media as StrapiMediaRelation)
+        const mediaItem = getStrapiMediaItem(media as StrapiMediaRelation) as
+          | { id?: number, attributes?: StrapiMediaAttributes }
+          | undefined
+        mediaId = mediaItem?.id
+      }
+      else if (media && typeof media === 'object') {
+        path = media.url ?? media.attributes?.url
+        mediaId = media.id
+      }
+
+      if (!path) {
+        return []
+      }
+
+      return [{
+        id: item.id ?? mediaId ?? index,
+        url: toMediaUrl(path),
+        marked: Boolean(item.marked),
+      }]
+    })
+  }
+
+  // Legacy shape: media multiple { data: [...] }
+  const imageList = imagesField.data
   if (!Array.isArray(imageList)) {
     return []
   }
@@ -136,7 +179,7 @@ export function mapClientImages(
       return []
     }
 
-    return [{ id: image.id, url: toMediaUrl(path) }]
+    return [{ id: image.id, url: toMediaUrl(path), marked: false }]
   })
 }
 

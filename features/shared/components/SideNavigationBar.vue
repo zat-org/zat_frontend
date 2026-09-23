@@ -211,7 +211,6 @@ const tournamentItems = [
     { label: 'بطولة الكأس', to: '/championships/cup', icon: 'zat:cup' },
     { label: 'بطولة السوبر', to: '/championships/super', icon: 'zat:cup' },
     { label: 'بطولة الحزام', to: '/championships/hezam', icon: 'zat:cup' },
-    { label: 'بطولة الجمهور', to: '/join-us', icon: 'zat:medal-star' },
 ]
 
 const mainItems = [

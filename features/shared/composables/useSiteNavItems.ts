@@ -22,7 +22,6 @@ export function useSiteNavItems() {
         { label: 'بطولة الحزام', to: '/championships/hezam', row: 2 },
         { label: 'بطولة السوبر', to: '/championships/super', row: 2 },
         { label: 'بطولة الكأس', to: '/championships/cup', row: 2 },
-        { label: 'بطولة الجمهور', to: '/join-us', row: 2 },
       ],
     },
 

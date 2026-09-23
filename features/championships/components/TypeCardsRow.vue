@@ -6,7 +6,7 @@
             aria-label="أنواع البطولات"
         >
             <div
-                v-for="card in CHAMPIONSHIP_TYPE_CARDS"
+                v-for="card in cards"
                 :key="card.label"
                 role="listitem"
                 class="shrink-0 py-1"
@@ -19,4 +19,6 @@
 
 <script setup lang="ts">
 import { CHAMPIONSHIP_TYPE_CARDS } from '~/features/championships/utils/championshipTypes'
+
+const cards = CHAMPIONSHIP_TYPE_CARDS.filter(c => c.label !== 'followers')
 </script>

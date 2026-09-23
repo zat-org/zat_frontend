@@ -120,7 +120,7 @@ const props = defineProps<{
     status: MatchHistoryStatus
 }>()
 
-const typeTabs = ['league', 'cup', 'super', 'hezam', 'followers']
+const typeTabs = ['league', 'cup', 'super', 'hezam']
     .map(label => CHAMPIONSHIP_TYPE_CARDS.find(card => card.label === label)!)
     .map(card => ({ label: card.label, title: card.title }))
 
@@ -137,7 +137,7 @@ const viewMode = ref<'list' | 'cards'>('list')
 const typeTab = ref('league')
 
 const historyParams = computed<IMatchHistoryParams>(() => ({
-    type: typeTab.value === 'followers' ? 'league' : typeTab.value,
+    type: typeTab.value,
     status: props.status,
 }))
 
@@ -155,31 +155,22 @@ const {
 } = await $api.champions.getAll(cardsType)
 
 const champs = computed<IMatchHistoryChamp[]>(() => {
-    if (typeTab.value === 'followers') return []
     return (historyData.value?.champs ?? []).filter(champ =>
         (champ.groups ?? []).some(group => group.matches.length > 0),
     )
 })
 
 const cardChamps = computed(() => {
-    if (typeTab.value === 'followers') return []
     return (cardsData.value?.champs ?? []).filter(champ => String(champ.type) === typeTab.value)
 })
 
 const emptyListMessage = computed(() => {
-    if (typeTab.value === 'followers') {
-        return 'بطولات المتابعين عبر صفحة الانضمام'
-    }
     return isUpcoming.value
         ? 'لا توجد مباريات قادمة لهذا النوع'
         : 'لا توجد مباريات سابقة لهذا النوع'
 })
 
-const emptyCardsMessage = computed(() =>
-    typeTab.value === 'followers'
-        ? 'بطولات المتابعين عبر صفحة الانضمام'
-        : 'لا توجد بطولات حاليا',
-)
+const emptyCardsMessage = computed(() => 'لا توجد بطولات حاليا')
 
 function typeTabClass(label: string) {
     const active = typeTab.value === label

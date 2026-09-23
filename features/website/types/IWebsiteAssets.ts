@@ -9,6 +9,7 @@ export interface IPlayerImage {
 export interface IClientImage {
   id: number
   url: string
+  marked: boolean
 }
 
 export interface IZatStatistics {

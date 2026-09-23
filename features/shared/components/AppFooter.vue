@@ -119,7 +119,6 @@ const tournamentLinks = [
     { label: 'كأس زات', to: '/championships/cup' },
     { label: 'سوبر زات', to: '/championships/super' },
     { label: 'حزام زات', to: '/championships/hezam' },
-    { label: 'الجماهير', to: '/join-us' },
 ]
 
 const quickLinks = [
