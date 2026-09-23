@@ -2,11 +2,11 @@
     <section
         v-if="trackLogos.length > 0"
         id="clients"
-        class="relative w-full overflow-hidden py-6"
+        class="relative w-full overflow-hidden bg-surface-tone2 py-6 dark:bg-transparent"
         aria-label="شركائنا"
     >
         <div class="relative z-10 flex flex-col items-center gap-6">
-            <h2 class="w-full text-center text-[32px] font-bold leading-[56px] text-text-subtitle">
+            <h2 class="w-full text-center text-[32px] font-bold leading-[56px] text-text-on-action dark:text-text-subtitle">
                 شركائنا
             </h2>
 
@@ -28,7 +28,7 @@
                                 :src="logo.url"
                                 alt="شريك"
                                 class="h-12 w-auto max-h-12 object-contain"
-                                :class="{ 'brightness-0 dark:invert': !logo.marked }"
+                                :class="{ 'brightness-0 invert': !logo.marked }"
                                 loading="eager"
                                 draggable="false"
                             >
@@ -47,7 +47,7 @@
                                 :src="logo.url"
                                 alt=""
                                 class="h-12 w-auto max-h-12 object-contain"
-                                :class="{ 'brightness-0 dark:invert': !logo.marked }"
+                                :class="{ 'brightness-0 invert': !logo.marked }"
                                 loading="eager"
                                 draggable="false"
                             >
