@@ -7,7 +7,10 @@ export function usePlayerImages() {
   return useStrapiCollection(
     'website:players-images',
     'players-images',
-    { populate: '*' },
+    {
+      populate: '*',
+      pagination: { pageSize: 100 },
+    },
     response => mapPlayerImages(response, toMediaUrl),
   )
 }
