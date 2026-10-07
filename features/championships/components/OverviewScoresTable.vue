@@ -2,7 +2,7 @@
     <ChampionLeagueTable
         :table="table"
         :logos-by-id="logosById"
-        :limit="limit ?? 6"
+        :limit="limit"
     />
 </template>
 
