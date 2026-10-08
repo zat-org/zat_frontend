@@ -176,26 +176,28 @@
 
         <section
             id="download-qydha"
-            class=" page-container bg-poker-pattern bg-surface-off-base"
+            class="page-container bg-poker-pattern bg-surface-off-base"
             aria-label="حمل تطبيق قيدها"
             dir="rtl"
         >
-            <img
-                :src="qydhaBanner"
-                alt="من تسجيل اللاعبين إلى آخر صكة بالبطولة"
-                class="h-48 w-full object-cover sm:h-56"
-            >
+            <div class="overflow-hidden rounded-t-zat-md">
+                <img
+                    :src="qydhaBanner"
+                    alt="من تسجيل اللاعبين إلى آخر صكة بالبطولة"
+                    class="h-auto w-full object-contain object-center sm:h-56 sm:object-cover md:h-64 lg:h-72"
+                >
+            </div>
 
-            <div class=" ">
-                <div class="flex flex-col items-center gap-4 bg-surface-raised">
+            <div class="rounded-b-zat-md bg-surface-raised px-4 py-6 sm:px-6 sm:py-8">
+                <div class="flex flex-col items-center gap-4">
                     <div class="flex w-full flex-col items-center gap-2 text-center">
-                        <p class="text-xl font-bold leading-10 text-text-caption">
+                        <p class="text-base font-bold leading-8 text-text-caption sm:text-xl sm:leading-10">
                             كل شيء تحتاجه للبلوت.. في مكان واحد
                         </p>
-                        <h2 class="text-2xl font-bold leading-12 text-text-heading sm:text-3xl sm:leading-14">
+                        <h2 class="text-xl font-bold leading-10 text-text-heading sm:text-3xl sm:leading-14">
                             يلا حمل قيدها بسرعة وعيش التحدي!
                         </h2>
-                        <p class="text-xl font-semibold leading-9 text-text-subtitle">
+                        <p class="max-w-2xl text-base font-semibold leading-7 text-text-subtitle sm:text-xl sm:leading-9">
                             احسب النقاط، تابع الجولات، ونظّم البطولات بسهولة مع قيدها.
                         </p>
                     </div>
@@ -221,12 +223,12 @@
                         <div
                             v-for="stat in stats"
                             :key="stat.label"
-                            class="flex min-w-24 flex-col items-center"
+                            class="flex min-w-20 flex-col items-center sm:min-w-24"
                         >
-                            <p class="text-2xl font-bold leading-12 text-zat-500">
+                            <p class="text-xl font-bold leading-10 text-zat-500 sm:text-2xl sm:leading-12">
                                 {{ stat.value }}
                             </p>
-                            <p class="text-base font-bold leading-7 text-text-subtitle">
+                            <p class="text-sm font-bold leading-6 text-text-subtitle sm:text-base sm:leading-7">
                                 {{ stat.label }}
                             </p>
                         </div>

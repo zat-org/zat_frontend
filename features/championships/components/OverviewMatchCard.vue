@@ -54,13 +54,13 @@
         </div>
 
         <div
-            class="relative z-10 flex items-center justify-center"
+            class="relative z-10 flex items-start justify-center"
             :class="compact ? 'gap-3' : 'gap-6'"
             dir="ltr"
         >
-            <div class="flex min-w-0 flex-col items-center gap-1">
+            <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <div
-                    class="flex items-center justify-center rounded-zat-full bg-surface-off-base"
+                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base"
                     :class="compact ? 'size-12 p-1' : 'size-24 p-2'"
                 >
                     <Image
@@ -79,15 +79,15 @@
                     />
                 </div>
                 <p
-                    class="truncate text-center font-bold text-text-body"
-                    :class="compact ? 'max-w-20 text-sm leading-6' : 'max-w-28 text-2xl leading-12'"
+                    class="w-full text-center font-bold text-text-body text-balance"
+                    :class="compact ? 'text-sm leading-5' : 'text-2xl leading-8'"
                 >
                     {{ displayTextValue(match.team_1_name) }}
                 </p>
             </div>
 
             <div
-                class="flex min-w-0 flex-col items-center justify-center text-center"
+                class="flex shrink-0 flex-col items-center justify-center self-center text-center"
                 :class="compact ? 'gap-0.5' : 'gap-2'"
             >
                 <template v-if="isDone">
@@ -127,9 +127,9 @@
                 </template>
             </div>
 
-            <div class="flex min-w-0 flex-col items-center gap-1">
+            <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <div
-                    class="flex items-center justify-center rounded-zat-full bg-surface-off-base"
+                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base"
                     :class="compact ? 'size-12 p-1' : 'size-24 p-2'"
                 >
                     <Image
@@ -148,8 +148,8 @@
                     />
                 </div>
                 <p
-                    class="truncate text-center font-bold text-text-body"
-                    :class="compact ? 'max-w-20 text-sm leading-6' : 'max-w-28 text-2xl leading-12'"
+                    class="w-full text-center font-bold text-text-body text-balance"
+                    :class="compact ? 'text-sm leading-5' : 'text-2xl leading-8'"
                 >
                     {{ displayTextValue(match.team_2_name) }}
                 </p>

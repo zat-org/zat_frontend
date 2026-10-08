@@ -49,6 +49,7 @@ const props = withDefaults(defineProps<{
     labelClass?: string
     disabled?: boolean
     type?: 'button' | 'submit' | 'reset'
+    form?: string
 }>(), {
     href: undefined,
     to: undefined,
@@ -62,6 +63,7 @@ const props = withDefaults(defineProps<{
     labelClass: 'text-white',
     disabled: false,
     type: 'button',
+    form: undefined,
 })
 
 const NuxtLink = resolveComponent('NuxtLink')
@@ -119,6 +121,9 @@ const rootAttrs = computed(() => {
         return { to: props.to }
     }
 
-    return { type: props.type }
+    return {
+        type: props.type,
+        ...(props.form ? { form: props.form } : {}),
+    }
 })
 </script>

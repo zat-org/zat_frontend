@@ -50,14 +50,25 @@
                         </template>
                     </div>
 
-                    <div class="flex w-full flex-col items-center gap-2">
-                        <AppButton
-                            label="احترف معنا الان"
-                            icon="zat:teacher"
-                            variant="secondary"
-                            size="lg"
-                            href="https://www.youtube.com/@zat_baloot"
-                        />
+                    <div class="flex w-full flex-col items-center gap-3">
+                        <div class="flex w-full flex-wrap items-center justify-center gap-3">
+                            <AppButton
+                                label="احترف معنا الان"
+                                icon="zat:teacher"
+                                variant="secondary"
+                                size="lg"
+                                href="https://www.youtube.com/@zat_baloot"
+                            />
+                            <AppButton
+                                :label="PHONE_DISPLAY"
+                                icon="i-heroicons-phone"
+                                variant="primary"
+                                size="lg"
+                                :href="PHONE_HREF"
+                                aria-label="اتصل بنا"
+                                label-class="font-numbers text-white"
+                            />
+                        </div>
                         <p class="text-center text-base font-semibold leading-7 text-text-subtitle">
                             ارسل لنا الان و اشترك في دورات البلوت
                         </p>
@@ -71,6 +82,9 @@
 <script setup lang="ts">
 import darkHeroPattern from '~/assets/images/shared/dark-hero-pattern.png'
 import heroGraphic from '~/assets/images/learn/hero-graphic.png'
+
+const PHONE_DISPLAY = '0545970009'
+const PHONE_HREF = 'tel:+966545970009'
 
 const highlights = [
     'استراتيجيات احترافية للفوز',

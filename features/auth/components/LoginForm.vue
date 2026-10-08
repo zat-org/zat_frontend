@@ -56,6 +56,34 @@
                     </span>
                 </p>
 
+                <div
+                    class="rounded-lg border border-default bg-elevated/50 p-3"
+                    dir="rtl"
+                >
+                    <p class="mb-2 text-sm font-medium text-highlighted">
+                        ما عندك تطبيق قيدها؟
+                    </p>
+                    <p class="mb-3 text-xs text-muted">
+                        حمّله عشان يوصلك رمز الدخول على الإشعار
+                    </p>
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <AppButton
+                            label="Google Play"
+                            icon="zat:google-play"
+                            variant="secondary"
+                            size="sm"
+                            :href="GOOGLE_PLAY_URL"
+                        />
+                        <AppButton
+                            label="App Store"
+                            icon="zat:apple"
+                            variant="secondary"
+                            size="sm"
+                            :href="APP_STORE_URL"
+                        />
+                    </div>
+                </div>
+
                 <p
                     v-if="error && state.formState === FormState.waitUsernameInput"
                     class="flex items-center text-sm text-red-500"
@@ -123,33 +151,35 @@
         </template>
 
         <template #footer>
-            <UButton
-                color="neutral"
-                variant="outline"
+            <AppButton
+                label="الغاء"
+                variant="secondary"
+                size="sm"
+                type="button"
                 @click="handleClose"
-            >
-                الغاء
-            </UButton>
+            />
 
-            <UButton
+            <AppButton
                 v-if="state.formState === FormState.waitUsernameInput"
+                label="ارسال الرمز"
+                icon="i-heroicons-paper-airplane-16-solid"
+                variant="primary"
+                size="sm"
                 type="submit"
                 form="login-username-form"
-                icon="i-heroicons-paper-airplane-16-solid"
-                :loading="pending"
-            >
-                ارسال الرمز
-            </UButton>
+                :disabled="pending"
+            />
 
-            <UButton
+            <AppButton
                 v-else
+                label="تسجيل الدخول"
+                icon="i-heroicons-paper-airplane-16-solid"
+                variant="primary"
+                size="sm"
                 type="submit"
                 form="login-otp-form"
-                icon="i-heroicons-paper-airplane-16-solid"
-                :loading="pending"
-            >
-                تسجيل الدخول
-            </UButton>
+                :disabled="pending"
+            />
         </template>
     </UModal>
 </template>
@@ -160,6 +190,9 @@ import { useUserStore } from '~/stores/useUserStore'
 
 const userStore = useUserStore()
 const { $api } = useNuxtApp()
+
+const GOOGLE_PLAY_URL = 'https://play.google.com/store/apps/details?id=com.qydha'
+const APP_STORE_URL = 'https://apps.apple.com/in/app/qydha/id6446068415'
 
 const timeToWait = 60 * 5
 const countdown = ref(0)

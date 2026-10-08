@@ -153,33 +153,34 @@
                         </p>
                     </div>
 
-                    <div class="relative z-10 flex w-full items-center justify-center gap-4 sm:gap-6">
-                        <div class="flex w-20 flex-col items-center sm:w-26">
+                    <div class="relative z-10 flex w-full items-start justify-center gap-3 sm:gap-6">
+                        <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                             <Image
                                 :src="mediaBaseUrl + upcomingMatch.team_1_logo"
-                                class="h-20 w-full object-contain sm:h-26"
+                                class="h-20 w-20 shrink-0 object-contain sm:h-26 sm:w-26"
                                 :alt="upcomingMatch.team_1_name"
                                 icon="i-heroicons-user-group"
                             />
-                            <p class="w-full truncate text-center text-xl font-bold leading-10 text-text-heading sm:text-2xl sm:leading-12">
+                            <p class="w-full text-center text-xl font-bold leading-8 text-text-heading text-balance sm:text-2xl sm:leading-10">
                                 {{ displayTextValue(upcomingMatch.team_1_name) }}
                             </p>
                         </div>
 
                         <MatchCountdownBlocks
+                            class="shrink-0 self-center"
                             :days="countdown.days"
                             :hours="countdown.hours"
                             :minutes="countdown.minutes"
                         />
 
-                        <div class="flex w-20 flex-col items-center sm:w-26">
+                        <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                             <Image
                                 :src="mediaBaseUrl + upcomingMatch.team_2_logo"
-                                class="h-20 w-full object-contain sm:h-26"
+                                class="h-20 w-20 shrink-0 object-contain sm:h-26 sm:w-26"
                                 :alt="upcomingMatch.team_2_name"
                                 icon="i-heroicons-user-group"
                             />
-                            <p class="w-full truncate text-center text-xl font-bold leading-10 text-text-heading sm:text-2xl sm:leading-12">
+                            <p class="w-full text-center text-xl font-bold leading-8 text-text-heading text-balance sm:text-2xl sm:leading-10">
                                 {{ displayTextValue(upcomingMatch.team_2_name) }}
                             </p>
                         </div>
