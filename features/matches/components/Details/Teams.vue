@@ -6,17 +6,17 @@
         dir="rtl"
     >
         <div
-            class="pointer-events-none absolute -inset-s-8 top-4 aspect-[650/744] w-[min(280px,55vw)] opacity-30 sm:-inset-s-12 sm:top-6 sm:w-[min(420px,50vw)] sm:opacity-40 lg:-inset-s-16 lg:top-8 lg:w-[min(612px,55vw)] lg:opacity-55 dark:opacity-20 sm:dark:opacity-25 lg:dark:opacity-35"
+            class="pointer-events-none absolute -inset-s-8 top-4 aspect-[650/744] w-[min(280px,55vw)] opacity-10 sm:-inset-s-12 sm:top-6 sm:w-[min(420px,50vw)] sm:opacity-15 lg:-inset-s-16 lg:top-8 lg:w-[min(612px,55vw)] lg:opacity-20 dark:opacity-5 sm:dark:opacity-10 lg:dark:opacity-10"
             :style="cupMaskStyle"
             aria-hidden="true"
         />
         <div
-            class="pointer-events-none absolute inset-s-1/2 top-1/2 hidden aspect-[235/128] w-[min(235px,36vw)] -translate-x-1/2 -translate-y-1/2 opacity-40 md:block lg:opacity-55 dark:opacity-20 lg:dark:opacity-30"
+            class="pointer-events-none absolute inset-s-1/2 top-1/2 hidden aspect-[235/128] w-[min(235px,36vw)] -translate-x-1/2 -translate-y-1/2 opacity-15 md:block lg:opacity-20 dark:opacity-5 lg:dark:opacity-10"
             :style="logoFrameMaskStyle"
             aria-hidden="true"
         />
         <div
-            class="pointer-events-none absolute inset-s-1/2 top-[40%] size-[min(325px,70vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface-raised opacity-40 blur-[120px] sm:size-81.25 sm:blur-[200px] dark:bg-surface-overlay"
+            class="pointer-events-none absolute inset-s-1/2 top-[40%] size-[min(325px,70vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-surface-raised opacity-25 blur-[120px] sm:size-81.25 sm:blur-[200px] dark:bg-surface-overlay"
             aria-hidden="true"
         />
 

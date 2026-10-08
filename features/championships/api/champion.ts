@@ -3,6 +3,7 @@ import FetchFactory from '~/features/shared/api/factory'
 import type { IGetAllChampionsResponse, IUpcomingChamp, IChamp, IGetChampTeamsResponse, IGetChampSummaryResponse, IGetChampSummaryWinnerResponse, IGetChampStudiosResponse, IGetChampMatchesResponse, IGetRecentChampsResponse } from '~/features/championships/types/IChamp'
 import { mapSummaryWinnerToStats } from '~/features/championships/utils/championWinnerStats'
 import type { IStatistics } from '~/features/championships/types/IStatistics'
+import type { GetTeamByIdResponse, ITeam } from '~/features/teams/types/ITeam'
 
 class ChampionsModule extends FetchFactory {
   async getAll(champType: Ref<string>, asyncDataOptions?: AsyncDataOptions<IGetAllChampionsResponse>) {
@@ -72,7 +73,40 @@ class ChampionsModule extends FetchFactory {
   async getChampTeamsByChampId(champId: string, asyncDataOptions?: AsyncDataOptions<IGetChampTeamsResponse>) {
     return this.asyncData(
       `champions:${champId}:teams`,
-      () => this.get<IGetChampTeamsResponse>(`/api/leagues/${champId}/teams`),
+      async () => {
+        const response = await this.get<IGetChampTeamsResponse>(`/api/leagues/${champId}/teams`)
+        const teams = response?.teams ?? []
+
+        // Some league team payloads omit players; enrich from team detail when needed.
+        const enrichedTeams = await Promise.all(
+          teams.map(async (team: ITeam) => {
+            if (team.players?.length) {
+              return team
+            }
+
+            try {
+              const full = await this.get<GetTeamByIdResponse>(`/api/teams/getbyid/${team.id}`)
+              return {
+                ...team,
+                players: full?.data?.players ?? [],
+                coaches: full?.data?.coaches?.length ? full.data.coaches : (team.coaches ?? []),
+              }
+            }
+            catch {
+              return {
+                ...team,
+                players: team.players ?? [],
+                coaches: team.coaches ?? [],
+              }
+            }
+          }),
+        )
+
+        return {
+          ...response,
+          teams: enrichedTeams,
+        }
+      },
       asyncDataOptions,
     )
   }

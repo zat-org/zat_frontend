@@ -169,7 +169,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_auth_api_auth",
-      "community": 82,
+      "community": 41,
       "norm_label": "auth.ts"
     },
     {
@@ -179,7 +179,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_auth_api_auth_authmodule",
-      "community": 166,
+      "community": 41,
       "norm_label": "authmodule"
     },
     {
@@ -189,7 +189,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_auth_api_auth_authmodule_uselogin",
-      "community": 166,
+      "community": 41,
       "norm_label": ".uselogin()"
     },
     {
@@ -399,7 +399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_auth_types_authmodels",
-      "community": 82,
+      "community": 41,
       "norm_label": "authmodels.ts"
     },
     {
@@ -409,7 +409,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_ierror",
-      "community": 82,
+      "community": 41,
       "norm_label": "ierror"
     },
     {
@@ -419,7 +419,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_iloginconfirmed",
-      "community": 82,
+      "community": 41,
       "norm_label": "iloginconfirmed"
     },
     {
@@ -429,7 +429,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_iuser",
-      "community": 82,
+      "community": 41,
       "norm_label": "iuser"
     },
     {
@@ -606,7 +606,7 @@
       "label": "ChampionsModule",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule",
       "community": 1,
@@ -616,7 +616,7 @@
       "label": ".getAll()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getall",
       "community": 1,
@@ -626,7 +626,7 @@
       "label": ".getRecentWithStats()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getrecentwithstats",
       "community": 1,
@@ -636,7 +636,7 @@
       "label": ".getUpcoming()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L56",
+      "source_location": "L57",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getupcoming",
       "community": 1,
@@ -646,7 +646,7 @@
       "label": ".getById()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getbyid",
       "community": 1,
@@ -656,7 +656,7 @@
       "label": ".getChampTeamsByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L72",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampteamsbychampid",
       "community": 1,
@@ -666,7 +666,7 @@
       "label": ".getChampSummaryByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L80",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampsummarybychampid",
       "community": 1,
@@ -676,7 +676,7 @@
       "label": ".getChampSummaryWinnerByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L88",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampsummarywinnerbychampid",
       "community": 8,
@@ -686,7 +686,7 @@
       "label": ".getChampStudiosByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L99",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampstudiosbychampid",
       "community": 1,
@@ -696,7 +696,7 @@
       "label": ".getChampMatchesByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L107",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampmatchesbychampid",
       "community": 1,
@@ -706,7 +706,7 @@
       "label": ".fetchChampMatchesByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L115",
+      "source_location": "L149",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_fetchchampmatchesbychampid",
       "community": 1,
@@ -716,7 +716,7 @@
       "label": ".getChampStatisticsByChampId()",
       "file_type": "code",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L119",
+      "source_location": "L153",
       "_origin": "ast",
       "id": "features_championships_api_champion_championsmodule_getchampstatisticsbychampid",
       "community": 1,
@@ -729,7 +729,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_card",
-      "community": 16,
+      "community": 37,
       "norm_label": "card.vue"
     },
     {
@@ -739,7 +739,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "features_championships_champion_components_card_ui",
-      "community": 16,
+      "community": 37,
       "norm_label": "ui"
     },
     {
@@ -969,7 +969,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow",
-      "community": 46,
+      "community": 14,
       "norm_label": "cupbracketteamrow.vue"
     },
     {
@@ -979,7 +979,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_props",
-      "community": 46,
+      "community": 14,
       "norm_label": "props"
     },
     {
@@ -989,7 +989,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_teamname",
-      "community": 46,
+      "community": 14,
       "norm_label": "teamname"
     },
     {
@@ -999,7 +999,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_scoredisplay",
-      "community": 46,
+      "community": 14,
       "norm_label": "scoredisplay"
     },
     {
@@ -1009,7 +1009,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_nameclass",
-      "community": 46,
+      "community": 14,
       "norm_label": "nameclass"
     },
     {
@@ -1019,7 +1019,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_scoreclass",
-      "community": 46,
+      "community": 14,
       "norm_label": "scoreclass"
     },
     {
@@ -1159,7 +1159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_hezamtable",
-      "community": 99,
+      "community": 10,
       "norm_label": "hezamtable.vue"
     },
     {
@@ -1169,7 +1169,7 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "features_championships_champion_components_hezamtable_props",
-      "community": 99,
+      "community": 10,
       "norm_label": "props"
     },
     {
@@ -1179,7 +1179,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "features_championships_champion_components_hezamtable_parseabnat",
-      "community": 99,
+      "community": 10,
       "norm_label": "parseabnat()"
     },
     {
@@ -1189,7 +1189,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "features_championships_champion_components_hezamtable_rows",
-      "community": 99,
+      "community": 10,
       "norm_label": "rows"
     },
     {
@@ -1199,7 +1199,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "features_championships_champion_components_hezamtable_logofor",
-      "community": 99,
+      "community": 10,
       "norm_label": "logofor()"
     },
     {
@@ -1219,7 +1219,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable",
-      "community": 15,
+      "community": 10,
       "norm_label": "leaguetable.vue"
     },
     {
@@ -1229,7 +1229,7 @@
       "source_location": "L109",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_scorerow",
-      "community": 15,
+      "community": 10,
       "norm_label": "scorerow"
     },
     {
@@ -1239,7 +1239,7 @@
       "source_location": "L120",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_props",
-      "community": 15,
+      "community": 10,
       "norm_label": "props"
     },
     {
@@ -1249,7 +1249,7 @@
       "source_location": "L129",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_parseabnat",
-      "community": 15,
+      "community": 10,
       "norm_label": "parseabnat()"
     },
     {
@@ -1259,7 +1259,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_torow",
-      "community": 15,
+      "community": 10,
       "norm_label": "torow()"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_rows",
-      "community": 15,
+      "community": 10,
       "norm_label": "rows"
     },
     {
@@ -1279,7 +1279,7 @@
       "source_location": "L163",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_logofor",
-      "community": 15,
+      "community": 10,
       "norm_label": "logofor()"
     },
     {
@@ -1289,7 +1289,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_matchteam",
-      "community": 46,
+      "community": 88,
       "norm_label": "matchteam.vue"
     },
     {
@@ -1336,7 +1336,7 @@
       "label": "TeamMemberSlot",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L118",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_teammemberslot",
       "community": 42,
@@ -1346,17 +1346,27 @@
       "label": "props",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L125",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_props",
       "community": 42,
       "norm_label": "props"
     },
     {
+      "label": "toMediaUrl",
+      "file_type": "code",
+      "source_file": "features/championships/champion-components/TeamCard.vue",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "features_championships_champion_components_teamcard_tomediaurl",
+      "community": 42,
+      "norm_label": "tomediaurl"
+    },
+    {
       "label": "isHovered",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L128",
+      "source_location": "L133",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_ishovered",
       "community": 42,
@@ -1366,7 +1376,7 @@
       "label": "isExpanded",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L129",
+      "source_location": "L134",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_isexpanded",
       "community": 42,
@@ -1376,7 +1386,7 @@
       "label": "imageErrors",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L130",
+      "source_location": "L135",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_imageerrors",
       "community": 42,
@@ -1386,7 +1396,7 @@
       "label": "showMembersPeek",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L132",
+      "source_location": "L137",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_showmemberspeek",
       "community": 42,
@@ -1396,17 +1406,27 @@
       "label": "memberSlots",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L134",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_memberslots",
       "community": 42,
       "norm_label": "memberslots"
     },
     {
+      "label": "onImageError()",
+      "file_type": "code",
+      "source_file": "features/championships/champion-components/TeamCard.vue",
+      "source_location": "L173",
+      "_origin": "ast",
+      "id": "features_championships_champion_components_teamcard_onimageerror",
+      "community": 42,
+      "norm_label": "onimageerror()"
+    },
+    {
       "label": "onMouseLeave()",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L168",
+      "source_location": "L177",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_onmouseleave",
       "community": 42,
@@ -1416,7 +1436,7 @@
       "label": "expand()",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L172",
+      "source_location": "L181",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_expand",
       "community": 42,
@@ -1426,7 +1446,7 @@
       "label": "collapse()",
       "file_type": "code",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L176",
+      "source_location": "L185",
       "_origin": "ast",
       "id": "features_championships_champion_components_teamcard_collapse",
       "community": 42,
@@ -1659,7 +1679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist",
-      "community": 37,
+      "community": 78,
       "norm_label": "filteredlist.vue"
     },
     {
@@ -1669,7 +1689,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist_route",
-      "community": 37,
+      "community": 78,
       "norm_label": "route"
     },
     {
@@ -1679,7 +1699,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist_champtype",
-      "community": 37,
+      "community": 78,
       "norm_label": "champtype"
     },
     {
@@ -1689,7 +1709,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist_api",
-      "community": 37,
+      "community": 78,
       "norm_label": "{ $api }"
     },
     {
@@ -1699,7 +1719,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist_champs",
-      "community": 37,
+      "community": 78,
       "norm_label": "champs"
     },
     {
@@ -1709,7 +1729,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "features_championships_components_filteredlist_sectiontitle",
-      "community": 37,
+      "community": 78,
       "norm_label": "sectiontitle"
     },
     {
@@ -1739,7 +1759,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_listitem",
-      "community": 16,
+      "community": 37,
       "norm_label": "listitem.vue"
     },
     {
@@ -1749,7 +1769,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "features_championships_components_listitem_props",
-      "community": 16,
+      "community": 37,
       "norm_label": "props"
     },
     {
@@ -1759,7 +1779,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_championships_components_listitem_gotochampionship",
-      "community": 16,
+      "community": 37,
       "norm_label": "gotochampionship()"
     },
     {
@@ -3009,7 +3029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_tournamentcard",
-      "community": 37,
+      "community": 161,
       "norm_label": "tournamentcard.vue"
     },
     {
@@ -3019,7 +3039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_typecard",
-      "community": 37,
+      "community": 161,
       "norm_label": "typecard.vue"
     },
     {
@@ -3029,7 +3049,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "features_championships_components_typecard_props",
-      "community": 37,
+      "community": 161,
       "norm_label": "props"
     },
     {
@@ -3039,7 +3059,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "features_championships_components_typecard_preferredreducedmotion",
-      "community": 37,
+      "community": 161,
       "norm_label": "preferredreducedmotion"
     },
     {
@@ -3049,7 +3069,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "features_championships_components_typecard_reducemotion",
-      "community": 37,
+      "community": 161,
       "norm_label": "reducemotion"
     },
     {
@@ -3059,7 +3079,7 @@
       "source_location": "L126",
       "_origin": "ast",
       "id": "features_championships_components_typecard_cardboxref",
-      "community": 37,
+      "community": 161,
       "norm_label": "cardboxref"
     },
     {
@@ -3069,7 +3089,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "features_championships_components_typecard_shineref",
-      "community": 37,
+      "community": 161,
       "norm_label": "shineref"
     },
     {
@@ -3079,7 +3099,7 @@
       "source_location": "L131",
       "_origin": "ast",
       "id": "features_championships_components_typecard_titlestyle",
-      "community": 37,
+      "community": 161,
       "norm_label": "titlestyle"
     },
     {
@@ -3089,7 +3109,7 @@
       "source_location": "L136",
       "_origin": "ast",
       "id": "features_championships_components_typecard_onhoverstart",
-      "community": 37,
+      "community": 161,
       "norm_label": "onhoverstart()"
     },
     {
@@ -3099,7 +3119,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "features_championships_components_typecard_onhoverend",
-      "community": 37,
+      "community": 161,
       "norm_label": "onhoverend()"
     },
     {
@@ -3109,7 +3129,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_typecardsrow",
-      "community": 37,
+      "community": 78,
       "norm_label": "typecardsrow.vue"
     },
     {
@@ -3119,7 +3139,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "features_championships_components_typecardsrow_cards",
-      "community": 37,
+      "community": 78,
       "norm_label": "cards"
     },
     {
@@ -3129,7 +3149,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_typepage",
-      "community": 37,
+      "community": 78,
       "norm_label": "typepage.vue"
     },
     {
@@ -3139,7 +3159,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "features_championships_components_typepage_props",
-      "community": 37,
+      "community": 78,
       "norm_label": "props"
     },
     {
@@ -3149,7 +3169,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "features_championships_components_typepage_champtype",
-      "community": 37,
+      "community": 78,
       "norm_label": "champtype"
     },
     {
@@ -3159,7 +3179,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "features_championships_components_typepage_api",
-      "community": 37,
+      "community": 78,
       "norm_label": "{ $api }"
     },
     {
@@ -3169,7 +3189,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "features_championships_components_typepage_champs",
-      "community": 37,
+      "community": 78,
       "norm_label": "champs"
     },
     {
@@ -3179,7 +3199,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "features_championships_components_typepage_typeconfig",
-      "community": 37,
+      "community": 78,
       "norm_label": "typeconfig"
     },
     {
@@ -3189,7 +3209,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "features_championships_components_typepage_pagetitle",
-      "community": 37,
+      "community": 78,
       "norm_label": "pagetitle"
     },
     {
@@ -3229,7 +3249,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champstate",
-      "community": 16,
+      "community": 37,
       "norm_label": "champstate.ts"
     },
     {
@@ -3239,7 +3259,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champstate_leaguestate",
-      "community": 16,
+      "community": 37,
       "norm_label": "leaguestate"
     },
     {
@@ -3299,7 +3319,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_ichamp",
-      "community": 16,
+      "community": 37,
       "norm_label": "ichamp"
     },
     {
@@ -3469,7 +3489,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_championships_types_icupsummary_iteamdata",
-      "community": 46,
+      "community": 14,
       "norm_label": "iteamdata"
     },
     {
@@ -3609,7 +3629,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats_displayabnatvalue",
-      "community": 99,
+      "community": 10,
       "norm_label": "displayabnatvalue()"
     },
     {
@@ -3619,7 +3639,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats_displaytextvalue",
-      "community": 15,
+      "community": 10,
       "norm_label": "displaytextvalue()"
     },
     {
@@ -3629,7 +3649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes",
-      "community": 37,
+      "community": 78,
       "norm_label": "championshiptypes.ts"
     },
     {
@@ -3649,7 +3669,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_card_shared",
-      "community": 37,
+      "community": 161,
       "norm_label": "championship_card_shared"
     },
     {
@@ -3659,7 +3679,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_type_cards",
-      "community": 37,
+      "community": 78,
       "norm_label": "championship_type_cards"
     },
     {
@@ -3669,7 +3689,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_extra_type_titles",
-      "community": 37,
+      "community": 78,
       "norm_label": "extra_type_titles"
     },
     {
@@ -3679,7 +3699,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_type_slugs",
-      "community": 37,
+      "community": 78,
       "norm_label": "championship_type_slugs"
     },
     {
@@ -3689,7 +3709,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypeconfig",
-      "community": 37,
+      "community": 78,
       "norm_label": "getchampionshiptypeconfig()"
     },
     {
@@ -3699,7 +3719,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypelabel",
-      "community": 37,
+      "community": 78,
       "norm_label": "getchampionshiptypelabel()"
     },
     {
@@ -3709,7 +3729,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypepagetitle",
-      "community": 37,
+      "community": 78,
       "norm_label": "getchampionshiptypepagetitle()"
     },
     {
@@ -3719,7 +3739,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_isvalidchampionshiptypeslug",
-      "community": 37,
+      "community": 78,
       "norm_label": "isvalidchampionshiptypeslug()"
     },
     {
@@ -3809,7 +3829,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_followers_api_followerschampions_followerschampionsmodule_getall",
-      "community": 12,
+      "community": 52,
       "norm_label": ".getall()"
     },
     {
@@ -3819,7 +3839,7 @@
       "source_location": "L26",
       "_origin": "ast",
       "id": "features_followers_api_followerschampions_followerschampionsmodule_getbyid",
-      "community": 12,
+      "community": 52,
       "norm_label": ".getbyid()"
     },
     {
@@ -3989,7 +4009,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_followers_components_card",
-      "community": 12,
+      "community": 52,
       "norm_label": "card.vue"
     },
     {
@@ -3999,7 +4019,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_followers_types_ifollowerchampion",
-      "community": 12,
+      "community": 52,
       "norm_label": "ifollowerchampion.ts"
     },
     {
@@ -4009,7 +4029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_followers_types_ifollowerchampion_ifollowerchampion",
-      "community": 12,
+      "community": 52,
       "norm_label": "ifollowerchampion"
     },
     {
@@ -4019,7 +4039,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "features_followers_types_ifollowerchampion_ifollowerchampionapplyrequest",
-      "community": 12,
+      "community": 52,
       "norm_label": "ifollowerchampionapplyrequest"
     },
     {
@@ -4469,7 +4489,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel",
-      "community": 161,
+      "community": 44,
       "norm_label": "matchstatssidepanel.vue"
     },
     {
@@ -4479,7 +4499,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_emit",
-      "community": 161,
+      "community": 44,
       "norm_label": "emit"
     },
     {
@@ -4489,7 +4509,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_open",
-      "community": 161,
+      "community": 44,
       "norm_label": "open"
     },
     {
@@ -4499,7 +4519,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_onselect",
-      "community": 161,
+      "community": 44,
       "norm_label": "onselect()"
     },
     {
@@ -4509,7 +4529,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_formatmatchdate",
-      "community": 161,
+      "community": 44,
       "norm_label": "formatmatchdate()"
     },
     {
@@ -5099,7 +5119,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_jobs_api_jobs",
-      "community": 63,
+      "community": 41,
       "norm_label": "jobs.ts"
     },
     {
@@ -5109,7 +5129,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_jobs_api_jobs_strapijobattributes",
-      "community": 63,
+      "community": 41,
       "norm_label": "strapijobattributes"
     },
     {
@@ -5119,7 +5139,7 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "features_jobs_api_jobs_jobsmodule",
-      "community": 63,
+      "community": 41,
       "norm_label": "jobsmodule"
     },
     {
@@ -5129,7 +5149,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_jobs_api_jobs_jobsmodule_getall",
-      "community": 63,
+      "community": 41,
       "norm_label": ".getall()"
     },
     {
@@ -5139,7 +5159,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_jobs_api_jobs_jobsmodule_getbyid",
-      "community": 63,
+      "community": 41,
       "norm_label": ".getbyid()"
     },
     {
@@ -5149,7 +5169,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "features_jobs_api_jobs_jobsmodule_usesendapplyrequest",
-      "community": 63,
+      "community": 41,
       "norm_label": ".usesendapplyrequest()"
     },
     {
@@ -5329,7 +5349,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_jobs_components_card",
-      "community": 63,
+      "community": 41,
       "norm_label": "card.vue"
     },
     {
@@ -5359,7 +5379,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_jobs_types_ijob",
-      "community": 63,
+      "community": 41,
       "norm_label": "ijob.ts"
     },
     {
@@ -5369,7 +5389,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_jobs_types_ijob_ijob",
-      "community": 63,
+      "community": 41,
       "norm_label": "ijob"
     },
     {
@@ -5379,7 +5399,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "features_jobs_types_ijob_ijobslistresult",
-      "community": 63,
+      "community": 41,
       "norm_label": "ijobslistresult"
     },
     {
@@ -5389,7 +5409,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "features_jobs_types_ijob_iapplytojobrequest",
-      "community": 63,
+      "community": 41,
       "norm_label": "iapplytojobrequest"
     },
     {
@@ -5459,7 +5479,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "features_matches_api_estimations_estimationsmodule",
-      "community": 166,
+      "community": 41,
       "norm_label": "estimationsmodule"
     },
     {
@@ -5469,7 +5489,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "features_matches_api_estimations_estimationsmodule_usegetbyids",
-      "community": 166,
+      "community": 41,
       "norm_label": ".usegetbyids()"
     },
     {
@@ -5479,7 +5499,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "features_matches_api_estimations_estimationsmodule_usesendestimation",
-      "community": 166,
+      "community": 41,
       "norm_label": ".usesendestimation()"
     },
     {
@@ -5489,7 +5509,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "features_matches_api_estimations_estimationsmodule_getestimationtablebychampid",
-      "community": 0,
+      "community": 41,
       "norm_label": ".getestimationtablebychampid()"
     },
     {
@@ -5549,7 +5569,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_mapbyteammatch",
-      "community": 60,
+      "community": 44,
       "norm_label": ".mapbyteammatch()"
     },
     {
@@ -5569,7 +5589,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getbyid",
-      "community": 26,
+      "community": 60,
       "norm_label": ".getbyid()"
     },
     {
@@ -5589,7 +5609,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getupcoming",
-      "community": 60,
+      "community": 44,
       "norm_label": ".getupcoming()"
     },
     {
@@ -5609,7 +5629,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getended",
-      "community": 60,
+      "community": 44,
       "norm_label": ".getended()"
     },
     {
@@ -5669,7 +5689,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_card",
-      "community": 164,
+      "community": 88,
       "norm_label": "card.vue"
     },
     {
@@ -5679,7 +5699,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_matches_components_card_props",
-      "community": 164,
+      "community": 88,
       "norm_label": "props"
     },
     {
@@ -5689,7 +5709,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "features_matches_components_card_handlematchcardclick",
-      "community": 164,
+      "community": 88,
       "norm_label": "handlematchcardclick()"
     },
     {
@@ -5699,7 +5719,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "features_matches_components_card_handleyoutubeclick",
-      "community": 164,
+      "community": 88,
       "norm_label": "handleyoutubeclick()"
     },
     {
@@ -5709,7 +5729,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "features_matches_components_card_ismatchopenforestimations",
-      "community": 164,
+      "community": 88,
       "norm_label": "ismatchopenforestimations"
     },
     {
@@ -6029,7 +6049,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches",
-      "community": 19,
+      "community": 82,
       "norm_label": "othermatches.vue"
     },
     {
@@ -6039,7 +6059,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_props",
-      "community": 19,
+      "community": 82,
       "norm_label": "props"
     },
     {
@@ -6049,7 +6069,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_api",
-      "community": 19,
+      "community": 82,
       "norm_label": "{ $api }"
     },
     {
@@ -6059,7 +6079,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_othermatches",
-      "community": 19,
+      "community": 82,
       "norm_label": "othermatches"
     },
     {
@@ -6189,7 +6209,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_details_state",
-      "community": 44,
+      "community": 63,
       "norm_label": "state.vue"
     },
     {
@@ -6199,7 +6219,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "features_matches_components_details_state_props",
-      "community": 44,
+      "community": 63,
       "norm_label": "props"
     },
     {
@@ -6209,7 +6229,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "features_matches_components_details_state_estimationmatch",
-      "community": 44,
+      "community": 63,
       "norm_label": "estimationmatch"
     },
     {
@@ -6219,7 +6239,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "features_matches_components_details_state_matchhref",
-      "community": 44,
+      "community": 63,
       "norm_label": "matchhref()"
     },
     {
@@ -6229,7 +6249,7 @@
       "source_location": "L197",
       "_origin": "ast",
       "id": "features_matches_components_details_state_neighborlabel",
-      "community": 15,
+      "community": 10,
       "norm_label": "neighborlabel()"
     },
     {
@@ -6239,7 +6259,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "features_matches_components_details_state_hasscore",
-      "community": 44,
+      "community": 63,
       "norm_label": "hasscore"
     },
     {
@@ -6249,7 +6269,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "features_matches_components_details_state_scoredisplay",
-      "community": 44,
+      "community": 63,
       "norm_label": "scoredisplay()"
     },
     {
@@ -6409,7 +6429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_estimation_bestplayer",
-      "community": 27,
+      "community": 65,
       "norm_label": "bestplayer.vue"
     },
     {
@@ -6419,7 +6439,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "features_matches_components_estimation_bestplayer_bestplayerid",
-      "community": 27,
+      "community": 65,
       "norm_label": "bestplayerid"
     },
     {
@@ -7009,7 +7029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_composables_usechampmatchneighbors",
-      "community": 44,
+      "community": 82,
       "norm_label": "usechampmatchneighbors.ts"
     },
     {
@@ -7019,7 +7039,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_matches_composables_usechampmatchneighbors_usechampmatchneighbors",
-      "community": 44,
+      "community": 63,
       "norm_label": "usechampmatchneighbors()"
     },
     {
@@ -7039,7 +7059,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchfulldetails_person",
-      "community": 27,
+      "community": 65,
       "norm_label": "person"
     },
     {
@@ -7069,7 +7089,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory",
-      "community": 165,
+      "community": 22,
       "norm_label": "imatchhistory.ts"
     },
     {
@@ -7079,7 +7099,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_matchhistorystatus",
-      "community": 165,
+      "community": 45,
       "norm_label": "matchhistorystatus"
     },
     {
@@ -7089,7 +7109,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistoryteam",
-      "community": 165,
+      "community": 22,
       "norm_label": "imatchhistoryteam"
     },
     {
@@ -7099,7 +7119,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorymatch",
-      "community": 46,
+      "community": 22,
       "norm_label": "imatchhistorymatch"
     },
     {
@@ -7109,7 +7129,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorygroup",
-      "community": 165,
+      "community": 22,
       "norm_label": "imatchhistorygroup"
     },
     {
@@ -7119,7 +7139,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorychamp",
-      "community": 165,
+      "community": 47,
       "norm_label": "imatchhistorychamp"
     },
     {
@@ -7149,7 +7169,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_imatchlessdetails",
-      "community": 44,
+      "community": 88,
       "norm_label": "imatchlessdetails.ts"
     },
     {
@@ -7159,7 +7179,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchlessdetails_imatchlessdetails",
-      "community": 60,
+      "community": 44,
       "norm_label": "imatchlessdetails"
     },
     {
@@ -7289,7 +7309,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchstate",
-      "community": 46,
+      "community": 88,
       "norm_label": "matchstate.ts"
     },
     {
@@ -7299,7 +7319,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchstate_matchstate",
-      "community": 46,
+      "community": 88,
       "norm_label": "matchstate"
     },
     {
@@ -7309,7 +7329,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils",
-      "community": 19,
+      "community": 57,
       "norm_label": "collectionswithtimeutils.ts"
     },
     {
@@ -7319,7 +7339,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils_sortbytime",
-      "community": 19,
+      "community": 82,
       "norm_label": "sortbytime()"
     },
     {
@@ -7329,7 +7349,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils_getindexofupcomingevent",
-      "community": 19,
+      "community": 57,
       "norm_label": "getindexofupcomingevent()"
     },
     {
@@ -7429,7 +7449,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_referees_api_referees",
-      "community": 108,
+      "community": 41,
       "norm_label": "referees.ts"
     },
     {
@@ -7439,7 +7459,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_referees_api_referees_refereesmodule",
-      "community": 166,
+      "community": 41,
       "norm_label": "refereesmodule"
     },
     {
@@ -7449,7 +7469,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "features_referees_api_referees_refereesmodule_getall",
-      "community": 108,
+      "community": 41,
       "norm_label": ".getall()"
     },
     {
@@ -7459,7 +7479,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "features_referees_api_referees_refereesmodule_usesendjoinrequest",
-      "community": 166,
+      "community": 41,
       "norm_label": ".usesendjoinrequest()"
     },
     {
@@ -7669,7 +7689,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_referees_types_ireferee",
-      "community": 108,
+      "community": 41,
       "norm_label": "ireferee.ts"
     },
     {
@@ -7679,7 +7699,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_referees_types_ireferee_ireferee",
-      "community": 108,
+      "community": 41,
       "norm_label": "ireferee"
     },
     {
@@ -7689,7 +7709,7 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "features_referees_types_ireferee_ijoinasrefereerequest",
-      "community": 108,
+      "community": 41,
       "norm_label": "ijoinasrefereerequest"
     },
     {
@@ -7699,7 +7719,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule",
-      "community": 78,
+      "community": 41,
       "norm_label": "contactusmessagesmodule.ts"
     },
     {
@@ -7709,7 +7729,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessage",
-      "community": 78,
+      "community": 41,
       "norm_label": "contactusmessage"
     },
     {
@@ -7719,7 +7739,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessagesmodule",
-      "community": 78,
+      "community": 41,
       "norm_label": "contactusmessagesmodule"
     },
     {
@@ -7729,7 +7749,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessagesmodule_usesendmessage",
-      "community": 78,
+      "community": 41,
       "norm_label": ".usesendmessage()"
     },
     {
@@ -7739,7 +7759,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_api_factory",
-      "community": 78,
+      "community": 41,
       "norm_label": "factory.ts"
     },
     {
@@ -7749,7 +7769,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_shared_api_factory_httpmethod",
-      "community": 78,
+      "community": 41,
       "norm_label": "httpmethod"
     },
     {
@@ -7759,7 +7779,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_shared_api_factory_requestbody",
-      "community": 78,
+      "community": 41,
       "norm_label": "requestbody"
     },
     {
@@ -7769,7 +7789,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory",
-      "community": 106,
+      "community": 41,
       "norm_label": "fetchfactory"
     },
     {
@@ -7779,7 +7799,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_constructor",
-      "community": 106,
+      "community": 41,
       "norm_label": ".constructor()"
     },
     {
@@ -7789,7 +7809,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_call",
-      "community": 106,
+      "community": 41,
       "norm_label": ".call()"
     },
     {
@@ -7799,7 +7819,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_get",
-      "community": 106,
+      "community": 41,
       "norm_label": ".get()"
     },
     {
@@ -7809,7 +7829,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_post",
-      "community": 106,
+      "community": 41,
       "norm_label": ".post()"
     },
     {
@@ -7819,7 +7839,7 @@
       "source_location": "L35",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_put",
-      "community": 106,
+      "community": 41,
       "norm_label": ".put()"
     },
     {
@@ -7829,7 +7849,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_delete",
-      "community": 106,
+      "community": 41,
       "norm_label": ".delete()"
     },
     {
@@ -7839,7 +7859,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "features_shared_api_factory_fetchfactory_asyncdata",
-      "community": 106,
+      "community": 41,
       "norm_label": ".asyncdata()"
     },
     {
@@ -8846,7 +8866,7 @@
       "label": "props",
       "file_type": "code",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L15",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "features_shared_components_pagination_props",
       "community": 105,
@@ -8856,7 +8876,7 @@
       "label": "availablePages",
       "file_type": "code",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L29",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "features_shared_components_pagination_availablepages",
       "community": 105,
@@ -8866,7 +8886,7 @@
       "label": "emit",
       "file_type": "code",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L30",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "features_shared_components_pagination_emit",
       "community": 105,
@@ -9139,7 +9159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_composables_usemediaurl",
-      "community": 11,
+      "community": 38,
       "norm_label": "usemediaurl.ts"
     },
     {
@@ -9149,7 +9169,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_shared_composables_usemediaurl_usemediaurl",
-      "community": 11,
+      "community": 38,
       "norm_label": "usemediaurl()"
     },
     {
@@ -9179,7 +9199,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_composables_usestrapicollection",
-      "community": 11,
+      "community": 38,
       "norm_label": "usestrapicollection.ts"
     },
     {
@@ -9189,7 +9209,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_shared_composables_usestrapicollection_strapifindparams",
-      "community": 11,
+      "community": 38,
       "norm_label": "strapifindparams"
     },
     {
@@ -9199,7 +9219,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "features_shared_composables_usestrapicollection_usestrapicollection",
-      "community": 11,
+      "community": 38,
       "norm_label": "usestrapicollection()"
     },
     {
@@ -9269,7 +9289,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_utils_createstrapiclient",
-      "community": 124,
+      "community": 41,
       "norm_label": "createstrapiclient.ts"
     },
     {
@@ -9279,7 +9299,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "features_shared_utils_createstrapiclient_createstrapiclient",
-      "community": 124,
+      "community": 41,
       "norm_label": "createstrapiclient()"
     },
     {
@@ -9319,7 +9339,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_shared_utils_strapimappers_strapientity",
-      "community": 11,
+      "community": 99,
       "norm_label": "strapientity"
     },
     {
@@ -9439,7 +9459,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "features_shared_utils_strapimappers_mapplayerimages",
-      "community": 11,
+      "community": 15,
       "norm_label": "mapplayerimages()"
     },
     {
@@ -9459,7 +9479,7 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "features_shared_utils_strapimappers_mapclientimages",
-      "community": 11,
+      "community": 15,
       "norm_label": "mapclientimages()"
     },
     {
@@ -9469,7 +9489,7 @@
       "source_location": "L186",
       "_origin": "ast",
       "id": "features_shared_utils_strapimappers_unwrapstrapicounter",
-      "community": 11,
+      "community": 15,
       "norm_label": "unwrapstrapicounter()"
     },
     {
@@ -9489,7 +9509,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "features_shared_utils_strapimappers_strapiheroslideattributes",
-      "community": 11,
+      "community": 99,
       "norm_label": "strapiheroslideattributes"
     },
     {
@@ -9539,7 +9559,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_api_players",
-      "community": 166,
+      "community": 41,
       "norm_label": "players.ts"
     },
     {
@@ -9549,7 +9569,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_teams_api_players_playersmodule",
-      "community": 166,
+      "community": 41,
       "norm_label": "playersmodule"
     },
     {
@@ -9559,7 +9579,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "features_teams_api_players_playersmodule_getbyid",
-      "community": 166,
+      "community": 41,
       "norm_label": ".getbyid()"
     },
     {
@@ -9569,7 +9589,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_api_teams",
-      "community": 124,
+      "community": 41,
       "norm_label": "teams.ts"
     },
     {
@@ -9579,7 +9599,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_teams_api_teams_teamsmodule",
-      "community": 124,
+      "community": 41,
       "norm_label": "teamsmodule"
     },
     {
@@ -9589,7 +9609,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "features_teams_api_teams_teamsmodule_getall",
-      "community": 124,
+      "community": 41,
       "norm_label": ".getall()"
     },
     {
@@ -9599,7 +9619,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_teams_api_teams_teamsmodule_getbyid",
-      "community": 124,
+      "community": 41,
       "norm_label": ".getbyid()"
     },
     {
@@ -9679,7 +9699,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_components_coach",
-      "community": 27,
+      "community": 65,
       "norm_label": "coach.vue"
     },
     {
@@ -10019,7 +10039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_components_statistics",
-      "community": 38,
+      "community": 54,
       "norm_label": "statistics.vue"
     },
     {
@@ -10029,7 +10049,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "features_teams_components_statistics_props",
-      "community": 38,
+      "community": 54,
       "norm_label": "props"
     },
     {
@@ -10039,7 +10059,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_teams_components_statistics_rows",
-      "community": 38,
+      "community": 54,
       "norm_label": "rows"
     },
     {
@@ -10249,7 +10269,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "features_teams_types_iteam_iteamfulldetails",
-      "community": 77,
+      "community": 79,
       "norm_label": "iteamfulldetails"
     },
     {
@@ -10259,7 +10279,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "features_teams_types_iteam_iteamstatistics",
-      "community": 38,
+      "community": 54,
       "norm_label": "iteamstatistics"
     },
     {
@@ -10289,7 +10309,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "features_teams_types_iteam_getallteamsresponse",
-      "community": 124,
+      "community": 41,
       "norm_label": "getallteamsresponse"
     },
     {
@@ -10299,7 +10319,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "features_teams_types_iteam_getteambyidresponse",
-      "community": 124,
+      "community": 41,
       "norm_label": "getteambyidresponse"
     },
     {
@@ -10309,7 +10329,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "features_teams_types_iteam_getplayerbyidresponse",
-      "community": 166,
+      "community": 41,
       "norm_label": "getplayerbyidresponse"
     },
     {
@@ -10319,7 +10339,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_api_websiteassets",
-      "community": 11,
+      "community": 15,
       "norm_label": "websiteassets.ts"
     },
     {
@@ -10329,7 +10349,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule",
-      "community": 160,
+      "community": 41,
       "norm_label": "websiteassetsmodule"
     },
     {
@@ -10339,7 +10359,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_addonetovisitorcounter",
-      "community": 160,
+      "community": 41,
       "norm_label": ".addonetovisitorcounter()"
     },
     {
@@ -10349,7 +10369,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getyoutubeurl",
-      "community": 160,
+      "community": 41,
       "norm_label": ".getyoutubeurl()"
     },
     {
@@ -10359,7 +10379,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getyoutubechanneldata",
-      "community": 160,
+      "community": 41,
       "norm_label": ".getyoutubechanneldata()"
     },
     {
@@ -10369,7 +10389,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getzatstatistics",
-      "community": 160,
+      "community": 41,
       "norm_label": ".getzatstatistics()"
     },
     {
@@ -10379,7 +10399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_composables_useclientimages",
-      "community": 11,
+      "community": 15,
       "norm_label": "useclientimages.ts"
     },
     {
@@ -10389,7 +10409,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_website_composables_useclientimages_useclientimages",
-      "community": 11,
+      "community": 38,
       "norm_label": "useclientimages()"
     },
     {
@@ -10399,7 +10419,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_composables_useheroslides",
-      "community": 11,
+      "community": 99,
       "norm_label": "useheroslides.ts"
     },
     {
@@ -10409,7 +10429,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_website_composables_useheroslides_fallback_slides",
-      "community": 11,
+      "community": 99,
       "norm_label": "fallback_slides"
     },
     {
@@ -10419,7 +10439,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_website_composables_useheroslides_useheroslides",
-      "community": 11,
+      "community": 38,
       "norm_label": "useheroslides()"
     },
     {
@@ -10429,7 +10449,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_composables_useplayerimages",
-      "community": 11,
+      "community": 15,
       "norm_label": "useplayerimages.ts"
     },
     {
@@ -10439,7 +10459,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_website_composables_useplayerimages_useplayerimages",
-      "community": 11,
+      "community": 38,
       "norm_label": "useplayerimages()"
     },
     {
@@ -10479,7 +10499,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_types_iheroslide",
-      "community": 11,
+      "community": 99,
       "norm_label": "iheroslide.ts"
     },
     {
@@ -10489,7 +10509,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_types_iheroslide_iheroslide",
-      "community": 11,
+      "community": 99,
       "norm_label": "iheroslide"
     },
     {
@@ -10499,7 +10519,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_types_iwebsiteassets",
-      "community": 11,
+      "community": 15,
       "norm_label": "iwebsiteassets.ts"
     },
     {
@@ -10509,7 +10529,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_website_types_iwebsiteassets_iplayerimage",
-      "community": 11,
+      "community": 15,
       "norm_label": "iplayerimage"
     },
     {
@@ -10519,7 +10539,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "features_website_types_iwebsiteassets_iclientimage",
-      "community": 11,
+      "community": 15,
       "norm_label": "iclientimage"
     },
     {
@@ -10529,7 +10549,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "features_website_types_iwebsiteassets_izatstatistics",
-      "community": 11,
+      "community": 15,
       "norm_label": "izatstatistics"
     },
     {
@@ -10539,7 +10559,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_types_iyoutubechanneldata",
-      "community": 11,
+      "community": 15,
       "norm_label": "iyoutubechanneldata.ts"
     },
     {
@@ -10549,7 +10569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_website_types_iyoutubechanneldata_iyoutubechanneldata",
-      "community": 11,
+      "community": 15,
       "norm_label": "iyoutubechanneldata"
     },
     {
@@ -10663,10 +10683,20 @@
       "norm_label": "devdependencies"
     },
     {
-      "label": "@nuxt/devtools",
+      "label": "@iconify-json/heroicons",
       "file_type": "code",
       "source_file": "package.json",
       "source_location": "L12",
+      "_origin": "ast",
+      "id": "package_devdependencies_iconify_json_heroicons",
+      "community": 2,
+      "norm_label": "@iconify-json/heroicons"
+    },
+    {
+      "label": "@nuxt/devtools",
+      "file_type": "code",
+      "source_file": "package.json",
+      "source_location": "L13",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt_devtools",
       "community": 2,
@@ -10676,7 +10706,7 @@
       "label": "@nuxt/image",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L13",
+      "source_location": "L14",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt_image",
       "community": 2,
@@ -10686,7 +10716,7 @@
       "label": "@nuxt/ui",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt_ui",
       "community": 2,
@@ -10696,7 +10726,7 @@
       "label": "@nuxtjs/robots",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast",
       "id": "package_devdependencies_nuxtjs_robots",
       "community": 2,
@@ -10706,7 +10736,7 @@
       "label": "@samk-dev/nuxt-vcalendar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast",
       "id": "package_devdependencies_samk_dev_nuxt_vcalendar",
       "community": 2,
@@ -10716,7 +10746,7 @@
       "label": "@tailwindcss/typography",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L17",
+      "source_location": "L18",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_typography",
       "community": 2,
@@ -10726,7 +10756,7 @@
       "label": "@types/node",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast",
       "id": "package_devdependencies_types_node",
       "community": 2,
@@ -10736,7 +10766,7 @@
       "label": "better-sqlite3",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "_origin": "ast",
       "id": "package_devdependencies_better_sqlite3",
       "community": 2,
@@ -10746,7 +10776,7 @@
       "label": "ipx",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L21",
       "_origin": "ast",
       "id": "package_devdependencies_ipx",
       "community": 2,
@@ -10756,7 +10786,7 @@
       "label": "nuxt",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L21",
+      "source_location": "L22",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt",
       "community": 2,
@@ -10766,7 +10796,7 @@
       "label": "nuxt-schema-org",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L22",
+      "source_location": "L23",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt_schema_org",
       "community": 2,
@@ -10776,7 +10806,7 @@
       "label": "nuxt-swiper",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L24",
       "_origin": "ast",
       "id": "package_devdependencies_nuxt_swiper",
       "community": 2,
@@ -10786,7 +10816,7 @@
       "label": "ofetch",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L24",
+      "source_location": "L25",
       "_origin": "ast",
       "id": "package_devdependencies_ofetch",
       "community": 2,
@@ -10796,7 +10826,7 @@
       "label": "pinia-plugin-persistedstate",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L26",
       "_origin": "ast",
       "id": "package_devdependencies_pinia_plugin_persistedstate",
       "community": 2,
@@ -10806,7 +10836,7 @@
       "label": "tailwindcss-flip",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L26",
+      "source_location": "L27",
       "_origin": "ast",
       "id": "package_devdependencies_tailwindcss_flip",
       "community": 2,
@@ -10816,7 +10846,7 @@
       "label": "dependencies",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "_origin": "ast",
       "id": "package_dependencies",
       "community": 2,
@@ -10826,7 +10856,7 @@
       "label": "@nuxt/content",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "package_dependencies_nuxt_content",
       "community": 2,
@@ -10836,7 +10866,7 @@
       "label": "@nuxtjs/strapi",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L30",
+      "source_location": "L31",
       "_origin": "ast",
       "id": "package_dependencies_nuxtjs_strapi",
       "community": 2,
@@ -10846,7 +10876,7 @@
       "label": "@pinia/nuxt",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L31",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "package_dependencies_pinia_nuxt",
       "community": 2,
@@ -10856,7 +10886,7 @@
       "label": "@unhead/ssr",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L32",
+      "source_location": "L33",
       "_origin": "ast",
       "id": "package_dependencies_unhead_ssr",
       "community": 2,
@@ -10866,7 +10896,7 @@
       "label": "@unhead/vue",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L33",
+      "source_location": "L34",
       "_origin": "ast",
       "id": "package_dependencies_unhead_vue",
       "community": 2,
@@ -10876,7 +10906,7 @@
       "label": "@vee-validate/yup",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L34",
+      "source_location": "L35",
       "_origin": "ast",
       "id": "package_dependencies_vee_validate_yup",
       "community": 2,
@@ -10886,7 +10916,7 @@
       "label": "@vue-flow/background",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L35",
+      "source_location": "L36",
       "_origin": "ast",
       "id": "package_dependencies_vue_flow_background",
       "community": 2,
@@ -10896,7 +10926,7 @@
       "label": "@vue-flow/core",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L36",
+      "source_location": "L37",
       "_origin": "ast",
       "id": "package_dependencies_vue_flow_core",
       "community": 2,
@@ -10906,7 +10936,7 @@
       "label": "@vueuse/nuxt",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L37",
+      "source_location": "L38",
       "_origin": "ast",
       "id": "package_dependencies_vueuse_nuxt",
       "community": 2,
@@ -10916,7 +10946,7 @@
       "label": "apexcharts",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "package_dependencies_apexcharts",
       "community": 2,
@@ -10926,7 +10956,7 @@
       "label": "chart.js",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "package_dependencies_chart_js",
       "community": 2,
@@ -10936,7 +10966,7 @@
       "label": "motion-v",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L40",
+      "source_location": "L41",
       "_origin": "ast",
       "id": "package_dependencies_motion_v",
       "community": 2,
@@ -10946,7 +10976,7 @@
       "label": "pinia",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L41",
+      "source_location": "L42",
       "_origin": "ast",
       "id": "package_dependencies_pinia",
       "community": 2,
@@ -10956,7 +10986,7 @@
       "label": "swiper",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L42",
+      "source_location": "L43",
       "_origin": "ast",
       "id": "package_dependencies_swiper",
       "community": 2,
@@ -10966,7 +10996,7 @@
       "label": "v-calendar",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L43",
+      "source_location": "L44",
       "_origin": "ast",
       "id": "package_dependencies_v_calendar",
       "community": 2,
@@ -10976,7 +11006,7 @@
       "label": "vue-apexcharts",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L44",
+      "source_location": "L45",
       "_origin": "ast",
       "id": "package_dependencies_vue_apexcharts",
       "community": 2,
@@ -10986,7 +11016,7 @@
       "label": "vue-chartjs",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L45",
+      "source_location": "L46",
       "_origin": "ast",
       "id": "package_dependencies_vue_chartjs",
       "community": 2,
@@ -10996,7 +11026,7 @@
       "label": "vue3-apexcharts",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L46",
+      "source_location": "L47",
       "_origin": "ast",
       "id": "package_dependencies_vue3_apexcharts",
       "community": 2,
@@ -11006,7 +11036,7 @@
       "label": "vue3-carousel",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "package_dependencies_vue3_carousel",
       "community": 2,
@@ -11016,7 +11046,7 @@
       "label": "overrides",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "package_overrides",
       "community": 2,
@@ -11026,7 +11056,7 @@
       "label": "vue",
       "file_type": "code",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "_origin": "ast",
       "id": "package_overrides_vue",
       "community": 2,
@@ -11709,7 +11739,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_studios",
-      "community": 57,
+      "community": 46,
       "norm_label": "studios.vue"
     },
     {
@@ -11719,7 +11749,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "pages_championships_id_studios_props",
-      "community": 57,
+      "community": 46,
       "norm_label": "props"
     },
     {
@@ -11729,7 +11759,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pages_championships_id_studios_api",
-      "community": 57,
+      "community": 46,
       "norm_label": "{ $api }"
     },
     {
@@ -11739,7 +11769,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "pages_championships_id_studios_currentpage",
-      "community": 57,
+      "community": 46,
       "norm_label": "currentpage"
     },
     {
@@ -11749,7 +11779,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "pages_championships_id_studios_sortedstudios",
-      "community": 57,
+      "community": 46,
       "norm_label": "sortedstudios"
     },
     {
@@ -11759,7 +11789,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "pages_championships_id_studios_totalpages",
-      "community": 57,
+      "community": 46,
       "norm_label": "totalpages"
     },
     {
@@ -11769,7 +11799,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "pages_championships_id_studios_pagedstudios",
-      "community": 57,
+      "community": 46,
       "norm_label": "pagedstudios"
     },
     {
@@ -11779,7 +11809,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "pages_championships_id_studios_gotopage",
-      "community": 57,
+      "community": 46,
       "norm_label": "gotopage()"
     },
     {
@@ -13159,7 +13189,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "plugins_api",
-      "community": 124,
+      "community": 41,
       "norm_label": "api.ts"
     },
     {
@@ -13279,7 +13309,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "types_nuxt_d",
-      "community": 166,
+      "community": 41,
       "norm_label": "nuxt.d.ts"
     },
     {
@@ -13289,7 +13319,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "types_nuxt_d_iapiinstance",
-      "community": 166,
+      "community": 41,
       "norm_label": "iapiinstance"
     },
     {
@@ -13299,7 +13329,7 @@
       "source_location": "L30",
       "_origin": "ast",
       "id": "types_nuxt_d_nuxtapp",
-      "community": 166,
+      "community": 41,
       "norm_label": "nuxtapp"
     },
     {
@@ -13309,7 +13339,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "types_nuxt_d_componentcustomproperties",
-      "community": 166,
+      "community": 41,
       "norm_label": "componentcustomproperties"
     },
     {
@@ -14258,7 +14288,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "features_championships_api_champion",
       "target": "features_championships_api_champion_championsmodule",
@@ -14444,6 +14474,39 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "features/championships/api/champion.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "features_championships_api_champion",
+      "target": "features_teams_types_iteam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/championships/api/champion.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "features_championships_api_champion",
+      "target": "features_teams_types_iteam_getteambyidresponse",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/championships/api/champion.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "features_championships_api_champion",
+      "target": "features_teams_types_iteam_iteam",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "plugins/api.ts",
       "source_location": "L9",
       "weight": 1.0,
@@ -14466,7 +14529,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L115",
+      "source_location": "L149",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_fetchchampmatchesbychampid",
@@ -14476,7 +14539,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getall",
@@ -14486,7 +14549,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getbyid",
@@ -14496,7 +14559,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L107",
+      "source_location": "L141",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampmatchesbychampid",
@@ -14506,7 +14569,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L119",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampstatisticsbychampid",
@@ -14516,7 +14579,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L99",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampstudiosbychampid",
@@ -14526,7 +14589,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L80",
+      "source_location": "L114",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampsummarybychampid",
@@ -14536,7 +14599,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L88",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampsummarywinnerbychampid",
@@ -14546,7 +14609,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getchampteamsbychampid",
@@ -14556,7 +14619,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getrecentwithstats",
@@ -14566,7 +14629,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_championships_api_champion_championsmodule_getupcoming",
@@ -14577,7 +14640,7 @@
       "context": "type",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule",
       "target": "features_shared_api_factory_fetchfactory",
@@ -14621,7 +14684,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getall",
       "target": "features_championships_types_ichamp_igetallchampionsresponse",
@@ -14632,7 +14695,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getrecentwithstats",
       "target": "features_championships_types_ichamp_igetrecentchampsresponse",
@@ -14643,7 +14706,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L56",
+      "source_location": "L57",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getupcoming",
       "target": "features_championships_types_ichamp_iupcomingchamp",
@@ -14654,7 +14717,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L64",
+      "source_location": "L65",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getbyid",
       "target": "features_championships_types_ichamp_ichamp",
@@ -14665,7 +14728,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampteamsbychampid",
       "target": "features_championships_types_ichamp_igetchampteamsresponse",
@@ -14676,7 +14739,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L80",
+      "source_location": "L114",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampsummarybychampid",
       "target": "features_championships_types_ichamp_igetchampsummaryresponse",
@@ -14687,7 +14750,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L88",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampsummarywinnerbychampid",
       "target": "features_championships_types_ichamp_igetchampsummarywinnerresponse",
@@ -14698,7 +14761,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L99",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampstudiosbychampid",
       "target": "features_championships_types_ichamp_igetchampstudiosresponse",
@@ -14709,7 +14772,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L107",
+      "source_location": "L141",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampmatchesbychampid",
       "target": "features_championships_types_ichamp_igetchampmatchesresponse",
@@ -14720,7 +14783,7 @@
       "context": "generic_arg",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/api/champion.ts",
-      "source_location": "L119",
+      "source_location": "L153",
       "weight": 1.0,
       "source": "features_championships_api_champion_championsmodule_getchampstatisticsbychampid",
       "target": "features_championships_types_istatistics_istatistics",
@@ -15740,7 +15803,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L176",
+      "source_location": "L185",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_collapse",
@@ -15750,7 +15813,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L172",
+      "source_location": "L181",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_expand",
@@ -15760,7 +15823,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L130",
+      "source_location": "L135",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_imageerrors",
@@ -15770,7 +15833,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L129",
+      "source_location": "L134",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_isexpanded",
@@ -15780,7 +15843,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L128",
+      "source_location": "L133",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_ishovered",
@@ -15790,7 +15853,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L134",
+      "source_location": "L139",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_memberslots",
@@ -15800,7 +15863,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L168",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "features_championships_champion_components_teamcard",
+      "target": "features_championships_champion_components_teamcard_onimageerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/championships/champion-components/TeamCard.vue",
+      "source_location": "L177",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_onmouseleave",
@@ -15810,7 +15883,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L125",
+      "source_location": "L129",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_props",
@@ -15820,7 +15893,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L132",
+      "source_location": "L137",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_showmemberspeek",
@@ -15830,10 +15903,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L118",
+      "source_location": "L122",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_champion_components_teamcard_teammemberslot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/championships/champion-components/TeamCard.vue",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "features_championships_champion_components_teamcard",
+      "target": "features_championships_champion_components_teamcard_tomediaurl",
       "confidence_score": 1.0
     },
     {
@@ -15841,7 +15924,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L116",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_utils_championwinnerstats",
@@ -15852,7 +15935,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L116",
+      "source_location": "L120",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_championships_utils_championwinnerstats_displaytextvalue",
@@ -15863,7 +15946,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L115",
+      "source_location": "L119",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_teams_types_iteam",
@@ -15874,7 +15957,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/championships/champion-components/TeamCard.vue",
-      "source_location": "L115",
+      "source_location": "L119",
       "weight": 1.0,
       "source": "features_championships_champion_components_teamcard",
       "target": "features_teams_types_iteam_iteam",
@@ -27648,7 +27731,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L29",
+      "source_location": "L47",
       "weight": 1.0,
       "source": "features_shared_components_pagination",
       "target": "features_shared_components_pagination_availablepages",
@@ -27658,7 +27741,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L30",
+      "source_location": "L48",
       "weight": 1.0,
       "source": "features_shared_components_pagination",
       "target": "features_shared_components_pagination_emit",
@@ -27668,7 +27751,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/shared/components/Pagination.vue",
-      "source_location": "L15",
+      "source_location": "L32",
       "weight": 1.0,
       "source": "features_shared_components_pagination",
       "target": "features_shared_components_pagination_props",
@@ -29939,7 +30022,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "source": "package",
       "target": "package_dependencies",
@@ -29969,7 +30052,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0,
       "source": "package",
       "target": "package_overrides",
@@ -30049,7 +30132,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "source": "package_devdependencies",
       "target": "package_devdependencies_better_sqlite3",
@@ -30059,10 +30142,10 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L20",
+      "source_location": "L12",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_ipx",
+      "target": "package_devdependencies_iconify_json_heroicons",
       "confidence_score": 1.0
     },
     {
@@ -30072,27 +30155,7 @@
       "source_location": "L21",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L12",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt_devtools",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L13",
-      "weight": 1.0,
-      "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt_image",
+      "target": "package_devdependencies_ipx",
       "confidence_score": 1.0
     },
     {
@@ -30102,17 +30165,17 @@
       "source_location": "L22",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt_schema_org",
+      "target": "package_devdependencies_nuxt",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L23",
+      "source_location": "L13",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt_swiper",
+      "target": "package_devdependencies_nuxt_devtools",
       "confidence_score": 1.0
     },
     {
@@ -30122,17 +30185,17 @@
       "source_location": "L14",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxt_ui",
+      "target": "package_devdependencies_nuxt_image",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L15",
+      "source_location": "L23",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_nuxtjs_robots",
+      "target": "package_devdependencies_nuxt_schema_org",
       "confidence_score": 1.0
     },
     {
@@ -30142,17 +30205,17 @@
       "source_location": "L24",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_ofetch",
+      "target": "package_devdependencies_nuxt_swiper",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L25",
+      "source_location": "L15",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_pinia_plugin_persistedstate",
+      "target": "package_devdependencies_nuxt_ui",
       "confidence_score": 1.0
     },
     {
@@ -30162,7 +30225,17 @@
       "source_location": "L16",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_samk_dev_nuxt_vcalendar",
+      "target": "package_devdependencies_nuxtjs_robots",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_ofetch",
       "confidence_score": 1.0
     },
     {
@@ -30172,7 +30245,7 @@
       "source_location": "L26",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_flip",
+      "target": "package_devdependencies_pinia_plugin_persistedstate",
       "confidence_score": 1.0
     },
     {
@@ -30182,7 +30255,17 @@
       "source_location": "L17",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_tailwindcss_typography",
+      "target": "package_devdependencies_samk_dev_nuxt_vcalendar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_tailwindcss_flip",
       "confidence_score": 1.0
     },
     {
@@ -30192,17 +30275,17 @@
       "source_location": "L18",
       "weight": 1.0,
       "source": "package_devdependencies",
-      "target": "package_devdependencies_types_node",
+      "target": "package_devdependencies_tailwindcss_typography",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L38",
+      "source_location": "L19",
       "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_apexcharts",
+      "source": "package_devdependencies",
+      "target": "package_devdependencies_types_node",
       "confidence_score": 1.0
     },
     {
@@ -30212,7 +30295,7 @@
       "source_location": "L39",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_chart_js",
+      "target": "package_dependencies_apexcharts",
       "confidence_score": 1.0
     },
     {
@@ -30222,27 +30305,7 @@
       "source_location": "L40",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_motion_v",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L29",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_nuxt_content",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L30",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_nuxtjs_strapi",
+      "target": "package_dependencies_chart_js",
       "confidence_score": 1.0
     },
     {
@@ -30252,7 +30315,17 @@
       "source_location": "L41",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_pinia",
+      "target": "package_dependencies_motion_v",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_nuxt_content",
       "confidence_score": 1.0
     },
     {
@@ -30262,7 +30335,7 @@
       "source_location": "L31",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_pinia_nuxt",
+      "target": "package_dependencies_nuxtjs_strapi",
       "confidence_score": 1.0
     },
     {
@@ -30272,7 +30345,7 @@
       "source_location": "L42",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_swiper",
+      "target": "package_dependencies_pinia",
       "confidence_score": 1.0
     },
     {
@@ -30282,17 +30355,7 @@
       "source_location": "L32",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_unhead_ssr",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L33",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_unhead_vue",
+      "target": "package_dependencies_pinia_nuxt",
       "confidence_score": 1.0
     },
     {
@@ -30302,7 +30365,17 @@
       "source_location": "L43",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_v_calendar",
+      "target": "package_dependencies_swiper",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_unhead_ssr",
       "confidence_score": 1.0
     },
     {
@@ -30312,27 +30385,7 @@
       "source_location": "L34",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_vee_validate_yup",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L46",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_vue3_apexcharts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L47",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_vue3_carousel",
+      "target": "package_dependencies_unhead_vue",
       "confidence_score": 1.0
     },
     {
@@ -30342,17 +30395,7 @@
       "source_location": "L44",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_vue_apexcharts",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "package.json",
-      "source_location": "L45",
-      "weight": 1.0,
-      "source": "package_dependencies",
-      "target": "package_dependencies_vue_chartjs",
+      "target": "package_dependencies_v_calendar",
       "confidence_score": 1.0
     },
     {
@@ -30362,7 +30405,47 @@
       "source_location": "L35",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_vue_flow_background",
+      "target": "package_dependencies_vee_validate_yup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_vue3_apexcharts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_vue3_carousel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_vue_apexcharts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "package_dependencies",
+      "target": "package_dependencies_vue_chartjs",
       "confidence_score": 1.0
     },
     {
@@ -30372,7 +30455,7 @@
       "source_location": "L36",
       "weight": 1.0,
       "source": "package_dependencies",
-      "target": "package_dependencies_vue_flow_core",
+      "target": "package_dependencies_vue_flow_background",
       "confidence_score": 1.0
     },
     {
@@ -30382,6 +30465,16 @@
       "source_location": "L37",
       "weight": 1.0,
       "source": "package_dependencies",
+      "target": "package_dependencies_vue_flow_core",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "package.json",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "package_dependencies",
       "target": "package_dependencies_vueuse_nuxt",
       "confidence_score": 1.0
     },
@@ -30389,7 +30482,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "package.json",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0,
       "source": "package_overrides",
       "target": "package_overrides_vue",
@@ -32303,5 +32396,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9e4897566cb8f4799b057805b8427497ee5e7837"
+  "built_at_commit": "43c678edada9ba39e75d77cd221f5f7e706dd660"
 }

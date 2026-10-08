@@ -14,7 +14,7 @@
         >
             <Image
                 v-if="team.team_logo"
-                :src="mediaBaseUrl + team.team_logo"
+                :src="toMediaUrl(team.team_logo)"
                 :alt="team.name"
                 icon="i-heroicons-user-group"
                 class="size-38 object-contain"
@@ -46,22 +46,26 @@
                 <div
                     v-for="(slot, index) in memberSlots"
                     :key="slot ? `${slot.role}-${slot.id}` : `empty-${index}`"
-                    class="relative flex min-h-0 min-w-0 items-end justify-center overflow-hidden rounded-lg bg-[#F36166]"
+                    class="relative flex h-full min-h-0 min-w-0 items-end justify-center overflow-hidden rounded-lg bg-[#F36166]"
                 >
                     <img
                         v-if="slot?.image && !imageErrors[index]"
-                        :src="mediaBaseUrl + slot.image"
+                        :src="toMediaUrl(slot.image)"
                         :alt="slot.name || (slot.role === 'coach' ? 'مدرب' : 'لاعب')"
                         class="absolute inset-0 size-full object-cover object-top"
                         loading="lazy"
-                        @error="imageErrors[index] = true"
+                        @error="onImageError(index)"
                     >
                     <div
                         v-else
-                        class="flex size-full min-h-48 items-center justify-center bg-[#E8E8E8]"
+                        class="flex size-full min-h-0 items-center justify-center bg-[#E8E8E8]/60"
                         aria-hidden="true"
                     >
-                        <UIcon name="i-heroicons-user" class="size-10 text-[#737171]" />
+                        <UIcon
+                            v-if="slot"
+                            name="i-heroicons-user"
+                            class="size-10 text-[#737171]"
+                        />
                     </div>
                     <span
                         v-if="slot?.role === 'coach'"
@@ -124,7 +128,7 @@ type TeamMemberSlot = {
 
 const props = defineProps<{ team: ITeam }>()
 
-const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
+const toMediaUrl = useMediaUrl()
 const isHovered = ref(false)
 const isExpanded = ref(false)
 const imageErrors = reactive<Record<number, boolean>>({})
@@ -164,6 +168,10 @@ watch(memberSlots, () => {
         delete imageErrors[Number(key)]
     })
 })
+
+function onImageError(index: number) {
+    imageErrors[index] = true
+}
 
 function onMouseLeave() {
     isHovered.value = false

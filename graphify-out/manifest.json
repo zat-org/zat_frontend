@@ -35,8 +35,8 @@
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1789345652.56267,
-    "ast_hash": "163e47f093769b1f073661785ab24c6f",
+    "mtime": 1791463664.2391944,
+    "ast_hash": "5b4507bc8a712c969c1d36ee2d36cd57",
     "semantic_hash": ""
   },
   "pages/about-us.vue": {
@@ -675,8 +675,8 @@
     "semantic_hash": ""
   },
   "features/auth/components/LoginForm.vue": {
-    "mtime": 1791462155.6673517,
-    "ast_hash": "03689f1e7eb834fc0d86d2a28d554e8f",
+    "mtime": 1791463151.5611157,
+    "ast_hash": "68ffca27b502795dd97f4373bcc3a182",
     "semantic_hash": ""
   },
   "features/auth/types/AuthModels.ts": {
@@ -700,8 +700,8 @@
     "semantic_hash": ""
   },
   "features/championships/api/champion.ts": {
-    "mtime": 1789345652.4036703,
-    "ast_hash": "02d324b419cc98ff7c1a02409875a67d",
+    "mtime": 1791464283.2474003,
+    "ast_hash": "89b561820cb8e64e3d64b1737108dec1",
     "semantic_hash": ""
   },
   "features/championships/champion-components/Card.vue": {
@@ -775,13 +775,13 @@
     "semantic_hash": ""
   },
   "features/championships/champion-components/TeamCard.vue": {
-    "mtime": 1789345652.4136674,
-    "ast_hash": "c1028d88bd37090fbb9791b63113b35c",
+    "mtime": 1791464309.7938783,
+    "ast_hash": "2a5ab693bf658db2f0e9bcd5cc59359f",
     "semantic_hash": ""
   },
   "features/championships/components/DetailHero.vue": {
-    "mtime": 1791462407.4530067,
-    "ast_hash": "53f8945c8fdead22357f6acfc4fdb0bb",
+    "mtime": 1791463151.9062362,
+    "ast_hash": "1e8119834e1ca05bcd1767049a984b29",
     "semantic_hash": ""
   },
   "features/championships/components/FilteredList.vue": {
@@ -835,8 +835,8 @@
     "semantic_hash": ""
   },
   "features/championships/components/OverviewMatchCard.vue": {
-    "mtime": 1791462559.3177376,
-    "ast_hash": "f4b71dd5905a3ab52849e9556c1ce6c8",
+    "mtime": 1791463152.0953546,
+    "ast_hash": "a0c01b984a82c2356db94b3bff410b62",
     "semantic_hash": ""
   },
   "features/championships/components/OverviewMatchesSection.vue": {
@@ -1320,8 +1320,8 @@
     "semantic_hash": ""
   },
   "features/shared/components/Pagination.vue": {
-    "mtime": 1789345652.4956691,
-    "ast_hash": "0e77cd3b68c98ce3e9e743a770fdff4f",
+    "mtime": 1791463630.2571638,
+    "ast_hash": "92aad2b96aacdef62c282041fe7faff0",
     "semantic_hash": ""
   },
   "features/shared/components/SectionHeader.vue": {
@@ -1525,8 +1525,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Teams.vue": {
-    "mtime": 1789345652.466666,
-    "ast_hash": "f6ee310ecbf8fce55e3a7f47b53cac7b",
+    "mtime": 1791463785.1065948,
+    "ast_hash": "1e9c071abe06eabc7ede428c03c7ca0a",
     "semantic_hash": ""
   },
   "features/matches/composables/useChampMatchNeighbors.ts": {
@@ -1570,8 +1570,8 @@
     "semantic_hash": ""
   },
   "features/shared/components/AppButton.vue": {
-    "mtime": 1791462155.6673517,
-    "ast_hash": "945ce23e7d82f5a857b40a216e570db3",
+    "mtime": 1791463151.7508345,
+    "ast_hash": "0f54844234886d9c16b8228d741466de",
     "semantic_hash": ""
   },
   "features/teams/components/DetailHero.vue": {
@@ -1735,13 +1735,13 @@
     "semantic_hash": ""
   },
   "pages/learn-baloot.vue": {
-    "mtime": 1791462972.60175,
-    "ast_hash": "6ac162028e07fbb1c4e13b3964ac1eb1",
+    "mtime": 1791463152.864254,
+    "ast_hash": "588b0dce23e28623b49e5a5fc0417ef0",
     "semantic_hash": ""
   },
   "pages/qydha.vue": {
-    "mtime": 1791462824.7972648,
-    "ast_hash": "1805c827d7eff1cee653c274ff9a6565",
+    "mtime": 1791463152.627994,
+    "ast_hash": "7a0b7134cfce0263f7f329ecd3a5f543",
     "semantic_hash": ""
   },
   "assets/icons/learn-arrow.svg": {
