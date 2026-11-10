@@ -9,11 +9,13 @@
                 v-if="champType === ChampType.LEAGUE"
                 :table="(table as LeagueTeamSummary[])"
                 :logos-by-id="logosById"
+                :live-href="liveTablePath"
             />
             <ChampionHezamTable
                 v-else-if="champType === ChampType.HEZAM"
                 :table="(table as HezamTeamSummary[])"
                 :logos-by-id="logosById"
+                :live-href="liveTablePath"
             />
             <ChampionCupMap
                 v-else-if="champType === ChampType.CUP"
@@ -35,7 +37,13 @@ const props = defineProps({
     },
 })
 
+const route = useRoute()
 const { $api } = useNuxtApp()
+
+const liveTablePath = computed(() => {
+    const id = String(route.params.id || props.champ.leagueid)
+    return `/championships/${id}/table/live`
+})
 
 const [
     { data, error, pending },

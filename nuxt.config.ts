@@ -20,6 +20,7 @@ try {
 }
 
 export default defineNuxtConfig({
+  compatibilityDate: '2026-11-09',
   css: ['~/assets/css/tailwind.css', '~/assets/css/styles.css'],
   components: [
     { path: '~/features/matches/components', prefix: 'Match' },
@@ -54,8 +55,8 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/strapi",
     "@nuxt/ui",
-    "@nuxt/content",
     "@nuxt/image",
+    "@nuxtjs/robots",
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
@@ -82,17 +83,19 @@ export default defineNuxtConfig({
   pinia: {
     storesDirs: ["./stores/**", "./features/**/stores/**"],
   },
-  content: {
-    markdown: {
-      anchorLinks: false,
-    },
-  },
   nitro: {
     preset: "netlify",
     compressPublicAssets: true,
     prerender: {
       crawlLinks: false,
       routes: [],
+    },
+  },
+  vite: {
+    server: {
+      watch: {
+        ignored: ['**/.data/**', '**/graphify-out/**'],
+      },
     },
   },
   routeRules: {

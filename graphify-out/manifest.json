@@ -15,8 +15,8 @@
     "semantic_hash": ""
   },
   "app.vue": {
-    "mtime": 1789345652.266668,
-    "ast_hash": "2c2e533304ab875a5777a1a0de4af855",
+    "mtime": 1794236219.6776154,
+    "ast_hash": "5a4ca413ad07c54f6da031f26f0b7ba2",
     "semantic_hash": ""
   },
   "components/content/LawsItem.vue": {
@@ -30,13 +30,13 @@
     "semantic_hash": "3aee7383a73c048a046dae32006f8de3"
   },
   "nuxt.config.ts": {
-    "mtime": 1789345652.5526688,
-    "ast_hash": "a815bad4a11a8364089d3a4bcec9b804",
+    "mtime": 1794286479.1041362,
+    "ast_hash": "ac541987e6c5b79dba13355d5d7d95b6",
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1791463664.2391944,
-    "ast_hash": "5b4507bc8a712c969c1d36ee2d36cd57",
+    "mtime": 1794286478.9921484,
+    "ast_hash": "7a4b3cf12a5c1d1a59ced8fe28671ead",
     "semantic_hash": ""
   },
   "pages/about-us.vue": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "pages/championships/[id].vue": {
-    "mtime": 1789345652.5666673,
-    "ast_hash": "6ceb70e9492df9390fd4ad51c0f34445",
+    "mtime": 1794235742.3128757,
+    "ast_hash": "0a5f2dcdfa7f31f4ee58dd6b4598b15c",
     "semantic_hash": ""
   },
   "pages/championships/[id]/estimations.vue": {
@@ -92,11 +92,6 @@
   "pages/championships/[id]/studios.vue": {
     "mtime": 1789345652.5746672,
     "ast_hash": "deaa41353bac58eaca14cce97b9ce0a3",
-    "semantic_hash": ""
-  },
-  "pages/championships/[id]/table.vue": {
-    "mtime": 1789345652.5746672,
-    "ast_hash": "a0c4fa142d9fb93e5a7c0a0476396dfc",
     "semantic_hash": ""
   },
   "pages/championships/[id]/teams.vue": {
@@ -140,7 +135,7 @@
     "semantic_hash": ""
   },
   "pages/referees.vue": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.951238,
     "ast_hash": "465a6359d3b6baa22067f1d46927674b",
     "semantic_hash": ""
   },
@@ -154,20 +149,10 @@
     "ast_hash": "903569d59f1b535985962e686a2a5051",
     "semantic_hash": ""
   },
-  "plugins/ApexChart.client.ts": {
-    "mtime": 1755718823.1717286,
-    "ast_hash": "f938e87d9c95858fcd9b695642800f25",
-    "semantic_hash": "f938e87d9c95858fcd9b695642800f25"
-  },
   "plugins/api.ts": {
     "mtime": 1789345652.5986686,
     "ast_hash": "b917dcd139beee4b7d19f27249b3029d",
     "semantic_hash": ""
-  },
-  "plugins/chartjs.ts": {
-    "mtime": 1751967564.57018,
-    "ast_hash": "64f7ed137023c59fe0376cc1911a4071",
-    "semantic_hash": "64f7ed137023c59fe0376cc1911a4071"
   },
   "plugins/swiper.client.ts": {
     "mtime": 1756046370.2126148,
@@ -700,8 +685,8 @@
     "semantic_hash": ""
   },
   "features/championships/api/champion.ts": {
-    "mtime": 1791464283.2474003,
-    "ast_hash": "89b561820cb8e64e3d64b1737108dec1",
+    "mtime": 1794235399.990948,
+    "ast_hash": "33a207c8361ef2a8f4a6632e9df69f4e",
     "semantic_hash": ""
   },
   "features/championships/champion-components/Card.vue": {
@@ -750,8 +735,8 @@
     "semantic_hash": ""
   },
   "features/championships/champion-components/HezamTable.vue": {
-    "mtime": 1789345652.4096668,
-    "ast_hash": "d9c67a55ac75c7d919b9e5356b9eb85c",
+    "mtime": 1794236629.1827202,
+    "ast_hash": "c91e139801038e206071f52fdc8a9559",
     "semantic_hash": ""
   },
   "features/championships/champion-components/LargeCupMatch.vue": {
@@ -760,8 +745,8 @@
     "semantic_hash": ""
   },
   "features/championships/champion-components/LeagueTable.vue": {
-    "mtime": 1789345652.4106686,
-    "ast_hash": "37482a5289094b104593d300d1a5b4c6",
+    "mtime": 1794236606.641363,
+    "ast_hash": "871c38554dd68f210e2893938a15357f",
     "semantic_hash": ""
   },
   "features/championships/champion-components/MatchTeam.vue": {
@@ -1200,12 +1185,12 @@
     "semantic_hash": ""
   },
   "features/referees/components/Card.vue": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.946238,
     "ast_hash": "3e9bcb33822a3b6dac27f1f399e6f80c",
     "semantic_hash": ""
   },
   "features/referees/components/JoinRequestForm.vue": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.9522421,
     "ast_hash": "ec83a932258d1b92ece742e946da853d",
     "semantic_hash": ""
   },
@@ -1300,7 +1285,7 @@
     "semantic_hash": ""
   },
   "features/shared/components/NavbarAccountSection.vue": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.9532435,
     "ast_hash": "c2913f27732997d1eb6ba64ceb579ab5",
     "semantic_hash": ""
   },
@@ -1510,7 +1495,7 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/MemberCard.vue": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.9472382,
     "ast_hash": "2e068e124c110b723d6b4b3677dc0741",
     "semantic_hash": ""
   },
@@ -1760,7 +1745,7 @@
     "semantic_hash": ""
   },
   "assets/images/players/player-badge.svg": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.9452503,
     "ast_hash": "4fd57a0510fa10cb440b305df3b14438",
     "semantic_hash": ""
   },
@@ -1775,7 +1760,7 @@
     "semantic_hash": ""
   },
   "assets/images/players/decor-side.svg": {
-    "mtime": 1791462155.6673517,
+    "mtime": 1794233553.9492385,
     "ast_hash": "d7a8359e77748a422abf3a940bfee1db",
     "semantic_hash": ""
   },
@@ -1847,6 +1832,76 @@
   "features/teams/components/LastMatches.vue": {
     "mtime": 1789997378.161743,
     "ast_hash": "d1911395194577fd6862398d398b808d",
+    "semantic_hash": ""
+  },
+  "features/championships/composables/useLeagueSummaryLive.ts": {
+    "mtime": 1794239220.5007021,
+    "ast_hash": "9837a5381875420cddb81074931f643a",
+    "semantic_hash": ""
+  },
+  "pages/championships/[id]/table/index.vue": {
+    "mtime": 1794236597.3462706,
+    "ast_hash": "bc384a808e0906cf4852be60247a7244",
+    "semantic_hash": ""
+  },
+  "pages/championships/[id]/table/live.vue": {
+    "mtime": 1794284661.616431,
+    "ast_hash": "78bf59a1be925cdfa40f84b46dc0a901",
+    "semantic_hash": ""
+  },
+  "layouts/default.vue": {
+    "mtime": 1794236213.5818422,
+    "ast_hash": "7abd0bbfb6a1cf22baf57bbe9c22da4c",
+    "semantic_hash": ""
+  },
+  "layouts/obs.vue": {
+    "mtime": 1794284652.5120924,
+    "ast_hash": "1372da0f1c6da2da96ccab06d82d0cc9",
+    "semantic_hash": ""
+  },
+  "plugins/clear-stale-sw.client.ts": {
+    "mtime": 1794286479.4037333,
+    "ast_hash": "fd7d046292bf2dc08eace84d197a9bce",
+    "semantic_hash": ""
+  },
+  "features/championships/champion-components/LiveStandingsBoard.vue": {
+    "mtime": 1794318193.3450646,
+    "ast_hash": "3feb17358a2f2c4d74aba1bf082523e4",
+    "semantic_hash": ""
+  },
+  "public/images/table-champion.png": {
+    "mtime": 1794284277.7651591,
+    "ast_hash": "a9905be0d2bf46fe8b3728becc3db658",
+    "semantic_hash": ""
+  },
+  "assets/images/table-champion.png": {
+    "mtime": 1794284303.054588,
+    "ast_hash": "a2b78c127e275062ba9e25e62c931ac1",
+    "semantic_hash": ""
+  },
+  "features/championships/champion-components/LiveTableLayoutEditor.vue": {
+    "mtime": 1794313314.3225503,
+    "ast_hash": "426b8881520e3fed8b22b97834244229",
+    "semantic_hash": ""
+  },
+  "features/championships/composables/useLiveTableLayout.ts": {
+    "mtime": 1794312310.1317317,
+    "ast_hash": "b3d8824ec3f46026e06e118a5e2473ba",
+    "semantic_hash": ""
+  },
+  "features/championships/live-table/defaultLayout.ts": {
+    "mtime": 1794317971.1647584,
+    "ast_hash": "062a905faaabcbdfeb85a5a6c0d4e468",
+    "semantic_hash": ""
+  },
+  "features/championships/live-table/types.ts": {
+    "mtime": 1794317917.803522,
+    "ast_hash": "ee19f595314e783da73be041c469a554",
+    "semantic_hash": ""
+  },
+  "pages/championships/table/live-editor.vue": {
+    "mtime": 1794308680.053629,
+    "ast_hash": "83f8c0e146cc9dc4396292e194f0e032",
     "semantic_hash": ""
   }
 }

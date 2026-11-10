@@ -4,6 +4,7 @@
 .nitro
 .cache
 dist
+.data
 
 # Node dependencies
 node_modules
@@ -16,6 +17,7 @@ logs
 .DS_Store
 .fleet
 .idea
+graphify-out
 
 # Local env files
 .env

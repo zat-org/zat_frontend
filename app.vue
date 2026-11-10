@@ -1,13 +1,9 @@
 <template>
   <UApp :locale="ar">
-    <div dir="rtl" lang="ar" class="flex flex-col min-h-screen bg-surface-base">
-      <NuxtLoadingIndicator />
-      <Navbar />
-      <main class="grow w-full relative flex flex-col justify-start items-stretch">
-        <NuxtPage />
-      </main>
-      <AppFooter />
-    </div>
+    <NuxtLoadingIndicator />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </UApp>
 </template>
 

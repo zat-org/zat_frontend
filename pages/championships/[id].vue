@@ -1,6 +1,6 @@
 <template>
     <NuxtPage
-        v-if="isMatchDetail"
+        v-if="isStandaloneChild"
         class="w-full grow"
     />
 
@@ -45,9 +45,18 @@ const isMatchDetail = computed(() => {
     return path === `/championships/${id}/match/${mid}`
 })
 
+const isLiveTable = computed(() => {
+    const id = String(route.params.id || '')
+    if (!id) return false
+    const path = route.path.replace(/\/+$/, '') || '/'
+    return path === `/championships/${id}/table/live`
+})
+
+const isStandaloneChild = computed(() => isMatchDetail.value || isLiveTable.value)
+
 const { data: champ, error, pending } = await $api.champions.getById(route.params.id as string)
 
-const { data: summary } = champ.value?.leagueid
+const { data: summary } = champ.value?.leagueid && !isStandaloneChild.value
     ? await $api.champions.getChampSummaryWinnerByChampId(champ.value.leagueid.toString())
     : { data: ref(null) }
 
@@ -60,11 +69,11 @@ const isOverview = computed(() => {
 
 useHead({
     title: computed(() => {
-        if (isMatchDetail.value) return undefined
+        if (isStandaloneChild.value) return undefined
         return champ.value ? `بطولات زات - ${champ.value.name}` : 'بطولات زات'
     }),
     meta: computed(() => {
-        if (isMatchDetail.value) return []
+        if (isStandaloneChild.value) return []
         return [
             {
                 name: 'description',

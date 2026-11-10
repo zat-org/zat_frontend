@@ -6,20 +6,26 @@
     >
         <div class="w-full overflow-x-auto overscroll-x-contain">
             <div class="min-w-[34rem] sm:min-w-0">
-                <header
-                    class="flex h-14 shrink-0 items-center justify-between gap-3 bg-nav-bar px-3 text-sm font-bold leading-7 text-text-on-action sm:h-17 sm:gap-6 sm:px-4 sm:text-base"
+                <UContextMenu
+                    :disabled="!liveHref"
+                    :items="liveMenuItems"
                 >
-                    <div class="flex min-w-0 flex-1 items-center justify-start gap-3 sm:gap-6">
-                        <span class="w-7 shrink-0 text-center sm:w-9">مركز</span>
-                        <span class="min-w-14 shrink-0 text-end">الفريق</span>
-                    </div>
-                    <div class="flex items-center gap-2 sm:gap-6">
-                        <span class="w-10 shrink-0 text-center sm:w-12">لعب</span>
-                        <span class="hidden w-20.5 shrink-0 text-center sm:block">خ / ت / ف</span>
-                        <span class="w-12 shrink-0 text-center sm:w-16">ابناط</span>
-                        <span class="w-10 shrink-0 text-center sm:w-12.5">نقاط</span>
-                    </div>
-                </header>
+                    <header
+                        class="flex h-14 shrink-0 items-center justify-between gap-3 bg-nav-bar px-3 text-sm font-bold leading-7 text-text-on-action sm:h-17 sm:gap-6 sm:px-4 sm:text-base"
+                        :class="liveHref ? 'cursor-context-menu' : undefined"
+                    >
+                        <div class="flex min-w-0 flex-1 items-center justify-start gap-3 sm:gap-6">
+                            <span class="w-7 shrink-0 text-center sm:w-9">مركز</span>
+                            <span class="min-w-14 shrink-0 text-end">الفريق</span>
+                        </div>
+                        <div class="flex items-center gap-2 sm:gap-6">
+                            <span class="w-10 shrink-0 text-center sm:w-12">لعب</span>
+                            <span class="hidden w-20.5 shrink-0 text-center sm:block">خ / ت / ف</span>
+                            <span class="w-12 shrink-0 text-center sm:w-16">ابناط</span>
+                            <span class="w-10 shrink-0 text-center sm:w-12.5">نقاط</span>
+                        </div>
+                    </header>
+                </UContextMenu>
 
                 <div
                     v-if="rows.length"
@@ -99,6 +105,7 @@
 </template>
 
 <script setup lang="ts">
+import type { ContextMenuItem } from '@nuxt/ui'
 import type { HezamTeamSummary, LeagueTeamSummary } from '~/features/championships/types/IChamp'
 import {
     displayAbnatValue,
@@ -122,9 +129,23 @@ const props = defineProps<{
     logosById?: Record<number, string>
     /** When set, only the first N rows are shown. Omit to show the full table. */
     limit?: number
+    /** Right-click header opens this live table URL in a new tab. */
+    liveHref?: string
 }>()
 
 const mediaBaseUrl = useRuntimeConfig().public.apiBaseUrl
+
+const liveMenuItems = computed<ContextMenuItem[]>(() => {
+    if (!props.liveHref) return []
+    return [
+        {
+            label: 'مباشر',
+            icon: 'i-heroicons-signal',
+            to: props.liveHref,
+            target: '_blank',
+        },
+    ]
+})
 
 function parseAbnat(value: string | number | null | undefined): number | null {
     if (value === null || value === undefined) return null

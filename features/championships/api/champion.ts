@@ -114,9 +114,13 @@ class ChampionsModule extends FetchFactory {
   async getChampSummaryByChampId(champId: string, asyncDataOptions?: AsyncDataOptions<IGetChampSummaryResponse>) {
     return this.asyncData(
       `champions:${champId}:summary`,
-      () => this.get<IGetChampSummaryResponse>(`/api/leagues/${champId}/summary`),
+      () => this.fetchChampSummaryByChampId(champId),
       asyncDataOptions,
     )
+  }
+
+  fetchChampSummaryByChampId(champId: string) {
+    return this.get<IGetChampSummaryResponse>(`/api/leagues/${champId}/summary`)
   }
 
   async getChampSummaryWinnerByChampId(

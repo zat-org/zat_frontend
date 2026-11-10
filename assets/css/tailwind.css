@@ -177,6 +177,23 @@
         background-color: var(--zat-surface-base);
     }
 
+    /* OBS browser-source overlay: transparent page chrome, no page scroll */
+    html.obs-layout,
+    html.obs-layout body {
+        background: transparent !important;
+        background-color: transparent !important;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    html.obs-layout #__nuxt,
+    html.obs-layout .obs-layout-root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
     /* Keep brand primary identical in light and dark (Nuxt UI defaults to -400 in dark;
        if that shade alias is missing, bg-primary becomes transparent) */
     :root,
@@ -412,7 +429,7 @@
 
     .nav-dropdown-panel {
         @apply absolute top-full inset-x-0 z-50 bg-white border border-[#f0f0f0]
-               shadow-zat py-6 px-[var(--spacing-page)];
+               shadow-zat py-6 px-(--spacing-page);
     }
 
     /* Force solid white navbar dropdown in dark mode */
