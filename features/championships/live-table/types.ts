@@ -71,6 +71,6 @@ export type LiveTableLayout = {
   cells: Array<Record<string, LiveTableFieldBox>>
 }
 
-export const LIVE_TABLE_LAYOUT_STORAGE_KEY = 'zat:live-table-layout:v6'
+export const LIVE_TABLE_LAYOUT_STORAGE_KEY = 'zat:live-table-layout:v7'
 export const LIVE_TABLE_MAX_ROWS = 8
 export const LIVE_TABLE_CANVAS = { width: 1920, height: 1080 } as const

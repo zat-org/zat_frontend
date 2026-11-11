@@ -193,140 +193,815 @@ export function normalizeLiveTableLayout(layout: LiveTableLayout): LiveTableLayo
 
 /** Pixel-tuned league default from live-editor export. */
 const LEAGUE_DEFAULT_LAYOUT: LiveTableLayout = {
-  version: 1,
-  canvas: { width: 1920, height: 1080 },
-  background: '/images/table-champion.png',
-  table: {
-    x: 311,
-    y: 241,
-    gapX: 19,
-    gapY: 10,
-    cellW: 124,
-    cellH: 73,
-    headerH: 86,
-    headerGap: 18,
-    cellBgColor: '#ffffff',
-    headerBgColor: '',
+  "version": 1,
+  "canvas": {
+    "width": 1920,
+    "height": 1080
   },
-  columns: [
-    { key: 'abnat', label: 'ابناط' },
-    { key: 'points', label: 'نقاط' },
-    { key: 'lost', label: 'خسر' },
-    { key: 'draw', label: 'تعادل' },
-    { key: 'win', label: 'فاز' },
-    { key: 'play', label: 'لعب' },
-    { key: 'team', label: 'الفريق' },
-    { key: 'rank', label: '' },
+  "background": "/images/table-champion.png",
+  "table": {
+    "x": 311,
+    "y": 241,
+    "gapX": 19,
+    "gapY": 10,
+    "cellW": 124,
+    "cellH": 73,
+    "headerH": 86,
+    "headerGap": 18,
+    "cellBgColor": "#ffffff",
+    "headerBgColor": ""
+  },
+  "columns": [
+    {
+      "key": "abnat",
+      "label": "ابناط"
+    },
+    {
+      "key": "points",
+      "label": "نقاط"
+    },
+    {
+      "key": "lost",
+      "label": "خسر"
+    },
+    {
+      "key": "draw",
+      "label": "تعادل"
+    },
+    {
+      "key": "win",
+      "label": "فاز"
+    },
+    {
+      "key": "play",
+      "label": "لعب"
+    },
+    {
+      "key": "team",
+      "label": "الفريق"
+    },
+    {
+      "key": "rank",
+      "label": ""
+    }
   ],
-  logo: {
-    x: 824,
-    y: 6,
-    w: 200,
-    h: 200,
-    fontSize: 0,
-    color: '#ffffff',
-    bgColor: '',
-    align: 'center',
+  "logo": {
+    "x": 824,
+    "y": 6,
+    "w": 200,
+    "h": 200,
+    "fontSize": 0,
+    "color": "#ffffff",
+    "bgColor": "",
+    "align": "center"
   },
-  headers: {
-    abnat: { x: 431, y: 237, w: 116, h: 86, fontSize: 30, color: '#ffffff', bgColor: '', align: 'center' },
-    points: { x: 559, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    lost: { x: 686, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    draw: { x: 812, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    win: { x: 941, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    play: { x: 1071, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    team: { x: 1197, y: 237, w: 116, h: 86, fontSize: 32, color: '#ffffff', bgColor: '', align: 'center' },
-    rank: { x: 1332, y: 241, w: 79, h: 86, fontSize: 0, color: '#ffffff', bgColor: '', align: 'center' },
+  "headers": {
+    "abnat": {
+      "x": 431,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "points": {
+      "x": 559,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "lost": {
+      "x": 686,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "draw": {
+      "x": 812,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "win": {
+      "x": 941,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "play": {
+      "x": 1071,
+      "y": 237,
+      "w": 116,
+      "h": 86,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "team": {
+      "x": 1203,
+      "y": 232,
+      "w": 116,
+      "h": 86,
+      "fontSize": 32,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    },
+    "rank": {
+      "x": 1332,
+      "y": 241,
+      "w": 79,
+      "h": 86,
+      "fontSize": 0,
+      "color": "#ffffff",
+      "bgColor": "",
+      "align": "center"
+    }
   },
-  cells: [
+  "cells": [
     {
-      abnat: { x: 431, y: 333, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 333, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 333, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 333, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 333, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 333, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 333, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 333, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 333,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 333,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 418, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 418, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 418, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 418, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 418, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 418, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 418, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 418, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 418,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 418,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 502, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 502, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 502, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 502, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 502, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 502, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 502, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 502, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 502,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 502,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 587, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 587, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 587, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 587, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 587, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 587, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 587, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 587, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 587,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 587,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 673, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 673, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 673, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 673, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 673, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 673, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 673, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 673, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 673,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 673,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 758, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 758, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 758, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 758, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 758, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 758, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 758, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 758, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 758,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 758,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 842, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 842, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 842, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 842, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 842, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 842, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 842, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 842, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
+      "abnat": {
+        "x": 431,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 842,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 842,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
     },
     {
-      abnat: { x: 431, y: 925, w: 116, h: 73, fontSize: 30, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      points: { x: 559, y: 925, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      lost: { x: 686, y: 925, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      draw: { x: 812, y: 925, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      win: { x: 941, y: 925, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      play: { x: 1071, y: 925, w: 116, h: 73, fontSize: 36, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      team: { x: 1197, y: 925, w: 116, h: 73, fontSize: 0, color: '#111111', bgColor: '#ffffff', align: 'center' },
-      rank: { x: 1332, y: 925, w: 79, h: 73, fontSize: 40, color: '#ffffff', bgColor: '', align: 'center' },
-    },
+      "abnat": {
+        "x": 431,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 35,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "points": {
+        "x": 559,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "lost": {
+        "x": 686,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "draw": {
+        "x": 812,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "win": {
+        "x": 941,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "play": {
+        "x": 1071,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 45,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "team": {
+        "x": 1197,
+        "y": 925,
+        "w": 116,
+        "h": 73,
+        "fontSize": 32,
+        "color": "#111111",
+        "bgColor": "#ffffff",
+        "align": "center"
+      },
+      "rank": {
+        "x": 1332,
+        "y": 925,
+        "w": 79,
+        "h": 73,
+        "fontSize": 40,
+        "color": "#ffffff",
+        "bgColor": "",
+        "align": "center"
+      }
+    }
   ],
-  frame: {
-    x: 181,
-    y: 83,
-    w: 1482,
-    h: 990,
-  },
-}
+  "frame": {
+    "x": 181,
+    "y": 83,
+    "w": 1482,
+    "h": 990
+  }
+} as LiveTableLayout
 
 /**
  * Default absolute layout for a 1920×1080 OBS canvas over the frame JPG/PNG.

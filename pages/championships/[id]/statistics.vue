@@ -17,10 +17,10 @@
         </div>
         <div
             v-else
-            class="flex h-50 flex-col items-center justify-center py-10 text-lg text-text-subtitle"
+            class="flex h-50 flex-col items-center justify-center py-10 text-lg font-bold text-text-subtitle"
         >
             <Icon name="line-md:alert-circle" class="mb-2 block text-9xl" />
-            <h3>لا توجد احصائيات حاليا</h3>
+            <h3 class="font-bold">لا توجد احصائيات حاليا</h3>
         </div>
     </FetchDataWrapper>
 </template>

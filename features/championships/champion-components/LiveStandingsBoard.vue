@@ -49,7 +49,7 @@
             <div
                 v-for="column in activeLayout.columns"
                 :key="`header-${column.key}`"
-                class="absolute z-[3] flex items-center font-sans font-bold leading-none"
+                class="live-table-cell absolute z-[3] flex items-center font-sans font-extrabold leading-none"
                 :class="alignClass(activeLayout.headers[column.key]?.align)"
                 :style="textBoxStyle(activeLayout.headers[column.key])"
             >
@@ -73,7 +73,7 @@
             <div
                 v-for="(_, slotIndex) in occupiedSlotCount"
                 :key="`rank-${slotIndex}`"
-                class="absolute z-[3] flex items-center font-numbers font-bold leading-none"
+                class="live-table-cell absolute z-[3] flex items-center font-numbers font-extrabold leading-none"
                 :class="alignClass(cellBox(slotIndex, 'rank')?.align)"
                 :style="slotRankStyle(slotIndex)"
             >
@@ -101,7 +101,7 @@
                     <div
                         v-for="column in contentColumns"
                         :key="`${row.id}-${column.key}`"
-                        class="absolute flex items-center font-bold leading-none"
+                        class="live-table-cell absolute flex items-center font-extrabold leading-none"
                         :class="[
                             alignClass(cellBox(slotIndex, column.key)?.align),
                             column.key === 'team' ? 'font-sans' : 'font-numbers',
@@ -135,7 +135,7 @@
 
             <div
                 v-if="!visualRows.length"
-                class="absolute inset-0 z-[3] flex items-center justify-center font-sans text-4xl font-bold text-white/75"
+                class="absolute inset-0 z-[3] flex items-center justify-center font-sans text-4xl font-extrabold text-white/75"
             >
                 لا توجد نتائج حالياً
             </div>
@@ -592,6 +592,8 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
+
+
 .live-step-gone {
     opacity: 0;
     transform: translateX(48px);

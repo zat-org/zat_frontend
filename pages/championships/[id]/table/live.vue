@@ -11,7 +11,7 @@
             >
                 <p
                     v-if="isReconnecting && summary"
-                    class="pointer-events-none absolute inset-x-0 top-2 z-10 text-center text-sm text-white/80"
+                    class="pointer-events-none absolute inset-x-0 top-2 z-10 text-center text-sm font-bold text-white/80"
                     role="status"
                 >
                     جاري إعادة الاتصال…

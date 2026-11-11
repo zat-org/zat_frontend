@@ -80,8 +80,8 @@
     "semantic_hash": ""
   },
   "pages/championships/[id]/statistics.vue": {
-    "mtime": 1789345652.5736687,
-    "ast_hash": "6a9f1bc365930ca9ee40741df2bb989d",
+    "mtime": 1794429953.2559426,
+    "ast_hash": "7ec0527853878bccc42bf05183d8725b",
     "semantic_hash": ""
   },
   "pages/championships/[id]/studios.vue": {
@@ -845,8 +845,8 @@
     "semantic_hash": ""
   },
   "features/championships/components/StatisticsPanel.vue": {
-    "mtime": 1789345652.4256666,
-    "ast_hash": "430c2023f2a151671b43242169e55fc9",
+    "mtime": 1794429998.5763855,
+    "ast_hash": "382be33b6a8e8240b8789905cce75e38",
     "semantic_hash": ""
   },
   "features/championships/components/TitleBar.vue": {
@@ -1110,8 +1110,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Statistics.vue": {
-    "mtime": 1794411397.0226953,
-    "ast_hash": "42e02199d98f604751d6696c86cbdc76",
+    "mtime": 1794411525.9813972,
+    "ast_hash": "a504d78e567e4e4517d616c14eff4a5c",
     "semantic_hash": ""
   },
   "features/matches/components/Estimation/BestPlayer.vue": {
@@ -1840,8 +1840,8 @@
     "semantic_hash": ""
   },
   "pages/championships/[id]/table/live.vue": {
-    "mtime": 1794284661.616431,
-    "ast_hash": "78bf59a1be925cdfa40f84b46dc0a901",
+    "mtime": 1794430091.7100692,
+    "ast_hash": "6623866cd6637062fb12c730b061a9f4",
     "semantic_hash": ""
   },
   "layouts/default.vue": {
@@ -1860,8 +1860,8 @@
     "semantic_hash": ""
   },
   "features/championships/champion-components/LiveStandingsBoard.vue": {
-    "mtime": 1794318193.3450646,
-    "ast_hash": "3feb17358a2f2c4d74aba1bf082523e4",
+    "mtime": 1794430263.5471542,
+    "ast_hash": "c88e3495793934f9db3209e376fe7504",
     "semantic_hash": ""
   },
   "public/images/table-champion.png": {
@@ -1885,13 +1885,13 @@
     "semantic_hash": ""
   },
   "features/championships/live-table/defaultLayout.ts": {
-    "mtime": 1794317971.1647584,
-    "ast_hash": "062a905faaabcbdfeb85a5a6c0d4e468",
+    "mtime": 1794430808.4956698,
+    "ast_hash": "8106d8231b3d73b9619c5eb70571d1fe",
     "semantic_hash": ""
   },
   "features/championships/live-table/types.ts": {
-    "mtime": 1794317917.803522,
-    "ast_hash": "ee19f595314e783da73be041c469a554",
+    "mtime": 1794430671.1218834,
+    "ast_hash": "8eaea5921ca6a0d42da75fa8abe4cd2d",
     "semantic_hash": ""
   },
   "pages/championships/table/live-editor.vue": {
