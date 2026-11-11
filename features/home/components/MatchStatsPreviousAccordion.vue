@@ -36,7 +36,7 @@
                             <div class="flex min-w-0 flex-col items-center gap-2 ">
                                 <Image
                                     :src="logoBaseUrl + match.team_1_logo"
-                                    class="size-14 rounded-full bg-surface-overlay object-contain p-1 @-[400px]:size-16 @-[560px]:size-20"
+                                    class="size-20 rounded-full bg-surface-overlay object-contain p-1 @-[400px]:size-24 @-[560px]:size-28"
                                     :alt="match.team_1_name"
                                     icon="i-heroicons-user-group"
                                 />
@@ -53,7 +53,7 @@
                             <div class="flex min-w-0 flex-col items-center gap-2 @-[400px]:gap-3">
                                 <Image
                                     :src="logoBaseUrl + match.team_2_logo"
-                                    class="size-14 rounded-full bg-surface-overlay object-contain p-1 @-[400px]:size-16 @-[560px]:size-20"
+                                    class="size-20 rounded-full bg-surface-overlay object-contain p-1 @-[400px]:size-24 @-[560px]:size-28"
                                     :alt="match.team_2_name"
                                     icon="i-heroicons-user-group"
                                 />

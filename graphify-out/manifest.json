@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "pages/championships/[id].vue": {
-    "mtime": 1794235742.3128757,
-    "ast_hash": "0a5f2dcdfa7f31f4ee58dd6b4598b15c",
+    "mtime": 1794405863.4011524,
+    "ast_hash": "ecf9a480effea18388799de83aed4a95",
     "semantic_hash": ""
   },
   "pages/championships/[id]/estimations.vue": {
@@ -72,11 +72,6 @@
   "pages/championships/[id]/laws.vue": {
     "mtime": 1789345652.5706706,
     "ast_hash": "968105cd0f77a8d95293d79a3cc830ae",
-    "semantic_hash": ""
-  },
-  "pages/championships/[id]/match/[mid].vue": {
-    "mtime": 1789345652.571688,
-    "ast_hash": "9f85e2a5bee9324232220831fdbc9de2",
     "semantic_hash": ""
   },
   "pages/championships/[id]/matches.vue": {
@@ -135,7 +130,7 @@
     "semantic_hash": ""
   },
   "pages/referees.vue": {
-    "mtime": 1794233553.951238,
+    "mtime": 1794405863.4081478,
     "ast_hash": "465a6359d3b6baa22067f1d46927674b",
     "semantic_hash": ""
   },
@@ -765,8 +760,8 @@
     "semantic_hash": ""
   },
   "features/championships/components/DetailHero.vue": {
-    "mtime": 1791463151.9062362,
-    "ast_hash": "1e8119834e1ca05bcd1767049a984b29",
+    "mtime": 1794405863.4081478,
+    "ast_hash": "01bd4aac6f564f806daef27d2b2f0955",
     "semantic_hash": ""
   },
   "features/championships/components/FilteredList.vue": {
@@ -820,8 +815,8 @@
     "semantic_hash": ""
   },
   "features/championships/components/OverviewMatchCard.vue": {
-    "mtime": 1791463152.0953546,
-    "ast_hash": "a0c01b984a82c2356db94b3bff410b62",
+    "mtime": 1794405863.4081478,
+    "ast_hash": "2f0bf827ab4e2eed5c3ce9acdefa2870",
     "semantic_hash": ""
   },
   "features/championships/components/OverviewMatchesSection.vue": {
@@ -985,8 +980,8 @@
     "semantic_hash": ""
   },
   "features/home/components/MatchStatsPreviousAccordion.vue": {
-    "mtime": 1789345652.4436681,
-    "ast_hash": "768f2e0262b4a8394f627e1da4827388",
+    "mtime": 1794408872.8065655,
+    "ast_hash": "74dc4940b16fb0574ba229482626ea97",
     "semantic_hash": ""
   },
   "features/home/components/MatchStatsSidePanel.vue": {
@@ -1090,8 +1085,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details.vue": {
-    "mtime": 1789345652.4606698,
-    "ast_hash": "f64ee9eff44495b1ff4ffd747ff1724c",
+    "mtime": 1794405863.4141488,
+    "ast_hash": "dcbc4f0ffcd0c00752e6a4b630cb8cb7",
     "semantic_hash": ""
   },
   "features/matches/components/Details/Coaches.vue": {
@@ -1115,8 +1110,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Statistics.vue": {
-    "mtime": 1789345652.4656668,
-    "ast_hash": "7ee828b5c5154ece7f70a1bd18b937f5",
+    "mtime": 1794405863.4011524,
+    "ast_hash": "26bdf8173c06a8f2bcf7ed05b11aa3bb",
     "semantic_hash": ""
   },
   "features/matches/components/Estimation/BestPlayer.vue": {
@@ -1185,12 +1180,12 @@
     "semantic_hash": ""
   },
   "features/referees/components/Card.vue": {
-    "mtime": 1794233553.946238,
+    "mtime": 1794405863.4011524,
     "ast_hash": "3e9bcb33822a3b6dac27f1f399e6f80c",
     "semantic_hash": ""
   },
   "features/referees/components/JoinRequestForm.vue": {
-    "mtime": 1794233553.9522421,
+    "mtime": 1794405863.4081478,
     "ast_hash": "ec83a932258d1b92ece742e946da853d",
     "semantic_hash": ""
   },
@@ -1285,7 +1280,7 @@
     "semantic_hash": ""
   },
   "features/shared/components/NavbarAccountSection.vue": {
-    "mtime": 1794233553.9532435,
+    "mtime": 1794405863.4141488,
     "ast_hash": "c2913f27732997d1eb6ba64ceb579ab5",
     "semantic_hash": ""
   },
@@ -1495,7 +1490,7 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/MemberCard.vue": {
-    "mtime": 1794233553.9472382,
+    "mtime": 1794405863.4081478,
     "ast_hash": "2e068e124c110b723d6b4b3677dc0741",
     "semantic_hash": ""
   },
@@ -1745,7 +1740,7 @@
     "semantic_hash": ""
   },
   "assets/images/players/player-badge.svg": {
-    "mtime": 1794233553.9452503,
+    "mtime": 1794405863.4011524,
     "ast_hash": "4fd57a0510fa10cb440b305df3b14438",
     "semantic_hash": ""
   },
@@ -1760,7 +1755,7 @@
     "semantic_hash": ""
   },
   "assets/images/players/decor-side.svg": {
-    "mtime": 1794233553.9492385,
+    "mtime": 1794405863.4081478,
     "ast_hash": "d7a8359e77748a422abf3a940bfee1db",
     "semantic_hash": ""
   },
@@ -1902,6 +1897,56 @@
   "pages/championships/table/live-editor.vue": {
     "mtime": 1794308680.053629,
     "ast_hash": "83f8c0e146cc9dc4396292e194f0e032",
+    "semantic_hash": ""
+  },
+  "features/matches/composables/useLiveMatchStatsLayout.ts": {
+    "mtime": 1794405863.4081478,
+    "ast_hash": "7afe9adf100d4700002bfe174d798a9d",
+    "semantic_hash": ""
+  },
+  "features/matches/composables/useMatchLive.ts": {
+    "mtime": 1794405863.4011524,
+    "ast_hash": "1f6f68162bbd8d57a2cfeb4b2a7c6bc0",
+    "semantic_hash": ""
+  },
+  "features/matches/live-stats/LiveMatchStatsBoard.vue": {
+    "mtime": 1794408657.1864288,
+    "ast_hash": "ceb7174b8fe2471780981288adac3ef2",
+    "semantic_hash": ""
+  },
+  "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue": {
+    "mtime": 1794407078.289534,
+    "ast_hash": "f3c9f0b08497ae4533d6a48fdf9b09d5",
+    "semantic_hash": ""
+  },
+  "features/matches/live-stats/defaultLayout.ts": {
+    "mtime": 1794408875.9602158,
+    "ast_hash": "60767c5a7e37c8380a7769d5d120739f",
+    "semantic_hash": ""
+  },
+  "features/matches/live-stats/types.ts": {
+    "mtime": 1794408873.8950062,
+    "ast_hash": "4b3ebc17f4d390cb17f882ac722ef5d6",
+    "semantic_hash": ""
+  },
+  "pages/championships/[id]/match/[mid]/index.vue": {
+    "mtime": 1794405863.4081478,
+    "ast_hash": "9f85e2a5bee9324232220831fdbc9de2",
+    "semantic_hash": ""
+  },
+  "pages/championships/[id]/match/[mid]/stats/live.vue": {
+    "mtime": 1794405863.4011524,
+    "ast_hash": "ac920ff38cc8278d200efd9e1c48e6ee",
+    "semantic_hash": ""
+  },
+  "pages/championships/match/stats/live-editor.vue": {
+    "mtime": 1794405863.4081478,
+    "ast_hash": "c0c525d5ac141e60bb1c680a68facbe8",
+    "semantic_hash": ""
+  },
+  "public/images/match-stats.png": {
+    "mtime": 1794406612.5849671,
+    "ast_hash": "63e37dc070f49110317b02c61ad7db79",
     "semantic_hash": ""
   }
 }

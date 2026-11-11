@@ -9,17 +9,25 @@
             <ChampionshipsSectionDivider title="احصائية المباراة" />
 
             <div class="overflow-hidden rounded-zat-md border border-surface-tone2 bg-surface-raised">
-                <div class="grid grid-cols-3 bg-nav-bar px-4 py-4 text-center text-text-on-action">
-                    <p class="text-lg font-bold leading-9">
-                        {{ displayTextValue(match.team1.name) }}
-                    </p>
-                    <p class="text-lg font-normal leading-9">
-                        وجه المقارنة
-                    </p>
-                    <p class="text-lg font-bold leading-9">
-                        {{ displayTextValue(match.team2.name) }}
-                    </p>
-                </div>
+                <UContextMenu
+                    :disabled="!liveHref"
+                    :items="liveMenuItems"
+                >
+                    <div
+                        class="grid grid-cols-3 bg-nav-bar px-4 py-4 text-center text-text-on-action"
+                        :class="liveHref ? 'cursor-context-menu' : undefined"
+                    >
+                        <p class="text-lg font-bold leading-9">
+                            {{ displayTextValue(match.team1.name) }}
+                        </p>
+                        <p class="text-lg font-normal leading-9">
+                            وجه المقارنة
+                        </p>
+                        <p class="text-lg font-bold leading-9">
+                            {{ displayTextValue(match.team2.name) }}
+                        </p>
+                    </div>
+                </UContextMenu>
 
                 <div
                     v-for="(row, index) in rows"
@@ -37,12 +45,20 @@
                         {{ displayStatValue(row.team2) }}
                     </p>
                 </div>
+
+                <div
+                    v-if="!rows.length"
+                    class="px-4 py-8 text-center text-base text-text-caption"
+                >
+                    لا توجد إحصائيات حالياً — انقر بزر الفأرة الأيمن لفتح البث المباشر
+                </div>
             </div>
         </div>
     </section>
 </template>
 
 <script setup lang="ts">
+import type { ContextMenuItem } from '@nuxt/ui'
 import MatchState from '~/features/matches/types/MatchState'
 import type { IMatchFullDetails } from '~/features/matches/types/IMatchFullDetails'
 import {
@@ -52,13 +68,15 @@ import {
 
 const props = defineProps<{
     match: IMatchFullDetails
+    liveHref?: string
 }>()
 
-const showStats = computed(
-    () =>
-        props.match.state === MatchState.Done
-        && (props.match.team1.statistics?.length ?? 0) > 0,
-)
+const showStats = computed(() => {
+    const state = String(props.match.state)
+    const hasStats = (props.match.team1.statistics?.length ?? 0) > 0
+    if (state === MatchState.Live) return true
+    return state === MatchState.Done && hasStats
+})
 
 const rows = computed(() => {
     const team1Stats = props.match.team1.statistics ?? []
@@ -68,5 +86,17 @@ const rows = computed(() => {
         team1: stat.value,
         team2: team2Stats[index]?.value ?? null,
     }))
+})
+
+const liveMenuItems = computed<ContextMenuItem[]>(() => {
+    if (!props.liveHref) return []
+    return [
+        {
+            label: 'مباشر',
+            icon: 'i-heroicons-signal',
+            to: props.liveHref,
+            target: '_blank',
+        },
+    ]
 })
 </script>

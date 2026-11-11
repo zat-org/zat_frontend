@@ -14,7 +14,10 @@
                 :champ-id="champId"
             />
             <MatchDetailsTeams :match="match" />
-            <MatchDetailsStatistics :match="match" />
+            <MatchDetailsStatistics
+                :match="match"
+                :live-href="liveStatsHref"
+            />
             <MatchDetailsOtherMatches
                 :champ-id="champId"
                 :current-match-id="match.id"
@@ -27,9 +30,13 @@
 import type { IChamp } from '~/features/championships/types/IChamp'
 import type { IMatchFullDetails } from '~/features/matches/types/IMatchFullDetails'
 
-defineProps<{
+const props = defineProps<{
     match: IMatchFullDetails
     champ: IChamp | null
     champId: number | string
 }>()
+
+const liveStatsHref = computed(
+    () => `/championships/${props.champId}/match/${props.match.id}/stats/live`,
+)
 </script>

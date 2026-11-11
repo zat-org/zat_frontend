@@ -8,7 +8,7 @@
         dir="rtl"
     >
         <div
-            class="pointer-events-none absolute -top-10 inset-s-1/4 size-93 rounded-full bg-white/80 blur-[90px]"
+            class="pointer-events-none absolute -top-10 inset-s-1/4 size-93 rounded-full bg-white/80 blur-[90px] dark:bg-surface-overlay/60"
             aria-hidden="true"
         />
 
@@ -60,7 +60,7 @@
         >
             <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <div
-                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base"
+                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base dark:bg-surface-raised"
                     :class="compact ? 'size-12 p-1' : 'size-24 p-2'"
                 >
                     <Image
@@ -129,7 +129,7 @@
 
             <div class="flex min-w-0 flex-1 flex-col items-center gap-1">
                 <div
-                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base"
+                    class="flex shrink-0 items-center justify-center rounded-zat-full bg-surface-off-base dark:bg-surface-raised"
                     :class="compact ? 'size-12 p-1' : 'size-24 p-2'"
                 >
                     <Image

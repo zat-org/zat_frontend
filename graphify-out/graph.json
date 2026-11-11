@@ -169,7 +169,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_auth_api_auth",
-      "community": 15,
+      "community": 3,
       "norm_label": "auth.ts"
     },
     {
@@ -399,7 +399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_auth_types_authmodels",
-      "community": 15,
+      "community": 3,
       "norm_label": "authmodels.ts"
     },
     {
@@ -409,7 +409,7 @@
       "source_location": "L2",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_ierror",
-      "community": 15,
+      "community": 3,
       "norm_label": "ierror"
     },
     {
@@ -419,7 +419,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_iloginconfirmed",
-      "community": 15,
+      "community": 3,
       "norm_label": "iloginconfirmed"
     },
     {
@@ -429,7 +429,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "features_auth_types_authmodels_iuser",
-      "community": 15,
+      "community": 3,
       "norm_label": "iuser"
     },
     {
@@ -739,7 +739,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_card",
-      "community": 168,
+      "community": 172,
       "norm_label": "card.vue"
     },
     {
@@ -749,7 +749,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "features_championships_champion_components_card_ui",
-      "community": 168,
+      "community": 172,
       "norm_label": "ui"
     },
     {
@@ -759,7 +759,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard",
-      "community": 161,
+      "community": 175,
       "norm_label": "cupbracketcard.vue"
     },
     {
@@ -769,7 +769,7 @@
       "source_location": "L66",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_props",
-      "community": 161,
+      "community": 175,
       "norm_label": "props"
     },
     {
@@ -779,7 +779,7 @@
       "source_location": "L71",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_isupcoming",
-      "community": 161,
+      "community": 175,
       "norm_label": "isupcoming"
     },
     {
@@ -789,7 +789,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_isdone",
-      "community": 161,
+      "community": 175,
       "norm_label": "isdone"
     },
     {
@@ -799,7 +799,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_statuslabel",
-      "community": 161,
+      "community": 175,
       "norm_label": "statuslabel"
     },
     {
@@ -809,7 +809,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_team1iswinner",
-      "community": 161,
+      "community": 175,
       "norm_label": "team1iswinner"
     },
     {
@@ -819,7 +819,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_team2iswinner",
-      "community": 161,
+      "community": 175,
       "norm_label": "team2iswinner"
     },
     {
@@ -829,7 +829,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcard_dateparts",
-      "community": 161,
+      "community": 175,
       "norm_label": "dateparts"
     },
     {
@@ -839,7 +839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel",
-      "community": 14,
+      "community": 163,
       "norm_label": "cupbracketcarousel.vue"
     },
     {
@@ -849,7 +849,7 @@
       "source_location": "L37",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_props",
-      "community": 14,
+      "community": 163,
       "norm_label": "props"
     },
     {
@@ -859,7 +859,7 @@
       "source_location": "L44",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_previewbreakpoints",
-      "community": 14,
+      "community": 163,
       "norm_label": "previewbreakpoints"
     },
     {
@@ -869,7 +869,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_fullbreakpoints",
-      "community": 14,
+      "community": 163,
       "norm_label": "fullbreakpoints"
     },
     {
@@ -879,7 +879,7 @@
       "source_location": "L70",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_activebreakpoints",
-      "community": 14,
+      "community": 163,
       "norm_label": "activebreakpoints"
     },
     {
@@ -889,7 +889,7 @@
       "source_location": "L74",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_showaddons",
-      "community": 14,
+      "community": 163,
       "norm_label": "showaddons"
     },
     {
@@ -899,7 +899,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_wrapperclass",
-      "community": 14,
+      "community": 163,
       "norm_label": "wrapperclass"
     },
     {
@@ -909,7 +909,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_carouselwrapper",
-      "community": 14,
+      "community": 163,
       "norm_label": "carouselwrapper"
     },
     {
@@ -919,7 +919,7 @@
       "source_location": "L81",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_isvisiblearr",
-      "community": 14,
+      "community": 163,
       "norm_label": "isvisiblearr"
     },
     {
@@ -929,7 +929,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_observersarr",
-      "community": 14,
+      "community": 163,
       "norm_label": "observersarr"
     },
     {
@@ -939,7 +939,7 @@
       "source_location": "L84",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_roundlabel",
-      "community": 14,
+      "community": 163,
       "norm_label": "roundlabel()"
     },
     {
@@ -949,7 +949,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_disconnectobservers",
-      "community": 14,
+      "community": 163,
       "norm_label": "disconnectobservers()"
     },
     {
@@ -959,7 +959,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketcarousel_setupvisibilitywatchers",
-      "community": 14,
+      "community": 163,
       "norm_label": "setupvisibilitywatchers()"
     },
     {
@@ -969,7 +969,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketmatchnode",
-      "community": 61,
+      "community": 14,
       "norm_label": "cupbracketmatchnode.vue"
     },
     {
@@ -979,7 +979,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow",
-      "community": 166,
+      "community": 176,
       "norm_label": "cupbracketteamrow.vue"
     },
     {
@@ -989,7 +989,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_props",
-      "community": 166,
+      "community": 176,
       "norm_label": "props"
     },
     {
@@ -999,7 +999,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_teamname",
-      "community": 166,
+      "community": 176,
       "norm_label": "teamname"
     },
     {
@@ -1009,7 +1009,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_scoredisplay",
-      "community": 166,
+      "community": 176,
       "norm_label": "scoredisplay"
     },
     {
@@ -1019,7 +1019,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_nameclass",
-      "community": 166,
+      "community": 176,
       "norm_label": "nameclass"
     },
     {
@@ -1029,7 +1029,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbracketteamrow_scoreclass",
-      "community": 166,
+      "community": 176,
       "norm_label": "scoreclass"
     },
     {
@@ -1039,7 +1039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree",
-      "community": 61,
+      "community": 14,
       "norm_label": "cupbrackettree.vue"
     },
     {
@@ -1049,7 +1049,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree_props",
-      "community": 61,
+      "community": 14,
       "norm_label": "props"
     },
     {
@@ -1059,7 +1059,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree_nodetypes",
-      "community": 61,
+      "community": 14,
       "norm_label": "nodetypes"
     },
     {
@@ -1069,7 +1069,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree_graph",
-      "community": 61,
+      "community": 14,
       "norm_label": "graph"
     },
     {
@@ -1079,7 +1079,7 @@
       "source_location": "L68",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree_nodes",
-      "community": 61,
+      "community": 14,
       "norm_label": "nodes"
     },
     {
@@ -1089,7 +1089,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupbrackettree_edges",
-      "community": 61,
+      "community": 14,
       "norm_label": "edges"
     },
     {
@@ -1099,7 +1099,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupmap",
-      "community": 99,
+      "community": 14,
       "norm_label": "cupmap.vue"
     },
     {
@@ -1109,7 +1109,7 @@
       "source_location": "L58",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupmap_ismodalopen",
-      "community": 99,
+      "community": 14,
       "norm_label": "ismodalopen"
     },
     {
@@ -1119,7 +1119,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_cupmatch",
-      "community": 99,
+      "community": 14,
       "norm_label": "cupmatch.vue"
     },
     {
@@ -1229,7 +1229,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_largecupmatch",
-      "community": 99,
+      "community": 14,
       "norm_label": "largecupmatch.vue"
     },
     {
@@ -1239,7 +1239,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable",
-      "community": 162,
+      "community": 99,
       "norm_label": "leaguetable.vue"
     },
     {
@@ -1249,7 +1249,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_scorerow",
-      "community": 162,
+      "community": 99,
       "norm_label": "scorerow"
     },
     {
@@ -1259,7 +1259,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_props",
-      "community": 162,
+      "community": 99,
       "norm_label": "props"
     },
     {
@@ -1269,7 +1269,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_livemenuitems",
-      "community": 162,
+      "community": 99,
       "norm_label": "livemenuitems"
     },
     {
@@ -1279,7 +1279,7 @@
       "source_location": "L150",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_parseabnat",
-      "community": 162,
+      "community": 99,
       "norm_label": "parseabnat()"
     },
     {
@@ -1289,7 +1289,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_torow",
-      "community": 162,
+      "community": 99,
       "norm_label": "torow()"
     },
     {
@@ -1299,7 +1299,7 @@
       "source_location": "L178",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_rows",
-      "community": 162,
+      "community": 99,
       "norm_label": "rows"
     },
     {
@@ -1309,7 +1309,7 @@
       "source_location": "L184",
       "_origin": "ast",
       "id": "features_championships_champion_components_leaguetable_logofor",
-      "community": 162,
+      "community": 99,
       "norm_label": "logofor()"
     },
     {
@@ -2179,7 +2179,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_matchteam",
-      "community": 18,
+      "community": 176,
       "norm_label": "matchteam.vue"
     },
     {
@@ -2189,7 +2189,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_champion_components_smallcupmatch",
-      "community": 99,
+      "community": 14,
       "norm_label": "smallcupmatch.vue"
     },
     {
@@ -2199,7 +2199,7 @@
       "source_location": "L48",
       "_origin": "ast",
       "id": "features_championships_champion_components_smallcupmatch_props",
-      "community": 99,
+      "community": 14,
       "norm_label": "props"
     },
     {
@@ -2209,7 +2209,7 @@
       "source_location": "L52",
       "_origin": "ast",
       "id": "features_championships_champion_components_smallcupmatch_scoreline",
-      "community": 99,
+      "community": 14,
       "norm_label": "scoreline"
     },
     {
@@ -2649,7 +2649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_listitem",
-      "community": 168,
+      "community": 172,
       "norm_label": "listitem.vue"
     },
     {
@@ -2659,7 +2659,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "features_championships_components_listitem_props",
-      "community": 168,
+      "community": 172,
       "norm_label": "props"
     },
     {
@@ -2669,7 +2669,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_championships_components_listitem_gotochampionship",
-      "community": 168,
+      "community": 172,
       "norm_label": "gotochampionship()"
     },
     {
@@ -3389,7 +3389,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_overviewestimationscard",
-      "community": 45,
+      "community": 179,
       "norm_label": "overviewestimationscard.vue"
     },
     {
@@ -3399,7 +3399,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "features_championships_components_overviewestimationscard_props",
-      "community": 45,
+      "community": 179,
       "norm_label": "props"
     },
     {
@@ -3409,7 +3409,7 @@
       "source_location": "L62",
       "_origin": "ast",
       "id": "features_championships_components_overviewestimationscard_morehref",
-      "community": 45,
+      "community": 179,
       "norm_label": "morehref"
     },
     {
@@ -3419,7 +3419,7 @@
       "source_location": "L64",
       "_origin": "ast",
       "id": "features_championships_components_overviewestimationscard_rows",
-      "community": 45,
+      "community": 179,
       "norm_label": "rows"
     },
     {
@@ -3549,7 +3549,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection",
-      "community": 124,
+      "community": 30,
       "norm_label": "overviewmatchessection.vue"
     },
     {
@@ -3559,7 +3559,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_props",
-      "community": 124,
+      "community": 30,
       "norm_label": "props"
     },
     {
@@ -3569,7 +3569,7 @@
       "source_location": "L80",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_api",
-      "community": 124,
+      "community": 30,
       "norm_label": "{ $api }"
     },
     {
@@ -3579,7 +3579,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_pending",
-      "community": 124,
+      "community": 30,
       "norm_label": "pending"
     },
     {
@@ -3589,7 +3589,7 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_sectionerror",
-      "community": 124,
+      "community": 30,
       "norm_label": "sectionerror"
     },
     {
@@ -3599,7 +3599,7 @@
       "source_location": "L99",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_previewmatches",
-      "community": 124,
+      "community": 30,
       "norm_label": "previewmatches"
     },
     {
@@ -3609,7 +3609,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "features_championships_components_overviewmatchessection_previewstudios",
-      "community": 124,
+      "community": 30,
       "norm_label": "previewstudios"
     },
     {
@@ -3619,7 +3619,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_overviewscorestable",
-      "community": 8,
+      "community": 82,
       "norm_label": "overviewscorestable.vue"
     },
     {
@@ -3919,7 +3919,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_tournamentcard",
-      "community": 28,
+      "community": 172,
       "norm_label": "tournamentcard.vue"
     },
     {
@@ -4019,7 +4019,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_components_typecardsrow",
-      "community": 68,
+      "community": 78,
       "norm_label": "typecardsrow.vue"
     },
     {
@@ -4029,7 +4029,7 @@
       "source_location": "L23",
       "_origin": "ast",
       "id": "features_championships_components_typecardsrow_cards",
-      "community": 68,
+      "community": 78,
       "norm_label": "cards"
     },
     {
@@ -4139,7 +4139,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_composables_useleaguesummarylive",
-      "community": 170,
+      "community": 177,
       "norm_label": "useleaguesummarylive.ts"
     },
     {
@@ -4149,7 +4149,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_championships_composables_useleaguesummarylive_resolveapibaseurl",
-      "community": 170,
+      "community": 177,
       "norm_label": "resolveapibaseurl()"
     },
     {
@@ -4159,7 +4159,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_championships_composables_useleaguesummarylive_useleaguesummarylive",
-      "community": 170,
+      "community": 177,
       "norm_label": "useleaguesummarylive()"
     },
     {
@@ -4399,7 +4399,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champstate",
-      "community": 168,
+      "community": 172,
       "norm_label": "champstate.ts"
     },
     {
@@ -4409,7 +4409,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champstate_leaguestate",
-      "community": 168,
+      "community": 172,
       "norm_label": "leaguestate"
     },
     {
@@ -4419,7 +4419,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champtype",
-      "community": 108,
+      "community": 13,
       "norm_label": "champtype.ts"
     },
     {
@@ -4429,7 +4429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_champtype_champtype",
-      "community": 108,
+      "community": 13,
       "norm_label": "champtype"
     },
     {
@@ -4439,7 +4439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_ichamp",
-      "community": 168,
+      "community": 172,
       "norm_label": "ichamp.ts"
     },
     {
@@ -4459,7 +4459,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_ijoinchamp",
-      "community": 168,
+      "community": 172,
       "norm_label": "ijoinchamp"
     },
     {
@@ -4469,7 +4469,7 @@
       "source_location": "L19",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_ichamp",
-      "community": 168,
+      "community": 172,
       "norm_label": "ichamp"
     },
     {
@@ -4509,7 +4509,7 @@
       "source_location": "L47",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_teamsummary",
-      "community": 8,
+      "community": 82,
       "norm_label": "teamsummary"
     },
     {
@@ -4519,7 +4519,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_leagueteamsummary",
-      "community": 8,
+      "community": 82,
       "norm_label": "leagueteamsummary"
     },
     {
@@ -4529,7 +4529,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_hezamteamsummary",
-      "community": 8,
+      "community": 82,
       "norm_label": "hezamteamsummary"
     },
     {
@@ -4569,7 +4569,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_ichampsummarywinner",
-      "community": 162,
+      "community": 166,
       "norm_label": "ichampsummarywinner"
     },
     {
@@ -4579,7 +4579,7 @@
       "source_location": "L87",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_igetchampsummarywinnerresponse",
-      "community": 168,
+      "community": 172,
       "norm_label": "igetchampsummarywinnerresponse"
     },
     {
@@ -4589,7 +4589,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_ichampwinnerstats",
-      "community": 162,
+      "community": 166,
       "norm_label": "ichampwinnerstats"
     },
     {
@@ -4599,7 +4599,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "features_championships_types_ichamp_irecentchamp",
-      "community": 168,
+      "community": 172,
       "norm_label": "irecentchamp"
     },
     {
@@ -4619,7 +4619,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_types_icupsummary",
-      "community": 99,
+      "community": 14,
       "norm_label": "icupsummary.ts"
     },
     {
@@ -4629,7 +4629,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_championships_types_icupsummary_icupmatchdata",
-      "community": 99,
+      "community": 14,
       "norm_label": "icupmatchdata"
     },
     {
@@ -4639,7 +4639,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_championships_types_icupsummary_iteamdata",
-      "community": 166,
+      "community": 176,
       "norm_label": "iteamdata"
     },
     {
@@ -4739,7 +4739,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats",
-      "community": 162,
+      "community": 166,
       "norm_label": "championwinnerstats.ts"
     },
     {
@@ -4749,7 +4749,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats_parseabnat",
-      "community": 162,
+      "community": 166,
       "norm_label": "parseabnat()"
     },
     {
@@ -4759,7 +4759,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats_mapsummarywinnertostats",
-      "community": 162,
+      "community": 166,
       "norm_label": "mapsummarywinnertostats()"
     },
     {
@@ -4789,7 +4789,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_championships_utils_championwinnerstats_displaytextvalue",
-      "community": 162,
+      "community": 164,
       "norm_label": "displaytextvalue()"
     },
     {
@@ -4799,7 +4799,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes",
-      "community": 28,
+      "community": 78,
       "norm_label": "championshiptypes.ts"
     },
     {
@@ -4809,7 +4809,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championshiptypeconfig",
-      "community": 28,
+      "community": 78,
       "norm_label": "championshiptypeconfig"
     },
     {
@@ -4819,7 +4819,7 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_card_shared",
-      "community": 28,
+      "community": 78,
       "norm_label": "championship_card_shared"
     },
     {
@@ -4829,7 +4829,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_type_cards",
-      "community": 68,
+      "community": 78,
       "norm_label": "championship_type_cards"
     },
     {
@@ -4839,7 +4839,7 @@
       "source_location": "L95",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_extra_type_titles",
-      "community": 28,
+      "community": 78,
       "norm_label": "extra_type_titles"
     },
     {
@@ -4849,7 +4849,7 @@
       "source_location": "L100",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_championship_type_slugs",
-      "community": 28,
+      "community": 78,
       "norm_label": "championship_type_slugs"
     },
     {
@@ -4859,7 +4859,7 @@
       "source_location": "L104",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypeconfig",
-      "community": 28,
+      "community": 50,
       "norm_label": "getchampionshiptypeconfig()"
     },
     {
@@ -4869,7 +4869,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypelabel",
-      "community": 28,
+      "community": 50,
       "norm_label": "getchampionshiptypelabel()"
     },
     {
@@ -4879,7 +4879,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_getchampionshiptypepagetitle",
-      "community": 28,
+      "community": 50,
       "norm_label": "getchampionshiptypepagetitle()"
     },
     {
@@ -4889,7 +4889,7 @@
       "source_location": "L118",
       "_origin": "ast",
       "id": "features_championships_utils_championshiptypes_isvalidchampionshiptypeslug",
-      "community": 28,
+      "community": 78,
       "norm_label": "isvalidchampionshiptypeslug()"
     },
     {
@@ -4899,7 +4899,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_championships_utils_cupbracketlayout",
-      "community": 61,
+      "community": 14,
       "norm_label": "cupbracketlayout.ts"
     },
     {
@@ -4909,7 +4909,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "features_championships_utils_cupbracketlayout_cupbracketnodedata",
-      "community": 61,
+      "community": 14,
       "norm_label": "cupbracketnodedata"
     },
     {
@@ -4919,7 +4919,7 @@
       "source_location": "L16",
       "_origin": "ast",
       "id": "features_championships_utils_cupbracketlayout_cuproundlabel",
-      "community": 61,
+      "community": 14,
       "norm_label": "cuproundlabel()"
     },
     {
@@ -4929,7 +4929,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "features_championships_utils_cupbracketlayout_buildcupbracketgraph",
-      "community": 61,
+      "community": 14,
       "norm_label": "buildcupbracketgraph()"
     },
     {
@@ -4939,7 +4939,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "features_championships_utils_cupbracketlayout_nodeid",
-      "community": 61,
+      "community": 14,
       "norm_label": "nodeid()"
     },
     {
@@ -5029,7 +5029,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_followers_components_applyform",
-      "community": 12,
+      "community": 165,
       "norm_label": "applyform.vue"
     },
     {
@@ -5039,7 +5039,7 @@
       "source_location": "L105",
       "_origin": "ast",
       "id": "features_followers_components_applyform_props",
-      "community": 12,
+      "community": 165,
       "norm_label": "props"
     },
     {
@@ -5049,7 +5049,7 @@
       "source_location": "L112",
       "_origin": "ast",
       "id": "features_followers_components_applyform_toast",
-      "community": 12,
+      "community": 165,
       "norm_label": "toast"
     },
     {
@@ -5059,7 +5059,7 @@
       "source_location": "L113",
       "_origin": "ast",
       "id": "features_followers_components_applyform_router",
-      "community": 12,
+      "community": 165,
       "norm_label": "router"
     },
     {
@@ -5069,7 +5069,7 @@
       "source_location": "L115",
       "_origin": "ast",
       "id": "features_followers_components_applyform_api",
-      "community": 12,
+      "community": 165,
       "norm_label": "{ $api }"
     },
     {
@@ -5079,7 +5079,7 @@
       "source_location": "L116",
       "_origin": "ast",
       "id": "features_followers_components_applyform_error_pending_send_sendjoinrequest",
-      "community": 12,
+      "community": 165,
       "norm_label": "{ error, pending, send: sendjoinrequest }"
     },
     {
@@ -5089,7 +5089,7 @@
       "source_location": "L119",
       "_origin": "ast",
       "id": "features_followers_components_applyform_state",
-      "community": 12,
+      "community": 165,
       "norm_label": "state"
     },
     {
@@ -5099,7 +5099,7 @@
       "source_location": "L137",
       "_origin": "ast",
       "id": "features_followers_components_applyform_isplayedbeforeoptions",
-      "community": 12,
+      "community": 165,
       "norm_label": "isplayedbeforeoptions"
     },
     {
@@ -5109,7 +5109,7 @@
       "source_location": "L138",
       "_origin": "ast",
       "id": "features_followers_components_applyform_currentdate",
-      "community": 12,
+      "community": 165,
       "norm_label": "currentdate"
     },
     {
@@ -5119,7 +5119,7 @@
       "source_location": "L139",
       "_origin": "ast",
       "id": "features_followers_components_applyform_maxbirthdate",
-      "community": 12,
+      "community": 165,
       "norm_label": "maxbirthdate"
     },
     {
@@ -5129,7 +5129,7 @@
       "source_location": "L140",
       "_origin": "ast",
       "id": "features_followers_components_applyform_minbirthdate",
-      "community": 12,
+      "community": 165,
       "norm_label": "minbirthdate"
     },
     {
@@ -5139,7 +5139,7 @@
       "source_location": "L144",
       "_origin": "ast",
       "id": "features_followers_components_applyform_schema",
-      "community": 12,
+      "community": 165,
       "norm_label": "schema"
     },
     {
@@ -5149,7 +5149,7 @@
       "source_location": "L186",
       "_origin": "ast",
       "id": "features_followers_components_applyform_onsubmit",
-      "community": 12,
+      "community": 165,
       "norm_label": "onsubmit()"
     },
     {
@@ -5619,7 +5619,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_home_components_matchstatspreviousaccordion",
-      "community": 46,
+      "community": 167,
       "norm_label": "matchstatspreviousaccordion.vue"
     },
     {
@@ -5629,7 +5629,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "features_home_components_matchstatspreviousaccordion_open",
-      "community": 46,
+      "community": 167,
       "norm_label": "open"
     },
     {
@@ -5639,7 +5639,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel",
-      "community": 164,
+      "community": 167,
       "norm_label": "matchstatssidepanel.vue"
     },
     {
@@ -5649,7 +5649,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_emit",
-      "community": 164,
+      "community": 167,
       "norm_label": "emit"
     },
     {
@@ -5659,7 +5659,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_open",
-      "community": 164,
+      "community": 167,
       "norm_label": "open"
     },
     {
@@ -5669,7 +5669,7 @@
       "source_location": "L75",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_onselect",
-      "community": 164,
+      "community": 167,
       "norm_label": "onselect()"
     },
     {
@@ -5679,7 +5679,7 @@
       "source_location": "L79",
       "_origin": "ast",
       "id": "features_home_components_matchstatssidepanel_formatmatchdate",
-      "community": 164,
+      "community": 167,
       "norm_label": "formatmatchdate()"
     },
     {
@@ -6569,7 +6569,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_api_estimations",
-      "community": 3,
+      "community": 170,
       "norm_label": "estimations.ts"
     },
     {
@@ -6579,7 +6579,7 @@
       "source_location": "L14",
       "_origin": "ast",
       "id": "features_matches_api_estimations_strapirelation",
-      "community": 3,
+      "community": 170,
       "norm_label": "strapirelation"
     },
     {
@@ -6589,7 +6589,7 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "features_matches_api_estimations_strapiestimationattributes",
-      "community": 3,
+      "community": 170,
       "norm_label": "strapiestimationattributes"
     },
     {
@@ -6599,7 +6599,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "features_matches_api_estimations_mediapath",
-      "community": 3,
+      "community": 170,
       "norm_label": "mediapath()"
     },
     {
@@ -6609,7 +6609,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "features_matches_api_estimations_unwraprelation",
-      "community": 3,
+      "community": 170,
       "norm_label": "unwraprelation()"
     },
     {
@@ -6619,7 +6619,7 @@
       "source_location": "L54",
       "_origin": "ast",
       "id": "features_matches_api_estimations_mapestimationitem",
-      "community": 3,
+      "community": 170,
       "norm_label": "mapestimationitem()"
     },
     {
@@ -6679,7 +6679,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule",
-      "community": 57,
+      "community": 15,
       "norm_label": "matchesmodule"
     },
     {
@@ -6689,7 +6689,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_buildendedquery",
-      "community": 57,
+      "community": 15,
       "norm_label": ".buildendedquery()"
     },
     {
@@ -6699,7 +6699,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_buildhistoryquery",
-      "community": 24,
+      "community": 15,
       "norm_label": ".buildhistoryquery()"
     },
     {
@@ -6719,7 +6719,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_mapbyteammatch",
-      "community": 57,
+      "community": 15,
       "norm_label": ".mapbyteammatch()"
     },
     {
@@ -6739,7 +6739,7 @@
       "source_location": "L86",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getbyid",
-      "community": 65,
+      "community": 15,
       "norm_label": ".getbyid()"
     },
     {
@@ -6749,7 +6749,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_fetchbyid",
-      "community": 57,
+      "community": 15,
       "norm_label": ".fetchbyid()"
     },
     {
@@ -6759,7 +6759,7 @@
       "source_location": "L98",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getupcoming",
-      "community": 57,
+      "community": 15,
       "norm_label": ".getupcoming()"
     },
     {
@@ -6769,7 +6769,7 @@
       "source_location": "L106",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_fetchupcoming",
-      "community": 57,
+      "community": 15,
       "norm_label": ".fetchupcoming()"
     },
     {
@@ -6779,7 +6779,7 @@
       "source_location": "L110",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_getended",
-      "community": 57,
+      "community": 15,
       "norm_label": ".getended()"
     },
     {
@@ -6789,7 +6789,7 @@
       "source_location": "L123",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_fetchended",
-      "community": 57,
+      "community": 15,
       "norm_label": ".fetchended()"
     },
     {
@@ -6799,7 +6799,7 @@
       "source_location": "L127",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_gethistory",
-      "community": 24,
+      "community": 15,
       "norm_label": ".gethistory()"
     },
     {
@@ -6809,7 +6809,7 @@
       "source_location": "L141",
       "_origin": "ast",
       "id": "features_matches_api_matches_matchesmodule_fetchhistory",
-      "community": 24,
+      "community": 15,
       "norm_label": ".fetchhistory()"
     },
     {
@@ -6839,7 +6839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_card",
-      "community": 18,
+      "community": 176,
       "norm_label": "card.vue"
     },
     {
@@ -6849,7 +6849,7 @@
       "source_location": "L76",
       "_origin": "ast",
       "id": "features_matches_components_card_props",
-      "community": 18,
+      "community": 176,
       "norm_label": "props"
     },
     {
@@ -6859,7 +6859,7 @@
       "source_location": "L82",
       "_origin": "ast",
       "id": "features_matches_components_card_handlematchcardclick",
-      "community": 18,
+      "community": 176,
       "norm_label": "handlematchcardclick()"
     },
     {
@@ -6869,7 +6869,7 @@
       "source_location": "L90",
       "_origin": "ast",
       "id": "features_matches_components_card_handleyoutubeclick",
-      "community": 18,
+      "community": 176,
       "norm_label": "handleyoutubeclick()"
     },
     {
@@ -6879,7 +6879,7 @@
       "source_location": "L94",
       "_origin": "ast",
       "id": "features_matches_components_card_ismatchopenforestimations",
-      "community": 18,
+      "community": 176,
       "norm_label": "ismatchopenforestimations"
     },
     {
@@ -7133,6 +7133,26 @@
       "norm_label": "details.vue"
     },
     {
+      "label": "props",
+      "file_type": "code",
+      "source_file": "features/matches/components/Details.vue",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "features_matches_components_details_props",
+      "community": 65,
+      "norm_label": "props"
+    },
+    {
+      "label": "liveStatsHref",
+      "file_type": "code",
+      "source_file": "features/matches/components/Details.vue",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "features_matches_components_details_livestatshref",
+      "community": 65,
+      "norm_label": "livestatshref"
+    },
+    {
       "label": "Coaches.vue",
       "file_type": "code",
       "source_file": "features/matches/components/Details/Coaches.vue",
@@ -7199,7 +7219,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches",
-      "community": 163,
+      "community": 46,
       "norm_label": "othermatches.vue"
     },
     {
@@ -7209,7 +7229,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_props",
-      "community": 163,
+      "community": 46,
       "norm_label": "props"
     },
     {
@@ -7219,7 +7239,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_api",
-      "community": 163,
+      "community": 46,
       "norm_label": "{ $api }"
     },
     {
@@ -7229,7 +7249,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "features_matches_components_details_othermatches_othermatches",
-      "community": 163,
+      "community": 46,
       "norm_label": "othermatches"
     },
     {
@@ -7359,7 +7379,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_details_state",
-      "community": 46,
+      "community": 167,
       "norm_label": "state.vue"
     },
     {
@@ -7369,7 +7389,7 @@
       "source_location": "L158",
       "_origin": "ast",
       "id": "features_matches_components_details_state_props",
-      "community": 46,
+      "community": 167,
       "norm_label": "props"
     },
     {
@@ -7379,7 +7399,7 @@
       "source_location": "L170",
       "_origin": "ast",
       "id": "features_matches_components_details_state_estimationmatch",
-      "community": 46,
+      "community": 167,
       "norm_label": "estimationmatch"
     },
     {
@@ -7389,7 +7409,7 @@
       "source_location": "L193",
       "_origin": "ast",
       "id": "features_matches_components_details_state_matchhref",
-      "community": 46,
+      "community": 167,
       "norm_label": "matchhref()"
     },
     {
@@ -7399,7 +7419,7 @@
       "source_location": "L197",
       "_origin": "ast",
       "id": "features_matches_components_details_state_neighborlabel",
-      "community": 162,
+      "community": 164,
       "norm_label": "neighborlabel()"
     },
     {
@@ -7409,7 +7429,7 @@
       "source_location": "L201",
       "_origin": "ast",
       "id": "features_matches_components_details_state_hasscore",
-      "community": 46,
+      "community": 167,
       "norm_label": "hasscore"
     },
     {
@@ -7419,7 +7439,7 @@
       "source_location": "L208",
       "_origin": "ast",
       "id": "features_matches_components_details_state_scoredisplay",
-      "community": 46,
+      "community": 167,
       "norm_label": "scoredisplay()"
     },
     {
@@ -7429,38 +7449,48 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_details_statistics",
-      "community": 162,
+      "community": 164,
       "norm_label": "statistics.vue"
     },
     {
       "label": "props",
       "file_type": "code",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L53",
+      "source_location": "L69",
       "_origin": "ast",
       "id": "features_matches_components_details_statistics_props",
-      "community": 162,
+      "community": 164,
       "norm_label": "props"
     },
     {
       "label": "showStats",
       "file_type": "code",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L57",
+      "source_location": "L74",
       "_origin": "ast",
       "id": "features_matches_components_details_statistics_showstats",
-      "community": 162,
+      "community": 164,
       "norm_label": "showstats"
     },
     {
       "label": "rows",
       "file_type": "code",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L63",
+      "source_location": "L81",
       "_origin": "ast",
       "id": "features_matches_components_details_statistics_rows",
-      "community": 162,
+      "community": 164,
       "norm_label": "rows"
+    },
+    {
+      "label": "liveMenuItems",
+      "file_type": "code",
+      "source_file": "features/matches/components/Details/Statistics.vue",
+      "source_location": "L91",
+      "_origin": "ast",
+      "id": "features_matches_components_details_statistics_livemenuitems",
+      "community": 164,
+      "norm_label": "livemenuitems"
     },
     {
       "label": "Teams.vue",
@@ -7579,7 +7609,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_estimation_bestplayer",
-      "community": 165,
+      "community": 65,
       "norm_label": "bestplayer.vue"
     },
     {
@@ -7589,7 +7619,7 @@
       "source_location": "L46",
       "_origin": "ast",
       "id": "features_matches_components_estimation_bestplayer_bestplayerid",
-      "community": 165,
+      "community": 65,
       "norm_label": "bestplayerid"
     },
     {
@@ -7899,7 +7929,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted",
-      "community": 13,
+      "community": 93,
       "norm_label": "submitted.vue"
     },
     {
@@ -7909,7 +7939,7 @@
       "source_location": "L151",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_props",
-      "community": 13,
+      "community": 93,
       "norm_label": "props"
     },
     {
@@ -7919,7 +7949,7 @@
       "source_location": "L157",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_isopen",
-      "community": 13,
+      "community": 93,
       "norm_label": "isopen"
     },
     {
@@ -7929,7 +7959,7 @@
       "source_location": "L160",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_ismatchended",
-      "community": 13,
+      "community": 93,
       "norm_label": "ismatchended"
     },
     {
@@ -7939,7 +7969,7 @@
       "source_location": "L165",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_relationid",
-      "community": 13,
+      "community": 93,
       "norm_label": "relationid()"
     },
     {
@@ -7949,7 +7979,7 @@
       "source_location": "L171",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_relationname",
-      "community": 13,
+      "community": 93,
       "norm_label": "relationname()"
     },
     {
@@ -7959,7 +7989,7 @@
       "source_location": "L176",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_relationimage",
-      "community": 13,
+      "community": 93,
       "norm_label": "relationimage()"
     },
     {
@@ -7969,7 +7999,7 @@
       "source_location": "L181",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_winnerteamid",
-      "community": 13,
+      "community": 93,
       "norm_label": "winnerteamid"
     },
     {
@@ -7979,7 +8009,7 @@
       "source_location": "L183",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_team1score",
-      "community": 13,
+      "community": 93,
       "norm_label": "team1score"
     },
     {
@@ -7989,7 +8019,7 @@
       "source_location": "L196",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_team2score",
-      "community": 13,
+      "community": 93,
       "norm_label": "team2score"
     },
     {
@@ -7999,7 +8029,7 @@
       "source_location": "L209",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_bestplayerid",
-      "community": 13,
+      "community": 93,
       "norm_label": "bestplayerid"
     },
     {
@@ -8009,7 +8039,7 @@
       "source_location": "L211",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_bestplayerfrommatch",
-      "community": 13,
+      "community": 93,
       "norm_label": "bestplayerfrommatch"
     },
     {
@@ -8019,7 +8049,7 @@
       "source_location": "L218",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_bestplayername",
-      "community": 13,
+      "community": 93,
       "norm_label": "bestplayername"
     },
     {
@@ -8029,7 +8059,7 @@
       "source_location": "L224",
       "_origin": "ast",
       "id": "features_matches_components_estimation_submitted_bestplayerimage",
-      "community": 13,
+      "community": 93,
       "norm_label": "bestplayerimage"
     },
     {
@@ -8069,7 +8099,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_components_list",
-      "community": 163,
+      "community": 46,
       "norm_label": "list.vue"
     },
     {
@@ -8079,7 +8109,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "features_matches_components_list_props",
-      "community": 163,
+      "community": 46,
       "norm_label": "props"
     },
     {
@@ -8089,7 +8119,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "features_matches_components_list_currentpage",
-      "community": 163,
+      "community": 46,
       "norm_label": "currentpage"
     },
     {
@@ -8099,7 +8129,7 @@
       "source_location": "L53",
       "_origin": "ast",
       "id": "features_matches_components_list_sortedmatches",
-      "community": 163,
+      "community": 46,
       "norm_label": "sortedmatches"
     },
     {
@@ -8109,7 +8139,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "features_matches_components_list_totalpages",
-      "community": 163,
+      "community": 46,
       "norm_label": "totalpages"
     },
     {
@@ -8119,7 +8149,7 @@
       "source_location": "L61",
       "_origin": "ast",
       "id": "features_matches_components_list_pagedmatches",
-      "community": 163,
+      "community": 46,
       "norm_label": "pagedmatches"
     },
     {
@@ -8129,7 +8159,7 @@
       "source_location": "L72",
       "_origin": "ast",
       "id": "features_matches_components_list_gotopage",
-      "community": 163,
+      "community": 46,
       "norm_label": "gotopage()"
     },
     {
@@ -8139,7 +8169,7 @@
       "source_location": "L77",
       "_origin": "ast",
       "id": "features_matches_components_list_resolvedchampid",
-      "community": 163,
+      "community": 46,
       "norm_label": "resolvedchampid()"
     },
     {
@@ -8179,7 +8209,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_composables_usechampmatchneighbors",
-      "community": 46,
+      "community": 167,
       "norm_label": "usechampmatchneighbors.ts"
     },
     {
@@ -8189,8 +8219,948 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_matches_composables_usechampmatchneighbors_usechampmatchneighbors",
-      "community": 46,
+      "community": 167,
       "norm_label": "usechampmatchneighbors()"
+    },
+    {
+      "label": "useLiveMatchStatsLayout.ts",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_composables_uselivematchstatslayout",
+      "community": 171,
+      "norm_label": "uselivematchstatslayout.ts"
+    },
+    {
+      "label": "cloneLayout()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "features_matches_composables_uselivematchstatslayout_clonelayout",
+      "community": 171,
+      "norm_label": "clonelayout()"
+    },
+    {
+      "label": "isValidLayout()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "id": "features_matches_composables_uselivematchstatslayout_isvalidlayout",
+      "community": 171,
+      "norm_label": "isvalidlayout()"
+    },
+    {
+      "label": "useLiveMatchStatsLayout()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L28",
+      "_origin": "ast",
+      "id": "features_matches_composables_uselivematchstatslayout_uselivematchstatslayout",
+      "community": 171,
+      "norm_label": "uselivematchstatslayout()"
+    },
+    {
+      "label": "useMatchLive.ts",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive",
+      "community": 161,
+      "norm_label": "usematchlive.ts"
+    },
+    {
+      "label": "TeamStatsSlice",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive_teamstatsslice",
+      "community": 161,
+      "norm_label": "teamstatsslice"
+    },
+    {
+      "label": "resolveApiBaseUrl()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L7",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive_resolveapibaseurl",
+      "community": 161,
+      "norm_label": "resolveapibaseurl()"
+    },
+    {
+      "label": "unwrapPayload()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive_unwrappayload",
+      "community": 161,
+      "norm_label": "unwrappayload()"
+    },
+    {
+      "label": "looksLikeFullMatch()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive_lookslikefullmatch",
+      "community": 161,
+      "norm_label": "lookslikefullmatch()"
+    },
+    {
+      "label": "useMatchLive()",
+      "file_type": "code",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "features_matches_composables_usematchlive_usematchlive",
+      "community": 161,
+      "norm_label": "usematchlive()"
+    },
+    {
+      "label": "LiveMatchStatsBoard.vue",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard",
+      "community": 28,
+      "norm_label": "livematchstatsboard.vue"
+    },
+    {
+      "label": "props",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L161",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_props",
+      "community": 28,
+      "norm_label": "props"
+    },
+    {
+      "label": "mediaBaseUrl",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L169",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_mediabaseurl",
+      "community": 28,
+      "norm_label": "mediabaseurl"
+    },
+    {
+      "label": "{ layout: storedLayout }",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_layout_storedlayout",
+      "community": 28,
+      "norm_label": "{ layout: storedlayout }"
+    },
+    {
+      "label": "activeLayout",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L172",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_activelayout",
+      "community": 28,
+      "norm_label": "activelayout"
+    },
+    {
+      "label": "boardScale",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L178",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_boardscale",
+      "community": 28,
+      "norm_label": "boardscale"
+    },
+    {
+      "label": "flashKeys",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L179",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_flashkeys",
+      "community": 28,
+      "norm_label": "flashkeys"
+    },
+    {
+      "label": "DisplayRow",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L183",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_displayrow",
+      "community": 28,
+      "norm_label": "displayrow"
+    },
+    {
+      "label": "isKababitHakamLabel()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L189",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_iskababithakamlabel",
+      "community": 28,
+      "norm_label": "iskababithakamlabel()"
+    },
+    {
+      "label": "displayRows",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L194",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_displayrows",
+      "community": 28,
+      "norm_label": "displayrows"
+    },
+    {
+      "label": "tournamentLogoSrc",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L223",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_tournamentlogosrc",
+      "community": 28,
+      "norm_label": "tournamentlogosrc"
+    },
+    {
+      "label": "team1LogoSrc",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L224",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_team1logosrc",
+      "community": 28,
+      "norm_label": "team1logosrc"
+    },
+    {
+      "label": "team2LogoSrc",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L225",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_team2logosrc",
+      "community": 28,
+      "norm_label": "team2logosrc"
+    },
+    {
+      "label": "team1Name",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L226",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_team1name",
+      "community": 28,
+      "norm_label": "team1name"
+    },
+    {
+      "label": "team2Name",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L227",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_team2name",
+      "community": 28,
+      "norm_label": "team2name"
+    },
+    {
+      "label": "resolveMedia()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L229",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_resolvemedia",
+      "community": 28,
+      "norm_label": "resolvemedia()"
+    },
+    {
+      "label": "boxStyle()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_boxstyle",
+      "community": 28,
+      "norm_label": "boxstyle()"
+    },
+    {
+      "label": "textBoxStyle()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L245",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_textboxstyle",
+      "community": 28,
+      "norm_label": "textboxstyle()"
+    },
+    {
+      "label": "alignClass()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L254",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_alignclass",
+      "community": 28,
+      "norm_label": "alignclass()"
+    },
+    {
+      "label": "updateBoardScale()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L260",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_updateboardscale",
+      "community": 28,
+      "norm_label": "updateboardscale()"
+    },
+    {
+      "label": "rowsSignature()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L266",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatsboard_rowssignature",
+      "community": 28,
+      "norm_label": "rowssignature()"
+    },
+    {
+      "label": "LiveMatchStatsLayoutEditor.vue",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor",
+      "community": 18,
+      "norm_label": "livematchstatslayouteditor.vue"
+    },
+    {
+      "label": "EditableItem",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L441",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_editableitem",
+      "community": 18,
+      "norm_label": "editableitem"
+    },
+    {
+      "label": "RowItem",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L448",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_rowitem",
+      "community": 18,
+      "norm_label": "rowitem"
+    },
+    {
+      "label": "ColumnItem",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L455",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_columnitem",
+      "community": 18,
+      "norm_label": "columnitem"
+    },
+    {
+      "label": "frameKeys",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L463",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_framekeys",
+      "community": 18,
+      "norm_label": "framekeys"
+    },
+    {
+      "label": "{\n    layout: storedLayout,\n    saveToStorage,\n    resetToDefault,\n    importJson,\n    loadFromStorage,\n}",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L465",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_layout_storedlayout_savetostorage_resettodefault_importjson_loadfromstorage",
+      "community": 18,
+      "norm_label": "{\n    layout: storedlayout,\n    savetostorage,\n    resettodefault,\n    importjson,\n    loadfromstorage,\n}"
+    },
+    {
+      "label": "draft",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L473",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_draft",
+      "community": 18,
+      "norm_label": "draft"
+    },
+    {
+      "label": "selectedId",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L474",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_selectedid",
+      "community": 18,
+      "norm_label": "selectedid"
+    },
+    {
+      "label": "selectionMode",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L475",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_selectionmode",
+      "community": 18,
+      "norm_label": "selectionmode"
+    },
+    {
+      "label": "status",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L476",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_status",
+      "community": 18,
+      "norm_label": "status"
+    },
+    {
+      "label": "previewScale",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L477",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_previewscale",
+      "community": 18,
+      "norm_label": "previewscale"
+    },
+    {
+      "label": "collectGridBoxes()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L479",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_collectgridboxes",
+      "community": 18,
+      "norm_label": "collectgridboxes()"
+    },
+    {
+      "label": "boundsFromBoxes()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L483",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_boundsfromboxes",
+      "community": 18,
+      "norm_label": "boundsfromboxes()"
+    },
+    {
+      "label": "cellItems",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L500",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_cellitems",
+      "community": 18,
+      "norm_label": "cellitems"
+    },
+    {
+      "label": "rowItems",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L535",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_rowitems",
+      "community": 18,
+      "norm_label": "rowitems"
+    },
+    {
+      "label": "columnItems",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L547",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_columnitems",
+      "community": 18,
+      "norm_label": "columnitems"
+    },
+    {
+      "label": "gridBounds",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L560",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_gridbounds",
+      "community": 18,
+      "norm_label": "gridbounds"
+    },
+    {
+      "label": "selectOptions",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L562",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_selectoptions",
+      "community": 18,
+      "norm_label": "selectoptions"
+    },
+    {
+      "label": "isRowSelection",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L575",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_isrowselection",
+      "community": 18,
+      "norm_label": "isrowselection"
+    },
+    {
+      "label": "isColumnSelection",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L576",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_iscolumnselection",
+      "community": 18,
+      "norm_label": "iscolumnselection"
+    },
+    {
+      "label": "selectedBoxes",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L578",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_selectedboxes",
+      "community": 18,
+      "norm_label": "selectedboxes"
+    },
+    {
+      "label": "sharedColor",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L607",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_sharedcolor",
+      "community": 18,
+      "norm_label": "sharedcolor"
+    },
+    {
+      "label": "sharedAlign",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L608",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_sharedalign",
+      "community": 18,
+      "norm_label": "sharedalign"
+    },
+    {
+      "label": "isItemSelected()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L629",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_isitemselected",
+      "community": 18,
+      "norm_label": "isitemselected()"
+    },
+    {
+      "label": "syncGridOriginFromRows()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L642",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_syncgridoriginfromrows",
+      "community": 18,
+      "norm_label": "syncgridoriginfromrows()"
+    },
+    {
+      "label": "onGridGeometryChange()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L649",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_ongridgeometrychange",
+      "community": 18,
+      "norm_label": "ongridgeometrychange()"
+    },
+    {
+      "label": "sharedNumber()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L654",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_sharednumber",
+      "community": 18,
+      "norm_label": "sharednumber()"
+    },
+    {
+      "label": "onSharedNumberInput()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L660",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_onsharednumberinput",
+      "community": 18,
+      "norm_label": "onsharednumberinput()"
+    },
+    {
+      "label": "onSharedColorInput()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L666",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_onsharedcolorinput",
+      "community": 18,
+      "norm_label": "onsharedcolorinput()"
+    },
+    {
+      "label": "onSharedAlignInput()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L671",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_onsharedaligninput",
+      "community": 18,
+      "norm_label": "onsharedaligninput()"
+    },
+    {
+      "label": "boxStyle()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L676",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_boxstyle",
+      "community": 18,
+      "norm_label": "boxstyle()"
+    },
+    {
+      "label": "updatePreviewScale()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L686",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_updatepreviewscale",
+      "community": 18,
+      "norm_label": "updatepreviewscale()"
+    },
+    {
+      "label": "syncDraftFromStorage()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L694",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_syncdraftfromstorage",
+      "community": 171,
+      "norm_label": "syncdraftfromstorage()"
+    },
+    {
+      "label": "save()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L701",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_save",
+      "community": 18,
+      "norm_label": "save()"
+    },
+    {
+      "label": "reset()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L706",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_reset",
+      "community": 171,
+      "norm_label": "reset()"
+    },
+    {
+      "label": "downloadJson()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L714",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_downloadjson",
+      "community": 18,
+      "norm_label": "downloadjson()"
+    },
+    {
+      "label": "onImportFile()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L725",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_onimportfile",
+      "community": 171,
+      "norm_label": "onimportfile()"
+    },
+    {
+      "label": "dragOrigins",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L746",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_dragorigins",
+      "community": 18,
+      "norm_label": "dragorigins"
+    },
+    {
+      "label": "dragPointer",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L747",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_dragpointer",
+      "community": 18,
+      "norm_label": "dragpointer"
+    },
+    {
+      "label": "startDrag()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L749",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_startdrag",
+      "community": 18,
+      "norm_label": "startdrag()"
+    },
+    {
+      "label": "onDragMove()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L780",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_ondragmove",
+      "community": 18,
+      "norm_label": "ondragmove()"
+    },
+    {
+      "label": "onDragEnd()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L792",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_livematchstatslayouteditor_ondragend",
+      "community": 18,
+      "norm_label": "ondragend()"
+    },
+    {
+      "label": "defaultLayout.ts",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout",
+      "community": 61,
+      "norm_label": "defaultlayout.ts"
+    },
+    {
+      "label": "fieldBox()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_fieldbox",
+      "community": 61,
+      "norm_label": "fieldbox()"
+    },
+    {
+      "label": "createDefaultGridOptions()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_createdefaultgridoptions",
+      "community": 61,
+      "norm_label": "createdefaultgridoptions()"
+    },
+    {
+      "label": "DEFAULT_ROW_YS",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_default_row_ys",
+      "community": 61,
+      "norm_label": "default_row_ys"
+    },
+    {
+      "label": "reflowLiveMatchStatsGrid()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_reflowlivematchstatsgrid",
+      "community": 18,
+      "norm_label": "reflowlivematchstatsgrid()"
+    },
+    {
+      "label": "buildRows()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_buildrows",
+      "community": 61,
+      "norm_label": "buildrows()"
+    },
+    {
+      "label": "createDefaultLiveMatchStatsLayout()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L121",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "community": 61,
+      "norm_label": "createdefaultlivematchstatslayout()"
+    },
+    {
+      "label": "normalizeBox()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L175",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_normalizebox",
+      "community": 61,
+      "norm_label": "normalizebox()"
+    },
+    {
+      "label": "normalizeGrid()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L195",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_normalizegrid",
+      "community": 171,
+      "norm_label": "normalizegrid()"
+    },
+    {
+      "label": "normalizeLiveMatchStatsLayout()",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L212",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "community": 171,
+      "norm_label": "normalizelivematchstatslayout()"
+    },
+    {
+      "label": "types.ts",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types",
+      "community": 61,
+      "norm_label": "types.ts"
+    },
+    {
+      "label": "LiveMatchStatsAlign",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatsalign",
+      "community": 61,
+      "norm_label": "livematchstatsalign"
+    },
+    {
+      "label": "LiveMatchStatsFieldBox",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatsfieldbox",
+      "community": 61,
+      "norm_label": "livematchstatsfieldbox"
+    },
+    {
+      "label": "LiveMatchStatsFrameBox",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatsframebox",
+      "community": 61,
+      "norm_label": "livematchstatsframebox"
+    },
+    {
+      "label": "LiveMatchStatsColumnKey",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L22",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatscolumnkey",
+      "community": 61,
+      "norm_label": "livematchstatscolumnkey"
+    },
+    {
+      "label": "LiveMatchStatsRowBoxes",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatsrowboxes",
+      "community": 61,
+      "norm_label": "livematchstatsrowboxes"
+    },
+    {
+      "label": "LiveMatchStatsGridOptions",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatsgridoptions",
+      "community": 61,
+      "norm_label": "livematchstatsgridoptions"
+    },
+    {
+      "label": "LiveMatchStatsLayout",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_livematchstatslayout",
+      "community": 171,
+      "norm_label": "livematchstatslayout"
+    },
+    {
+      "label": "LIVE_MATCH_STATS_COLUMN_KEYS",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_live_match_stats_column_keys",
+      "community": 61,
+      "norm_label": "live_match_stats_column_keys"
+    },
+    {
+      "label": "LIVE_MATCH_STATS_COLUMN_LABELS",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L70",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_live_match_stats_column_labels",
+      "community": 61,
+      "norm_label": "live_match_stats_column_labels"
+    },
+    {
+      "label": "LIVE_MATCH_STATS_CANVAS",
+      "file_type": "code",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "features_matches_live_stats_types_live_match_stats_canvas",
+      "community": 61,
+      "norm_label": "live_match_stats_canvas"
     },
     {
       "label": "IMatchFullDetails.ts",
@@ -8209,7 +9179,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchfulldetails_person",
-      "community": 165,
+      "community": 65,
       "norm_label": "person"
     },
     {
@@ -8239,7 +9209,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory",
-      "community": 24,
+      "community": 22,
       "norm_label": "imatchhistory.ts"
     },
     {
@@ -8249,7 +9219,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_matchhistorystatus",
-      "community": 24,
+      "community": 22,
       "norm_label": "matchhistorystatus"
     },
     {
@@ -8269,7 +9239,7 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorymatch",
-      "community": 18,
+      "community": 22,
       "norm_label": "imatchhistorymatch"
     },
     {
@@ -8279,7 +9249,7 @@
       "source_location": "L24",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorygroup",
-      "community": 24,
+      "community": 22,
       "norm_label": "imatchhistorygroup"
     },
     {
@@ -8289,7 +9259,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistorychamp",
-      "community": 24,
+      "community": 68,
       "norm_label": "imatchhistorychamp"
     },
     {
@@ -8299,7 +9269,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistoryresponse",
-      "community": 24,
+      "community": 15,
       "norm_label": "imatchhistoryresponse"
     },
     {
@@ -8309,7 +9279,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "features_matches_types_imatchhistory_imatchhistoryparams",
-      "community": 24,
+      "community": 15,
       "norm_label": "imatchhistoryparams"
     },
     {
@@ -8319,7 +9289,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_imatchlessdetails",
-      "community": 46,
+      "community": 167,
       "norm_label": "imatchlessdetails.ts"
     },
     {
@@ -8329,7 +9299,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_matches_types_imatchlessdetails_imatchlessdetails",
-      "community": 57,
+      "community": 167,
       "norm_label": "imatchlessdetails"
     },
     {
@@ -8389,7 +9359,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels",
-      "community": 3,
+      "community": 170,
       "norm_label": "matchestimationsmodels.ts"
     },
     {
@@ -8399,7 +9369,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_icreatematchestimation",
-      "community": 3,
+      "community": 170,
       "norm_label": "icreatematchestimation"
     },
     {
@@ -8409,7 +9379,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_iestimationrelation",
-      "community": 3,
+      "community": 170,
       "norm_label": "iestimationrelation"
     },
     {
@@ -8419,7 +9389,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_imatchestimation",
-      "community": 3,
+      "community": 170,
       "norm_label": "imatchestimation"
     },
     {
@@ -8429,7 +9399,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_iuserestimationsresult",
-      "community": 3,
+      "community": 170,
       "norm_label": "iuserestimationsresult"
     },
     {
@@ -8439,7 +9409,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_iestimationrecord",
-      "community": 45,
+      "community": 179,
       "norm_label": "iestimationrecord"
     },
     {
@@ -8449,7 +9419,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "features_matches_types_matchestimationsmodels_iestimationtable",
-      "community": 3,
+      "community": 170,
       "norm_label": "iestimationtable"
     },
     {
@@ -8459,7 +9429,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchstate",
-      "community": 18,
+      "community": 176,
       "norm_label": "matchstate.ts"
     },
     {
@@ -8469,7 +9439,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_types_matchstate_matchstate",
-      "community": 18,
+      "community": 176,
       "norm_label": "matchstate"
     },
     {
@@ -8479,7 +9449,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils",
-      "community": 163,
+      "community": 46,
       "norm_label": "collectionswithtimeutils.ts"
     },
     {
@@ -8489,7 +9459,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils_sortbytime",
-      "community": 163,
+      "community": 46,
       "norm_label": "sortbytime()"
     },
     {
@@ -8499,7 +9469,7 @@
       "source_location": "L9",
       "_origin": "ast",
       "id": "features_matches_utils_collectionswithtimeutils_getindexofupcomingevent",
-      "community": 163,
+      "community": 46,
       "norm_label": "getindexofupcomingevent()"
     },
     {
@@ -8869,7 +9839,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule",
-      "community": 41,
+      "community": 178,
       "norm_label": "contactusmessagesmodule.ts"
     },
     {
@@ -8879,7 +9849,7 @@
       "source_location": "L3",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessage",
-      "community": 41,
+      "community": 178,
       "norm_label": "contactusmessage"
     },
     {
@@ -8889,7 +9859,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessagesmodule",
-      "community": 41,
+      "community": 178,
       "norm_label": "contactusmessagesmodule"
     },
     {
@@ -8899,7 +9869,7 @@
       "source_location": "L13",
       "_origin": "ast",
       "id": "features_shared_api_contactusmessagesmodule_contactusmessagesmodule_usesendmessage",
-      "community": 41,
+      "community": 178,
       "norm_label": ".usesendmessage()"
     },
     {
@@ -8909,7 +9879,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_api_factory",
-      "community": 15,
+      "community": 3,
       "norm_label": "factory.ts"
     },
     {
@@ -8919,7 +9889,7 @@
       "source_location": "L4",
       "_origin": "ast",
       "id": "features_shared_api_factory_httpmethod",
-      "community": 15,
+      "community": 3,
       "norm_label": "httpmethod"
     },
     {
@@ -8929,7 +9899,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_shared_api_factory_requestbody",
-      "community": 15,
+      "community": 3,
       "norm_label": "requestbody"
     },
     {
@@ -9689,7 +10659,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_components_menubar",
-      "community": 30,
+      "community": 45,
       "norm_label": "menubar.vue"
     },
     {
@@ -9699,7 +10669,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_shared_components_menubar_props",
-      "community": 30,
+      "community": 45,
       "norm_label": "props"
     },
     {
@@ -9709,7 +10679,7 @@
       "source_location": "L39",
       "_origin": "ast",
       "id": "features_shared_components_menubar_route",
-      "community": 30,
+      "community": 45,
       "norm_label": "route"
     },
     {
@@ -9719,7 +10689,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "features_shared_components_menubar_champid",
-      "community": 30,
+      "community": 45,
       "norm_label": "champid"
     },
     {
@@ -9729,7 +10699,7 @@
       "source_location": "L42",
       "_origin": "ast",
       "id": "features_shared_components_menubar_navigation",
-      "community": 30,
+      "community": 45,
       "norm_label": "navigation"
     },
     {
@@ -9739,7 +10709,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "features_shared_components_menubar_champtype",
-      "community": 30,
+      "community": 45,
       "norm_label": "champtype"
     },
     {
@@ -9749,7 +10719,7 @@
       "source_location": "L91",
       "_origin": "ast",
       "id": "features_shared_components_menubar_availablenavigation",
-      "community": 30,
+      "community": 45,
       "norm_label": "availablenavigation"
     },
     {
@@ -9759,7 +10729,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "features_shared_components_menubar_normalizepath",
-      "community": 30,
+      "community": 45,
       "norm_label": "normalizepath()"
     },
     {
@@ -9769,7 +10739,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "features_shared_components_menubar_isactive",
-      "community": 30,
+      "community": 45,
       "norm_label": "isactive()"
     },
     {
@@ -9779,7 +10749,7 @@
       "source_location": "L108",
       "_origin": "ast",
       "id": "features_shared_components_menubar_tabclass",
-      "community": 30,
+      "community": 45,
       "norm_label": "tabclass()"
     },
     {
@@ -10439,7 +11409,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_shared_utils_createstrapiclient",
-      "community": 41,
+      "community": 178,
       "norm_label": "createstrapiclient.ts"
     },
     {
@@ -10449,7 +11419,7 @@
       "source_location": "L7",
       "_origin": "ast",
       "id": "features_shared_utils_createstrapiclient_createstrapiclient",
-      "community": 41,
+      "community": 178,
       "norm_label": "createstrapiclient()"
     },
     {
@@ -10709,7 +11679,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_api_players",
-      "community": 41,
+      "community": 26,
       "norm_label": "players.ts"
     },
     {
@@ -10719,7 +11689,7 @@
       "source_location": "L5",
       "_origin": "ast",
       "id": "features_teams_api_players_playersmodule",
-      "community": 41,
+      "community": 26,
       "norm_label": "playersmodule"
     },
     {
@@ -10729,7 +11699,7 @@
       "source_location": "L6",
       "_origin": "ast",
       "id": "features_teams_api_players_playersmodule_getbyid",
-      "community": 41,
+      "community": 26,
       "norm_label": ".getbyid()"
     },
     {
@@ -10849,7 +11819,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_components_coach",
-      "community": 165,
+      "community": 65,
       "norm_label": "coach.vue"
     },
     {
@@ -11149,7 +12119,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_components_players",
-      "community": 165,
+      "community": 79,
       "norm_label": "players.vue"
     },
     {
@@ -11159,7 +12129,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "features_teams_components_players_props",
-      "community": 165,
+      "community": 79,
       "norm_label": "props"
     },
     {
@@ -11169,7 +12139,7 @@
       "source_location": "L27",
       "_origin": "ast",
       "id": "features_teams_components_players_sortedplayers",
-      "community": 165,
+      "community": 79,
       "norm_label": "sortedplayers"
     },
     {
@@ -11179,7 +12149,7 @@
       "source_location": "L31",
       "_origin": "ast",
       "id": "features_teams_components_players_toperson",
-      "community": 165,
+      "community": 79,
       "norm_label": "toperson()"
     },
     {
@@ -11189,7 +12159,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "features_teams_components_statistics",
-      "community": 79,
+      "community": 174,
       "norm_label": "statistics.vue"
     },
     {
@@ -11199,7 +12169,7 @@
       "source_location": "L28",
       "_origin": "ast",
       "id": "features_teams_components_statistics_props",
-      "community": 79,
+      "community": 174,
       "norm_label": "props"
     },
     {
@@ -11209,7 +12179,7 @@
       "source_location": "L32",
       "_origin": "ast",
       "id": "features_teams_components_statistics_rows",
-      "community": 79,
+      "community": 174,
       "norm_label": "rows"
     },
     {
@@ -11419,7 +12389,7 @@
       "source_location": "L38",
       "_origin": "ast",
       "id": "features_teams_types_iteam_iteamfulldetails",
-      "community": 25,
+      "community": 54,
       "norm_label": "iteamfulldetails"
     },
     {
@@ -11429,7 +12399,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "features_teams_types_iteam_iteamstatistics",
-      "community": 79,
+      "community": 174,
       "norm_label": "iteamstatistics"
     },
     {
@@ -11479,7 +12449,7 @@
       "source_location": "L93",
       "_origin": "ast",
       "id": "features_teams_types_iteam_getplayerbyidresponse",
-      "community": 41,
+      "community": 26,
       "norm_label": "getplayerbyidresponse"
     },
     {
@@ -11499,7 +12469,7 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule",
-      "community": 167,
+      "community": 41,
       "norm_label": "websiteassetsmodule"
     },
     {
@@ -11509,7 +12479,7 @@
       "source_location": "L11",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_addonetovisitorcounter",
-      "community": 167,
+      "community": 41,
       "norm_label": ".addonetovisitorcounter()"
     },
     {
@@ -11519,7 +12489,7 @@
       "source_location": "L18",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getyoutubeurl",
-      "community": 167,
+      "community": 41,
       "norm_label": ".getyoutubeurl()"
     },
     {
@@ -11529,7 +12499,7 @@
       "source_location": "L22",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getyoutubechanneldata",
-      "community": 167,
+      "community": 41,
       "norm_label": ".getyoutubechanneldata()"
     },
     {
@@ -11539,7 +12509,7 @@
       "source_location": "L29",
       "_origin": "ast",
       "id": "features_website_api_websiteassets_websiteassetsmodule_getzatstatistics",
-      "community": 167,
+      "community": 41,
       "norm_label": ".getzatstatistics()"
     },
     {
@@ -12463,10 +13433,20 @@
       "norm_label": "islivetable"
     },
     {
-      "label": "isStandaloneChild",
+      "label": "isLiveMatchStats",
       "file_type": "code",
       "source_file": "pages/championships/[id].vue",
       "source_location": "L55",
+      "_origin": "ast",
+      "id": "pages_championships_id_islivematchstats",
+      "community": 92,
+      "norm_label": "islivematchstats"
+    },
+    {
+      "label": "isStandaloneChild",
+      "file_type": "code",
+      "source_file": "pages/championships/[id].vue",
+      "source_location": "L63",
       "_origin": "ast",
       "id": "pages_championships_id_isstandalonechild",
       "community": 92,
@@ -12476,7 +13456,7 @@
       "label": "isOverview",
       "file_type": "code",
       "source_file": "pages/championships/[id].vue",
-      "source_location": "L63",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "pages_championships_id_isoverview",
       "community": 92,
@@ -12669,7 +13649,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_laws",
-      "community": 168,
+      "community": 172,
       "norm_label": "laws.vue"
     },
     {
@@ -12679,7 +13659,7 @@
       "source_location": "L89",
       "_origin": "ast",
       "id": "pages_championships_id_laws_props",
-      "community": 168,
+      "community": 172,
       "norm_label": "props"
     },
     {
@@ -12689,7 +13669,7 @@
       "source_location": "L97",
       "_origin": "ast",
       "id": "pages_championships_id_laws_haslaws",
-      "community": 168,
+      "community": 172,
       "norm_label": "haslaws"
     },
     {
@@ -12699,7 +13679,7 @@
       "source_location": "L101",
       "_origin": "ast",
       "id": "pages_championships_id_laws_accordionitems",
-      "community": 168,
+      "community": 172,
       "norm_label": "accordionitems"
     },
     {
@@ -12709,58 +13689,158 @@
       "source_location": "L111",
       "_origin": "ast",
       "id": "pages_championships_id_laws_accordionui",
-      "community": 168,
+      "community": 172,
       "norm_label": "accordionui"
     },
     {
-      "label": "[mid].vue",
+      "label": "index.vue",
       "file_type": "code",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "pages_championships_id_match_mid",
-      "community": 93,
-      "norm_label": "[mid].vue"
+      "id": "pages_championships_id_match_mid_index",
+      "community": 173,
+      "norm_label": "index.vue"
     },
     {
       "label": "route",
       "file_type": "code",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L18",
       "_origin": "ast",
-      "id": "pages_championships_id_match_mid_route",
-      "community": 93,
+      "id": "pages_championships_id_match_mid_index_route",
+      "community": 173,
       "norm_label": "route"
     },
     {
       "label": "{ $api }",
       "file_type": "code",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L19",
       "_origin": "ast",
-      "id": "pages_championships_id_match_mid_api",
-      "community": 93,
+      "id": "pages_championships_id_match_mid_index_api",
+      "community": 173,
       "norm_label": "{ $api }"
     },
     {
       "label": "champId",
       "file_type": "code",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L21",
       "_origin": "ast",
-      "id": "pages_championships_id_match_mid_champid",
-      "community": 93,
+      "id": "pages_championships_id_match_mid_index_champid",
+      "community": 173,
       "norm_label": "champid"
     },
     {
       "label": "matchId",
       "file_type": "code",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L22",
       "_origin": "ast",
-      "id": "pages_championships_id_match_mid_matchid",
-      "community": 93,
+      "id": "pages_championships_id_match_mid_index_matchid",
+      "community": 173,
       "norm_label": "matchid"
+    },
+    {
+      "label": "live.vue",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live",
+      "community": 77,
+      "norm_label": "live.vue"
+    },
+    {
+      "label": "route",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_route",
+      "community": 77,
+      "norm_label": "route"
+    },
+    {
+      "label": "{ $api }",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_api",
+      "community": 77,
+      "norm_label": "{ $api }"
+    },
+    {
+      "label": "champRouteId",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_champrouteid",
+      "community": 77,
+      "norm_label": "champrouteid"
+    },
+    {
+      "label": "matchRouteId",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_matchrouteid",
+      "community": 77,
+      "norm_label": "matchrouteid"
+    },
+    {
+      "label": "{\n    match,\n    pending: livePending,\n    error: liveError,\n    isReconnecting,\n}",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L43",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_match_pending_livepending_error_liveerror_isreconnecting",
+      "community": 77,
+      "norm_label": "{\n    match,\n    pending: livepending,\n    error: liveerror,\n    isreconnecting,\n}"
+    },
+    {
+      "label": "tournamentLogo",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L51",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_tournamentlogo",
+      "community": 77,
+      "norm_label": "tournamentlogo"
+    },
+    {
+      "label": "tournamentName",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L55",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_tournamentname",
+      "community": 77,
+      "norm_label": "tournamentname"
+    },
+    {
+      "label": "pagePending",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L62",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_pagepending",
+      "community": 77,
+      "norm_label": "pagepending"
+    },
+    {
+      "label": "pageError",
+      "file_type": "code",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L66",
+      "_origin": "ast",
+      "id": "pages_championships_id_match_mid_stats_live_pageerror",
+      "community": 77,
+      "norm_label": "pageerror"
     },
     {
       "label": "matches.vue",
@@ -12879,7 +13959,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_studios",
-      "community": 77,
+      "community": 124,
       "norm_label": "studios.vue"
     },
     {
@@ -12889,7 +13969,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "pages_championships_id_studios_props",
-      "community": 77,
+      "community": 124,
       "norm_label": "props"
     },
     {
@@ -12899,7 +13979,7 @@
       "source_location": "L51",
       "_origin": "ast",
       "id": "pages_championships_id_studios_api",
-      "community": 77,
+      "community": 124,
       "norm_label": "{ $api }"
     },
     {
@@ -12909,7 +13989,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "pages_championships_id_studios_currentpage",
-      "community": 77,
+      "community": 124,
       "norm_label": "currentpage"
     },
     {
@@ -12919,7 +13999,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "pages_championships_id_studios_sortedstudios",
-      "community": 77,
+      "community": 124,
       "norm_label": "sortedstudios"
     },
     {
@@ -12929,7 +14009,7 @@
       "source_location": "L63",
       "_origin": "ast",
       "id": "pages_championships_id_studios_totalpages",
-      "community": 77,
+      "community": 124,
       "norm_label": "totalpages"
     },
     {
@@ -12939,7 +14019,7 @@
       "source_location": "L67",
       "_origin": "ast",
       "id": "pages_championships_id_studios_pagedstudios",
-      "community": 77,
+      "community": 124,
       "norm_label": "pagedstudios"
     },
     {
@@ -12949,7 +14029,7 @@
       "source_location": "L78",
       "_origin": "ast",
       "id": "pages_championships_id_studios_gotopage",
-      "community": 77,
+      "community": 124,
       "norm_label": "gotopage()"
     },
     {
@@ -12959,7 +14039,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_table_index",
-      "community": 8,
+      "community": 13,
       "norm_label": "index.vue"
     },
     {
@@ -12969,7 +14049,7 @@
       "source_location": "L33",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_props",
-      "community": 8,
+      "community": 13,
       "norm_label": "props"
     },
     {
@@ -12979,7 +14059,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_route",
-      "community": 8,
+      "community": 13,
       "norm_label": "route"
     },
     {
@@ -12989,7 +14069,7 @@
       "source_location": "L41",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_api",
-      "community": 8,
+      "community": 13,
       "norm_label": "{ $api }"
     },
     {
@@ -12999,7 +14079,7 @@
       "source_location": "L43",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_livetablepath",
-      "community": 8,
+      "community": 13,
       "norm_label": "livetablepath"
     },
     {
@@ -13009,7 +14089,7 @@
       "source_location": "L56",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_table",
-      "community": 8,
+      "community": 13,
       "norm_label": "table"
     },
     {
@@ -13019,7 +14099,7 @@
       "source_location": "L57",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_champtype",
-      "community": 8,
+      "community": 13,
       "norm_label": "champtype"
     },
     {
@@ -13029,7 +14109,7 @@
       "source_location": "L59",
       "_origin": "ast",
       "id": "pages_championships_id_table_index_logosbyid",
-      "community": 8,
+      "community": 13,
       "norm_label": "logosbyid"
     },
     {
@@ -13149,7 +14229,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "pages_championships_id_teams",
-      "community": 168,
+      "community": 172,
       "norm_label": "teams.vue"
     },
     {
@@ -13159,7 +14239,7 @@
       "source_location": "L34",
       "_origin": "ast",
       "id": "pages_championships_id_teams_props",
-      "community": 168,
+      "community": 172,
       "norm_label": "props"
     },
     {
@@ -13169,7 +14249,7 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "pages_championships_id_teams_api",
-      "community": 168,
+      "community": 172,
       "norm_label": "{ $api }"
     },
     {
@@ -13179,7 +14259,7 @@
       "source_location": "L40",
       "_origin": "ast",
       "id": "pages_championships_id_teams_teams",
-      "community": 168,
+      "community": 172,
       "norm_label": "teams"
     },
     {
@@ -13231,6 +14311,16 @@
       "id": "pages_championships_league",
       "community": 150,
       "norm_label": "league.vue"
+    },
+    {
+      "label": "live-editor.vue",
+      "file_type": "code",
+      "source_file": "pages/championships/match/stats/live-editor.vue",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "pages_championships_match_stats_live_editor",
+      "community": 18,
+      "norm_label": "live-editor.vue"
     },
     {
       "label": "super.vue",
@@ -14459,7 +15549,7 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "plugins_api",
-      "community": 41,
+      "community": 178,
       "norm_label": "api.ts"
     },
     {
@@ -22555,7 +23645,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details.vue",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "features_matches_components_details",
       "target": "features_championships_types_ichamp",
@@ -22698,7 +23788,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details.vue",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0,
       "source": "features_matches_components_details",
       "target": "features_championships_types_ichamp_ichamp",
@@ -23367,9 +24457,20 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L48",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
+      "target": "features_championships_utils_championwinnerstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
       "target": "features_championships_utils_championwinnerstats",
       "confidence_score": 1.0
     },
@@ -23400,9 +24501,20 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L48",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
+      "target": "features_championships_utils_championwinnerstats_displaystatvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
       "target": "features_championships_utils_championwinnerstats_displaystatvalue",
       "confidence_score": 1.0
     },
@@ -23466,9 +24578,20 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L48",
+      "source_location": "L64",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
+      "target": "features_championships_utils_championwinnerstats_displaytextvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
       "target": "features_championships_utils_championwinnerstats_displaytextvalue",
       "confidence_score": 1.0
     },
@@ -27145,11 +28268,31 @@
       "confidence_score": 1.0
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/components/Details.vue",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "features_matches_components_details",
+      "target": "features_matches_components_details_livestatshref",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/components/Details.vue",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "features_matches_components_details",
+      "target": "features_matches_components_details_props",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details.vue",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "features_matches_components_details",
       "target": "features_matches_types_imatchfulldetails",
@@ -27160,7 +28303,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details.vue",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0,
       "source": "features_matches_components_details",
       "target": "features_matches_types_imatchfulldetails_imatchfulldetails",
@@ -27610,7 +28753,17 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L53",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "features_matches_components_details_statistics",
+      "target": "features_matches_components_details_statistics_livemenuitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/components/Details/Statistics.vue",
+      "source_location": "L69",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_components_details_statistics_props",
@@ -27620,7 +28773,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L63",
+      "source_location": "L81",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_components_details_statistics_rows",
@@ -27630,7 +28783,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L57",
+      "source_location": "L74",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_components_details_statistics_showstats",
@@ -27641,7 +28794,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L47",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_types_imatchfulldetails",
@@ -27652,7 +28805,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L47",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_types_imatchfulldetails_imatchfulldetails",
@@ -27663,7 +28816,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L46",
+      "source_location": "L62",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_types_matchstate",
@@ -27674,7 +28827,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "features/matches/components/Details/Statistics.vue",
-      "source_location": "L46",
+      "source_location": "L62",
       "weight": 1.0,
       "source": "features_matches_components_details_statistics",
       "target": "features_matches_types_matchstate_matchstate",
@@ -28692,6 +29845,1469 @@
       "weight": 1.0,
       "source": "features_matches_composables_usechampmatchneighbors",
       "target": "features_matches_utils_collectionswithtimeutils_sortbytime",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_composables_uselivematchstatslayout_clonelayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_composables_uselivematchstatslayout_isvalidlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L28",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_composables_uselivematchstatslayout_uselivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_live_stats_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout",
+      "target": "features_matches_live_stats_types_livematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_composables_uselivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_composables_uselivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useLiveMatchStatsLayout.ts",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "features_matches_composables_uselivematchstatslayout_clonelayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L157",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_composables_uselivematchstatslayout_uselivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_composables_uselivematchstatslayout_uselivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_composables_usematchlive_lookslikefullmatch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_composables_usematchlive_resolveapibaseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_composables_usematchlive_teamstatsslice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_composables_usematchlive_unwrappayload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_composables_usematchlive_usematchlive",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_types_imatchfulldetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/composables/useMatchLive.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_composables_usematchlive",
+      "target": "features_matches_types_imatchfulldetails_imatchfulldetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_defaultlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_activelayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_alignclass",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L178",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_boardscale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_boxstyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L183",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_displayrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L194",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_displayrows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L179",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_flashkeys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L189",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_iskababithakamlabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_layout_storedlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L169",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_mediabaseurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L161",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_props",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L229",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_resolvemedia",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_rowssignature",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_team1logosrc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L226",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_team1name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L225",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_team2logosrc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_team2name",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L245",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_textboxstyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L223",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_tournamentlogosrc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L260",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_livematchstatsboard_updateboardscale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_types_livematchstatsalign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_types_livematchstatsfieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L148",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_live_stats_types_livematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_types_imatchfulldetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard",
+      "target": "features_matches_types_imatchfulldetails_imatchfulldetails",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "features_matches_live_stats_livematchstatsboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsBoard.vue",
+      "source_location": "L248",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatsboard_textboxstyle",
+      "target": "features_matches_live_stats_livematchstatsboard_boxstyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L424",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_defaultlayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L424",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L424",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L424",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_defaultlayout_reflowlivematchstatsgrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L483",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_boundsfromboxes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L676",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_boxstyle",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L500",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_cellitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L479",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_collectgridboxes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L455",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_columnitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L547",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_columnitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L714",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_downloadjson",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L473",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_draft",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L746",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_dragorigins",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L747",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_dragpointer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L441",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_editableitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L463",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_framekeys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L560",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_gridbounds",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L576",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_iscolumnselection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L629",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_isitemselected",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L575",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_isrowselection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L465",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_layout_storedlayout_savetostorage_resettodefault_importjson_loadfromstorage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L792",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_ondragend",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L780",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_ondragmove",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L649",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_ongridgeometrychange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L725",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_onimportfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L671",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_onsharedaligninput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L666",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_onsharedcolorinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L660",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_onsharednumberinput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L477",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_previewscale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L706",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_reset",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L448",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_rowitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L535",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_rowitems",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L701",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_save",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L578",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_selectedboxes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L474",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_selectedid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L475",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_selectionmode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L562",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_selectoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L608",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_sharedalign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L607",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_sharedcolor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L654",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_sharednumber",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L749",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_startdrag",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L476",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L694",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_syncdraftfromstorage",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L642",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_syncgridoriginfromrows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L686",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_updatepreviewscale",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_live_match_stats_column_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L435",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_live_match_stats_column_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_livematchstatsalign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_livematchstatscolumnkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_livematchstatsfieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L429",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor",
+      "target": "features_matches_live_stats_types_livematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/match/stats/live-editor.vue",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "pages_championships_match_stats_live_editor",
+      "target": "features_matches_live_stats_livematchstatslayouteditor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L794",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor_ondragend",
+      "target": "features_matches_live_stats_livematchstatslayouteditor_syncgridoriginfromrows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L650",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor_ongridgeometrychange",
+      "target": "features_matches_live_stats_defaultlayout_reflowlivematchstatsgrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L696",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor_syncdraftfromstorage",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L708",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor_reset",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/LiveMatchStatsLayoutEditor.vue",
+      "source_location": "L732",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_livematchstatslayouteditor_onimportfile",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_buildrows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultgridoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L121",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_default_row_ys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_fieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizebox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L195",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizegrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_defaultlayout_reflowlivematchstatsgrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types_live_match_stats_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types_livematchstatsfieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types_livematchstatsgridoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types_livematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout",
+      "target": "features_matches_live_stats_types_livematchstatsrowboxes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L134",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_fieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_normalizebox",
+      "target": "features_matches_live_stats_defaultlayout_fieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L122",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultgridoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_buildrows",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_createdefaultlivematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L242",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizebox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/defaultLayout.ts",
+      "source_location": "L241",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_defaultlayout_normalizelivematchstatslayout",
+      "target": "features_matches_live_stats_defaultlayout_normalizegrid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_live_match_stats_canvas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_live_match_stats_column_keys",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_live_match_stats_column_labels",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatsalign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatscolumnkey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatsfieldbox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatsframebox",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatsgridoptions",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatslayout",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "features/matches/live-stats/types.ts",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "features_matches_live_stats_types",
+      "target": "features_matches_live_stats_types_livematchstatsrowboxes",
       "confidence_score": 1.0
     },
     {
@@ -34123,6 +36739,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pages/championships/[id].vue",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "pages_championships_id",
+      "target": "pages_championships_id_islivematchstats",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id].vue",
       "source_location": "L48",
       "weight": 1.0,
       "source": "pages_championships_id",
@@ -34143,7 +36769,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pages/championships/[id].vue",
-      "source_location": "L63",
+      "source_location": "L73",
       "weight": 1.0,
       "source": "pages_championships_id",
       "target": "pages_championships_id_isoverview",
@@ -34153,7 +36779,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "pages/championships/[id].vue",
-      "source_location": "L55",
+      "source_location": "L63",
       "weight": 1.0,
       "source": "pages_championships_id",
       "target": "pages_championships_id_isstandalonechild",
@@ -34394,41 +37020,131 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L19",
       "weight": 1.0,
-      "source": "pages_championships_id_match_mid",
-      "target": "pages_championships_id_match_mid_api",
+      "source": "pages_championships_id_match_mid_index",
+      "target": "pages_championships_id_match_mid_index_api",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L21",
       "weight": 1.0,
-      "source": "pages_championships_id_match_mid",
-      "target": "pages_championships_id_match_mid_champid",
+      "source": "pages_championships_id_match_mid_index",
+      "target": "pages_championships_id_match_mid_index_champid",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L22",
       "weight": 1.0,
-      "source": "pages_championships_id_match_mid",
-      "target": "pages_championships_id_match_mid_matchid",
+      "source": "pages_championships_id_match_mid_index",
+      "target": "pages_championships_id_match_mid_index_matchid",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "pages/championships/[id]/match/[mid].vue",
+      "source_file": "pages/championships/[id]/match/[mid]/index.vue",
       "source_location": "L18",
       "weight": 1.0,
-      "source": "pages_championships_id_match_mid",
-      "target": "pages_championships_id_match_mid_route",
+      "source": "pages_championships_id_match_mid_index",
+      "target": "pages_championships_id_match_mid_index_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_api",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_champrouteid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_match_pending_livepending_error_liveerror_isreconnecting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_matchrouteid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_pageerror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_pagepending",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_route",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_tournamentlogo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "pages/championships/[id]/match/[mid]/stats/live.vue",
+      "source_location": "L55",
+      "weight": 1.0,
+      "source": "pages_championships_id_match_mid_stats_live",
+      "target": "pages_championships_id_match_mid_stats_live_tournamentname",
       "confidence_score": 1.0
     },
     {
@@ -35957,5 +38673,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d753f1700c2c7e952b90ab91f2e9acfb34b9c284"
+  "built_at_commit": "013e095a781caa7d2b7566257ec4672e7a4f6e92"
 }

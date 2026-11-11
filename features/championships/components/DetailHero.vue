@@ -137,11 +137,11 @@
             >
                 <article
                     v-if="upcomingMatch"
-                    class="relative flex w-full flex-col items-center gap-2 overflow-hidden rounded-zat-md border-2 border-surface-tone2 bg-surface-raised p-4 sm:p-6"
+                    class="@container relative flex w-full flex-col items-center gap-2 overflow-hidden rounded-zat-md border-2 border-surface-tone2 bg-surface-raised p-4 sm:p-6"
                 >
                     <MatchVsWatermark
                         tone="strong"
-                        class="pointer-events-none absolute inset-0 opacity-40"
+                        class="opacity-40"
                     />
 
                     <div class="relative z-10 flex flex-wrap items-center justify-center gap-2 sm:gap-4">

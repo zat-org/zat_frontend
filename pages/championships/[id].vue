@@ -52,7 +52,17 @@ const isLiveTable = computed(() => {
     return path === `/championships/${id}/table/live`
 })
 
-const isStandaloneChild = computed(() => isMatchDetail.value || isLiveTable.value)
+const isLiveMatchStats = computed(() => {
+    const id = String(route.params.id || '')
+    const mid = String(route.params.mid || '')
+    if (!id || !mid) return false
+    const path = route.path.replace(/\/+$/, '') || '/'
+    return path === `/championships/${id}/match/${mid}/stats/live`
+})
+
+const isStandaloneChild = computed(
+    () => isMatchDetail.value || isLiveTable.value || isLiveMatchStats.value,
+)
 
 const { data: champ, error, pending } = await $api.champions.getById(route.params.id as string)
 
