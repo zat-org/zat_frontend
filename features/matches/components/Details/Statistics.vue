@@ -1,6 +1,5 @@
 <template>
     <section
-        v-if="showStats"
         class="w-full bg-poker-pattern bg-surface-off-base py-6"
         aria-label="احصائية المباراة"
         dir="rtl"
@@ -29,28 +28,30 @@
                     </div>
                 </UContextMenu>
 
-                <div
-                    v-for="(row, index) in rows"
-                    :key="row.name"
-                    class="grid grid-cols-3 px-4 py-2 text-center"
-                    :class="index % 2 === 0 ? 'bg-surface-overlay' : 'bg-surface-raised'"
-                >
-                    <p class="font-numbers text-base font-medium leading-7 text-text-body">
-                        {{ displayStatValue(row.team1) }}
-                    </p>
-                    <p class="text-base font-normal leading-9 text-text-body">
-                        {{ displayTextValue(row.name) }}
-                    </p>
-                    <p class="font-numbers text-base font-medium leading-7 text-text-body">
-                        {{ displayStatValue(row.team2) }}
-                    </p>
-                </div>
+                <template v-if="showStats && rows.length">
+                    <div
+                        v-for="(row, index) in rows"
+                        :key="row.name"
+                        class="grid grid-cols-3 px-4 py-2 text-center"
+                        :class="index % 2 === 0 ? 'bg-surface-overlay' : 'bg-surface-raised'"
+                    >
+                        <p class="font-numbers text-base font-medium leading-7 text-text-body">
+                            {{ displayStatValue(row.team1) }}
+                        </p>
+                        <p class="text-base font-normal leading-9 text-text-body">
+                            {{ displayTextValue(row.name) }}
+                        </p>
+                        <p class="font-numbers text-base font-medium leading-7 text-text-body">
+                            {{ displayStatValue(row.team2) }}
+                        </p>
+                    </div>
+                </template>
 
                 <div
-                    v-if="!rows.length"
+                    v-else
                     class="px-4 py-8 text-center text-base text-text-caption"
                 >
-                    لا توجد إحصائيات حالياً — انقر بزر الفأرة الأيمن لفتح البث المباشر
+                    لا توجد إحصائيات متاحة
                 </div>
             </div>
         </div>
@@ -71,6 +72,7 @@ const props = defineProps<{
     liveHref?: string
 }>()
 
+/** Live always; ended only when stats exist. Otherwise empty message. */
 const showStats = computed(() => {
     const state = String(props.match.state)
     const hasStats = (props.match.team1.statistics?.length ?? 0) > 0

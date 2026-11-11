@@ -1110,8 +1110,8 @@
     "semantic_hash": ""
   },
   "features/matches/components/Details/Statistics.vue": {
-    "mtime": 1794405863.4011524,
-    "ast_hash": "26bdf8173c06a8f2bcf7ed05b11aa3bb",
+    "mtime": 1794411397.0226953,
+    "ast_hash": "42e02199d98f604751d6696c86cbdc76",
     "semantic_hash": ""
   },
   "features/matches/components/Estimation/BestPlayer.vue": {
